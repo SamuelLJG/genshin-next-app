@@ -6,17 +6,6 @@ import CharacterStatsSlider from "@/components/CharacterStatsSlider";
 import SliderHighlight from '@/components/SliderHighlight';
 import ptBr from '@/data/pt-br.json'
 import ScriptsClient from '@/components/scripts-client'
-import { Anuphan, Plus_Jakarta_Sans } from 'next/font/google'
- 
-export const anuphan = Anuphan({
-    subsets: ['latin'],
-    display: 'swap',
-  })
-   
-  export const plusJakartaSans = Plus_Jakarta_Sans({
-    subsets: ['latin'],
-    display: 'swap',
-  })
   
 
 export default async function Home( { params }:any ) {
