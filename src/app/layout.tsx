@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Anuphan, Plus_Jakarta_Sans } from 'next/font/google'
 import "./globals.css";
 
 
@@ -9,15 +8,6 @@ export const metadata: Metadata = {
 };
 
  
-export const anuphan = Anuphan({
-  subsets: ['latin'],
-  display: 'swap',
-})
- 
-export const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  display: 'swap',
-})
 
 export default function RootLayout({
   children,
