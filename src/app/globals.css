@@ -448,6 +448,7 @@ background-size: 100%;
 #character-image {
   width: calc(215px * var(--minimize));
   border-radius: 50%;
+  height:  calc(215px * var(--minimize));
   margin-top: calc(6px * var(--minimize));
 }
 
@@ -1097,6 +1098,7 @@ display: grid;  grid-template-columns: repeat(4, 1fr); gap: calc(5px * var(--min
 
   #character-image {
       width: calc(190px * var(--minimize));
+      height:  calc(190px * var(--minimize));
   }
 
   #weapon-container {
@@ -1176,6 +1178,7 @@ nav:not(:hover) .names, nav:not(:hover) #logo {
 }
 }
 @media (max-width: 970px) {
+  #character-banner {gap: 15px;}
   h1 {
       margin: calc(20px * var(--minimize)) calc(20px * var(--minimize)) 0px;
       width: auto;
@@ -1261,10 +1264,7 @@ margin-top: calc(-2px * var(--minimize));
   #teams-list {
       grid-template-columns: repeat(1, 1fr);
   }
-  #character-image {
-      width: calc(270px * var(--minimize));
-  }
-
+  
 
 
   .title-square:first-of-type {
@@ -1306,9 +1306,10 @@ margin-top: calc(-2px * var(--minimize));
   #character-image {
       border-radius: calc(5px * var(--minimize));
       margin-top: calc(0px * var(--minimize));
+      width: calc(370px * var(--minimize));
+      height: fit-content;
       background: var(--ct2);
       border: 1px solid var(--bd);
-      margin-bottom: calc(-4px * var(--minimize));
   }
 
   #character-info {
@@ -1339,7 +1340,7 @@ margin-top: calc(-2px * var(--minimize));
   }
 
   #character-header {
-      justify-content: space-between;
+      justify-content: space-around;
       height: 100%;
   }
   #other-artifacts img {
@@ -1353,6 +1354,9 @@ margin-top: calc(-2px * var(--minimize));
 
 
 @media (max-width: 710px) {
+  #character-image {
+    width: calc(270px * var(--minimize));
+  }
   #artifacts-sub-stats ul {
       grid-template-columns: repeat(2, 1fr);
   }
@@ -1384,7 +1388,13 @@ margin-top: calc(-2px * var(--minimize));
       grid-template-columns: repeat(1, 1fr);
   }
 }
+@media (max-width: 584px) {
 
+  #character-basic-stats-list {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+}
 @media (max-width: 568px) {
   
   #character-talent-priority ol {
@@ -1435,10 +1445,7 @@ margin-top: calc(-2px * var(--minimize));
       width: calc(180px * var(--minimize));
   }
   
-  #character-basic-stats-list {
-      grid-template-columns: repeat(2, 1fr);
-  }
- 
+
 
   #character-type p {
       border-radius: calc(0px * var(--minimize));

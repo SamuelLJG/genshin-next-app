@@ -6,7 +6,7 @@ import CharacterStatsSlider from "@/components/CharacterStatsSlider";
 import SliderHighlight from '@/components/SliderHighlight';
 import ptBr from '@/data/pt-br.json'
 import ScriptsClient from '@/components/scripts-client'
-  
+import ImagemResponsiva from "@/components/CharacterImageChange";
 
 export default async function Home( { params }:any ) {
     const { id } = await params;
@@ -51,7 +51,6 @@ export default async function Home( { params }:any ) {
     const { characterData, characterFolder, characterWeapons, characterTalents } = await getData();
     return (
         <body id={characterData.elementText}>
-            <SliderHighlight />
             <h1>
                 <div id="header-container">
                     <div className="header-icon">
@@ -70,10 +69,7 @@ export default async function Home( { params }:any ) {
             </h1>
             <main id="main-content">
                 <section id="character-banner">
-                    <picture>
-                        <source srcSet={`images/${characterData.images.filename_icon}.png`} media="(max-width: 825px)"/>
-                        <img id="character-image" className={`star${characterData.rarity}`} src={`images/${characterData.name}.png`} alt="example" />
-                    </picture>
+                <ImagemResponsiva data={characterData}/>
                     <div id="character-main">
                         <div id="character-header">
                             <div id="character-info">
@@ -377,6 +373,9 @@ export default async function Home( { params }:any ) {
 
                 </a>
             </nav>
+            
             <ScriptsClient/>
+            
+            <SliderHighlight />
         </body>
     )}
