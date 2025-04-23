@@ -1,0 +1,1557 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #1c1d21;
+  /*#161a1f*/
+  --sub: #23242a;
+  /*#21252b*/
+  --ct: #42b7ee;
+
+  --bd: #484950c5;
+  /*#6be1ff*/
+  /*hsl(86, 100%, 68%)*/
+  /*hsl(44, 100%, 68%)*/
+  --minimize: 1;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: Anuphan;
+  color: #f5f5f5;
+  font-size: calc(16px * var(--minimize));
+}
+
+#Hydro {
+  --ct: #42b7ee;
+  --ct2: #104ec0;
+}
+
+#Dendro {
+  --ct: #62ff3b;
+  --ct2: #62ff3b;
+}
+
+#Geo {
+  --ct: #ffaf02;
+  --ct2: #ffaf02;
+}
+
+#Anemo {
+  --ct: #02ffab;
+  --ct2: #02ffab;
+}
+
+#Pyro {
+  --ct: #ff7010;
+  --ct2: #ff7010;
+}
+
+input[type="range"] {
+  display: block;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color:  var(--ct);
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  
+  outline: 0;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: white;
+  width: 20px;
+  height: 7px;
+  border-radius: 1px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  cursor: pointer;
+  position: relative;
+  transition: .1s ease-in-out;
+} 
+input[type="range"]::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.2);
+}
+p::-webkit-scrollbar {
+  width: .6em;
+}
+
+p::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+p::-webkit-scrollbar-thumb {
+  background-color: rgb(78, 83, 90);
+  outline: 1px solid #333333;
+}
+
+p::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+
+p::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+div::-webkit-scrollbar {
+  width: .6em;
+}
+
+div::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: rgb(78, 83, 90);
+  outline: 1px solid #333333;
+}
+
+div::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+
+div::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+
+
+main {
+  width: calc(955px * var(--minimize));
+  display: flex;
+  flex-direction: column;
+  gap: calc(20px * var(--minimize));
+  border-radius: calc(5px * var(--minimize));
+  margin: calc(0px * var(--minimize)) auto;
+
+}
+nav h2 {
+  display: none;
+}
+nav {
+  gap: calc(10px * var(--minimize));
+  display: flex;
+  padding: calc(10px * var(--minimize));
+  flex-direction: column;
+  overflow-x: hidden;
+  top: 0;
+  background: var(--sub);
+  height: 100%;
+  width: calc(55px * var(--minimize));
+  position: fixed;
+  z-index: 1;
+  padding-top: calc(20px * var(--minimize));
+  border-right: calc(1px * var(--minimize)) solid var(--bd);
+}
+
+
+
+
+
+.links {
+  color: hsla(0, 0%, 100%, .75);
+  display: flex;
+  align-items: center;
+  width: auto;
+  padding: calc(15px * var(--minimize));
+  height: calc(35px * var(--minimize));
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-decoration: none;
+  font-size: calc(14px * var(--minimize));
+  font-weight: bold;
+  border-radius: calc(10px * var(--minimize));
+  overflow: hidden;
+}
+.links div {
+  min-width: calc(27.5px * var(--minimize));
+  height: calc(35px * var(--minimize));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(10px * var(--minimize));
+}
+
+
+
+.links img {
+  width: calc(22px * var(--minimize));
+  height: calc(22px * var(--minimize));
+  filter: brightness(2000000%);
+  opacity: 0.8;
+}
+
+
+nav a:first-of-type { 
+  padding: calc(0px * var(--minimize)) calc(0px * var(--minimize));
+  color: hsla(0, 0%, 100%, .75);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  text-decoration: none;
+  font-size: calc(14px * var(--minimize));
+}
+
+.names {
+  display: flex;
+  align-items: center;
+  padding: calc(15px * var(--minimize));
+  margin-left: calc(38px * var(--minimize));
+  height: calc(32px * var(--minimize));
+}
+
+#logo {
+ 
+
+  margin-left: calc(30px * var(--minimize));
+  padding-left: calc(15px * var(--minimize));
+  padding-bottom: calc(20px * var(--minimize));
+  font-family: Plus Jakarta Sans;
+  color: #fffffff1;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  height: calc(48px * var(--minimize));
+  margin-bottom: calc(-6px * var(--minimize));
+  text-transform: none; font-size: 18px; margin-top: -5px;
+}
+#titlessss div:first-of-type {
+  min-width: calc(55px * var(--minimize));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+#titlessss img {
+   border: calc(2px * var(--minimize)) solid var(--ct); border-left: none; border-radius: 50%; border-top: none;
+  width: calc(50px * var(--minimize));
+  height: calc(50px * var(--minimize));
+  margin-left: calc(0px * var(--minimize));
+  margin-bottom: calc(15px * var(--minimize));
+}
+
+
+#titlessss{
+  border-bottom: calc(1px * var(--minimize)) solid var(--bd);
+  display: flex;
+  align-items: center;
+  width: auto;
+  border-radius: calc(0px * var(--minimize));
+}
+
+
+.asc .boxes {
+  position: relative;
+  font-size: calc(15px * var(--minimize));
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: calc(5px * var(--minimize));
+  border-top-left-radius: calc(0px * var(--minimize));
+}
+
+
+
+.nn2 {
+  display: none;
+  font-family: Poppins;
+}
+
+
+
+.boxes img {
+  width: calc(65px * var(--minimize));
+}
+
+.asc .boxes p {
+  font-size: calc(12px * var(--minimize));
+  font-weight: bold;
+  font-family: Anuphan;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #ffffffa1;
+  display: none;
+}
+
+/*.one-Star p { 
+color: #7cff70;
+}
+.two-Star p { 
+color: #7cff70;
+}
+.three-Star p { 
+color: #70ffec;
+}
+.four-Star p { 
+color: #b370ff;
+}
+.five-Star p { 
+color: #ffd270;
+}*/
+.asc {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: calc(7px * var(--minimize));
+}
+
+
+
+/*
+.one-Star img {
+  background-image: url(https://images.genshin-builds.com/genshin/1-Star.webp);
+}
+
+.two-Star img {
+  background-image: url(https://images.genshin-builds.com/genshin/2-Star.webp);
+}
+
+.three-Star img {
+  background-image: url(https://images.genshin-builds.com/genshin/3-Star.webp);
+}
+*/      .star4 {
+background-image: url(/images/Background_Item_4_Star.webp);
+
+background-size: 100%;
+}
+.star5 {
+  background-image: url(/images/Background_Item_5_Star.webp);
+  
+  background-size: 100%;
+}
+#character-type p {
+  border: calc(2px * var(--minimize)) solid rgba(255, 255, 255, 0.24);
+  border-radius: calc(50px * var(--minimize));
+  padding: calc(2px * var(--minimize)) calc(9px * var(--minimize));
+  padding-bottom: calc(3px * var(--minimize));
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Anuphan;
+  display: flex;
+  align-items: center;
+  background: var(--sub);
+}
+
+#character-type {
+  display: flex;
+  gap: calc(5px * var(--minimize));
+  justify-content: space-between;
+}
+
+#character-type p img {
+  width: calc(25px * var(--minimize));
+  margin-right: calc(5px * var(--minimize));
+}
+#character-type p:first-of-type img {
+  filter: brightness(1000%);
+}
+#character-type p:last-of-type img {
+  width: calc(23px * var(--minimize));
+  margin-bottom: calc(-1px * var(--minimize));
+}
+
+#character-basic-stats-list img {
+  width: calc(25px * var(--minimize));
+}
+#character-basic-stats-level span {
+  min-width: calc(50px * var(--minimize));
+  max-width: calc(50px * var(--minimize));
+}
+#character-basic-stats-list li p {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: calc(5px * var(--minimize));
+}
+
+#character-basic-stats-list li span {
+  font-size: calc(24px * var(--minimize)); color: #fff; font-weight: 600; line-height: calc(32px * var(--minimize));
+}
+#character-basic-stats-list li:last-of-type img {
+  margin-right: calc(-2px * var(--minimize)); 
+  filter: brightness(1000%);
+}
+#character-basic-stats-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: calc(0px * var(--minimize));
+  flex-direction: column;
+  font-weight: 500;
+  font-size: calc(14px * var(--minimize));
+  font-family: Anuphan;
+  color: hsla(0, 0%, 100%, .75);
+  gap: calc(5px * var(--minimize));
+}
+
+#character-basic-stats-list li {
+  border: 1px solid var(--bd);
+  border-radius: calc(4px * var(--minimize));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: calc(5.95px * var(--minimize)) calc(7px * var(--minimize));
+  background: var(--sub);
+}
+
+
+
+.numbers2 {
+  bottom: 0;
+  font-family: Anuphan;
+  color: #f5f5f5;
+  font-weight: normal;
+  font-size: calc(14px * var(--minimize));
+  font-style: italic;
+  color: hsla(0, 0%, 100%, .75);
+  margin: calc(5px * var(--minimize));
+  margin-right: calc(7px * var(--minimize));
+  width: calc(100% - calc(20px * var(--minimize)));
+}
+
+.boxes2 {
+  overflow: hidden;
+  background: var(--sub);
+  border: 1px solid var(--bd);
+  border-radius: calc(4px * var(--minimize));
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-bottom: calc(5px * var(--minimize)) solid var(--bd);
+  height: 100%;
+}
+
+.boxes2 img {
+  width: calc(50px * var(--minimize));
+  margin: calc(2px * var(--minimize)) calc(0px * var(--minimize));
+  margin-left: calc(5px * var(--minimize));
+  background-size: 100%;
+  border-radius: calc(4px * var(--minimize));
+}
+
+
+
+
+
+
+#ascension-materials-list li:first-of-type img {
+  width: calc(60px * var(--minimize));
+  height: calc(60px * var(--minimize));
+  margin-top: calc(-10px * var(--minimize));
+  margin-bottom: calc(-10px * var(--minimize));
+  margin-right: calc(-12px * var(--minimize));
+  margin-left: calc(-11px * var(--minimize));
+}
+
+#character-image {
+  width: calc(215px * var(--minimize));
+  border-radius: 50%;
+  margin-top: calc(6px * var(--minimize));
+}
+
+#weapon-container {
+  background: var(--sub);
+  border: 1px solid var(--bd);
+  border-radius: calc(4px * var(--minimize));
+  padding: calc(15px * var(--minimize));
+  position: relative;
+  display: flex;
+  gap: calc(15px * var(--minimize));
+}
+#weapon-header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;width: 100%; 
+  padding-top: calc(3px * var(--minimize));
+}
+#other-weapons-list {
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  white-space: nowrap;
+  gap: calc(5px * var(--minimize));
+  margin-top: calc(10px * var(--minimize));
+  line-height: 1em;
+}
+
+#other-weapons-list img {
+  height: calc(75px * var(--minimize));
+  width: calc(75px * var(--minimize));
+}
+
+.other-weapons-rank {
+  height: 100%;
+  min-width: calc(62px * var(--minimize));
+  font-size: calc(20px * var(--minimize));
+  font-style: italic;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ct);
+  color: var(--sub);
+  font-family: Anuphan;
+}
+
+#other-weapons-list div {
+
+  margin: calc(0px * var(--minimize)) calc(10px * var(--minimize)) calc(0px * var(--minimize)) calc(2px * var(--minimize));
+  font-weight: 600;
+
+  font-family: Anuphan;
+  font-size: calc(17px * var(--minimize));
+  font-style: italic;
+}
+#other-weapons-list p:last-of-type {
+  font-size: calc(14px * var(--minimize)); font-weight: normal; margin-top: calc(3px * var(--minimize)); color: hsla(0, 0%, 100%, .75);
+}
+#other-weapons-list p:first-of-type {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding-right: 2px;
+}
+#weapon-description {
+  margin-top: 4px;
+  font-size: calc(15px * var(--minimize));
+  line-height: 1.4em;
+  font-family: Anuphan;
+  font-style: italic;
+  width: 100%;
+  color: hsla(0, 0%, 100%, .85);
+  padding-right: calc(2px * var(--minimize));
+  font-weight: normal;
+}
+
+
+#artifacts-section {
+  gap: calc(15px * var(--minimize));
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+#artifacts-description {
+  font-size: calc(15px * var(--minimize));
+  line-height: calc(22px * var(--minimize));
+  color: hsla(0, 0%, 100%, .85);
+  padding-right: calc(2px * var(--minimize));
+  font-family: Anuphan;
+  font-style: italic;
+  font-weight: normal;
+}
+#artifacts-description p:first-of-type {
+  margin-bottom: calc(7px * var(--minimize)); padding-bottom: calc(7px * var(--minimize));
+  margin-left: calc(170px * var(--minimize));
+  border-bottom: calc(1px * var(--minimize)) solid var(--bd);
+}
+#artifacts-main-stats {
+  display: grid;
+  gap: calc(5px * var(--minimize));
+  font-family: Anuphan;
+}
+
+#artifacts-main-stats li {
+  display: flex;
+  padding: calc(2px * var(--minimize)) calc(10px * var(--minimize));
+  border: 1px solid var(--bd);
+  border-radius: calc(4px * var(--minimize));
+  align-items: center;
+  justify-content: center;
+  gap: calc(5px * var(--minimize));
+  font-weight: 600;
+}
+#artifacts-main-stats li p {
+  color: hsla(0, 0%, 100%, .75); font-weight: normal; font-style: italic; font-size: calc(15px * var(--minimize));  line-height: 1.0em;
+}
+#artifacts-main-stats li img {
+  width: calc(35px * var(--minimize));
+}
+#artifacts-main {
+display: block; 
+}
+#artifacts-main img {
+  border-radius: calc(7px * var(--minimize));
+  float: left;
+  width: calc(160px * var(--minimize));
+  margin-right: calc(10px * var(--minimize));
+  margin-bottom: calc(0px * var(--minimize));
+  height: calc(160px * var(--minimize));
+}
+
+#artifacts-h3, #weapon-header h3 {
+  font-size: calc(19px * var(--minimize)); color: #ffce80; font-family: Anuphan; font-style: italic;
+  display: -webkit-box;
+          -webkit-line-clamp: 1;
+          line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+}
+#artifacts-container {
+  background: var(--sub); margin-top: calc(15px * var(--minimize)); border: 1px solid var(--bd); border-radius: calc(4px * var(--minimize));
+padding: calc(15px * var(--minimize)); position: relative; display: grid; flex-direction: column; align-items: center; gap: calc(10px * var(--minimize));
+}
+
+.stats-div {
+  display: flex;
+  align-items: center;
+}
+#other-artifacts {
+  display: grid;
+grid-template-columns: repeat(2, 1fr);
+margin-top: calc(15px * var(--minimize));
+gap: calc(15px * var(--minimize));
+
+}
+.other-artifacts-set {
+  font-size: calc(20px * var(--minimize));
+  height: auto;
+  padding: calc(5px * var(--minimize));
+  color: var(--sub);
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
+
+  background: var(--ct);
+}
+
+#other-artifacts section {
+  display: grid;
+  height: fit-content;
+  align-items: center;
+  background: var(--sub);
+  border: calc(2px * var(--minimize)) solid var(--bd);
+  border-bottom: calc(3px * var(--minimize)) solid var(--ct);
+}
+
+#other-artifacts img {
+  width: calc(72px * var(--minimize));
+}
+.other-artifacts-set-img-list {
+  display: flex; justify-content: space-around; padding: calc(5px * var(--minimize)) calc(0px * var(--minimize)); border-bottom: calc(2px * var(--minimize)) solid var(--bd);
+}
+.other-artifacts-set-description {
+  padding: calc(10px * var(--minimize)); display: grid; gap: calc(10px * var(--minimize));font-size: calc(15px * var(--minimize)); font-style: italic; color: hsla(0, 0%, 100%, .85);
+}
+.other-artifacts-set-description p:first-of-type {
+  padding-bottom: calc(10px * var(--minimize)); border-bottom: calc(1px * var(--minimize)) solid var(--bd);
+}
+#character-info {
+  display: flex;
+  align-items: center;
+  gap: calc(10px * var(--minimize));
+  justify-content: space-between;
+}
+
+#element {
+  border: calc(2px * var(--minimize)) solid var(--ct);
+  color: var(--ct);
+}
+
+#character-banner {
+  display: flex;
+  gap: calc(20px * var(--minimize));
+  justify-content: space-between;
+  padding: calc(10px * var(--minimize)) calc(0px * var(--minimize));
+  border-bottom: calc(1px * var(--minimize)) solid var(--bd);
+  border-top: calc(1px * var(--minimize)) solid var(--bd);
+  margin-top:calc(10px * var(--minimize)) ;
+  margin-bottom: calc(-5px * var(--minimize));
+}
+
+#character-description {
+  text-align: justify;
+  font-size: calc(16px * var(--minimize));
+  line-height: 1.2em;
+  color: #ffffffa1;
+  font-style: italic;
+}
+
+#character-header {
+  display: flex;
+  flex-direction: column;
+}
+
+#header-container {
+  padding-right: calc(20px * var(--minimize));
+  margin-bottom: -3px;
+  display: inline-flex;
+  align-items: center;
+  gap: calc(5px * var(--minimize));
+  background: var(--ct);
+  border-radius: calc(10px * var(--minimize)) calc(10px * var(--minimize)) calc(0px * var(--minimize)) calc(0px * var(--minimize));
+  overflow: hidden;
+}
+
+.header-icon {
+  display: flex;
+  transform: skewX(-12deg);
+  justify-content: center;
+  align-items: center;
+  width: calc(52px * var(--minimize));
+  height: calc(52px * var(--minimize));
+}
+
+.wrapped {
+  width: calc(102px * var(--minimize));
+  height: calc(72px * var(--minimize));
+}
+
+.icon {
+  width: calc(18px * var(--minimize))
+}
+
+.icon2 {
+  width: calc(35px * var(--minimize))
+}
+
+#header-title {
+  margin-left: calc(-15px * var(--minimize));
+  display: inline-block;
+  font-size: calc(21px * var(--minimize));
+  font-family: Anuphan;
+  color: var(--sub);
+  font-style: italic; 
+  text-transform: uppercase;
+}
+#header-title::after {
+  content: '( Suporte )';
+  font-weight: 500; white-space: nowrap; font-style: italic; color: var(--sub); font-family: Anuphan; font-size: calc(18px * var(--minimize)); text-transform: none;
+}
+#ascension-materials-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(10px * var(--minimize));
+  white-space: nowrap;
+  color: hsla(0, 0%, 100%, .75);
+}
+#ascension-materials-list li {
+  display: flex;
+  align-items: center;
+  gap: calc(10px * var(--minimize));
+  padding: calc(0px * var(--minimize));
+  justify-content: center;
+  border-radius: calc(0px * var(--minimize));
+  background: var(--sub);
+  font-size: calc(15px * var(--minimize));
+  padding: calc(5px * var(--minimize));
+  border: 1px solid var(--bd);
+  border-radius: calc(4px * var(--minimize));
+  border-bottom: calc(5px * var(--minimize)) solid var(--bd);
+  font-family: Anuphan;
+  overflow: hidden;
+}
+
+#ascension-materials-list img {
+  width: calc(40px * var(--minimize));
+  height: calc(40px * var(--minimize));
+}
+
+#ascension-materials-list p {
+  overflow: hidden; text-overflow: ellipsis;
+}
+#character-name {
+  font-size: min(calc(31px * var(--minimize)), 3.5vw);
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: bolder;
+  letter-spacing: calc(-0.3px * var(--minimize));
+}
+
+#character-name span {
+  font-size: calc(20px * var(--minimize));
+  margin-left: calc(-3px * var(--minimize));
+}
+#r5 {
+  
+  color: #ffce80;
+}
+#r4 {
+  
+  color: #9780ff;
+}
+
+#character-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#character-basic-stats-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: calc(5px * var(--minimize));
+  margin-bottom: calc(8px * var(--minimize));
+}
+
+#character-basic-stats-title {
+  white-space: nowrap;
+  font-size: calc(16px * var(--minimize));
+  font-family: Anuphan;
+}
+.title-square {
+  height: calc(12px * var(--minimize));
+  width: calc(12px * var(--minimize));
+  margin-right: calc(2px * var(--minimize));
+  border-radius: calc(2px * var(--minimize));
+  background: var(--ct);
+  display: inline-block;
+}
+
+.title-square:first-of-type {
+  display: none;
+}
+
+#character-basic-stats {
+      margin-bottom: calc(4px * var(--minimize));
+  }
+h1 {
+  border-bottom: 3px solid var(--ct);
+  margin: calc(60px * var(--minimize)) auto calc(0px * var(--minimize)) auto;
+  max-width: calc(955px * var(--minimize));
+}    
+
+#character-basic-stats-level {
+  display: flex;
+  gap: calc(5px * var(--minimize));
+  white-space: nowrap;
+  font-family: Plus Jakarta Sans;
+  width: 100%;
+  font-weight: normal;
+  color: hsla(0, 0%, 100%, .75); 
+  align-items: baseline;
+  font-style: italic;
+}
+.titles-h2 {
+  width: 100%;
+  border-bottom: 2px solid var(--ct);
+  padding-bottom: calc(5px * var(--minimize));
+  margin-bottom: calc(15px * var(--minimize));
+  font-size: calc(20px * var(--minimize));
+  font-family: Anuphan;
+  text-transform: uppercase;
+}
+.titles-h2::before {
+  height: calc(13px * var(--minimize));
+  width: calc(13px * var(--minimize));
+  margin-right: calc(7px * var(--minimize));
+  border-radius: calc(2px * var(--minimize));
+  background: var(--ct);
+  display: inline-block;
+  content: '';
+}
+.titles-h3 {
+  width: 100%;
+  border-bottom: 2px solid var(--ct);
+  padding-bottom: calc(5px * var(--minimize));
+  margin-bottom: calc(10px * var(--minimize));
+  font-size: calc(16px * var(--minimize));
+  font-family: Anuphan;
+  text-transform: uppercase;
+}
+.titles-h3::before {
+  height: calc(11px * var(--minimize));
+  width: calc(11px * var(--minimize));
+  margin-right: calc(7px * var(--minimize));
+  border-radius: calc(2px * var(--minimize));
+  background: var(--ct);
+  display: inline-block;
+  content: '';
+}
+#weapon-section {
+  gap: calc(10px * var(--minimize)); justify-content: space-between; display: flex; flex-direction: column;
+}
+#weapon-main {
+  display: flex; gap: calc(10px * var(--minimize));
+}
+#weapon-main img {
+  border-radius: calc(7px * var(--minimize));
+  width: calc(160px * var(--minimize));
+  height: calc(160px * var(--minimize));
+}
+#weapon-refinement-level{
+  display: flex;
+  justify-content: space-between;
+  gap:calc(10px * var(--minimize)); font-size: calc(15px * var(--minimize)); 
+  font-weight: bold;
+  align-items: baseline;
+}
+#weapon-refinement-level p {
+  white-space: nowrap; font-family: Anuphan;
+}
+#weapon-refinement-level span:first-of-type {
+  text-transform: uppercase;
+}
+#weapon-refinement-level span:last-of-type {
+  white-space: nowrap; font-weight: normal;
+  color: hsla(0, 0%, 100%, .75);
+  font-style: italic;
+}
+#teams-list {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: calc(20px * var(--minimize));
+max-width: calc(1000px * var(--minimize));
+}
+.team-card {
+list-style: none;
+background: var(--sub);
+border-bottom: calc(3px * var(--minimize)) solid var(--ct);
+position: relative;
+text-transform: uppercase;
+}
+.team-card p {
+font-weight: bold; font-size: calc(14px * var(--minimize)); 
+}
+.team-label {
+position: absolute;
+top: calc(-12px * var(--minimize));
+left: calc(-12px * var(--minimize));
+background: var(--ct);
+color: var(--sub);
+padding: 0.25rem 0.5rem;
+border-radius: calc(4px * var(--minimize));
+font-weight: bold;
+font-size: var(--minimize)rem;
+display: none;
+}
+caption {
+background: var(--ct); color: var(--sub); padding: calc(5px * var(--minimize)) ;text-align: center;font-weight: bold;
+}
+.team-character-list {
+display: flex;
+justify-content: space-between;
+}
+
+
+.team-character img {
+width: calc(74px * var(--minimize));
+height: 100%;
+height: calc(74px * var(--minimize));
+border-radius: calc(4px * var(--minimize));
+}
+.tooltip {
+display: none;
+position: absolute;
+bottom: 80%;
+left: 50%;
+transform: translateX(-50%);
+background: #333;
+padding: calc(6px * var(--minimize)) calc(10px * var(--minimize));
+border-radius: calc(6px * var(--minimize));
+font-size: 0.75rem;
+white-space: nowrap;
+}
+th, td {
+padding: calc(10px * var(--minimize)) calc(0px * var(--minimize)); border: 1px solid var(--bd);
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+}
+
+table {
+border-collapse: collapse; width: 100% ; text-align: center; border: 1px solid var(--bd); 
+}
+tr {
+
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+}
+#character-talent-priority ol {
+align-items: center;
+gap: calc(10px * var(--minimize));
+display: flex;
+text-align: center;
+text-transform: uppercase;
+font-weight: bold;
+justify-content: space-between;
+}
+
+#character-talent-priority li {
+list-style: none;
+border: 1px solid var(--bd);
+background: var(--sub);
+width: 100%;
+}
+#character-talent-priority li p:first-of-type {
+background: var(--ct);
+color: var(--sub);
+border-bottom: calc(1px * var(--minimize)) solid var(--bd);
+}
+#character-talent-priority li p {
+padding: calc(7px * var(--minimize)) calc(10px * var(--minimize));
+}
+
+#other-weapons-list li {
+display: flex;align-items: center; gap: calc(5px * var(--minimize)); border: 1px solid var(--bd); border-radius: calc(4px * var(--minimize));
+}
+#weapon-level {
+display: flex; margin-top: calc(5px * var(--minimize)); white-space: nowrap; gap: calc(10px * var(--minimize));   align-items: baseline; justify-content: space-between; font-weight: normal;
+                              color: hsla(0, 0%, 100%, .75);
+                              font-style: italic;
+                              font-family: Plus Jakarta Sans;
+}
+#weapon-main-stats hr {
+margin-bottom: calc(-10px * var(--minimize)); border: 0; height: calc(1px * var(--minimize)); width: 100%; background: var(--bd);
+}
+#weapon-main-stats {
+display: flex; flex-direction: column;
+gap: calc(6px * var(--minimize));
+}
+#weapon-stats {
+gap: calc(6px * var(--minimize));
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+#weapon-main-stats li {
+display: flex;
+gap: calc(8px * var(--minimize));
+font-style: italic;
+white-space: nowrap;
+justify-content: space-between;
+align-items: center;
+border: 1px solid var(--bd);
+border-radius: calc(4px * var(--minimize)); 
+padding: calc(3px * var(--minimize)) calc(10px * var(--minimize));
+border-top: none;
+}
+#weapon-main-stats span:first-of-type {
+color: hsla(0, 0%, 100%, .85); font-weight: 400;
+}
+#weapon-main-stats span:last-of-type {
+font-weight: bold;
+font-size: calc(20px * var(--minimize));
+}
+#artifacts-sub-stats {
+padding-top: calc(10px * var(--minimize)); border-top: calc(1px * var(--minimize)) solid var(--bd); 
+}
+#artifacts-sub-stats li {
+display: flex; padding: calc(7px * var(--minimize)) calc(4px * var(--minimize)); border: 1px solid var(--bd); border-radius: calc(4px * var(--minimize)); border-bottom: calc(5px * var(--minimize)) solid var(--bd);
+align-items: center; justify-content: center;gap: calc(5px * var(--minimize)); 
+
+}
+#artifacts-sub-stats ul {font-size: calc(15px * var(--minimize));color: hsla(0, 0%, 100%, .75); font-weight: normal; font-style: italic;
+display: grid;  grid-template-columns: repeat(4, 1fr); gap: calc(5px * var(--minimize)) ;
+
+}
+@media (min-width: 1355px) {
+ 
+  #artifacts-main-stats-section {
+      white-space: nowrap;
+  }
+  #artifacts-description p:last-of-type {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: auto;
+  }
+  #weapon-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4; /* 👈 número de linhas desejado */
+  -webkit-box-orient: vertical;
+  overflow: auto;
+  padding-right: calc(2px * var(--minimize));
+  }
+}
+@media (max-width: 1354px) {
+  #artifacts-h3, #weapon-header h3 {
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+      }
+ 
+  #artifacts-main-stats li {
+      padding: calc(5px * var(--minimize));
+      text-align: center;
+      gap: calc(0px * var(--minimize));
+      flex-direction: column;
+  }
+
+  #artifacts-main-stats li img {
+      width: calc(30px * var(--minimize));
+  }
+  h1 {
+      max-width: 855px;
+      margin-left: calc(50% + calc(37px * var(--minimize)));
+      width: 100%;
+      transform: translateX(-50%);
+  } 
+   main {
+      max-width: 855px;
+      margin-left: calc(50% + calc(37px * var(--minimize)));
+      transform: translateX(-50%);
+
+  }
+
+
+  #character-image {
+      width: calc(190px * var(--minimize));
+  }
+
+  #weapon-container {
+      display: grid;
+      gap: calc(10px * var(--minimize));
+  }
+
+  #other-weapons-list {
+      grid-template-columns: repeat(3, 1fr);
+  }
+
+  .other-weapons-rank {
+      min-width: calc(32px * var(--minimize));
+      font-size: calc(17px * var(--minimize));
+  }
+
+
+  #other-weapons-list div {
+
+      font-size: calc(14px * var(--minimize));
+      white-space: wrap;
+      margin: calc(0px * var(--minimize));
+      margin-right: calc(5px * var(--minimize));
+  }
+
+  #artifacts-section {
+      display: grid;
+  }
+
+  #artifacts-description {
+      width: auto;
+  }
+
+  #artifacts-main-stats {
+      display: grid;
+      gap: calc(5px * var(--minimize));
+      font-family: Anuphan;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+  }
+
+}
+
+@media (min-width: 971px) {
+  .links:hover img {
+  filter: brightness(-1000%);
+}
+nav:hover .names {
+  margin-left: calc(9px * var(--minimize));
+}
+nav:hover #logo {
+  margin-left: calc(0px * var(--minimize));
+}
+
+nav a:first-of-type:hover {
+  background: none;
+  opacity: 0.8;
+  transition: 0.2s;
+  color: #f5f5f5;
+}
+nav a:hover {
+  background: var(--ct);
+  transition: 0.1s;
+  color: var(--bg);
+}
+
+nav:hover {
+  width: calc(250px * var(--minimize));
+  transition: 0.3s; 
+}
+nav:not(:hover) {
+  
+  transition: 0.3s; 
+}
+nav:not(:hover) .names, nav:not(:hover) #logo {
+  transition: 0s  0.3s; 
+}
+}
+@media (max-width: 970px) {
+  h1 {
+      margin: calc(20px * var(--minimize)) calc(20px * var(--minimize)) 0px;
+      width: auto;
+      padding:calc(0px * var(--minimize)) ;
+      max-width: none;
+      transform: none;
+  } 
+  :root {
+    --minimize: 0.93;
+    }
+  body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  }
+  main {
+      padding: calc(0px * var(--minimize)) calc(20px * var(--minimize)) calc(0px * var(--minimize)) calc(20px * var(--minimize));
+width: auto;
+max-width: none;
+margin: calc(0px * var(--minimize));
+transform: none;
+  }
+
+  nav #titlessss{display: none;}
+nav {
+flex-direction: row;
+display: grid ;
+grid-template-columns: repeat(5, 1fr);
+align-items: center;
+padding: calc(10px * var(--minimize)) ; 
+width:calc(100% - calc(20px * var(--minimize)));
+bottom: 0;
+top: auto;
+border-top: calc(1px * var(--minimize)) solid var(--bd);
+border-bottom: calc(2px * var(--minimize)) solid var(--bd);
+border-right: none;
+background: var(--bg);
+height: fit-content;
+transition: 0s;
+}
+
+.links {
+padding: calc(0px * var(--minimize)) ;
+height: auto;
+flex-direction: column;
+  gap: calc(5px * var(--minimize));
+  padding: 0;
+}
+
+
+
+.names {
+max-width: calc(70px * var(--minimize));
+padding: calc(0px * var(--minimize));
+margin: calc(0px * var(--minimize));
+height: auto;
+overflow: hidden;
+text-transform: uppercase;
+font-weight: bold;
+font-family: Anuphan;
+text-overflow: ellipsis;
+font-size: calc(11px * var(--minimize));display: block;
+margin-top: calc(-2px * var(--minimize));
+}
+
+}
+@media (min-width: 826px) {
+  #character-header {
+    margin-top: 8px;
+  }
+  #character-basic-stats-title::before{
+      display: none;
+  }
+  #character-basic-stats-title {
+  margin-bottom: calc(0px * var(--minimize));
+  width: auto;
+  border-bottom: none;
+  padding-bottom: calc(0px * var(--minimize));
+}
+}
+@media (max-width: 825px) {
+  
+  #teams-list {
+      grid-template-columns: repeat(1, 1fr);
+  }
+  #character-image {
+      width: calc(270px * var(--minimize));
+  }
+
+
+
+  .title-square:first-of-type {
+  display: inline-block;
+}
+
+  #character-basic-stats-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 0;
+}
+
+#character-basic-stats-title {
+  width: 100%;
+  border-bottom: 2px solid var(--ct);
+  padding-bottom: calc(5px * var(--minimize));
+  font-size: calc(20px * var(--minimize));
+  white-space: nowrap;
+  font-family: Anuphan;
+}
+  
+  #ascension-materials-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  
+
+  #character-banner {
+      gap: calc(10px * var(--minimize));
+  }
+
+  #character-basic-stats {
+      margin-bottom: calc(0px * var(--minimize));
+  }
+
+  #character-image {
+      border-radius: calc(5px * var(--minimize));
+      margin-top: calc(0px * var(--minimize));
+      background: var(--ct2);
+      border: 1px solid var(--bd);
+      margin-bottom: calc(-4px * var(--minimize));
+  }
+
+  #character-info {
+      flex-direction: column;
+      border: calc(2px * var(--minimize)) solid var(--bd);
+      gap: 0;
+
+  }
+
+  #character-type {
+      gap: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+  }
+
+  #character-type p {
+      border-radius: calc(0px * var(--minimize));
+      border: 0;
+      border-top: calc(1px * var(--minimize)) solid var(--bd);
+      background: none;
+      justify-content: center;
+      padding: calc(7px * var(--minimize)) calc(10px * var(--minimize));
+  }
+
+  #character-type p:first-of-type {
+      border-right: calc(1px * var(--minimize)) solid var(--bd);
+  }
+
+  #character-header {
+      justify-content: space-between;
+      height: 100%;
+  }
+  #other-artifacts img {
+  width: calc(62px * var(--minimize));
+  }
+  #character-name {
+    padding: 6px 0px;
+  }
+}
+
+
+
+@media (max-width: 710px) {
+  #artifacts-sub-stats ul {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  #other-weapons-list {
+      grid-template-columns: repeat(1, 1fr);
+  }
+
+  #other-weapons-list div {
+      font-size: calc(17px * var(--minimize));
+      line-height: 1em;
+  }
+
+  .other-weapons-rank {
+      min-width: calc(62px * var(--minimize));
+      font-size: calc(20px * var(--minimize));
+  }
+  #other-artifacts {
+      grid-template-columns: repeat(1, 1fr);
+  }
+  #other-artifacts img {
+      width: calc(82px * var(--minimize));
+  }
+
+  #character-talent-priority li p:last-of-type {
+      font-size: min(calc(15px * var(--minimize)), 2.36vw);
+
+  }
+  #artifacts-main-stats {
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 568px) {
+  
+  #character-talent-priority ol {
+      flex-direction: column;
+  }
+  #character-talent-priority li p:last-of-type {
+      font-size: calc(16px * var(--minimize));
+  }
+  #weapon-main-stats li {
+      padding: calc(2px * var(--minimize)) calc(6px * var(--minimize));
+  }
+  #weapon-stats {
+      gap: calc(3px * var(--minimize));
+  }
+  #weapon-header {
+      padding-top: calc(0px * var(--minimize));
+  }
+  #weapon-main-stats{
+      gap: calc(2px * var(--minimize));
+  }
+  #artifacts-h3, #weapon-header h3 {
+      font-size: calc(18px * var(--minimize));
+  }
+  #weapon-main img, #artifacts-main img {
+      width: calc(120px * var(--minimize));
+      height: calc(120px * var(--minimize));
+  }
+  #artifacts-description p:first-of-type {
+  margin-left: calc(130px * var(--minimize));
+  }
+  #weapon-main-stats span,#weapon-level {
+      font-size: calc(14px * var(--minimize));
+  }
+  #weapon-main-stats li:last-of-type span:first-of-type {
+      max-width: calc(110px * var(--minimize));
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+  
+  #weapon-main-stats span:last-of-type {
+      font-size: calc(15px * var(--minimize));
+  }
+  #other-artifacts img {
+      width: calc(72px * var(--minimize));
+  }
+  #character-image {
+      width: calc(180px * var(--minimize));
+  }
+  
+  #character-basic-stats-list {
+      grid-template-columns: repeat(2, 1fr);
+  }
+ 
+
+  #character-type p {
+      border-radius: calc(0px * var(--minimize));
+      border: 0;
+      border-top: calc(1px * var(--minimize)) solid var(--bd);
+      background: none;
+      justify-content: center;
+    padding: calc(5px * var(--minimize)) calc(9px * var(--minimize));
+
+  }
+
+  #character-banner {
+    flex-direction: column;
+}
+#character-name {
+  font-size: min(calc(28px * var(--minimize)), 6.2vw);
+}
+#character-description {
+  font-size: calc(16px * var(--minimize));
+  text-align: left;
+}
+#character-image {
+  max-width: none;
+  border-radius: calc(15px * var(--minimize)) calc(15px * var(--minimize)) calc(0px * var(--minimize)) calc(0px * var(--minimize));
+  width: calc(100% - calc(2px * var(--minimize)));
+}
+
+#character-header {
+  gap: calc(10px * var(--minimize));
+}
+#character-type p {
+  padding: calc(5px * var(--minimize)) calc(10px * var(--minimize));
+}
+}
+
+@media (max-width: 485px) {
+  #other-weapons-list div {
+      font-size: calc(16px * var(--minimize));
+  }
+  :root {
+  --minimize: 0.9;
+  }
+  #weapon-main-stats li {
+      gap: 4px;
+  }
+  nav {
+      gap: calc(0px * var(--minimize));
+      padding: calc(10px * var(--minimize)) calc(5px * var(--minimize));
+      width: calc(100% - calc(10px * var(--minimize)));
+  }
+  #artifacts-sub-stats ul {
+      grid-template-columns: repeat(1, 1fr);
+  }
+  th, td {
+      font-size: calc(15px * var(--minimize));
+  }
+  #other-artifacts img {
+      width: calc(62px * var(--minimize));
+  }
+  .team-character img {
+      width: calc(64px * var(--minimize));
+      height: auto;
+  }
+  .other-weapons-rank {
+      min-width: calc(40px * var(--minimize));
+  }
+  #weapon-main-stats hr {
+      display: none;
+  }
+  
+
+  
+
+  #character-description {
+      text-align: left;
+  }
+
+  #ascension-materials-list {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+  }
+
+  
+
+  
+  .team-character {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: calc(4px * var(--minimize));
+  }
+  .team-card p {
+      max-width: 20vw;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+}
+@media (max-width: 320px) {
+  th, td {
+      font-size: calc(14px * var(--minimize));
+  }
+  .names {
+      font-size: calc(10px * var(--minimize));
+  }
+  .team-card p {
+      font-size: calc(12px * var(--minimize));
+  }
+  #other-artifacts img {
+      width: calc(55px * var(--minimize));
+  }
+  .team-character img {
+      width: calc(55px * var(--minimize));
+      height: auto;
+  }
+}
