@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { useLayoutEffect, useState } from 'react'
-import { formatarParaSlashCase } from '@/app/[id]/page'
 interface Props {
   data: {
     name: string
@@ -13,7 +12,11 @@ interface Props {
     }
   }
 }
-
+function formatarParaSlashCase(texto: string): string {
+  return texto             
+    .trim()                      
+    .replace(/\s+/g, '_')        
+}
 export default function ImagemResponsiva({ data }: Props) {
   const [isMobile, setIsMobile] = useState(false)
 

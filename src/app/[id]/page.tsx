@@ -9,7 +9,7 @@ import ScriptsClient from '@/components/scripts-client'
 import ImagemResponsiva from "@/components/CharacterImageChange";
 import Link from "next/link";
 
-export function formatarParaSlashCase(texto: string): string {
+function formatarParaSlashCase(texto: string): string {
     return texto             
       .trim()                      
       .replace(/\s+/g, '_')        
