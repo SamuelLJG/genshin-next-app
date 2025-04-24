@@ -7,9 +7,17 @@ import SliderHighlight from '@/components/SliderHighlight';
 import ptBr from '@/data/pt-br.json'
 import ScriptsClient from '@/components/scripts-client'
 import ImagemResponsiva from "@/components/CharacterImageChange";
+import Link from "next/link";
 
+export function formatarParaSlashCase(texto: string): string {
+    return texto             
+      .trim()                      
+      .replace(/\s+/g, '_')        
+  }
 export default async function Home( { params }:any ) {
+    
     const { id } = await params;
+    const id2 = id.replace(/-/g, "")
     const characterBuild:any = characters.find(p => p.name === id);
     const nomesDasArmas = [characterBuild.bestWeapon, ...characterBuild.otherWeapons];
     async function getArmas() {
@@ -34,10 +42,10 @@ export default async function Home( { params }:any ) {
     async function getData() {
       const armaNomeOriginal = encodeURIComponent(armasEN[0].name);
       const urls = [
-        `https://genshin-db-api.vercel.app/api/v5/characters?query=${id}&resultLanguage=portuguese`,
-        `https://genshin-db-api.vercel.app/api/v5/stats?folder=characters&query=${id}`,
+        `https://genshin-db-api.vercel.app/api/v5/characters?query=${id2}&resultLanguage=portuguese`,
+        `https://genshin-db-api.vercel.app/api/v5/stats?folder=characters&query=${id2}`,
         `https://genshin-db-api.vercel.app/api/v5/stats?folder=weapons&query=${armaNomeOriginal}`,
-        `https://genshin-db-api.vercel.app/api/v5/talents?query=${id}&resultLanguage=portuguese`
+        `https://genshin-db-api.vercel.app/api/v5/talents?query=${id2}&resultLanguage=portuguese`
       ];
       const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'reload' })));
       const data = await Promise.all(responses.map(res => res.json()));
@@ -49,8 +57,19 @@ export default async function Home( { params }:any ) {
       };
     }
     const { characterData, characterFolder, characterWeapons, characterTalents } = await getData();
+    function extrairAtePrimeiroPonto(texto: string): string {
+        return texto.split('.')[0];
+      }
+      function formatarParaKebabCase(texto: string): string {
+        return texto
+          .toLowerCase()               // tudo minúsculo
+          .trim()                      // remove espaços extras no começo/fim
+          .replace(/\s+/g, '-')        // troca espaços internos por hífens
+      }
+      
     return (
         <body id={characterData.elementText}>
+            <ScriptsClient/>
             <h1>
                 <div id="header-container">
                     <div className="header-icon">
@@ -73,7 +92,7 @@ export default async function Home( { params }:any ) {
                     <div id="character-main">
                         <div id="character-header">
                             <div id="character-info">
-                                    <h2 id="character-name">{characterData.name} <span id={`r${characterData.rarity}`} aria-hidden="true">{characterData.rarity}★</span> </h2>
+                                   <div id="character-name-box"><h2 id="character-name">{characterData.name}</h2><span id={`r${characterData.rarity}`} aria-hidden="true">{characterData.rarity}★</span> </div>  
                                 <div id="character-type">
                                     <p>
                                         <img src={`images/${characterData.weaponType}.webp`} alt=""/>
@@ -85,7 +104,7 @@ export default async function Home( { params }:any ) {
                                     </p>
                                 </div>
                             </div>
-                            <p id="character-description">{characterData.description}</p>
+                            <p id="character-description">{extrairAtePrimeiroPonto(characterData.description)}.</p>
                         </div>
                         <CharacterStatsSlider stats={characterFolder} stats2={characterData} stats3={ptBr}/>
                     </div>
@@ -314,14 +333,21 @@ export default async function Home( { params }:any ) {
                                 <tbody>
                                     <tr>
                                         <td className="team-character"><img src="images/Icons/mavuika.png" alt="Mavuika"/><p>Mavuika</p></td>
-                                        <td className="team-character"><img src="images/Icons/furina.png" alt="{characterData.name}"/><p>{characterData.name}</p></td>
+                                        
                                         <td className="team-character">
+                                        <Link href={formatarParaKebabCase(characterData.name)}>
+                                            <img src="images/Icons/furina.png" alt="{characterData.name}"/><p>{characterData.name}</p>
+                                            </Link>
+                                            </td>
+                                        <td className="team-character">
+                                            <Link href={'arlecchino'}>
                                         <img src="images/Icons/xilonen.png" alt="Xingqiu"/>
-                                        <p>Xilonen</p>
+                                        <p>Xilonen</p></Link>
                                         </td>
                                         <td className="team-character">
+                                        <Link href={'yumemizuki'}>
                                         <img src="images/Icons/bennett.png" alt="Sangonomiya Kokomi"/>
-                                        <p>Bennett</p>
+                                        <p>Bennett</p> </Link>
                                         </td>
                             </tr>
                             </tbody>
@@ -337,7 +363,7 @@ export default async function Home( { params }:any ) {
             <nav>
                 <h2>Menu Principal de Navegação</h2>
                 <a href="" id="titlessss">
-                    <div><Image width={52} height={52} src={`/images/${characterData.name}.png`} alt=""/></div>
+                    <div><Image width={52} height={52} src={`/images/Icons/${formatarParaSlashCase(characterData.name)}.png`} alt=""/></div>
                     <div id="logo">genshinbuild.com</div>
                 </a>
                 <a href="/" className="links">
@@ -373,8 +399,6 @@ export default async function Home( { params }:any ) {
 
                 </a>
             </nav>
-            
-            <ScriptsClient/>
             
             <SliderHighlight />
         </body>
