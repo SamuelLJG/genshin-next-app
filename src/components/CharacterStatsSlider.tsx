@@ -33,6 +33,9 @@ export default function CharacterStatsSlider({ stats, stats2, stats3 }: any) {
         if (resultado.includes('de Dano')) {
             resultado = resultado.replace(' de Dano', '').replace('Dano ', '')
         }
+        if (resultado.includes('de Energia')) {
+            resultado = resultado.replace(' de Energia', ' Bônus')
+        }
         return resultado
     }
 

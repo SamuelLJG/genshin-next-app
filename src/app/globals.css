@@ -26,7 +26,7 @@ body {
 
 #Hydro {
   --ct: #42b7ee;
-  --ct2: #104ec0;
+  --ct2: #1596e0;
 }
 
 #Dendro {
@@ -210,7 +210,10 @@ nav a:first-of-type {
   margin-left: calc(38px * var(--minimize));
   height: calc(32px * var(--minimize));
 }
-
+a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
 #logo {
  
 
@@ -604,6 +607,7 @@ display: block;
   font-size: calc(19px * var(--minimize)); color: #ffce80; font-family: Anuphan; font-style: italic;
   display: -webkit-box;
           -webkit-line-clamp: 1;
+          line-height: 1.1em;
           line-clamp: 1;
           -webkit-box-orient: vertical;
           overflow: hidden;
@@ -747,7 +751,7 @@ gap: calc(15px * var(--minimize));
   white-space: nowrap;
   color: hsla(0, 0%, 100%, .75);
 }
-#ascension-materials-list li {
+.ascension-materials-items {
   display: flex;
   align-items: center;
   gap: calc(10px * var(--minimize));
@@ -1065,6 +1069,9 @@ align-items: center; justify-content: center;gap: calc(5px * var(--minimize));
 display: grid;  grid-template-columns: repeat(4, 1fr); gap: calc(5px * var(--minimize)) ;
 
 }
+.none {
+  display: none;
+}
 @media (min-width: 1355px) {
  
   #artifacts-main-stats-section {
@@ -1086,7 +1093,22 @@ display: grid;  grid-template-columns: repeat(4, 1fr); gap: calc(5px * var(--min
   padding-right: calc(2px * var(--minimize));
   }
 }
+@media (min-width: 970px) and (max-width: 1354px) {
+  .compress-title {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (min-width: 825px) and (max-width: 870px) {
+  .compress-title {
+    max-width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
 @media (max-width: 1354px) {
+ 
   #artifacts-h3, #weapon-header h3 {
           -webkit-line-clamp: 2;
           line-clamp: 2;
@@ -1263,6 +1285,9 @@ margin-top: calc(-2px * var(--minimize));
 
 }
 @media (min-width: 826px) {
+  #character-description {
+    margin-top: 3px;
+  }
   #character-header {
     margin-top: 8px;
   }
@@ -1278,9 +1303,15 @@ margin-top: calc(-2px * var(--minimize));
   border-bottom: none;
   padding-bottom: calc(0px * var(--minimize));
 }
+
+.character-icon-mobile {
+  display: none;
+}
 }
 @media (max-width: 825px) {
-  
+  .character-icon-pc {
+    display: none;
+  }
   #teams-list {
       grid-template-columns: repeat(1, 1fr);
   }
@@ -1449,10 +1480,10 @@ margin-top: calc(-2px * var(--minimize));
       font-size: calc(14px * var(--minimize));
   }
   #weapon-main-stats li:last-of-type span:first-of-type {
-      max-width: calc(110px * var(--minimize));
-      width: 100%;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      
+        text-overflow: ellipsis;
+        max-width: 22vw;
+        overflow: hidden;
   }
   
   #weapon-main-stats span:last-of-type {
@@ -1548,6 +1579,21 @@ margin-top: calc(-2px * var(--minimize));
       overflow: hidden;
       text-overflow: ellipsis;
   }
+}
+@media (max-width: 340px) {
+  #weapon-main img, #artifacts-main img {
+    width: calc(100px * var(--minimize));
+    height: calc(100px * var(--minimize));
+}
+#artifacts-h3, #weapon-header h3 {
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+}
+@media (width <= 568px) {
+  #artifacts-description p:first-of-type {
+      margin-left: calc(110px * var(--minimize));
+  }
+}
 }
 @media (max-width: 320px) {
   th, td {

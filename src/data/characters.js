@@ -7,7 +7,23 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
+        teams: {
+            time1: {
+                functions: ['maindps', 'subdps', 'suporte', 'suporte'],
+                characters: ['Mavuika','Kaedehara Kazuha','Albedo','Xilonen']
+                
+            },
+            time1: {
+                functions: ['maindps', 'subdps', 'suporte', 'suporte'],
+                characters: ['Mavuika','Kaedehara Kazuha','Albedo','Xilonen']
+                
+            }
+        },
+
+
+            
+
+
         talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
     },
     {
@@ -373,6 +389,16 @@ export const characters = [
     {
         name: 'kaedehara-kazuha',
         function: 'Sub-DPS',
+        bestWeapon: 'Freedom-Sworn',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'kaeya',
+        function: 'Sub-DPS',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
@@ -423,8 +449,8 @@ export const characters = [
     {
         name: 'kinich',
         function: 'Sub-DPS',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestWeapon: 'Fang of the Mountain King',
+        otherWeapons: ['Beacon of the Reed Sea','Serpent Spine','Verdict'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[],[],[],[]],
@@ -443,8 +469,8 @@ export const characters = [
     {
         name: 'klee',
         function: 'Sub-DPS',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestWeapon: 'Kaguras Verity',
+        otherWeapons: ['Lost Prayer to the Sacred Winds','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[],[],[],[]],
@@ -472,6 +498,516 @@ export const characters = [
     },
     {
         name: 'lan-yan',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'layla',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'lisa',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'lynette',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'lyney',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'mavuika',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'mika',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'mona',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'mualani',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'nahida',
+        function: 'Sub-DPS',
+        bestWeapon: 'Floating Dreams',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'navia',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'neuvillette',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'nilou',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'ningguang',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'noelle',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'ororon',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'qiqi',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'raiden-shogun',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'razor',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'rosaria',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'sangonomiya-kokomi',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'sayu',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'sethos',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'shenhe',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'shikanoin-heizou',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'sigewinne',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'tartaglia',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'thoma',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'tighnari',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'traveler-anemo',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'traveler-geo',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'traveler-electro',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'traveler-dendro',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'traveler-hydro',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'traveler-pyro',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'varesa',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'venti',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'wanderer',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'wriothesley',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'xiangling',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'xianyun',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'xiao',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'xilonen',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'xingqiu',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'xinyan',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'yae-miko',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'yanfei',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'yaoyao',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'yelan',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'yoimiya',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'yumemizuki-mizuki',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[],[],[],[]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+    },
+    {
+        name: 'zhongli',
         function: 'Sub-DPS',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],

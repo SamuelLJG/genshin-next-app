@@ -1,5 +1,6 @@
 // components/WeaponStatsSlider.tsx
 'use client'
+import { match } from 'assert'
 import { useState } from 'react'
 
 export default function WeaponStatsSlider({ arma2,arma3 }: { arma2: any, arma3:any }) {
@@ -11,6 +12,13 @@ export default function WeaponStatsSlider({ arma2,arma3 }: { arma2: any, arma3:a
 
     const descricao1 = arma2?.[`${weaponstats}`]?.attack
     const descricao2 = arma2?.[`${weaponstats}`]?.specialized
+    let calc = descricao2
+    if (arma3.mainStatText !== "Proficiência Elemental") {
+        calc = (Math.round(descricao2 * 1000 ** 1) / 10 ** 1) + '%'
+    } else {
+        calc = (Math.round(descricao2 * 10 ** 1) / 10 ** 1)
+    }
+       
     
     return (
             <div id="weapon-stats">
@@ -27,7 +35,7 @@ export default function WeaponStatsSlider({ arma2,arma3 }: { arma2: any, arma3:a
             <li>
                 <span>{arma3.mainStatText}</span>
                 <hr/>
-                <span>{Math.round(descricao2 * 1000 ** 1) / 10 ** 1}%</span>
+                <span>{calc}</span>
             </li>
         </ul>
         </div>

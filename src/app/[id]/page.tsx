@@ -5,8 +5,6 @@ import WeaponStatsSlider from "@/components/WeaponStatsSlider";
 import CharacterStatsSlider from "@/components/CharacterStatsSlider";
 import SliderHighlight from '@/components/SliderHighlight';
 import ptBr from '@/data/pt-br.json'
-import ScriptsClient from '@/components/scripts-client'
-import ImagemResponsiva from "@/components/CharacterImageChange";
 import Link from "next/link";
 
 function formatarParaSlashCase(texto: string): string {
@@ -16,8 +14,7 @@ function formatarParaSlashCase(texto: string): string {
   }
 export default async function Home( { params }:any ) {
     
-    const { id } = await params;
-    const id2 = id.replace(/-/g, "")
+    let { id } = await params;
     const characterBuild:any = characters.find(p => p.name === id);
     const nomesDasArmas = [characterBuild.bestWeapon, ...characterBuild.otherWeapons];
     async function getArmas() {
@@ -39,13 +36,52 @@ export default async function Home( { params }:any ) {
       return { armasPT, armasEN };
     }
     const { armasPT, armasEN } = await getArmas();
+    const id2 = (
+        id === 'traveler-hydro' ||
+        id === 'traveler-dendro' ||
+        id === 'traveler-anemo' ||
+        id === 'traveler-geo' ||
+        id === 'traveler-electro' ||
+        id === 'traveler-pyro'
+      ) ? 'aether' : id.replace(/-/g, "")
+      ;
+      let id3:any;
+
+switch (id) {
+  case 'traveler-hydro':
+    id3 = 'Traveler (Hydro)';
+    break;
+  case 'traveler-dendro':
+    id3 = 'Traveler (Dendro)';
+    break;
+  case 'traveler-anemo':
+    id3 = 'Traveler (Anemo)';
+    break;
+  case 'traveler-geo':
+    id3 = 'Traveler (Geo)';
+    break;
+  case 'traveler-electro':
+    id3 = 'Traveler (Electro)';
+    break;
+  case 'traveler-pyro':
+    id3 = 'Traveler (Pyro)';
+    break;
+  case 'andarilho':
+    id3 = 'wanderer';
+    break;
+  default:
+    id3 = id.replace(/-/g, "");
+    break;
+}
+      formatarParaKebabCase(id2)
     async function getData() {
       const armaNomeOriginal = encodeURIComponent(armasEN[0].name);
+     
       const urls = [
         `https://genshin-db-api.vercel.app/api/v5/characters?query=${id2}&resultLanguage=portuguese`,
         `https://genshin-db-api.vercel.app/api/v5/stats?folder=characters&query=${id2}`,
         `https://genshin-db-api.vercel.app/api/v5/stats?folder=weapons&query=${armaNomeOriginal}`,
-        `https://genshin-db-api.vercel.app/api/v5/talents?query=${id2}&resultLanguage=portuguese`
+        `https://genshin-db-api.vercel.app/api/v5/talents?query=${id3}&resultLanguage=portuguese`
       ];
       const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'reload' })));
       const data = await Promise.all(responses.map(res => res.json()));
@@ -66,10 +102,63 @@ export default async function Home( { params }:any ) {
           .trim()                      // remove espaços extras no começo/fim
           .replace(/\s+/g, '-')        // troca espaços internos por hífens
       }
-      
+      function formatCharacterName(name: string): string {
+        if (name === "Shogun Raiden") {
+          const parts = name.split(" ");
+          return `${parts[1]} ${parts[0]}`;
+        }
+        return name;
+      }
+      const formattedName = formatCharacterName(characterData.name);
+      let travelerName = formattedName;
+      switch (id3) {
+            case 'Traveler (Geo)' :
+            travelerName = 'Viajante Geo'
+            break;
+            case 'Traveler (Anemo)' :
+            travelerName = 'Viajante Anemo'
+            break;
+            case 'Traveler (Pyro)' :
+            travelerName = 'Viajante Pyro'
+            break;
+            case 'Traveler (Dendro)' :
+            travelerName = 'Viajante Dendro'
+            break;
+            case 'Traveler (Electro)' :
+            travelerName = 'Viajante Electro'
+            break;
+            case 'Traveler (Hydro)' :
+            travelerName = 'Viajante Hydro'
+            break;
+      }
+const element = characterData.elementText
+let elementFormatted;
+switch (travelerName) {
+      case 'Viajante Anemo':
+        elementFormatted = 'Anemo';
+      break;
+      case 'Viajante Hydro':
+        elementFormatted = 'Hydro';
+      break;
+      case 'Viajante Dendro':
+        elementFormatted = 'Dendro';
+      break;
+      case 'Viajante Geo':
+        elementFormatted = 'Geo';
+      break;
+      case 'Viajante Pyro':
+        elementFormatted = 'Pyro';
+      break;
+      case 'Viajante Electro':
+        elementFormatted = 'Electro';
+      break;
+    default:
+        elementFormatted = characterData.elementText; // mantém o valor original
+      break;
+  }
     return (
-        <body id={characterData.elementText}>
-            <ScriptsClient/>
+        <body id={elementFormatted}>
+            
             <h1>
                 <div id="header-container">
                     <div className="header-icon">
@@ -81,26 +170,45 @@ export default async function Home( { params }:any ) {
                         </svg>
                     </div>
                     <div id="header-title">
-                    &nbsp;{characterData.name}{" "}Build{" "}
+                    &nbsp;{travelerName}{" "}Build{" "}
                         
                     </div>
                 </div>
             </h1>
             <main id="main-content">
                 <section id="character-banner">
-                <ImagemResponsiva data={characterData}/>
+                <Image
+        id="character-image"
+        priority
+        className={`star${characterData.rarity} character-icon-pc`}
+        src={`/images/Icons/${formatarParaSlashCase(travelerName=== 'Andarilho' ? 'Wanderer' : travelerName)}.png`}
+        alt="Imagem Desktop"
+        width={256}
+        height={256}
+        
+        quality={90}
+      />
+      <Image
+        id="character-image"
+        priority
+        className={`star${characterData.rarity} character-icon-mobile`}
+        src={`/images/Banners/${formatarParaSlashCase(travelerName=== 'Andarilho' ? 'Wanderer' : travelerName)}_Card.png`}
+        alt="Imagem Mobile"
+        width={814}
+        height={499}
+      />
                     <div id="character-main">
                         <div id="character-header">
                             <div id="character-info">
-                                   <div id="character-name-box"><h2 id="character-name">{characterData.name}</h2><span id={`r${characterData.rarity}`} aria-hidden="true">{characterData.rarity}★</span> </div>  
+                                   <div id="character-name-box"><h2 id="character-name" className={id=== 'sangonomiya-kokomi' ? 'compress-title' : ''}>{travelerName}</h2><span id={`r${characterData.rarity}`} aria-hidden="true">{characterData.rarity}★</span> </div>  
                                 <div id="character-type">
                                     <p>
                                         <img src={`images/${characterData.weaponType}.webp`} alt=""/>
                                         {characterData.weaponText}
                                     </p>
                                     <p id="element">
-                                        <img src={`images/${characterData.elementText}.webp`} alt=""/>
-                                        {characterData.elementText}
+                                        <img src={`images/${elementFormatted}.webp`} alt=""/>
+                                        {elementFormatted}
                                     </p>
                                 </div>
                             </div>
@@ -110,34 +218,34 @@ export default async function Home( { params }:any ) {
                     </div>
                 </section>
                 <section id="ascension-materials">
-                    <h2 className="titles-h2">{characterData.name}{" "}{ptBr.ascensionMaterials}</h2>
+                    <h2 className="titles-h2">{travelerName}{" "}{ptBr.ascensionMaterials}</h2>
                     <ul id="ascension-materials-list">
-                        <li>
+                        <li className="ascension-materials-items">
                             <Image width={256} height={256} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend1[1].id}.png`}
                             alt=""/>
                             <p>{characterData.costs.ascend1[1].name}</p>
                         </li>
-                        <li>
+                        <li className="ascension-materials-items">
                             <Image width={256} height={256} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend1[2].id}.png`}
                             alt=""/>
                             <p>{characterData.costs.ascend1[2].name}</p>
                         </li>
-                        <li>
+                        <li className={id2=== 'aether' ? 'none' : 'ascension-materials-items'}>
                             <Image width={256} height={256} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend5[2].id}.png`}
                             alt=""/>
                             <p>{characterData.costs.ascend5[2].name}</p>
                         </li>
-                        <li>
+                        <li className="ascension-materials-items">
                             <Image width={256} height={256} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend1[3].id}.png`}
                             alt=""/>
                             <p>{characterData.costs.ascend1[3].name}</p>
                         </li>
-                        <li>
+                        <li className="ascension-materials-items">
                             <Image width={256} height={256} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterTalents.costs.lvl2[1].id}.png`}
                             alt=""/>
                             <p>{characterTalents.costs.lvl2[1].name}</p>
                         </li>
-                        <li>
+                        <li className="ascension-materials-items">
                             <Image width={256} height={256} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterTalents.costs.lvl7[3].id}.png`}
                             alt=""/>
                             <p>{characterTalents.costs.lvl7[3].name}</p>
@@ -145,7 +253,7 @@ export default async function Home( { params }:any ) {
                     </ul>
                 </section>
                 <section>
-                    <h2 className="titles-h2">{characterData.name}{" "}{ptBr.bestWeapon}</h2>
+                    <h2 className="titles-h2">{travelerName}{" "}{ptBr.bestWeapon}</h2>
                         <div id="weapon-container">
                             <section id="weapon-section">
                                 <div id="weapon-main">
@@ -218,7 +326,7 @@ export default async function Home( { params }:any ) {
                         </div>
                 </section>
                 <section>
-                    <h2 className="titles-h2">{characterData.name}{" "}{ptBr.bestArtifacts}</h2>
+                    <h2 className="titles-h2">{travelerName}{" "}{ptBr.bestArtifacts}</h2>
                     <div id="artifacts-container">
                         <div id="artifacts-section">
                             <section id="artifacts-main">
@@ -309,7 +417,7 @@ export default async function Home( { params }:any ) {
                     </div>
                 </section>
                 <section id="character-talent-priority">
-                    <h2 className="titles-h2">{characterData.name}{" "}{ptBr.talentPriority}</h2>
+                    <h2 className="titles-h2">{travelerName}{" "}{ptBr.talentPriority}</h2>
                     <ol>
                         <li><p>{ptBr.first}</p><p>{characterBuild.talentPriority[0]}</p></li>
                         <li><p>{ptBr.second}</p><p>{characterBuild.talentPriority[1]}</p></li>
@@ -317,11 +425,11 @@ export default async function Home( { params }:any ) {
                     </ol>
                 </section>
                 <section>
-                    <h2 className="titles-h2">{characterData.name}{" "}{ptBr.bestTeams}</h2>
+                    <h2 className="titles-h2">{travelerName}{" "}{ptBr.bestTeams}</h2>
                     <ol id="teams-list">
                         <li className="team-card">
                             <table>
-                                <caption>#1 FURINA TIME DE VAPORIZAÇÃO</caption>
+                                <caption>#1</caption>
                                 <thead>
                                     <tr>
                                         <th>Main DPS</th>
@@ -332,21 +440,21 @@ export default async function Home( { params }:any ) {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td className="team-character"><img src="images/Icons/mavuika.png" alt="Mavuika"/><p>Mavuika</p></td>
+                                        <td className="team-character"><img src="images/Team-Icons/mavuika.png" alt="Mavuika"/><p>Mavuika</p></td>
                                         
                                         <td className="team-character">
-                                        <Link href={formatarParaKebabCase(characterData.name)}>
-                                            <img src="images/Icons/furina.png" alt="{characterData.name}"/><p>{characterData.name}</p>
+                                        <Link href={formatarParaKebabCase(travelerName)}>
+                                            <img src="images/Team-Icons/furina.png" alt="{travelerName}"/><p>{travelerName}</p>
                                             </Link>
                                             </td>
                                         <td className="team-character">
                                             <Link href={'arlecchino'}>
-                                        <img src="images/Icons/xilonen.png" alt="Xingqiu"/>
+                                        <img src="images/Team-Icons/xilonen.png" alt="Xingqiu"/>
                                         <p>Xilonen</p></Link>
                                         </td>
                                         <td className="team-character">
                                         <Link href={'yumemizuki'}>
-                                        <img src="images/Icons/bennett.png" alt="Sangonomiya Kokomi"/>
+                                        <img src="images/Team-Icons/bennett.png" alt="Sangonomiya Kokomi"/>
                                         <p>Bennett</p> </Link>
                                         </td>
                             </tr>
@@ -363,7 +471,7 @@ export default async function Home( { params }:any ) {
             <nav>
                 <h2>Menu Principal de Navegação</h2>
                 <a href="" id="titlessss">
-                    <div><Image width={52} height={52} src={`/images/Icons/${formatarParaSlashCase(characterData.name)}.png`} alt=""/></div>
+                    <div><Image width={52} height={52} src={`/images/Icons/${formatarParaSlashCase(travelerName === 'Andarilho' ? 'Wanderer' : travelerName)}.png`} alt=""/></div>
                     <div id="logo">genshinbuild.com</div>
                 </a>
                 <a href="/" className="links">
