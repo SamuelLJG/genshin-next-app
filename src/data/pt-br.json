@@ -1,4 +1,5 @@
 {
+    "basicStats": "Estatísticas Básicas",
     "ascensionMaterials": "Materiais de Ascensão",
     "bestWeapon": "Melhor Arma",
     "refinement": "Refinamento",
@@ -24,6 +25,9 @@
     "talents": "Talentos",
     "passives": "Passivas",
     "constellations": "Constelações",
-    "hp": "Vida Básica"
+    "hp": "Vida Básica",
+    "atk": "Ataque Básico",
+    "def": "Defesa Básica",
+    "statsIconDescription": "Ícone representando"
 }
   

@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useLayoutEffect } from 'react'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
@@ -7,8 +7,8 @@ export default function CharacterStatsSlider({ stats, stats2, stats3 }: any) {
     const pathname = usePathname()
     const [characterlvl, setCharacterStats] = useState(90)
 
-    // Resetar o slider quando a rota mudar (inclusive ao voltar para a página)
-    useEffect(() => {
+    // Resetar o slider para 90 quando a rota mudar — ANTES da pintura
+    useLayoutEffect(() => {
         setCharacterStats(90)
     }, [pathname])
 
@@ -20,9 +20,10 @@ export default function CharacterStatsSlider({ stats, stats2, stats3 }: any) {
     const descricao2 = Math.round(stats?.[`${characterlvl}`]?.attack)
     const descricao3 = Math.round(stats?.[`${characterlvl}`]?.defense)
     const descricao4 = stats?.[`${characterlvl}`]?.specialized
+
     let calc = descricao4
     if (stats2.substatText !== "Proficiência Elemental") {
-        calc = (Math.round(descricao4 * 1000 ** 1) / 10 ** 1) + '%'
+        calc = (Math.round(descricao4 * 1000) / 10) + '%'
     }
 
     function formatarSubstat(texto: string): string {
@@ -42,7 +43,7 @@ export default function CharacterStatsSlider({ stats, stats2, stats3 }: any) {
     return (
         <section id="character-basic-stats">
             <div id="character-basic-stats-flex">
-                <h2 id="character-basic-stats-title" className="titles-h2">Estatísticas Básicas</h2>
+                <h2 id="character-basic-stats-title" className="titles-h2">{stats3.basicStats}</h2>
                 <div id="character-basic-stats-level">
                     <span>Nv.&nbsp;{characterlvl}</span>
                     <input
@@ -57,28 +58,28 @@ export default function CharacterStatsSlider({ stats, stats2, stats3 }: any) {
             <ul id="character-basic-stats-list">
                 <li>
                     <p>
-                        <img src="https://www.prydwen.gg/static/8aee0c2fe3ebac754669702c71428321/8fcc8/stat_hp.webp" alt="Ícone representando Vida Básica" />
+                        <Image width={25} height={25} src={`/images/Basic_HP.webp`} alt={`${stats3.statsIconDescription} ${stats3.hp}`} />
                         {stats3.hp}
                     </p>
                     <span>{descricao1}</span>
                 </li>
                 <li>
                     <p>
-                        <img src="https://www.prydwen.gg/static/d8d4e909851661548e2f972ce28e60c8/8fcc8/stat_atk.webp" alt="Ícone representando Ataque Básico" />
-                        Ataque Básico
+                        <Image width={25} height={25} src={`/images/Basic_ATK.webp`} alt={`${stats3.statsIconDescription} ${stats3.atk}`} />
+                        {stats3.atk}
                     </p>
                     <span>{descricao2}</span>
                 </li>
                 <li>
                     <p>
-                        <img src="https://www.prydwen.gg/static/8761d1d45b2e04339d837d3980965105/8fcc8/stat_def.webp" alt="Ícone representando Defesa Básica" />
-                        Defesa Básica
+                        <Image width={25} height={25} src={`/images/Basic_DEF.webp`} alt={`${stats3.statsIconDescription} ${stats3.def}`} />
+                        {stats3.def}
                     </p>
                     <span>{descricao3}</span>
                 </li>
                 <li>
                     <p>
-                        <Image width={25} height={25} src={`/images/${stats2.substatType}.png`} alt={`${stats2.substatText}`} />
+                        <Image width={25} height={25} src={`/images/${stats2.substatType}.png`} alt={`${stats3.statsIconDescription} ${stats2.substatText}`} />
                         {formatarSubstat(stats2.substatText)}
                     </p>
                     <span>{calc}</span>

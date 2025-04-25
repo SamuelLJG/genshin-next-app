@@ -6,12 +6,13 @@ import CharacterStatsSlider from "@/components/CharacterStatsSlider";
 import SliderHighlight from '@/components/SliderHighlight';
 import ptBr from '@/data/pt-br.json'
 import Link from "next/link";
+import ScriptsClient from "@/components/scripts-client";
 
 function formatarParaSlashCase(texto: string): string {
     return texto             
       .trim()                      
       .replace(/\s+/g, '_')        
-  }
+}
 export default async function Home( { params }:any ) {
     
     let { id } = await params;
@@ -26,16 +27,10 @@ export default async function Home( { params }:any ) {
         })
       );
       const armasPT = await Promise.all(responsesPT.map(res => res.json()));
-      const responsesEN = await Promise.all(
-        nomesDasArmas.map(nome => {
-          const nomeLimpo = encodeURIComponent(nome.trim());
-          return fetch(`${baseURL}${nomeLimpo}`, { cache: 'reload' });
-        })
-      );
-      const armasEN = await Promise.all(responsesEN.map(res => res.json()));
-      return { armasPT, armasEN };
+     
+      return { armasPT };
     }
-    const { armasPT, armasEN } = await getArmas();
+    const { armasPT } = await getArmas();
     const id2 = (
         id === 'traveler-hydro' ||
         id === 'traveler-dendro' ||
@@ -75,12 +70,11 @@ switch (id) {
 }
       formatarParaKebabCase(id2)
     async function getData() {
-      const armaNomeOriginal = encodeURIComponent(armasEN[0].name);
      
       const urls = [
         `https://genshin-db-api.vercel.app/api/v5/characters?query=${id2}&resultLanguage=portuguese`,
         `https://genshin-db-api.vercel.app/api/v5/stats?folder=characters&query=${id2}`,
-        `https://genshin-db-api.vercel.app/api/v5/stats?folder=weapons&query=${armaNomeOriginal}`,
+        `https://genshin-db-api.vercel.app/api/v5/stats?folder=weapons&query=${characterBuild.bestWeapon}`,
         `https://genshin-db-api.vercel.app/api/v5/talents?query=${id3}&resultLanguage=portuguese`
       ];
       const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'reload' })));
@@ -158,7 +152,6 @@ switch (travelerName) {
   }
     return (
         <body id={elementFormatted}>
-            
             <h1>
                 <div id="header-container">
                     <div className="header-icon">
@@ -175,8 +168,10 @@ switch (travelerName) {
                     </div>
                 </div>
             </h1>
+
             <main id="main-content">
                 <section id="character-banner">
+
                 <Image
         id="character-image"
         priority
@@ -185,8 +180,6 @@ switch (travelerName) {
         alt="Imagem Desktop"
         width={256}
         height={256}
-        
-        quality={90}
       />
       <Image
         id="character-image"
@@ -194,8 +187,8 @@ switch (travelerName) {
         className={`star${characterData.rarity} character-icon-mobile`}
         src={`/images/Banners/${formatarParaSlashCase(travelerName=== 'Andarilho' ? 'Wanderer' : travelerName)}_Card.png`}
         alt="Imagem Mobile"
-        width={814}
-        height={499}
+        width={530}
+        height={299}
       />
                     <div id="character-main">
                         <div id="character-header">
@@ -507,7 +500,7 @@ switch (travelerName) {
 
                 </a>
             </nav>
-            
+            <ScriptsClient/>
             <SliderHighlight />
         </body>
     )}

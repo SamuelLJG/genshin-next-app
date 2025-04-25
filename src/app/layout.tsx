@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Anuphan, Plus_Jakarta_Sans } from 'next/font/google'
 import "./globals.css";
-import ScriptsClient from "@/components/scripts-client";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,7 +25,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ScriptsClient/>
       {children}
     </html>
   );

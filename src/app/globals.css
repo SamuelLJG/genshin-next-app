@@ -652,6 +652,7 @@ gap: calc(15px * var(--minimize));
 
 #other-artifacts img {
   width: calc(72px * var(--minimize));
+  height: calc(72px * var(--minimize));
 }
 .other-artifacts-set-img-list {
   display: flex; justify-content: space-around; padding: calc(5px * var(--minimize)) calc(0px * var(--minimize)); border-bottom: calc(2px * var(--minimize)) solid var(--bd);
@@ -1399,6 +1400,7 @@ margin-top: calc(-2px * var(--minimize));
   }
   #other-artifacts img {
   width: calc(62px * var(--minimize));
+  height: calc(62px * var(--minimize));
   }
   #character-name {
     padding: 6px 0px;
@@ -1429,6 +1431,7 @@ margin-top: calc(-2px * var(--minimize));
   }
   #other-artifacts img {
       width: calc(82px * var(--minimize));
+      height: calc(82px * var(--minimize));
   }
 
   #character-talent-priority li p:last-of-type {
@@ -1491,6 +1494,7 @@ margin-top: calc(-2px * var(--minimize));
   }
   #other-artifacts img {
       width: calc(72px * var(--minimize));
+      height: calc(72px * var(--minimize));
   }
   #character-image {
       width: calc(180px * var(--minimize));
@@ -1540,6 +1544,7 @@ margin-top: calc(-2px * var(--minimize));
   }
   #other-artifacts img {
       width: calc(62px * var(--minimize));
+      height: calc(62px * var(--minimize));
   }
   .team-character img {
       width: calc(64px * var(--minimize));
@@ -1607,6 +1612,7 @@ margin-top: calc(-2px * var(--minimize));
   }
   #other-artifacts img {
       width: calc(55px * var(--minimize));
+      height: calc(55px * var(--minimize));
   }
   .team-character img {
       width: calc(55px * var(--minimize));
