@@ -4,7 +4,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   images: {
     domains: ['gi.yatta.moe','enka.network'],
-    unoptimized: true, // ✅ adiciona o domínio aqui
+    unoptimized: true,
   },
 };
 
