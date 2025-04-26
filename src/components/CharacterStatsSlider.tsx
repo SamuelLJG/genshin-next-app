@@ -29,7 +29,7 @@ export default function CharacterStatsSlider({ stats, stats2, stats3 }: any) {
     function formatarSubstat(texto: string): string {
         let resultado = texto
         if (resultado === 'Proficiência Elemental') {
-            resultado = 'Proficiência'
+            resultado = 'Prof Elem.'
         }
         if (resultado.includes('de Dano')) {
             resultado = resultado.replace(' de Dano', '').replace('Dano ', '')

@@ -2,1641 +2,1745 @@ export const characters = [
     
     {
         name: 'albedo',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [
-            [{"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}]
+            [{"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}]
         ],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'geo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'geo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'alhaitham',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'primordial jade cutter',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [
-            [{"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}]
+            [{"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}]
         ],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'dendro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'dendro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'aloy',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'cryo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'amber',
-        function: 'Sub-DPS',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        function: 'subDps',
+        bestWeapon: 'Elegy for the End',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'pyro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'pyro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'arataki-itto',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [
-            [{"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"kaedehara-kazuha": 'Main DPS'}],
-            [{"nahida": 'Main DPS'},
-                {"navia": 'Sub-DPS'},
-                {"arlecchino": 'Suporte'},
-                {"kaedehara-kazuha": 'Main DPS'}],
-                [{"ningguang": 'Main DPS'},
-                    {"navia": 'Sub-DPS'},
-                    {"arlecchino": 'Suporte'},
-                    {"kaedehara-kazuha": 'Main DPS'}]
+            [{"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"kaedehara-kazuha": 'mainDps'}],
+            [{"nahida": 'mainDps'},
+                {"navia": 'subDps'},
+                {"arlecchino": 'support'},
+                {"kaedehara-kazuha": 'mainDps'}],
+                [{"ningguang": 'mainDps'},
+                    {"navia": 'subDps'},
+                    {"arlecchino": 'support'},
+                    {"kaedehara-kazuha": 'mainDps'}]
         ],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'geo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'geo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'arlecchino',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Crimson Moons Semblance',
         otherWeapons: ['Primordial Jade Winged-Spear','Staff of the Scarlet Sands','Deathmatch'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith', 'Gilded Dreams'],
         teams: [[
-            {"mavuika": 'Main DPS'},
-            {"nilou": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}]
+            {"mavuika": 'mainDps'},
+            {"nilou": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}]
         ],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'pyro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'pyro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'baizhu',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'dendro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'dendro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'beidou',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'electro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'electro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'barbara',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'hydro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'hydro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'bennett',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'FAVONIUSSWORD',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'pyro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'pyro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'candace',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'hydro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'hydro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'charlotte',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'cryo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'chasca',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'anemo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'anemo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'chevreuse',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'favonius lance',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'pyro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'pyro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'chiori',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'geo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'geo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'chongyun',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'cryo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'citlali',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'cryo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'clorinde',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'electro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'electro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'collei',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'favonius bow',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'dendro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'dendro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'cyno',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'electro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'electro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'dehya',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'pyro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'pyro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'diluc',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'pyro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'pyro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'diona',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'cryo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'dori',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'electro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'electro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'emilie',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'dendro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'dendro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'eula',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'cryo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'faruzan',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'anemo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'anemo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'fischl',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'electro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'electro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'freminet',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'cryo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'furina',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Splendor of Tranquil Waters',
         otherWeapons: ['Primordial Jadecutter','Festering Desire ','Key of Khaj-Nisut'],
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nahida": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         twoPieces: ['Tenacity of the Millelith', 'Golden Troupe'],
-        elementType: 'hydro'
+        elementType: 'hydro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'gaming',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'pyro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'ganyu',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'cryo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'gorou',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'geo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'geo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'hu-tao',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'pyro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'pyro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'iansan',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'electro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'electro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'jean',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'anemo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'anemo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'kachina',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'dragon spear',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'geo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'geo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'kaedehara-kazuha',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Freedom-Sworn',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'anemo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'kaeya',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'cryo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'kamisato-ayaka',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Mistsplitter Reforged',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'Blizzard Strayer',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'cryo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'kamisato-ayato',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'hydro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'hydro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'kaveh',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'dendro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'dendro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'keqing',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'electro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'electro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'kinich',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Fang of the Mountain King',
         otherWeapons: ['Beacon of the Reed Sea','Serpent Spine','Verdict'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'dendro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'dendro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'kirara',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'dendro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'dendro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'klee',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Kaguras Verity',
         otherWeapons: ['Lost Prayer to the Sacred Winds','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'pyro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'pyro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'kujou-sara',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'electro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'electro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'kuki-shinobu',
-        function: 'Sub-DPS',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        function: 'subDps',
+        bestWeapon: 'Xiphos Moonlight',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'electro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'electro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'lan-yan',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'anemo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'anemo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'layla',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'cryo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'lisa',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'electro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'electro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'lynette',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'anemo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'anemo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'lyney',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'pyro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'pyro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'mavuika',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'pyro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'pyro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'mika',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'cryo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'mona',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'hydro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'hydro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'mualani',
-        function: 'Sub-DPS',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        function: 'subDps',
+        bestWeapon: 'Surfs Up',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'hydro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'hydro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'nahida',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Floating Dreams',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'dendro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'dendro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'navia',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'geo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'geo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'neuvillette',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'hydro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'hydro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'nilou',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'hydro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'hydro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'ningguang',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'geo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'geo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'noelle',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'geo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'geo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'ororon',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'electro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'electro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'qiqi',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'cryo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'raiden-shogun',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'electro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'electro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'razor',
-        function: 'Sub-DPS',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        function: 'subDps',
+        bestWeapon: 'Wolf ',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'electro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'electro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'rosaria',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'cryo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'sangonomiya-kokomi',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'hydro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'hydro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'sayu',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'anemo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'anemo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'sethos',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'electro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'electro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'shenhe',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'cryo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'shikanoin-heizou',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'anemo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'anemo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'sigewinne',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'hydro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'hydro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'tartaglia',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'hydro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'hydro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'sucrose',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'anemo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'anemo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'thoma',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'pyro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'pyro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'tighnari',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'dendro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'dendro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'traveler-anemo',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'anemo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'anemo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'traveler-geo',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'geo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'geo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'traveler-electro',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'electro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'electro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'traveler-dendro',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'dendro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'dendro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'traveler-hydro',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'hydro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'hydro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'traveler-pyro',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'pyro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'pyro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'varesa',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'electro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'electro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'venti',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'anemo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'anemo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'wanderer',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"traverler-anemo": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"traveler-anemo": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'anemo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'anemo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'wriothesley',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'cryo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'xiangling',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'pyro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'pyro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'xianyun',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'anemo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'anemo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'xiao',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'anemo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'anemo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'xilonen',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'geo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'geo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'xingqiu',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'hydro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'hydro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'xinyan',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'pyro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'pyro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'yae-miko',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'electro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'electro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'yanfei',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'pyro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'pyro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'yaoyao',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'dendro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'dendro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'yelan',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'hydro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'hydro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'yoimiya',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'pyro'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'pyro',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'yumemizuki-mizuki',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'anemo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'anemo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'yun-jin',
-        function: 'Sub-DPS',
+        function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'geo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'geo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
     {
         name: 'zhongli',
-        function: 'Sub-DPS',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        function: 'subDps',
+        bestWeapon: 'Black Tassel',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'goldentroupe',
+        bestArtifacts: 'Millelith',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
-            {"nilou": 'Main DPS'},
-            {"navia": 'Sub-DPS'},
-            {"arlecchino": 'Suporte'},
-            {"neuvillette": 'Main DPS'}
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
         ]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
-        elementType: 'geo'
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'geo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"]
     },
 ]
   

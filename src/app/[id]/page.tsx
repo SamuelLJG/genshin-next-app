@@ -93,7 +93,8 @@ switch (id) {
         `https://genshin-db-api.vercel.app/api/v5/characters?query=${id2}&resultLanguage=portuguese`,
         `https://genshin-db-api.vercel.app/api/v5/stats?folder=characters&query=${id2}`,
         `https://genshin-db-api.vercel.app/api/v5/stats?folder=weapons&query=${characterBuild.bestWeapon}`,
-        `https://genshin-db-api.vercel.app/api/v5/talents?query=${id3}&resultLanguage=portuguese`
+        `https://genshin-db-api.vercel.app/api/v5/talents?query=${id3}&resultLanguage=portuguese`,
+        `https://genshin-db-api.vercel.app/api/v5/constellations?query=${id3}&resultLanguage=portuguese`
       ];
       const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'reload' })));
       const data = await Promise.all(responses.map(res => res.json()));
@@ -101,10 +102,11 @@ switch (id) {
         characterData: data[0],
         characterFolder: data[1],
         characterWeapons: data[2],
-        characterTalents: data[3]
+        characterTalents: data[3],
+        characterConstellations: data[4]
       };
     }
-    const { characterData, characterFolder, characterWeapons, characterTalents } = await getData();
+    const { characterData, characterFolder, characterWeapons, characterTalents, characterConstellations } = await getData();
     function extrairAtePrimeiroPonto(texto: string) {
         return texto.split('.')[0];
       }
@@ -121,6 +123,18 @@ switch (id) {
         }
         if (name === "Hutao") {
             return 'Hu Tao';
+          }
+          if (name === "combat1") {
+            return ptBr.normalAttack;
+          }
+          if (name === "combat2") {
+            return ptBr.elementalSkill;
+          }
+          if (name === "combat3") {
+            return ptBr.elementalBurst;
+          }
+          if (name === "combat4") {
+            return ptBr.rightClick;
           }
         return name;
       }
@@ -141,7 +155,6 @@ switch (id) {
           .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
           .join(' ');
       }
-      
       const formattedName = formatCharacterName(characterData.name);
       let travelerName = formattedName;
       switch (id3) {
@@ -190,20 +203,49 @@ switch (travelerName) {
         elementFormatted = characterData.elementText; // mantém o valor original
       break;
   }
-  function formatarNomeEspecial(nome:any) {
+  function formatarNomeEspecial(name:any) {
     // Verifica se o nome contém as palavras a serem removidas e as substitui
-    if (nome.includes("Kaedehara Kazuha")) {
-      return nome.replace("Kaedehara ", "");
+    if (name === 'Traveler Hydro' ||
+      name === 'Traveler Dendro' ||
+      name === 'Traveler Anemo' ||
+      name === 'Traveler Geo' ||
+      name === 'Traveler Electro' ||
+      name === 'Traveler Pyro') {
+      return 'Viajante';
     }
-    if (nome.includes("Raiden Shogun")) {
-      return nome.replace("Shogun", "");
+    if (name === 'Raiden Shogun') {
+      return 'Raiden';
     }
-    if (nome.includes("Raiden Shogun")) {
-        return nome.replace("Shogun", "");
-      }
-    return nome;
+    if (name === 'Arataki Itto') {
+      return 'Itto';
+    }
+    if (name === 'Kamisato Ayaka') {
+      return 'Ayaka';
+    }
+    if (name === 'Kamisato Ayato') {
+      return 'Ayato';
+    }
+    if (name === 'Yumemizuki Mizuki') {
+      return 'Mizuki';
+    }
+    if (name === 'Kujou Sara') {
+      return 'Sara';
+    }
+    if (name === 'Shikanoin Heizou') {
+      return 'Heizou';
+    }
+    if (name === 'Sangonomiya Kokomi') {
+      return 'Kokomi';
+    }
+    if (name === 'Kaedehara Kazuha') {
+      return 'Kazuha';
+    }
+    if (name === 'Kuki Shinobu') {
+      return 'Kuki';
+    }
+  return name;
   }
-  
+  const translatedStats = characterBuild.mainStatsArtifacts.map((stat:any) => ptBr[stat as keyof typeof ptBr]);
     return (
         <body id={elementFormatted}>
             <h1 id="character-h1">
@@ -218,7 +260,7 @@ switch (travelerName) {
                     </div>
                     <div id="header-title">
                     &nbsp;{travelerName}{" "}Build{" "}
-                        <span id="character-function">( {characterBuild.function} )</span>
+                        <span id="character-function">( {ptBr[characterBuild.function as keyof typeof ptBr]} )</span>
                     </div>
                 </div>
             </h1>
@@ -314,7 +356,7 @@ switch (travelerName) {
                                         alt={armasPT[0].name}
                                     />
                                     <div id="weapon-header">
-                                        <h3>{armasPT[0].name}</h3>
+                                        <h3 className={`wa-${armasPT[0].rarity}`}>{armasPT[0].name}</h3>
                                         <div id="weapon-refinement">
                                         
                                                 <RefinamentoSlider arma2={ptBr} arma={armasPT[0]} />
@@ -339,8 +381,8 @@ switch (travelerName) {
                                                 alt={weapons.name}
                                             />
                                         <div>
-                                            <p>{armasPT[1].name}</p>
-                                            <p>{armasPT[1].mainStatText}</p>
+                                            <p>{weapons.name}</p>
+                                            <p>{weapons.mainStatText}</p>
                                         </div>
                                     </li>
                                     ))}
@@ -357,7 +399,7 @@ switch (travelerName) {
                             <Image width={160} height={160} className="star5" src={`https://enka.network/ui/${artefatosPT[0].images.filename_flower}.png`} alt=""/>
                                 <div id="artifacts-header">
                                     <div>
-                                        <h3 id="artifacts-h3">{artefatosPT[0].name}</h3>
+                                        <h3 id="artifacts-h3" className={`wa-${armasPT[0].rarity}`}>{artefatosPT[0].name}</h3>
                                     </div>
                                     <div id="artifacts-description">
                                         <p id="artifacts-description-first-p">
@@ -374,15 +416,15 @@ switch (travelerName) {
                                 <ul id="artifacts-main-stats">
                                     <li>
                                         <div className="stats-div"><Image width={30} height={30} src="/images/sands.webp" alt=""/><div>{ptBr.sands}:</div></div>
-                                        <p>Proficiência Elemental</p>
+                                        <p>{ptBr[characterBuild.mainStatsArtifacts[0] as keyof typeof ptBr]}</p>
                                     </li>
                                     <li>
                                         <div className="stats-div"><Image width={30} height={30} src="/images/goblet.webp" alt=""/><div>{ptBr.goblet}:</div></div>
-                                        <p>Bônus de Dano Dendro</p>
+                                        <p>{ptBr[characterBuild.mainStatsArtifacts[1] as keyof typeof ptBr]}</p>
                                     </li>
                                     <li>
                                         <div className="stats-div"><Image width={30} height={30} src="/images/circlet.webp" alt=""/><div>{ptBr.circlet}:</div></div>
-                                        <p>Taxa Crítica ou Dano Crítico</p>
+                                        <p>{ptBr[characterBuild.mainStatsArtifacts[2] as keyof typeof ptBr]}</p>
                                     </li>
                                 </ul>
                             </section>
@@ -444,7 +486,7 @@ switch (travelerName) {
                 <section id="character-talent-priority">
                     <h2 className="titles-h2">{travelerName}{" "}{ptBr.talentPriority}</h2>
                     <ol>
-                        {characterBuild.talentPriority.map((tlt:any, i:any) => (
+                        {characterBuild.talentPriority.map((stat:any) => ptBr[stat as keyof typeof ptBr]).map((tlt:any, i:any) => (
                             <li key={i}><p>{i+1}{ptBr.degree}</p><p>{tlt}</p></li>
                         ))}
                     </ol>
@@ -462,7 +504,7 @@ switch (travelerName) {
               const characterFunction = Object.values(character)[0]; // Pega o nome do personagem
               return (
                 <th key={j}>
-                  {characterFunction}
+                  {ptBr[characterFunction as keyof typeof ptBr]}
                 </th>
               );
             })}
@@ -489,37 +531,72 @@ switch (travelerName) {
       </table>
     </li>
   ))}
-  <li className="team-card">
-  <table>
-  <caption>Time #2</caption>
-  <thead><tr><th>Main DPS</th><th>Sub-DPS</th><th>Suporte</th><th>Main DPS</th></tr></thead>
-  <tbody>
-    <tr>
-        <td className="team-character">
-            <img src="images/Team-Icons/Traveler_Anemo.png" alt="Mavuika"/>
-            <p>Citlali</p>
-        </td>
-        <td className="team-character">
-            <img src="images/Team-Icons/Mavuika.png" alt="Nilou"/>
-            <p>Furina</p>
-        </td>
-        <td className="team-character">
-            <img src="images/Team-Icons/Arlecchino.png" alt="Arlecchino"/>
-            <p>Arlecchino</p>
-        </td>
-        <td className="team-character">
-            <img src="images/Team-Icons/Neuvillette.png" alt="Neuvillette"/>
-            <p>Neuvillette</p>
-        </td>
-    </tr>
-    </tbody>
-    </table>
-    </li>
 </ol>
 
                 </section>
-
-    
+                <section>
+                <h2 className="titles-h2">{travelerName}{" "}{ptBr.talents}</h2>
+            <ul className="talents-ul">
+              {Object.entries(characterTalents)
+                .filter(([key]) => key.startsWith('combat'))
+                .map(([key, p]:any, index) => (
+                  <li className="talents-box-cover" key={index}>
+                    <div className="talents-box">
+                      <h3 className="talents-name1">{formatCharacterName(`combat${index + 1}`)} 
+                      </h3>
+                      <span className="talents-name">{p.name}</span>
+                    </div>
+                    <div className="talents-description">
+                      {p.description}
+                    </div>
+                  </li>
+              ))}
+            </ul>
+            
+            
+        </section>
+                <section>
+                <h2 className="titles-h2">{travelerName}{" "}{ptBr.passives}</h2>
+            <ul className="talents-ul">
+              {Object.entries(characterTalents)
+                .filter(([key]) => key.startsWith('p'))
+                .map(([key, p]:any, index) => (
+                  <li className="talents-box-cover" key={index}>
+                    <div className="talents-box">
+                      <h3 className="talents-name1">{ptBr.passive}&nbsp;{index + 1}
+                      </h3>
+                      <span className="talents-name">{p.name}</span>
+                    </div>
+                    <div className="talents-description">
+                      {p.description}
+                    </div>
+                  </li>
+              ))}
+            </ul>
+            
+            
+        </section>
+                <section>
+                <h2 className="titles-h2">{travelerName}{" "}{ptBr.constellations}</h2>
+            <ul className="talents-ul">
+              {Object.entries(characterConstellations)
+                .filter(([key]) => key.startsWith('c'))
+                .map(([key, c]:any, index) => (
+                  <li className="talents-box-cover" key={index}>
+                    <div className="talents-box">
+                      <h3 className="talents-name1">C{index + 1}
+                      </h3>
+                      <span className="talents-name">{c.name}</span>
+                    </div>
+                    <div className="talents-description">
+                      {c.description}
+                    </div>
+                  </li>
+              ))}
+            </ul>
+            
+            
+        </section>
 
             </main>
             <nav>

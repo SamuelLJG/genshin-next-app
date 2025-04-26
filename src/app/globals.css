@@ -134,7 +134,7 @@ div::-webkit-scrollbar-thumb:active {
   gap: calc(20px * var(--minimize));
   border-radius: calc(5px * var(--minimize));
   margin: calc(0px * var(--minimize)) auto;
-
+  margin-bottom: 100px;
 }
 nav h2 {
   display: none;
@@ -310,8 +310,15 @@ color: #ffd270;
   gap: calc(7px * var(--minimize));
 }
 
-
-
+.wa-3 {
+  color: #aee5ff;
+}
+.wa-4 {
+  color: #c695ff;
+}
+.wa-5 {
+  color: #ffce80;
+}
 /*
 .one-Star img {
   background-image: url(https://images.genshin-builds.com/genshin/1-Star.webp);
@@ -331,6 +338,11 @@ background-size: 100%;
 }
 .star5 {
   background-image: url(/images/Background_Item_5_Star.webp);
+  
+  background-size: 100%;
+}
+.star3 {
+  background-image: url(/images/Background_Item_3_Star.webp);
   
   background-size: 100%;
 }
@@ -606,7 +618,7 @@ display: block;
 }
 
 #artifacts-h3, #weapon-header h3 {
-  font-size: calc(19px * var(--minimize)); color: #ffce80; font-family: Anuphan; font-style: italic;
+  font-size: calc(19px * var(--minimize));  font-family: Anuphan; font-style: italic;
   display: -webkit-box;
           -webkit-line-clamp: 1;
           line-height: 1.1em;
@@ -795,11 +807,7 @@ gap: calc(15px * var(--minimize));
   white-space: nowrap;
   color: hsla(0, 0%, 100%, .75);
 }
-#main-characters-flex {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 25px;
-}
+
 
 .geo img {
   
@@ -847,12 +855,17 @@ gap: calc(15px * var(--minimize));
   border-radius: 4px;
  gap: 10px
 }
+#main-characters-flex {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 25px;
+}
 .character-card p {
   font-weight: bold;
-  text-transform: uppercase;
+  font-family: Plus Jakarta Sans;
 }
 .character-card img {
-  border-radius: 5px;
+  border-radius: 50%;
   border-top: none;
   border-left: none;
 }
@@ -999,6 +1012,7 @@ gap: calc(15px * var(--minimize));
 }
 #weapon-section {
   gap: calc(10px * var(--minimize)); justify-content: space-between; display: flex; flex-direction: column;
+  width: 100%;
 }
 #weapon-main {
   display: flex; gap: calc(10px * var(--minimize));
@@ -1014,6 +1028,29 @@ gap: calc(15px * var(--minimize));
   gap:calc(10px * var(--minimize)); font-size: calc(15px * var(--minimize)); 
   font-weight: bold;
   align-items: baseline;
+}
+.talents-name {
+   padding: 7px 14px; font-size: calc(16px * var(--minimize)); text-transform: uppercase;
+}
+.talents-name1 {
+  background: var(--ct); justify-content: center; text-align: center;  display: flex; padding:7px 14px; color: var(--bg); align-items: center; font-size: calc(17px * var(--minimize)); text-transform: uppercase; 
+}
+.talents-box {
+  gap: 0px; display:flex;  background: #373941; align-items: stretch; border: 2px solid var(--bd);
+  grid-template-columns: repeat(2, 1fr);font-weight: bold; 
+}
+.talents-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.talents-box-cover{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.talents-description {
+  display: flex; flex-direction: column; gap: 5px;color: hsla(0, 0%, 100%, .75); border: 1px solid var(--bd);   padding: 10px 15px;  margin-top: 0px;  background:  #25262c; line-height: 22px; font-size: calc(15px * var(--minimize));
 }
 #weapon-refinement-level p {
   white-space: nowrap; font-family: Anuphan;
@@ -1376,6 +1413,7 @@ nav:not(:hover) .names, nav:not(:hover) #logo {
 width: auto;
 max-width: none;
 margin: calc(0px * var(--minimize));
+margin-bottom: 80px;
 transform: none;
   }
 
