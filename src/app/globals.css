@@ -1102,7 +1102,6 @@ justify-content: space-between;
 
 .team-character img {
 width: calc(74px * var(--minimize));
-height: 100%;
 height: calc(74px * var(--minimize));
 border-radius: calc(4px * var(--minimize));
 }
@@ -1706,7 +1705,7 @@ margin-top: calc(-2px * var(--minimize));
   }
   .team-character img {
       width: calc(64px * var(--minimize));
-      height: auto;
+      height: calc(64px * var(--minimize));
   }
   .other-weapons-rank {
       min-width: calc(40px * var(--minimize));
@@ -1770,6 +1769,6 @@ margin-top: calc(-2px * var(--minimize));
   }
   .team-character img {
       width: calc(55px * var(--minimize));
-      height: auto;
+      height: calc(55px * var(--minimize));
   }
 }

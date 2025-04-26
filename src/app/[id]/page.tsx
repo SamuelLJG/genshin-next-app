@@ -517,8 +517,8 @@ switch (travelerName) {
               const characterName = Object.keys(character)[0]; // Pega o nome do personagem
               return (
                 <td key={j} className="team-character">
-                  <img 
-                    src={`images/Team-Icons/${formatarNome(characterName)}.png`} 
+                  <Image width={74} height={74}
+                    src={`/images/Team-Icons/${formatarNome(characterName)}.png`} 
                     alt={formatarNomeComEspaco(formatarNome(characterName))}
                   />
                   <p>
