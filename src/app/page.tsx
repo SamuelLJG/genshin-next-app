@@ -66,7 +66,7 @@ export default function Home() {
             <div id="main-characters-flex">
             {characters.map((char:any,i:any)=> (
                 <Link href={`/${char.name}`} key={i} className={`character-card ${char.elementType}`}>
-            <Image width={100} height={100} src={`/images/Icons/${formatarNome(char.name)}.png?v=2`} alt=""/>
+            <Image width={100} height={100} src={`/images/Icons/${formatarNome(char.name)}?v=2.png`} alt=""/>
             <p>{formatCharacterName(formatarNomeComEspaco(formatarNome(char.name)))}</p>
             </Link>
         ))}</div></main>
