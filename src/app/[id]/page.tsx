@@ -286,6 +286,7 @@ switch (travelerName) {
         alt="Imagem Mobile"
         width={560}
         height={315}
+        loading="eager"
       />
                     <div id="character-main">
                         <div id="character-header">
