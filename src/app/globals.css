@@ -127,7 +127,7 @@ div::-webkit-scrollbar-thumb:active {
 }
 
 
-main {
+#main-content {
   width: calc(955px * var(--minimize));
   display: flex;
   flex-direction: column;
@@ -354,6 +354,7 @@ background-size: 100%;
 
 #character-type p img {
   width: calc(25px * var(--minimize));
+  height: calc(25px * var(--minimize));
   margin-right: calc(5px * var(--minimize));
 }
 #character-type p:first-of-type img {
@@ -362,6 +363,7 @@ background-size: 100%;
 
 #character-type p:last-of-type img {
   width: calc(23px * var(--minimize));
+  height: calc(23px * var(--minimize));
   margin-bottom: calc(-1px * var(--minimize));
 }
 
@@ -461,13 +463,12 @@ background-size: 100%;
 
 #character-image {
   width: calc(215px * var(--minimize));
+  height:  calc(215px * var(--minimize));
   border-radius: 50%;
   background: var(--sub);
   border: 4px solid var(--ct);
   border-top: none;
   border-left: none;
-  
-  height:  calc(215px * var(--minimize));
   margin-top: calc(6px * var(--minimize));
 }
 
@@ -590,6 +591,7 @@ background-size: 100%;
 }
 #artifacts-main-stats li img {
   width: calc(35px * var(--minimize));
+  height: calc(35px * var(--minimize));
 }
 #artifacts-main {
 display: block; 
@@ -658,10 +660,55 @@ gap: calc(15px * var(--minimize));
   display: flex; justify-content: space-around; padding: calc(5px * var(--minimize)) calc(0px * var(--minimize)); border-bottom: calc(2px * var(--minimize)) solid var(--bd);
 }
 .other-artifacts-set-description {
-  padding: calc(10px * var(--minimize)); display: grid; gap: calc(10px * var(--minimize));font-size: calc(15px * var(--minimize)); font-style: italic; color: hsla(0, 0%, 100%, .85);
+  padding: calc(10px * var(--minimize)); gap: calc(10px * var(--minimize));font-size: calc(15px * var(--minimize)); font-style: italic; color: hsla(0, 0%, 100%, .85);
+}
+#other-artifacts-set-description {
+  padding: calc(10px * var(--minimize)); gap: calc(0px * var(--minimize));font-size: calc(15px * var(--minimize)); font-style: italic; color: hsla(0, 0%, 100%, .85);
+}
+.two-pieces-flex {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+#testeteste {
+  display: flex;
+  flex-wrap: wrap;
+}
+.two-pieces-flex2 {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+#other-artifacts img {
+  background-image: url(/images/Background_Item_5_Star.webp);
+  background:var(--sub) ; padding-right:5px;
+  float:left;
+}
+#character-function {
+  white-space: nowrap;
+  color: var(--sub);
+  font-style: italic;
+  font-weight: 500;
+  font-size: calc(18px * var(--minimize));
+  text-transform: none;
+}
+#main-index {
+  max-width: 955px;
+  margin: auto;
+  margin-top: 80px;
+}
+
+#index-h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
 }
 .other-artifacts-set-description p:first-of-type {
   padding-bottom: calc(10px * var(--minimize)); border-bottom: calc(1px * var(--minimize)) solid var(--bd);
+}
+#other-artifacts-set-description p:first-of-type {
+  padding-bottom: calc(10px * var(--minimize));
 }
 #character-info {
   display: flex;
@@ -741,16 +788,73 @@ gap: calc(15px * var(--minimize));
   font-style: italic; 
   text-transform: uppercase;
 }
-#header-title::after {
-  content: '( Suporte )';
-  font-weight: 500; white-space: nowrap; font-style: italic; color: var(--sub); font-family: Anuphan; font-size: calc(18px * var(--minimize)); text-transform: none;
-}
 #ascension-materials-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: calc(10px * var(--minimize));
   white-space: nowrap;
   color: hsla(0, 0%, 100%, .75);
+}
+#main-characters-flex {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+}
+
+.geo img {
+  
+  border: 3px solid #ffbb00;
+}
+
+.hydro img {
+  
+  border: 3px solid #1596e0;
+}
+
+.anemo img {
+  
+  border: 3px solid #47ffc2;
+}
+
+.dendro img {
+  
+  border: 3px solid #b3ff00;
+}
+
+.electro img {
+  
+  border: 3px solid #ae4aff;
+}
+
+.cryo img {
+  
+  border: 3px solid #71fff8;
+}
+
+.pyro img {
+  
+  border: 3px solid #ff7c10;
+}
+.character-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--sub);
+  padding: 20px;
+  padding-bottom: 10px;
+  border: 2px solid var(--bd);
+  border-radius: 4px;
+ gap: 10px
+}
+.character-card p {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.character-card img {
+  border-radius: 5px;
+  border-top: none;
+  border-left: none;
 }
 .ascension-materials-items {
   display: flex;
@@ -840,7 +944,7 @@ gap: calc(15px * var(--minimize));
 #character-basic-stats {
       margin-bottom: calc(10px * var(--minimize));
   }
-h1 {
+#character-h1 {
   border-bottom: 3px solid var(--ct);
   margin: calc(60px * var(--minimize)) auto calc(0px * var(--minimize)) auto;
   max-width: calc(955px * var(--minimize));
@@ -1073,6 +1177,38 @@ display: grid;  grid-template-columns: repeat(4, 1fr); gap: calc(5px * var(--min
 .none {
   display: none;
 }
+.image1 {
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  position: absolute;
+}
+.image2 {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  position: absolute;
+}
+.twoArtifacts {
+  display: flex;
+  position: relative;
+  background: var(--sub);
+  margin-left: -5px;
+  width: calc(72px * var(--minimize));
+  height: calc(72px * var(--minimize));
+  float: left;
+}
+
+#line {
+  border: 0;
+  background: var(--bd);
+  height: 1px;
+}
+.border {
+  position: absolute;
+  width: 2px; /* espessura da borda */
+  height: 100%;
+  background: var(--ct); /* cor da borda */
+  top: 0;
+  left: 50%;
+  transform: rotate(45deg); 
+}
 @media (min-width: 1355px) {
  
   #artifacts-main-stats-section {
@@ -1124,14 +1260,15 @@ display: grid;  grid-template-columns: repeat(4, 1fr); gap: calc(5px * var(--min
 
   #artifacts-main-stats li img {
       width: calc(30px * var(--minimize));
+      height: calc(30px * var(--minimize));
   }
-  h1 {
+  #character-h1 {
       max-width: 855px;
       margin-left: calc(50% + calc(37px * var(--minimize)));
       width: 100%;
       transform: translateX(-50%);
   } 
-   main {
+   #main-content {
       max-width: 855px;
       margin-left: calc(50% + calc(37px * var(--minimize)));
       transform: translateX(-50%);
@@ -1219,7 +1356,7 @@ nav:not(:hover) .names, nav:not(:hover) #logo {
 }
 @media (max-width: 970px) {
   #character-banner {gap: 15px;}
-  h1 {
+  #character-h1 {
       margin: calc(20px * var(--minimize)) calc(20px * var(--minimize)) 0px;
       width: auto;
       padding:calc(0px * var(--minimize)) ;
@@ -1234,7 +1371,7 @@ nav:not(:hover) .names, nav:not(:hover) #logo {
   justify-content: center;
   flex-direction: column;
   }
-  main {
+  #main-content {
       padding: calc(0px * var(--minimize)) calc(20px * var(--minimize)) calc(0px * var(--minimize)) calc(20px * var(--minimize));
 width: auto;
 max-width: none;
@@ -1398,15 +1535,10 @@ margin-top: calc(-2px * var(--minimize));
     height: 100%;
     gap: 10px;
   }
-  #other-artifacts img {
-  width: calc(62px * var(--minimize));
-  height: calc(62px * var(--minimize));
-  }
   #character-name {
     padding: 6px 0px;
   }
 }
-
 
 
 @media (max-width: 710px) {
@@ -1428,10 +1560,6 @@ margin-top: calc(-2px * var(--minimize));
   }
   #other-artifacts {
       grid-template-columns: repeat(1, 1fr);
-  }
-  #other-artifacts img {
-      width: calc(82px * var(--minimize));
-      height: calc(82px * var(--minimize));
   }
 
   #character-talent-priority li p:last-of-type {
@@ -1492,10 +1620,6 @@ margin-top: calc(-2px * var(--minimize));
   #weapon-main-stats span:last-of-type {
       font-size: calc(15px * var(--minimize));
   }
-  #other-artifacts img {
-      width: calc(72px * var(--minimize));
-      height: calc(72px * var(--minimize));
-  }
   #character-image {
       width: calc(180px * var(--minimize));
   }
@@ -1541,10 +1665,6 @@ margin-top: calc(-2px * var(--minimize));
   }
   th, td {
       font-size: calc(15px * var(--minimize));
-  }
-  #other-artifacts img {
-      width: calc(62px * var(--minimize));
-      height: calc(62px * var(--minimize));
   }
   .team-character img {
       width: calc(64px * var(--minimize));
@@ -1609,10 +1729,6 @@ margin-top: calc(-2px * var(--minimize));
   }
   .team-card p {
       font-size: calc(12px * var(--minimize));
-  }
-  #other-artifacts img {
-      width: calc(55px * var(--minimize));
-      height: calc(55px * var(--minimize));
   }
   .team-character img {
       width: calc(55px * var(--minimize));

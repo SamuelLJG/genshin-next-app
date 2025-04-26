@@ -7,24 +7,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: {
-            time1: {
-                functions: ['maindps', 'subdps', 'suporte', 'suporte'],
-                characters: ['Mavuika','Kaedehara Kazuha','Albedo','Xilonen']
-                
-            },
-            time1: {
-                functions: ['maindps', 'subdps', 'suporte', 'suporte'],
-                characters: ['Mavuika','Kaedehara Kazuha','Albedo','Xilonen']
-                
-            }
-        },
-
-
-            
-
-
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [
+            [{"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}]
+        ],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'geo'
     },
     {
         name: 'alhaitham',
@@ -33,8 +23,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [
+            [{"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}]
+        ],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'dendro'
     },
     {
         name: 'aloy',
@@ -43,8 +39,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'cryo'
     },
     {
         name: 'amber',
@@ -53,8 +55,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'pyro'
     },
     {
         name: 'arataki-itto',
@@ -63,8 +71,22 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [
+            [{"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"kaedehara-kazuha": 'Main DPS'}],
+            [{"nahida": 'Main DPS'},
+                {"navia": 'Sub-DPS'},
+                {"arlecchino": 'Suporte'},
+                {"kaedehara-kazuha": 'Main DPS'}],
+                [{"ningguang": 'Main DPS'},
+                    {"navia": 'Sub-DPS'},
+                    {"arlecchino": 'Suporte'},
+                    {"kaedehara-kazuha": 'Main DPS'}]
+        ],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'geo'
     },
     {
         name: 'arlecchino',
@@ -72,9 +94,15 @@ export const characters = [
         bestWeapon: 'Crimson Moons Semblance',
         otherWeapons: ['Primordial Jade Winged-Spear','Staff of the Scarlet Sands','Deathmatch'],
         bestArtifacts: 'goldentroupe',
-        otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        otherArtifacts: ['tenacityofthemillelith', 'Gilded Dreams'],
+        teams: [[
+            {"mavuika": 'Main DPS'},
+            {"nilou": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}]
+        ],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'pyro'
     },
     {
         name: 'baizhu',
@@ -83,8 +111,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'dendro'
     },
     {
         name: 'beidou',
@@ -93,8 +127,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'electro'
     },
     {
         name: 'barbara',
@@ -103,8 +143,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'hydro'
     },
     {
         name: 'bennett',
@@ -113,8 +159,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'pyro'
     },
     {
         name: 'candace',
@@ -123,8 +175,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'hydro'
     },
     {
         name: 'charlotte',
@@ -133,8 +191,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'cryo'
     },
     {
         name: 'chasca',
@@ -143,8 +207,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'anemo'
     },
     {
         name: 'chevreuse',
@@ -153,8 +223,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'pyro'
     },
     {
         name: 'chiori',
@@ -163,8 +239,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'geo'
     },
     {
         name: 'chongyun',
@@ -173,8 +255,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'cryo'
     },
     {
         name: 'citlali',
@@ -183,8 +271,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'cryo'
     },
     {
         name: 'clorinde',
@@ -193,8 +287,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'electro'
     },
     {
         name: 'collei',
@@ -203,8 +303,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'dendro'
     },
     {
         name: 'cyno',
@@ -213,8 +319,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'electro'
     },
     {
         name: 'dehya',
@@ -223,8 +335,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'pyro'
     },
     {
         name: 'diluc',
@@ -233,8 +351,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'pyro'
     },
     {
         name: 'diona',
@@ -243,8 +367,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'cryo'
     },
     {
         name: 'dori',
@@ -253,8 +383,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'electro'
     },
     {
         name: 'emilie',
@@ -263,8 +399,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'dendro'
     },
     {
         name: 'eula',
@@ -273,8 +415,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'cryo'
     },
     {
         name: 'faruzan',
@@ -283,8 +431,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'anemo'
     },
     {
         name: 'fischl',
@@ -293,8 +447,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'electro'
     },
     {
         name: 'freminet',
@@ -303,18 +463,31 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'cryo'
     },
     {
         name: 'furina',
         function: 'Sub-DPS',
         bestWeapon: 'Splendor of Tranquil Waters',
         otherWeapons: ['Primordial Jadecutter','Festering Desire ','Key of Khaj-Nisut'],
-        bestArtifact: 'Golden Troupe',
+        bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        twoPieces: ['Tenacity of the Millelith', 'Golden Troupe'],
+        elementType: 'hydro'
     },
     {
         name: 'gaming',
@@ -323,7 +496,12 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
         talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
     },
     {
@@ -333,8 +511,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'cryo'
     },
     {
         name: 'gorou',
@@ -343,8 +527,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'geo'
     },
     {
         name: 'hu-tao',
@@ -353,8 +543,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'pyro'
     },
     {
         name: 'iansan',
@@ -363,8 +559,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'electro'
     },
     {
         name: 'jean',
@@ -373,8 +575,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'anemo'
     },
     {
         name: 'kachina',
@@ -383,8 +591,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'geo'
     },
     {
         name: 'kaedehara-kazuha',
@@ -393,7 +607,12 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
         talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
     },
     {
@@ -403,18 +622,30 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'cryo'
     },
     {
         name: 'kamisato-ayaka',
         function: 'Sub-DPS',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        bestWeapon: 'Mistsplitter Reforged',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'goldentroupe',
+        bestArtifacts: 'Blizzard Strayer',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'cryo'
     },
     {
         name: 'kamisato-ayato',
@@ -423,8 +654,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'hydro'
     },
     {
         name: 'kaveh',
@@ -433,8 +670,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'dendro'
     },
     {
         name: 'keqing',
@@ -443,8 +686,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'electro'
     },
     {
         name: 'kinich',
@@ -453,8 +702,14 @@ export const characters = [
         otherWeapons: ['Beacon of the Reed Sea','Serpent Spine','Verdict'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'dendro'
     },
     {
         name: 'kirara',
@@ -463,8 +718,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'dendro'
     },
     {
         name: 'klee',
@@ -473,8 +734,14 @@ export const characters = [
         otherWeapons: ['Lost Prayer to the Sacred Winds','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'pyro'
     },
     {
         name: 'kujou-sara',
@@ -483,8 +750,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'electro'
     },
     {
         name: 'kuki-shinobu',
@@ -493,8 +766,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'electro'
     },
     {
         name: 'lan-yan',
@@ -503,8 +782,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'anemo'
     },
     {
         name: 'layla',
@@ -513,8 +798,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'cryo'
     },
     {
         name: 'lisa',
@@ -523,8 +814,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'electro'
     },
     {
         name: 'lynette',
@@ -533,8 +830,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'anemo'
     },
     {
         name: 'lyney',
@@ -543,8 +846,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'pyro'
     },
     {
         name: 'mavuika',
@@ -553,8 +862,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'pyro'
     },
     {
         name: 'mika',
@@ -563,8 +878,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'cryo'
     },
     {
         name: 'mona',
@@ -573,8 +894,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'hydro'
     },
     {
         name: 'mualani',
@@ -583,8 +910,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'hydro'
     },
     {
         name: 'nahida',
@@ -593,8 +926,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'dendro'
     },
     {
         name: 'navia',
@@ -603,8 +942,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'geo'
     },
     {
         name: 'neuvillette',
@@ -613,8 +958,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'hydro'
     },
     {
         name: 'nilou',
@@ -623,8 +974,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'hydro'
     },
     {
         name: 'ningguang',
@@ -633,8 +990,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'geo'
     },
     {
         name: 'noelle',
@@ -643,8 +1006,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'geo'
     },
     {
         name: 'ororon',
@@ -653,8 +1022,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'electro'
     },
     {
         name: 'qiqi',
@@ -663,8 +1038,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'cryo'
     },
     {
         name: 'raiden-shogun',
@@ -673,8 +1054,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'electro'
     },
     {
         name: 'razor',
@@ -683,8 +1070,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'electro'
     },
     {
         name: 'rosaria',
@@ -693,8 +1086,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'cryo'
     },
     {
         name: 'sangonomiya-kokomi',
@@ -703,8 +1102,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'hydro'
     },
     {
         name: 'sayu',
@@ -713,8 +1118,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'anemo'
     },
     {
         name: 'sethos',
@@ -723,8 +1134,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'electro'
     },
     {
         name: 'shenhe',
@@ -733,8 +1150,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'cryo'
     },
     {
         name: 'shikanoin-heizou',
@@ -743,8 +1166,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'anemo'
     },
     {
         name: 'sigewinne',
@@ -753,8 +1182,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'hydro'
     },
     {
         name: 'tartaglia',
@@ -763,8 +1198,30 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'hydro'
+    },
+    {
+        name: 'sucrose',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'anemo'
     },
     {
         name: 'thoma',
@@ -773,8 +1230,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'pyro'
     },
     {
         name: 'tighnari',
@@ -783,8 +1246,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'dendro'
     },
     {
         name: 'traveler-anemo',
@@ -793,8 +1262,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'anemo'
     },
     {
         name: 'traveler-geo',
@@ -803,8 +1278,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'geo'
     },
     {
         name: 'traveler-electro',
@@ -813,8 +1294,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'electro'
     },
     {
         name: 'traveler-dendro',
@@ -823,8 +1310,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'dendro'
     },
     {
         name: 'traveler-hydro',
@@ -833,8 +1326,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'hydro'
     },
     {
         name: 'traveler-pyro',
@@ -843,8 +1342,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'pyro'
     },
     {
         name: 'varesa',
@@ -853,8 +1358,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'electro'
     },
     {
         name: 'venti',
@@ -863,8 +1374,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'anemo'
     },
     {
         name: 'wanderer',
@@ -872,9 +1389,14 @@ export const characters = [
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
-        otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"traverler-anemo": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'anemo'
     },
     {
         name: 'wriothesley',
@@ -883,8 +1405,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'cryo'
     },
     {
         name: 'xiangling',
@@ -893,8 +1421,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'pyro'
     },
     {
         name: 'xianyun',
@@ -903,8 +1437,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'anemo'
     },
     {
         name: 'xiao',
@@ -913,8 +1453,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'anemo'
     },
     {
         name: 'xilonen',
@@ -923,8 +1469,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'geo'
     },
     {
         name: 'xingqiu',
@@ -933,8 +1485,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'hydro'
     },
     {
         name: 'xinyan',
@@ -943,8 +1501,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'pyro'
     },
     {
         name: 'yae-miko',
@@ -953,8 +1517,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'electro'
     },
     {
         name: 'yanfei',
@@ -963,8 +1533,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'pyro'
     },
     {
         name: 'yaoyao',
@@ -973,8 +1549,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'dendro'
     },
     {
         name: 'yelan',
@@ -983,8 +1565,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'hydro'
     },
     {
         name: 'yoimiya',
@@ -993,8 +1581,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'pyro'
     },
     {
         name: 'yumemizuki-mizuki',
@@ -1003,8 +1597,30 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'anemo'
+    },
+    {
+        name: 'yun-jin',
+        function: 'Sub-DPS',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'geo'
     },
     {
         name: 'zhongli',
@@ -1013,8 +1629,14 @@ export const characters = [
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'goldentroupe',
         otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[],[],[],[]],
-        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']]
+        teams: [[
+            {"nilou": 'Main DPS'},
+            {"navia": 'Sub-DPS'},
+            {"arlecchino": 'Suporte'},
+            {"neuvillette": 'Main DPS'}
+        ]],
+        talentPriority: [['habilidade elemental'],['supremo'],['ataque normal']],
+        elementType: 'geo'
     },
 ]
   

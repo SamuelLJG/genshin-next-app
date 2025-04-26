@@ -8,29 +8,47 @@ import ptBr from '@/data/pt-br.json'
 import Link from "next/link";
 import ScriptsClient from "@/components/scripts-client";
 
-function formatarParaSlashCase(texto: string): string {
-    return texto             
-      .trim()                      
-      .replace(/\s+/g, '_')        
-}
+
 export default async function Home( { params }:any ) {
     
     let { id } = await params;
     const characterBuild:any = characters.find(p => p.name === id);
+
     const nomesDasArmas = [characterBuild.bestWeapon, ...characterBuild.otherWeapons];
-    async function getArmas() {
-      const baseURL = 'https://genshin-db-api.vercel.app/api/v5/weapons?query=';
-      const responsesPT = await Promise.all(
-        nomesDasArmas.map(nome => {
+    const nomesDosArtefatos = [characterBuild.bestArtifacts, ...characterBuild.otherArtifacts ? [...characterBuild.otherArtifacts] : []]
+    
+async function getArmasEArtefatos() {
+    const baseURLWeapon = 'https://genshin-db-api.vercel.app/api/v5/weapons?query=';
+    const baseURLArtifact = 'https://genshin-db-api.vercel.app/api/v5/artifacts?query=';
+  
+    // Armas em Português
+    const responsesPTWeapons = await Promise.all(
+      nomesDasArmas.map(nome => {
+        const nomeLimpo = encodeURIComponent(nome.trim());
+        return fetch(`${baseURLWeapon}${nomeLimpo}&resultLanguage=portuguese`, { cache: 'reload' });
+      })
+    );
+    const armasPT = await Promise.all(responsesPTWeapons.map(res => res.json()));
+    
+    const responsesPTArtifacts = await Promise.all(
+      nomesDosArtefatos.map(nome => {
+        const nomeLimpo = encodeURIComponent(nome.trim());
+        return fetch(`${baseURLArtifact}${nomeLimpo}&resultLanguage=portuguese`, { cache: 'reload' });
+      })
+    );
+    const doisArtefatos = characterBuild.twoPieces ? [...characterBuild.twoPieces] : [];
+    const responsestwoPieces = await Promise.all(
+        doisArtefatos.map(nome => {
           const nomeLimpo = encodeURIComponent(nome.trim());
-          return fetch(`${baseURL}${nomeLimpo}&resultLanguage=portuguese`, { cache: 'reload' });
+          return fetch(`${baseURLArtifact}${nomeLimpo}&resultLanguage=portuguese`, { cache: 'reload' });
         })
       );
-      const armasPT = await Promise.all(responsesPT.map(res => res.json()));
-     
-      return { armasPT };
-    }
-    const { armasPT } = await getArmas();
+    const twoPiecesArtifacts = await Promise.all(responsestwoPieces.map(res => res.json()));
+    const artefatosPT = await Promise.all(responsesPTArtifacts.map(res => res.json()));
+    return { armasPT, artefatosPT, twoPiecesArtifacts };
+  }
+  
+  const { armasPT, artefatosPT, twoPiecesArtifacts } = await getArmasEArtefatos();
     const id2 = (
         id === 'traveler-hydro' ||
         id === 'traveler-dendro' ||
@@ -87,22 +105,43 @@ switch (id) {
       };
     }
     const { characterData, characterFolder, characterWeapons, characterTalents } = await getData();
-    function extrairAtePrimeiroPonto(texto: string): string {
+    function extrairAtePrimeiroPonto(texto: string) {
         return texto.split('.')[0];
       }
-      function formatarParaKebabCase(texto: string): string {
+      function formatarParaKebabCase(texto: string) {
         return texto
           .toLowerCase()               // tudo minúsculo
           .trim()                      // remove espaços extras no começo/fim
           .replace(/\s+/g, '-')        // troca espaços internos por hífens
       }
-      function formatCharacterName(name: string): string {
+      function formatCharacterName(name: string) {
         if (name === "Shogun Raiden") {
           const parts = name.split(" ");
           return `${parts[1]} ${parts[0]}`;
         }
+        if (name === "Hutao") {
+            return 'Hu Tao';
+          }
         return name;
       }
+      function formatarNome(nome:string) {
+        return nome
+          .split('-')
+          .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
+          .join('_');
+      }
+      function formatarParaSlashCase(texto: string): string {
+        return texto             
+          .trim()                      
+          .replace(/\s+/g, '_')        
+    }
+    function formatarNomeComEspaco(nome: string) {
+        return nome
+          .split('_')
+          .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
+          .join(' ');
+      }
+      
       const formattedName = formatCharacterName(characterData.name);
       let travelerName = formattedName;
       switch (id3) {
@@ -124,6 +163,7 @@ switch (id) {
             case 'Traveler (Hydro)' :
             travelerName = 'Viajante Hydro'
             break;
+            
       }
 const element = characterData.elementText
 let elementFormatted;
@@ -150,9 +190,23 @@ switch (travelerName) {
         elementFormatted = characterData.elementText; // mantém o valor original
       break;
   }
+  function formatarNomeEspecial(nome:any) {
+    // Verifica se o nome contém as palavras a serem removidas e as substitui
+    if (nome.includes("Kaedehara Kazuha")) {
+      return nome.replace("Kaedehara ", "");
+    }
+    if (nome.includes("Raiden Shogun")) {
+      return nome.replace("Shogun", "");
+    }
+    if (nome.includes("Raiden Shogun")) {
+        return nome.replace("Shogun", "");
+      }
+    return nome;
+  }
+  
     return (
         <body id={elementFormatted}>
-            <h1>
+            <h1 id="character-h1">
                 <div id="header-container">
                     <div className="header-icon">
                         <svg className="icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book" role="img" xmlns="http://www.w3.org/2000/svg"
@@ -164,7 +218,7 @@ switch (travelerName) {
                     </div>
                     <div id="header-title">
                     &nbsp;{travelerName}{" "}Build{" "}
-                        
+                        <span id="character-function">( {characterBuild.function} )</span>
                     </div>
                 </div>
             </h1>
@@ -176,19 +230,20 @@ switch (travelerName) {
         id="character-image"
         priority
         className={`star${characterData.rarity} character-icon-pc`}
-        src={`/images/Icons/${formatarParaSlashCase(travelerName=== 'Andarilho' ? 'Wanderer' : travelerName)}.png`}
+        src={`/images/Icons/${formatarNome(id)}.png`}
         alt="Imagem Desktop"
         width={256}
         height={256}
+        loading="eager"
       />
       <Image
         id="character-image"
         priority
         className={`star${characterData.rarity} character-icon-mobile`}
-        src={`/images/Banners/${formatarParaSlashCase(travelerName=== 'Andarilho' ? 'Wanderer' : travelerName)}_Card.png`}
+        src={`/images/Banners/${formatarNome(id)}_Card.png`}
         alt="Imagem Mobile"
-        width={530}
-        height={299}
+        width={560}
+        height={315}
       />
                     <div id="character-main">
                         <div id="character-header">
@@ -196,11 +251,11 @@ switch (travelerName) {
                                    <div id="character-name-box"><h2 id="character-name" className={id=== 'sangonomiya-kokomi' ? 'compress-title' : ''}>{travelerName}</h2><span id={`r${characterData.rarity}`} aria-hidden="true">{characterData.rarity}★</span> </div>  
                                 <div id="character-type">
                                     <p>
-                                        <img src={`images/${characterData.weaponType}.webp`} alt=""/>
+                                        <Image width={25} height={25} src={`/images/${characterData.weaponType}.webp`} alt=""/>
                                         {characterData.weaponText}
                                     </p>
                                     <p id="element">
-                                        <img src={`images/${elementFormatted}.webp`} alt=""/>
+                                        <Image width={23} height={23} src={`/images/${elementFormatted}.webp`} alt=""/>
                                         {elementFormatted}
                                     </p>
                                 </div>
@@ -214,37 +269,38 @@ switch (travelerName) {
                     <h2 className="titles-h2">{travelerName}{" "}{ptBr.ascensionMaterials}</h2>
                     <ul id="ascension-materials-list">
                         <li className="ascension-materials-items">
-                            <Image width={256} height={256} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend1[1].id}.png`}
+                            <Image width={60} height={60} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend1[1].id}.png`}
                             alt=""/>
                             <p>{characterData.costs.ascend1[1].name}</p>
                         </li>
                         <li className="ascension-materials-items">
-                            <Image width={256} height={256} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend1[2].id}.png`}
+                            <Image width={40} height={40} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend1[2].id}.png`}
                             alt=""/>
                             <p>{characterData.costs.ascend1[2].name}</p>
                         </li>
                         <li className={id2=== 'aether' ? 'none' : 'ascension-materials-items'}>
-                            <Image width={256} height={256} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend5[2].id}.png`}
+                            <Image width={40} height={40} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend5[2].id}.png`}
                             alt=""/>
                             <p>{characterData.costs.ascend5[2].name}</p>
                         </li>
                         <li className="ascension-materials-items">
-                            <Image width={256} height={256} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend1[3].id}.png`}
+                            <Image width={40} height={40} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend1[3].id}.png`}
                             alt=""/>
                             <p>{characterData.costs.ascend1[3].name}</p>
                         </li>
                         <li className="ascension-materials-items">
-                            <Image width={256} height={256} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterTalents.costs.lvl2[1].id}.png`}
+                            <Image width={40} height={40} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterTalents.costs.lvl2[1].id}.png`}
                             alt=""/>
                             <p>{characterTalents.costs.lvl2[1].name}</p>
                         </li>
                         <li className="ascension-materials-items">
-                            <Image width={256} height={256} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterTalents.costs.lvl7[3].id}.png`}
+                            <Image width={40} height={40} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterTalents.costs.lvl7[3].id}.png`}
                             alt=""/>
                             <p>{characterTalents.costs.lvl7[3].name}</p>
                         </li>
                     </ul>
                 </section>
+                
                 <section>
                     <h2 className="titles-h2">{travelerName}{" "}{ptBr.bestWeapon}</h2>
                         <div id="weapon-container">
@@ -272,48 +328,23 @@ switch (travelerName) {
                             <section>
                                 <h3 className="titles-h3">{ptBr.otherWeapons}</h3>
                                 <ol id="other-weapons-list">
-                                    <li>
-                                        <span className="other-weapons-rank">{ptBr.second}</span>
+                                    {armasPT.slice(1).map((weapons:any, i:any) => (
+                                        <li key={i}>
+                                        <span className="other-weapons-rank">{i+2}{ptBr.degree}</span>
                                             <Image
-                                                className={`star${armasPT[1].rarity}`}
-                                                src={`https://gi.yatta.moe/assets/UI/${armasPT[1].images.filename_icon}.png`}
+                                                className={`star${weapons.rarity}`}
+                                                src={`https://gi.yatta.moe/assets/UI/${weapons.images.filename_icon}.png`}
                                                 width={75}
                                                 height={75}
-                                                alt={armasPT[1].name}
+                                                alt={weapons.name}
                                             />
                                         <div>
                                             <p>{armasPT[1].name}</p>
                                             <p>{armasPT[1].mainStatText}</p>
                                         </div>
                                     </li>
-                                    <li>
-                                        <span className="other-weapons-rank">{ptBr.third}</span>
-                                            <Image
-                                                className={`star${armasPT[2].rarity}`}
-                                                src={`https://gi.yatta.moe/assets/UI/${armasPT[2].images.filename_icon}.png`}
-                                                width={75}
-                                                height={75}
-                                                alt={armasPT[2].name}
-                                            />
-                                        <div>
-                                            <p>{armasPT[2].name}</p>
-                                            <p>{armasPT[2].mainStatText}</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span className="other-weapons-rank">{ptBr.fourth}</span>
-                                            <Image
-                                                className={`star${armasPT[3].rarity}`}
-                                                src={`https://gi.yatta.moe/assets/UI/${armasPT[3].images.filename_icon}.png`}
-                                                width={75}
-                                                height={75}
-                                                alt={armasPT[3].name}
-                                            />
-                                        <div>
-                                            <p>{armasPT[3].name}</p>
-                                            <p>{armasPT[3].mainStatText}</p>
-                                        </div>
-                                    </li>
+                                    ))}
+                                   
                                 </ol>
                             </section>
                         </div>
@@ -323,19 +354,17 @@ switch (travelerName) {
                     <div id="artifacts-container">
                         <div id="artifacts-section">
                             <section id="artifacts-main">
-                            <img className="star5" src="images/Item_Visitante_do_Labirinto.webp" alt=""/>
+                            <Image width={160} height={160} className="star5" src={`https://enka.network/ui/${artefatosPT[0].images.filename_flower}.png`} alt=""/>
                                 <div id="artifacts-header">
                                     <div>
-                                        <h3 id="artifacts-h3">Nighttime Whispers</h3>
+                                        <h3 id="artifacts-h3">{artefatosPT[0].name}</h3>
                                     </div>
                                     <div id="artifacts-description">
                                         <p id="artifacts-description-first-p">
-                                            <b>{ptBr.twoPieces}:</b> Efeito de Cura do Personagem aumenta em 15%
+                                            <b>{ptBr.twoPieces}:</b> {artefatosPT[0].effect2Pc}
                                         </p>  
                                         <p>
-                                            <b>{ptBr.fourPieces}:</b> Depois que as Habilidades Elementais ou Supremos acertam os oponentes,
-                                            a RES Dendro dos alvos serão reduzidas em 30% por 8s. Esse efeito pode ser desencadeado mesmo se o
-                                            personagem equipando este conjunto não estiver em campo.
+                                            <b>{ptBr.fourPieces}:</b> {artefatosPT[0].effect4Pc}
                                         </p>
                                     </div>
                                 </div>
@@ -344,15 +373,15 @@ switch (travelerName) {
                                 <h3 className="titles-h3">{ptBr.artifactsMainStats}</h3>
                                 <ul id="artifacts-main-stats">
                                     <li>
-                                        <div className="stats-div"><img src="images/amp.webp" alt=""/><div>{ptBr.sands}:</div></div>
+                                        <div className="stats-div"><Image width={30} height={30} src="/images/sands.webp" alt=""/><div>{ptBr.sands}:</div></div>
                                         <p>Proficiência Elemental</p>
                                     </li>
                                     <li>
-                                        <div className="stats-div"><img src="images/calicee3.webp" alt=""/><div>{ptBr.goblet}:</div></div>
+                                        <div className="stats-div"><Image width={30} height={30} src="/images/goblet.webp" alt=""/><div>{ptBr.goblet}:</div></div>
                                         <p>Bônus de Dano Dendro</p>
                                     </li>
                                     <li>
-                                        <div className="stats-div"><img src="images/tiara.webp" alt=""/><div>{ptBr.circlet}:</div></div>
+                                        <div className="stats-div"><Image width={30} height={30} src="/images/circlet.webp" alt=""/><div>{ptBr.circlet}:</div></div>
                                         <p>Taxa Crítica ou Dano Crítico</p>
                                     </li>
                                 </ul>
@@ -369,132 +398,165 @@ switch (travelerName) {
                         </section>
                     </div>
                 </section>
-                <section>
+                {...characterBuild.otherArtifacts ? [<section>
                     <h2 className="titles-h2">{ptBr.otherArtifacts}</h2>
                     <div id="other-artifacts">
-                        <section>
-                            <h3 className="other-artifacts-set">4x Sonhos Dourados</h3>
-                                <div className="other-artifacts-set-img-list">
-                                    <img src="https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15026_4.png" alt=""/>
-                                    <img src="https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15026_2.png" alt=""/>
-                                    <img src="https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15026_5.png" alt=""/>
-                                    <img src="https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15026_1.png" alt=""/>
-                                    <img src="https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15026_3.png" alt=""/>
-                                </div>
+                    {artefatosPT.slice(1).map((art, i) => (
+                    
+                        
+                        <section key={i}>
+                            <h3 className="other-artifacts-set">4x {art.name}</h3>
                                 <div className="other-artifacts-set-description">
-                                    <p>
-                                        <b>2 Peças:</b>{" "}Bônus de Dano Dendro +15%</p>
-                                        <p>
-                                    <b>4 Peças:</b>{" "}Depois que as Habilidades Elementais ou Supremos acertam os oponentes, a RES Dendro dos alvos serão reduzidas em 30% por 8s. Esse efeito pode ser desencadeado mesmo se o personagem equipando este conjunto não estiver em campo.</p>
+                                <div className="two-pieces-flex2">
+                                        <Image width={160} height={160} src={`https://enka.network/ui/${art.images.filename_flower}.png`} alt=""/>
+                                        <div>
+                                        <b>{ptBr.twoPieces}:</b> {art.effect2Pc}
+                                        </div>
+                                        </div>
+                                        
+                                <b>{ptBr.fourPieces}:</b> {art.effect4Pc}
                                 </div>
                         </section>
-                        <section>
-                            <h3 className="other-artifacts-set">4x Crônicas do Pavilhão do Deserto</h3>
-                                <div className="other-artifacts-set-img-list">
-                                    <img src="https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15017_4.png" alt=""/>
-                                    <img src="https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15017_2.png" alt=""/>
-                                    <img src="https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15017_5.png" alt=""/>
-                                    <img src="https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15017_1.png" alt=""/>
-                                    <img src="https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15017_3.png" alt=""/>
+                        ))}
+                        {characterBuild.twoPieces!= null ? <section>
+                            <h3 className="other-artifacts-set">2x&nbsp;{twoPiecesArtifacts[0].name} / 2x&nbsp;{twoPiecesArtifacts[1].name}</h3>
+                                <div id="other-artifacts-set-description">
+                                       <div className="two-pieces-flex">
+                                        <Image width={160} height={160} src={`https://enka.network/ui/${twoPiecesArtifacts[0].images.filename_flower}.png`} alt=""/>
+                                        <div>
+                                        <b>{ptBr.twoPieces}:</b> {twoPiecesArtifacts[0].effect2Pc}
+                                        </div>
+                                        </div>
+                                        <hr id="line" />
+                                        <div className="two-pieces-flex">
+                                        <Image width={160} height={160} src={`https://enka.network/ui/${twoPiecesArtifacts[1].images.filename_flower}.png`} alt=""/>
+                                        
+                                        <div>
+                                        <b>{ptBr.twoPieces}:</b> {twoPiecesArtifacts[1].effect2Pc}
+                                        </div>
+                                        </div>
+                                        
                                 </div>
-                                <div className="other-artifacts-set-description">
-                                    <p>
-                                        <b>2 Peças:</b>{" "}Aumenta o dano da Habilidade Elemental em 20%
-                                    </p>
-                                    <p>
-                                    <b>4 Peças:</b>{" "}Aumenta o Dano da Habilidade Elemental em 25%. Além disso, quando o personagem não está no campo de batalha, o Dano da Habilidade Elemental aumenta em mais 25%. Este efeito será removido 2s após o personagem entrar no campo de batalha.
-                                    </p>
-                                </div>
-                                
-                        </section>
+                        </section> : ''}
                     </div>
-                </section>
+                </section>] : []}
+                
                 <section id="character-talent-priority">
                     <h2 className="titles-h2">{travelerName}{" "}{ptBr.talentPriority}</h2>
                     <ol>
-                        <li><p>{ptBr.first}</p><p>{characterBuild.talentPriority[0]}</p></li>
-                        <li><p>{ptBr.second}</p><p>{characterBuild.talentPriority[1]}</p></li>
-                        <li><p>{ptBr.third}</p><p>{characterBuild.talentPriority[2]}</p></li>
+                        {characterBuild.talentPriority.map((tlt:any, i:any) => (
+                            <li key={i}><p>{i+1}{ptBr.degree}</p><p>{tlt}</p></li>
+                        ))}
                     </ol>
                 </section>
                 <section>
                     <h2 className="titles-h2">{travelerName}{" "}{ptBr.bestTeams}</h2>
                     <ol id="teams-list">
-                        <li className="team-card">
-                            <table>
-                                <caption>#1</caption>
-                                <thead>
-                                    <tr>
-                                        <th>Main DPS</th>
-                                        <th>Sub-DPS</th>
-                                        <th>Suporte</th>
-                                        <th>Suporte</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="team-character"><img src="images/Team-Icons/mavuika.png" alt="Mavuika"/><p>Mavuika</p></td>
-                                        
-                                        <td className="team-character">
-                                        <Link href={formatarParaKebabCase(travelerName)}>
-                                            <img src="images/Team-Icons/furina.png" alt="{travelerName}"/><p>{travelerName}</p>
-                                            </Link>
-                                            </td>
-                                        <td className="team-character">
-                                            <Link href={'arlecchino'}>
-                                        <img src="images/Team-Icons/xilonen.png" alt="Xingqiu"/>
-                                        <p>Xilonen</p></Link>
-                                        </td>
-                                        <td className="team-character">
-                                        <Link href={'yumemizuki'}>
-                                        <img src="images/Team-Icons/bennett.png" alt="Sangonomiya Kokomi"/>
-                                        <p>Bennett</p> </Link>
-                                        </td>
-                            </tr>
-                            </tbody>
-                            </table>
-                    
-                    
-                    
-                        </li>
-                        
-                    </ol>
+  {characterBuild.teams.map((team:any, i:any) => (
+    <li className="team-card" key={i}>
+      <table>
+        <caption>Time #{i + 1}</caption> 
+        <thead>
+          <tr>
+            {team.map((character:string, j:any) => {
+              const characterFunction = Object.values(character)[0]; // Pega o nome do personagem
+              return (
+                <th key={j}>
+                  {characterFunction}
+                </th>
+              );
+            })}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {team.map((character:any, j:any) => {
+              const characterName = Object.keys(character)[0]; // Pega o nome do personagem
+              return (
+                <td key={j} className="team-character">
+                  <img 
+                    src={`images/Team-Icons/${formatarNome(characterName)}.png`} 
+                    alt={formatarNomeComEspaco(formatarNome(characterName))}
+                  />
+                  <p>
+                    {formatarNomeEspecial(formatarNomeComEspaco(formatarNome(characterName)))}
+                  </p>
+                </td>
+              );
+            })}
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  ))}
+  <li className="team-card">
+  <table>
+  <caption>Time #2</caption>
+  <thead><tr><th>Main DPS</th><th>Sub-DPS</th><th>Suporte</th><th>Main DPS</th></tr></thead>
+  <tbody>
+    <tr>
+        <td className="team-character">
+            <img src="images/Team-Icons/Traveler_Anemo.png" alt="Mavuika"/>
+            <p>Citlali</p>
+        </td>
+        <td className="team-character">
+            <img src="images/Team-Icons/Mavuika.png" alt="Nilou"/>
+            <p>Furina</p>
+        </td>
+        <td className="team-character">
+            <img src="images/Team-Icons/Arlecchino.png" alt="Arlecchino"/>
+            <p>Arlecchino</p>
+        </td>
+        <td className="team-character">
+            <img src="images/Team-Icons/Neuvillette.png" alt="Neuvillette"/>
+            <p>Neuvillette</p>
+        </td>
+    </tr>
+    </tbody>
+    </table>
+    </li>
+</ol>
+
                 </section>
+
+    
+
             </main>
             <nav>
                 <h2>Menu Principal de Navegação</h2>
-                <a href="" id="titlessss">
-                    <div><Image width={52} height={52} src={`/images/Icons/${formatarParaSlashCase(travelerName === 'Andarilho' ? 'Wanderer' : travelerName)}.png`} alt=""/></div>
+                <Link href="/" id="titlessss">
+                    <div>
+                    <Image width={52} height={52} loading="eager" src={`/images/Icons/${formatarNome(id)}.png`} alt=""/></div>
                     <div id="logo">genshinbuild.com</div>
-                </a>
+                </Link>
                 <a href="/" className="links">
                     <div>
-                        <img src="images/header-icons/tierlist.svg" alt=""/>
+                    <Image width={22} height={22} loading="eager" src="/images/header-icons/tierlist.svg" alt=""/>
                     </div>
                     <span className="names">Tier-List</span>
                 </a>
                 <a href="/" className="links">
                     <div>
-                    <img src="images/header-icons/weapons.svg" alt=""/>
+                    <Image width={22} height={22} loading="eager" src="/images/header-icons/weapons.svg" alt=""/>
                     </div>
                     
                     <span className="names">Armas</span>
                 </a>
                 <a href="/" className="links" id="home">
                     <div>
-                        <img src="images/header-icons/home.svg" alt=""/>
+                    <Image width={22} height={22} loading="eager" src="/images/header-icons/home.svg" alt=""/>
                     </div>
                     <span className="names">Início</span>
                 </a>    
                 <a href="/" className="links">
                     <div>
-                    <img src="images/header-icons/artifacts.svg" alt=""/>
+                    <Image width={22} height={22} loading="eager" src="/images/header-icons/artifacts.svg" alt=""/>
                     </div>
                     <span className="names">Artefatos</span>
                 </a>
                 <a href="/" className="links">
                     <div>
-                    <img src="images/header-icons/farming.svg" alt=""/>
+                    <Image width={22} height={22} src="/images/header-icons/farming.svg" alt=""/>
                     </div>    
                     <span className="names">Farming</span>
 
