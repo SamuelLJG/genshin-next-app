@@ -267,27 +267,20 @@ switch (travelerName) {
 
             <main id="main-content">
                 <section id="character-banner">
-
-                <Image
+                <picture>
+        <source media="(min-width: 826px)" srcSet={`/images/Icons/${formatarNome(id)}.png`} />
+        <Image
         id="character-image"
         priority
-        className={`star${characterData.rarity} character-icon-pc`}
-        src={`/images/Icons/${formatarNome(id)}.png`}
-        alt="Imagem Desktop"
-        width={256}
-        height={256}
-        loading="eager"
-      />
-      <Image
-        id="character-image"
-        priority
-        className={`star${characterData.rarity} character-icon-mobile`}
+        className={`star${characterData.rarity}`}
         src={`/images/Banners/${formatarNome(id)}_Card.png`}
         alt="Imagem Mobile"
+        loading="eager"
         width={560}
         height={315}
-        loading="eager"
       />
+      </picture>
+      
                     <div id="character-main">
                         <div id="character-header">
                             <div id="character-info">
