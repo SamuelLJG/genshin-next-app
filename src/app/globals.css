@@ -310,15 +310,7 @@ color: #ffd270;
   gap: calc(7px * var(--minimize));
 }
 
-.wa-3 {
-  color: #aee5ff;
-}
-.wa-4 {
-  color: #c695ff;
-}
-.wa-5 {
-  color: #ffce80;
-}
+
 /*
 .one-Star img {
   background-image: url(https://images.genshin-builds.com/genshin/1-Star.webp);
@@ -618,7 +610,8 @@ display: block;
 }
 
 #artifacts-h3, #weapon-header h3 {
-  font-size: calc(19px * var(--minimize));  font-family: Anuphan; font-style: italic;
+  font-size: calc(19px * var(--minimize)); 
+  font-family: Anuphan; font-style: italic;
   display: -webkit-box;
           -webkit-line-clamp: 1;
           line-height: 1.1em;
@@ -626,6 +619,15 @@ display: block;
           -webkit-box-orient: vertical;
           overflow: hidden;
           text-overflow: ellipsis;
+}
+.wa-3 {
+  color: #aee5ff;
+}
+.wa-4 {
+  color: #c695ff;
+}
+.wa-5 {
+  color: #ffce80;
 }
 #artifacts-container {
   background: var(--sub); margin-top: calc(15px * var(--minimize)); border: 1px solid var(--bd); border-radius: calc(4px * var(--minimize));

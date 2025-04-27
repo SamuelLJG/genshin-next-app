@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import { Anuphan, Plus_Jakarta_Sans } from 'next/font/google'
 import "./globals.css";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Create Next App",

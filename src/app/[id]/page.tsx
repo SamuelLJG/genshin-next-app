@@ -7,10 +7,30 @@ import SliderHighlight from '@/components/SliderHighlight';
 import ptBr from '@/data/pt-br.json'
 import Link from "next/link";
 import ScriptsClient from "@/components/scripts-client";
+import type { Metadata } from "next";
 
+type Props = {
+  params: Promise<{ id: string }>
+}
+
+function formatarUrl(nome: string) {
+  return nome
+    .split('-')
+    .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
+    .join(' ');
+}
+
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
+  const id = (await params).id;
+  return {
+    title: `${formatarUrl(id)}`
+  }
+}
 
 export default async function Home( { params }:any ) {
-    
+  
     let { id } = await params;
     const characterBuild:any = characters.find(p => p.name === id);
 
@@ -203,6 +223,7 @@ switch (travelerName) {
         elementFormatted = characterData.elementText; // mantém o valor original
       break;
   }
+  
   function formatarNomeEspecial(name:any) {
     // Verifica se o nome contém as palavras a serem removidas e as substitui
     if (name === 'Traveler Hydro' ||
@@ -245,8 +266,9 @@ switch (travelerName) {
     }
   return name;
   }
-  const translatedStats = characterBuild.mainStatsArtifacts.map((stat:any) => ptBr[stat as keyof typeof ptBr]);
+ 
     return (
+      
         <body id={elementFormatted}>
             <h1 id="character-h1">
                 <div id="header-container">
@@ -393,7 +415,7 @@ switch (travelerName) {
                             <Image width={160} height={160} className="star5" src={`https://enka.network/ui/${artefatosPT[0].images.filename_flower}.png`} alt=""/>
                                 <div id="artifacts-header">
                                     <div>
-                                        <h3 id="artifacts-h3" className={`wa-${armasPT[0].rarity}`}>{artefatosPT[0].name}</h3>
+                                        <h3 id="artifacts-h3" className="wa-5">{artefatosPT[0].name}</h3>
                                     </div>
                                     <div id="artifacts-description">
                                         <p id="artifacts-description-first-p">
@@ -636,4 +658,5 @@ switch (travelerName) {
             <ScriptsClient/>
             <SliderHighlight />
         </body>
-    )}
+    )
+    }
