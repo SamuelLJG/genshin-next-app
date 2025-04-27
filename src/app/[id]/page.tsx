@@ -45,7 +45,7 @@ async function getArmasEArtefatos() {
     const responsesPTWeapons = await Promise.all(
       nomesDasArmas.map(nome => {
         const nomeLimpo = encodeURIComponent(nome.trim());
-        return fetch(`${baseURLWeapon}${nomeLimpo}&resultLanguage=portuguese`, { cache: 'reload' });
+        return fetch(`${baseURLWeapon}${nomeLimpo}&resultLanguage=portuguese`, { cache: 'force-cache' });
       })
     );
     const armasPT = await Promise.all(responsesPTWeapons.map(res => res.json()));
@@ -53,14 +53,14 @@ async function getArmasEArtefatos() {
     const responsesPTArtifacts = await Promise.all(
       nomesDosArtefatos.map(nome => {
         const nomeLimpo = encodeURIComponent(nome.trim());
-        return fetch(`${baseURLArtifact}${nomeLimpo}&resultLanguage=portuguese`, { cache: 'reload' });
+        return fetch(`${baseURLArtifact}${nomeLimpo}&resultLanguage=portuguese`, { cache: 'force-cache' });
       })
     );
     const doisArtefatos = characterBuild.twoPieces ? [...characterBuild.twoPieces] : [];
     const responsestwoPieces = await Promise.all(
         doisArtefatos.map(nome => {
           const nomeLimpo = encodeURIComponent(nome.trim());
-          return fetch(`${baseURLArtifact}${nomeLimpo}&resultLanguage=portuguese`, { cache: 'reload' });
+          return fetch(`${baseURLArtifact}${nomeLimpo}&resultLanguage=portuguese`, { cache: 'force-cache' });
         })
       );
     const twoPiecesArtifacts = await Promise.all(responsestwoPieces.map(res => res.json()));
@@ -116,7 +116,7 @@ switch (id) {
         `https://genshin-db-api.vercel.app/api/v5/talents?query=${id3}&resultLanguage=portuguese`,
         `https://genshin-db-api.vercel.app/api/v5/constellations?query=${id3}&resultLanguage=portuguese`
       ];
-      const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'reload' })));
+      const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'force-cache' })));
       const data = await Promise.all(responses.map(res => res.json()));
       return {
         characterData: data[0],
