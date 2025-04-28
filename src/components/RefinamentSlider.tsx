@@ -14,7 +14,7 @@ export default function RefinamentoSlider({ arma, arma2 }: any ) {
     return (
         <div>
             <div id="weapon-refinement-level">
-            <p> <span>{arma2.refinement}</span> <span>Nv. {refinamento}</span></p>
+            <p> <span>{arma2.refinement}. {refinamento}</span></p>
             <input className="slider" type="range" defaultValue="5" min="1" max="5" onChange={handleChange} />
             </div>
                 <p id="weapon-description">{descricao}</p>

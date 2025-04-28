@@ -36,10 +36,10 @@ export default async function Home( { params }:any ) {
 
     const nomesDasArmas = [characterBuild.bestWeapon, ...characterBuild.otherWeapons];
     const nomesDosArtefatos = [characterBuild.bestArtifacts, ...characterBuild.otherArtifacts ? [...characterBuild.otherArtifacts] : []]
-    
+    const apiUrl = 'https://genshin-db-api.vercel.app/api/v5/'
 async function getArmasEArtefatos() {
-    const baseURLWeapon = 'https://genshin-db-api.vercel.app/api/v5/weapons?query=';
-    const baseURLArtifact = 'https://genshin-db-api.vercel.app/api/v5/artifacts?query=';
+    const baseURLWeapon = `${apiUrl}weapons?query=`;
+    const baseURLArtifact = `${apiUrl}artifacts?query=`;
   
     // Armas em Português
     const responsesPTWeapons = await Promise.all(
@@ -110,11 +110,11 @@ switch (id) {
     async function getData() {
      
       const urls = [
-        `https://genshin-db-api.vercel.app/api/v5/characters?query=${id2}&resultLanguage=portuguese`,
-        `https://genshin-db-api.vercel.app/api/v5/stats?folder=characters&query=${id2}`,
-        `https://genshin-db-api.vercel.app/api/v5/stats?folder=weapons&query=${characterBuild.bestWeapon}`,
-        `https://genshin-db-api.vercel.app/api/v5/talents?query=${id3}&resultLanguage=portuguese`,
-        `https://genshin-db-api.vercel.app/api/v5/constellations?query=${id3}&resultLanguage=portuguese`
+        `${apiUrl}characters?query=${id2}&resultLanguage=portuguese`,
+        `${apiUrl}stats?folder=characters&query=${id2}`,
+        `${apiUrl}stats?folder=weapons&query=${characterBuild.bestWeapon}`,
+        `${apiUrl}talents?query=${id3}&resultLanguage=portuguese`,
+        `${apiUrl}constellations?query=${id3}&resultLanguage=portuguese`
       ];
       const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'force-cache' })));
       const data = await Promise.all(responses.map(res => res.json()));
@@ -266,11 +266,26 @@ switch (travelerName) {
     }
   return name;
   }
- 
+  const sanitizeDescription = (descriptionRaw:any) => {
+    return descriptionRaw
+      .replace(/"(.*?)"/g, '<b>"$1"</b>')
+      .replace(/\u003Ccolor=#FFD780FF\u003E/g, '<b> ')
+      .replace(/\u003C\/color\u003E/g, '</b>')
+      .replace(/\n\n/g, '<hr />')
+      .replace(/\n/g, '<br />')
+      .replace(/\u003Ccolor=#80C0FFFF\u003E/g, '<b style="color: var(--ct);">')
+      .replace(/\u003Ccolor=#FFACFFFF\u003E/g, '<b style="color: var(--ct);">')
+      .replace(/\u003Ccolor=#FFE699FF\u003E/g, '<b style="color: var(--ct);">')
+      .replace(/\u003Ccolor=#99FF88FF\u003E/g, '<b style="color: var(--ct);">')
+      .replace(/\u003Ccolor=#80FFD7FF\u003E/g, '<b style="color: var(--ct);">')
+      .replace(/\u003Ccolor=#99FFFFFF\u003E/g, '<b style="color: var(--ct);">')
+      .replace(/\u003Ccolor=#FF9999FF\u003E/g, '<b style="color: var(--ct);">')
+      .replace(/\u003Ci\u003E/g, '<i class="talent-description-i"> ') || '';
+  };
     return (
       
         <body id={elementFormatted}>
-            <h1 id="character-h1">
+            <div id="character-h1">
                 <div id="header-container">
                     <div className="header-icon">
                         <svg className="icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book" role="img" xmlns="http://www.w3.org/2000/svg"
@@ -280,12 +295,15 @@ switch (travelerName) {
                             </path>
                         </svg>
                     </div>
-                    <div id="header-title">
-                    &nbsp;{travelerName}{" "}Build{" "}
-                        <span id="character-function">( {ptBr[characterBuild.function as keyof typeof ptBr]} )</span>
+                    <div id="h1-box">
+                      <h1 id="header-title">
+                      &nbsp;{travelerName}{" "}Build{" "}
+                      <span id="character-function">( {ptBr[characterBuild.function as keyof typeof ptBr]} )</span>
+                      
+                      </h1>
                     </div>
                 </div>
-            </h1>
+            </div>
 
             <main id="main-content">
                 <section id="character-banner">
@@ -374,16 +392,16 @@ switch (travelerName) {
                                     <div id="weapon-header">
                                         <h3 className={`wa-${armasPT[0].rarity}`}>{armasPT[0].name}</h3>
                                         <div id="weapon-refinement">
-                                        
-                                                <RefinamentoSlider arma2={ptBr} arma={armasPT[0]} />
+                                        <WeaponStatsSlider arma2={characterWeapons} arma3={armasPT[0]} arma4={ptBr} />
+                                                
                                         </div>
 
                                     </div>
                                 </div>
-                                <WeaponStatsSlider arma2={characterWeapons} arma3={armasPT[0]} />
+                                <RefinamentoSlider arma2={ptBr} arma={armasPT[0]} />
                             </section>
 
-                            <section>
+                            <section id="other-weapons-section">
                                 <h3 className="titles-h3">{ptBr.otherWeapons}</h3>
                                 <ol id="other-weapons-list">
                                     {armasPT.slice(1).map((weapons:any, i:any) => (
@@ -412,7 +430,9 @@ switch (travelerName) {
                     <div id="artifacts-container">
                         <div id="artifacts-section">
                             <section id="artifacts-main">
+                              <div id="artifact-img-box">
                             <Image width={160} height={160} className="star5" src={`https://enka.network/ui/${artefatosPT[0].images.filename_flower}.png`} alt=""/>
+                            </div>
                                 <div id="artifacts-header">
                                     <div>
                                         <h3 id="artifacts-h3" className="wa-5">{artefatosPT[0].name}</h3>
@@ -431,72 +451,78 @@ switch (travelerName) {
                                 <h3 className="titles-h3">{ptBr.artifactsMainStats}</h3>
                                 <ul id="artifacts-main-stats">
                                     <li>
-                                        <div className="stats-div"><Image width={30} height={30} src="/images/sands.webp" alt=""/><div>{ptBr.sands}:</div></div>
+                                        <div className="stats-div"><Image width={30} height={30} src="/images/sands.webp" alt=""/><div><div>{ptBr.sands}:</div></div></div>
                                         <p>{ptBr[characterBuild.mainStatsArtifacts[0] as keyof typeof ptBr]}</p>
                                     </li>
                                     <li>
-                                        <div className="stats-div"><Image width={30} height={30} src="/images/goblet.webp" alt=""/><div>{ptBr.goblet}:</div></div>
+                                        <div className="stats-div"><Image width={30} height={30} src="/images/goblet.webp" alt=""/><div><div>{ptBr.goblet}:</div></div></div>
                                         <p>{ptBr[characterBuild.mainStatsArtifacts[1] as keyof typeof ptBr]}</p>
                                     </li>
                                     <li>
-                                        <div className="stats-div"><Image width={30} height={30} src="/images/circlet.webp" alt=""/><div>{ptBr.circlet}:</div></div>
+                                        <div className="stats-div"><Image width={30} height={30} src="/images/circlet.webp" alt=""/><div><div>{ptBr.circlet}:</div></div></div>
                                         <p>{ptBr[characterBuild.mainStatsArtifacts[2] as keyof typeof ptBr]}</p>
                                     </li>
                                 </ul>
                             </section>
                         </div>
                         <section id="artifacts-sub-stats">
-                            <h3 className="titles-h3">Sub-Status dos artefatos</h3>
+                            <h3 className="titles-h3">{ptBr.artifactsSubStats}</h3>
                             <ul>
-                                <li><p>Dano Crítico</p></li>
-                                <li><p>Taxa Crítica</p></li>
-                                <li><p>Proficiência Elemental</p></li>
-                                <li><p>Recarga de Energia</p></li>
+                              {characterBuild.subStatsArtifacts.map((art:any,i:any) => (
+                                <li key={i}><p>&bull; {ptBr[art as keyof typeof ptBr]}</p></li>
+                              ))}
                             </ul>
                         </section>
                     </div>
                 </section>
                 {...characterBuild.otherArtifacts ? [<section>
                     <h2 className="titles-h2">{ptBr.otherArtifacts}</h2>
-                    <div id="other-artifacts">
+                    <ul id="other-artifacts">
                     {artefatosPT.slice(1).map((art, i) => (
                     
                         
-                        <section key={i}>
-                            <h3 className="other-artifacts-set">4x {art.name}</h3>
-                                <div className="other-artifacts-set-description">
-                                <div className="two-pieces-flex2">
-                                        <Image width={160} height={160} src={`https://enka.network/ui/${art.images.filename_flower}.png`} alt=""/>
-                                        <div>
-                                        <b>{ptBr.twoPieces}:</b> {art.effect2Pc}
+                        <li key={i}>
+                            <span className="other-artifacts-set">{i+2}{ptBr.degree}</span>
+                                        <div className="other-artifacts-box">
+                                          <Image width={160} height={160} src={`https://enka.network/ui/${art.images.filename_flower}.png`} alt=""/>
+                                          <div className="other-artifacts-set-description">
+                                            <span className="four-pieces-name">4x&nbsp;{art.name}</span>
+                                          
+                                                                          </div>
                                         </div>
-                                        </div>
-                                        
-                                <b>{ptBr.fourPieces}:</b> {art.effect4Pc}
-                                </div>
-                        </section>
+                        </li>
                         ))}
-                        {characterBuild.twoPieces!= null ? <section>
-                            <h3 className="other-artifacts-set">2x&nbsp;{twoPiecesArtifacts[0].name} / 2x&nbsp;{twoPiecesArtifacts[1].name}</h3>
-                                <div id="other-artifacts-set-description">
-                                       <div className="two-pieces-flex">
-                                        <Image width={160} height={160} src={`https://enka.network/ui/${twoPiecesArtifacts[0].images.filename_flower}.png`} alt=""/>
-                                        <div>
-                                        <b>{ptBr.twoPieces}:</b> {twoPiecesArtifacts[0].effect2Pc}
-                                        </div>
-                                        </div>
-                                        <hr id="line" />
-                                        <div className="two-pieces-flex">
-                                        <Image width={160} height={160} src={`https://enka.network/ui/${twoPiecesArtifacts[1].images.filename_flower}.png`} alt=""/>
-                                        
-                                        <div>
-                                        <b>{ptBr.twoPieces}:</b> {twoPiecesArtifacts[1].effect2Pc}
-                                        </div>
-                                        </div>
-                                        
+                        {characterBuild.twoPieces!= null ? 
+                        twoPiecesArtifacts.map((_, i) => {
+                          // Só faz algo a cada dois itens
+                          if (i % 2 !== 0) return null;
+                          
+                          const first = twoPiecesArtifacts[i];
+                          const second = twoPiecesArtifacts[i + 1];
+                          
+                          
+                          const pairIndex = i / 2 + 2
+                          
+                          return (
+                            <li key={i}>
+                              <span className="other-artifacts-set">{(characterBuild.otherArtifacts.length === 0) ? (
+  pairIndex 
+): (pairIndex+1)}{ptBr.degree}</span>
+                              <div className="other-artifacts-box">
+                                <Image width={160} height={160} src={`https://enka.network/ui/${first.images.filename_flower}.png`} className="spp" alt="" />
+                                <Image width={160} height={160} src={`https://enka.network/ui/${second.images.filename_flower}.png`} alt="" />
+                                
+                                <div className="other-artifacts-set-description">
+                                  <div>
+                                    <span className="two-pieces-name">2x {first.name}</span>
+                                    <span className="two-pieces-name">2x {second.name}</span>
+                                  </div>
                                 </div>
-                        </section> : ''}
-                    </div>
+                              </div>
+                            </li>
+                          );
+                        }) : ''}
+                    </ul>
                 </section>] : []}
                 
                 <section id="character-talent-priority">
@@ -532,10 +558,11 @@ switch (travelerName) {
               const characterName = Object.keys(character)[0]; // Pega o nome do personagem
               return (
                 <td key={j} className="team-character">
+                  <Link href={`/${characterName}`}>
                   <Image width={74} height={74}
                     src={`/images/Team-Icons/${formatarNome(characterName)}.png`} 
                     alt={formatarNomeComEspaco(formatarNome(characterName))}
-                  />
+                  /></Link>
                   <p>
                     {formatarNomeEspecial(formatarNomeComEspaco(formatarNome(characterName)))}
                   </p>
@@ -550,66 +577,94 @@ switch (travelerName) {
 </ol>
 
                 </section>
+                
                 <section>
                 <h2 className="titles-h2">{travelerName}{" "}{ptBr.talents}</h2>
-            <ul className="talents-ul">
-              {Object.entries(characterTalents)
-                .filter(([key]) => key.startsWith('combat'))
-                .map(([key, p]:any, index) => (
-                  <li className="talents-box-cover" key={index}>
-                    <div className="talents-box">
-                      <h3 className="talents-name1">{formatCharacterName(`combat${index + 1}`)} 
-                      </h3>
-                      <span className="talents-name">{p.name}</span>
-                    </div>
-                    <div className="talents-description">
-                      {p.description}
-                    </div>
-                  </li>
-              ))}
-            </ul>
-            
+            <div className="talents-ul">
+            {(() => {
+  const filteredItems = Object.entries(characterTalents)
+    .filter(([key, p]) => key.startsWith('combat') && p); // Filtra apenas as entradas com chave "combat" e valor p existente
+
+  // Se houver exatamente 4 itens, inverta o último com o penúltimo
+  if (filteredItems.length === 4) {
+    const lastIndex = filteredItems.length - 1;
+    const secondLastIndex = lastIndex - 1;
+    // Inverte o último e penúltimo item
+    [filteredItems[lastIndex], filteredItems[secondLastIndex]] = [filteredItems[secondLastIndex], filteredItems[lastIndex]];
+  }
+
+  return filteredItems.map(([key, p]: any, index) => {
+    // Verifica se 'p' tem 'name' e 'descriptionRaw' antes de renderizar a seção
+    if (!p?.name || !p?.descriptionRaw) return null; // Caso não tenha, retorna null para não renderizar
+
+    return (
+      <section className="talents-box-cover" key={index}>
+        <div className="talents-box">
+          <h3 className="talents-name1">
+            {formatCharacterName(`combat${index + 1}`)}
+          </h3>
+          <span
+            className="talents-name"
+            dangerouslySetInnerHTML={{
+              __html: p.name.replace(/Ataque Normal: /g, ''),
+            }}
+          />
+        </div>
+
+        <div className="talents-description"
+          dangerouslySetInnerHTML={{
+            __html: sanitizeDescription(p.descriptionRaw)
+          }}
+        />
+      </section>
+    );
+  });
+})()}
+            </div>
             
         </section>
                 <section>
                 <h2 className="titles-h2">{travelerName}{" "}{ptBr.passives}</h2>
-            <ul className="talents-ul">
+            <div className="talents-ul">
               {Object.entries(characterTalents)
                 .filter(([key]) => key.startsWith('p'))
                 .map(([key, p]:any, index) => (
-                  <li className="talents-box-cover" key={index}>
+                  <section className="talents-box-cover" key={index}>
                     <div className="talents-box">
                       <h3 className="talents-name1">{ptBr.passive}&nbsp;{index + 1}
                       </h3>
                       <span className="talents-name">{p.name}</span>
                     </div>
-                    <div className="talents-description">
-                      {p.description}
-                    </div>
-                  </li>
+                    <div className="talents-description"
+          dangerouslySetInnerHTML={{
+            __html: sanitizeDescription(p.descriptionRaw)}}
+        />
+                  </section>
               ))}
-            </ul>
+            </div>
             
             
         </section>
                 <section>
                 <h2 className="titles-h2">{travelerName}{" "}{ptBr.constellations}</h2>
-            <ul className="talents-ul">
+            <div className="talents-ul">
               {Object.entries(characterConstellations)
                 .filter(([key]) => key.startsWith('c'))
                 .map(([key, c]:any, index) => (
-                  <li className="talents-box-cover" key={index}>
+                  <section className="talents-box-cover" key={index}>
                     <div className="talents-box">
                       <h3 className="talents-name1">C{index + 1}
                       </h3>
                       <span className="talents-name">{c.name}</span>
                     </div>
-                    <div className="talents-description">
-                      {c.description}
-                    </div>
-                  </li>
+                    <div className="talents-description"
+          dangerouslySetInnerHTML={{
+            __html: sanitizeDescription(c.descriptionRaw)
+          }}
+        />
+                  </section>
               ))}
-            </ul>
+            </div>
             
             
         </section>

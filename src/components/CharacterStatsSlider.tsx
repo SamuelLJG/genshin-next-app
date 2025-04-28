@@ -58,22 +58,22 @@ export default function CharacterStatsSlider({ stats, stats2, stats3 }: any) {
             <ul id="character-basic-stats-list">
                 <li>
                     <p>
-                        <Image width={25} height={25} src={`/images/Basic_HP.webp`} alt={`${stats3.statsIconDescription} ${stats3.hp}`} />
-                        {stats3.hp}
+                        <Image width={25} height={25} src={`/images/Basic_HP.webp`} alt={`${stats3.statsIconDescription} ${stats3.basicHp}`} />
+                        {stats3.basicHp}
                     </p>
                     <span>{descricao1}</span>
                 </li>
                 <li>
                     <p>
-                        <Image width={25} height={25} src={`/images/Basic_ATK.webp`} alt={`${stats3.statsIconDescription} ${stats3.atk}`} />
-                        {stats3.atk}
+                        <Image width={25} height={25} src={`/images/Basic_ATK.webp`} alt={`${stats3.statsIconDescription} ${stats3.basicAttack}`} />
+                        {stats3.basicAttack}
                     </p>
                     <span>{descricao2}</span>
                 </li>
                 <li>
                     <p>
-                        <Image width={25} height={25} src={`/images/Basic_DEF.webp`} alt={`${stats3.statsIconDescription} ${stats3.def}`} />
-                        {stats3.def}
+                        <Image width={25} height={25} src={`/images/Basic_DEF.webp`} alt={`${stats3.statsIconDescription} ${stats3.basicDefense}`} />
+                        {stats3.basicDefense}
                     </p>
                     <span>{descricao3}</span>
                 </li>
