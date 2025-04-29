@@ -32,7 +32,7 @@ export const generateMetadata = async ({
   }
 }
 
-export default async function getStaticProps( { params }:any ) {
+export default async function Home( { params }:any ) {
   
     let { id } = await params;
     let path;
@@ -353,11 +353,9 @@ switch (travelerName) {
 
             <main id="main-content">
                 <section id="character-banner">
-                <picture>
-        <source media="(min-width: 826px)" srcSet={`/images/Icons/${formatarNome(id)}.png`} />
         <Image
         id="character-image"
-        className={`star${characterData.rarity}`}
+        className={`star${characterData.rarity}  character-icon-mobile`}
         src={`/images/Banners/${formatarNome(id)}_Card.png`}
         alt="Imagem Mobile"
         width={560}
@@ -365,7 +363,16 @@ switch (travelerName) {
         loading="eager"
         priority
       />
-      </picture>
+      <Image
+        id="character-image"
+        className={`star${characterData.rarity} character-icon-pc`}
+        src={`/images/Icons/${formatarNome(id)}.png`}
+        alt="Imagem Pc"
+        width={256}
+        height={256}
+        loading="eager"
+        priority
+      />
       
                     <div id="character-main">
                         <div id="character-header">
