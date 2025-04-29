@@ -62,7 +62,7 @@ export default function Home() {
         <body>
         <main id="main-index"> 
         
-            <h1 id="index-h1">Genshin Impact Lista de Personagens</h1>
+            <h1 id="index-h1">GENSHIN IMPACT LISTA DE PERSONAGENS</h1>
             <br />
             <Filter/>
             <hr />

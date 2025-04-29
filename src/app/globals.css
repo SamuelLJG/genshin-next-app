@@ -929,9 +929,7 @@ li {
   font-size: calc(13.5px * var(--minimize));
 }
 #index-h1 {
-  font-size: calc(24px * var(--minimize));
-  text-transform: uppercase;
-  margin-bottom: calc(10px * var(--minimize));
+  font-size: 22px;
 
 }
 #main-index hr {
