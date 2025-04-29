@@ -474,7 +474,7 @@ background-size: 100%;
   border-top: none;
   border-left: none;
   margin-top: calc(6px * var(--minimize));
-  aspect-ratio: 16/9;
+  aspect-ratio: 1/1;
 }
 
 #weapon-container {
@@ -1809,6 +1809,7 @@ margin-top: calc(-2px * var(--minimize));
       height: fit-content;
       background: var(--ct2);
       border: 1px solid var(--bd);
+      aspect-ratio: 16/9;
   }
 
   #character-info {
