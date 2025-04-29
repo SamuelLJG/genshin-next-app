@@ -895,13 +895,13 @@ li {
   top: calc(-10px * var(--minimize));
   left: calc(-20px * var(--minimize));
 }
-.character-card img:first-of-type {
-  width: calc(100px * var(--minimize));
-  height: calc(100px * var(--minimize));
+.character-card img {
+  width: 100px;
+  height: 100px;
   border-top: none;
   border-left: none;
   padding-top: calc(10px * var(--minimize));
-  
+  aspect-ratio: 1/1;
 }
 
 .character-card:hover {
@@ -930,6 +930,8 @@ li {
 }
 #index-h1 {
   font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 
 }
 #main-index hr {
@@ -2081,8 +2083,8 @@ margin-top: calc(-2px * var(--minimize));
       text-overflow: ellipsis;
   }
   .character-card img:first-of-type {
-    width: calc(90px * var(--minimize));
-    height: calc(90px * var(--minimize));
+    width: 90px;
+    height: 90px;
 }
 }
 
@@ -2092,8 +2094,8 @@ margin-top: calc(-2px * var(--minimize));
     height: calc(110px * var(--minimize));
 }
 .character-card img:first-of-type {
-  width: calc(80px * var(--minimize));
-  height: calc(80px * var(--minimize));
+  width: 80px;
+  height: 80px;
 }
 .character-card p {
   font-size: calc(14px * var(--minimize));
