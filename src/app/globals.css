@@ -466,8 +466,8 @@ background-size: 100%;
 }
 
 #character-image {
-  width: 215px;
-  height:  215px;
+  width: calc(215px * var(--minimize));
+  height:  calc(215px * var(--minimize));
   border-radius: 50%;
   background: var(--sub);
   border: 4px solid var(--ct);
@@ -895,13 +895,13 @@ li {
   top: calc(-10px * var(--minimize));
   left: calc(-20px * var(--minimize));
 }
-.character-card img {
-  width: 100px;
-  height: 100px;
+.character-card img:first-of-type {
+  width: calc(100px * var(--minimize));
+  height: calc(100px * var(--minimize));
   border-top: none;
   border-left: none;
   padding-top: calc(10px * var(--minimize));
-  aspect-ratio: 1/1;
+  
 }
 
 .character-card:hover {
@@ -929,9 +929,9 @@ li {
   font-size: calc(13.5px * var(--minimize));
 }
 #index-h1 {
-  font-size: 22px;
+  font-size: calc(24px * var(--minimize));
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: calc(10px * var(--minimize));
 
 }
 #main-index hr {
@@ -1805,7 +1805,7 @@ margin-top: calc(-2px * var(--minimize));
   #character-image {
       border-radius: calc(5px * var(--minimize));
       margin-top: calc(0px * var(--minimize));
-      width: 270px;
+      width: calc(270px * var(--minimize));
       height: fit-content;
       background: var(--ct2);
       border: 1px solid var(--bd);
@@ -1995,7 +1995,7 @@ margin-top: calc(-2px * var(--minimize));
       font-size: calc(15px * var(--minimize));
   }
   #character-image {
-      width: 180px;
+      width: calc(180px * var(--minimize));
   }
 
   #character-banner {
@@ -2011,7 +2011,7 @@ margin-top: calc(-2px * var(--minimize));
 #character-image {
   max-width: none;
   border-radius: calc(15px * var(--minimize)) calc(15px * var(--minimize)) calc(0px * var(--minimize)) calc(0px * var(--minimize));
-  width: calc(100% - 2px);
+  width: calc(100% - calc(2px * var(--minimize)));
 }
 
 #character-header {
@@ -2083,8 +2083,8 @@ margin-top: calc(-2px * var(--minimize));
       text-overflow: ellipsis;
   }
   .character-card img:first-of-type {
-    width: 90px;
-    height: 90px;
+    width: calc(90px * var(--minimize));
+    height: calc(90px * var(--minimize));
 }
 }
 
@@ -2094,8 +2094,8 @@ margin-top: calc(-2px * var(--minimize));
     height: calc(110px * var(--minimize));
 }
 .character-card img:first-of-type {
-  width: 80px;
-  height: 80px;
+  width: calc(80px * var(--minimize));
+  height: calc(80px * var(--minimize));
 }
 .character-card p {
   font-size: calc(14px * var(--minimize));
