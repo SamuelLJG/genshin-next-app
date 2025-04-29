@@ -466,8 +466,8 @@ background-size: 100%;
 }
 
 #character-image {
-  width: calc(215px * var(--minimize));
-  height:  calc(215px * var(--minimize));
+  width: 215px;
+  height:  215px;
   border-radius: 50%;
   background: var(--sub);
   border: 4px solid var(--ct);
@@ -1805,7 +1805,7 @@ margin-top: calc(-2px * var(--minimize));
   #character-image {
       border-radius: calc(5px * var(--minimize));
       margin-top: calc(0px * var(--minimize));
-      width: calc(270px * var(--minimize));
+      width: 270px;
       height: fit-content;
       background: var(--ct2);
       border: 1px solid var(--bd);
@@ -1995,7 +1995,7 @@ margin-top: calc(-2px * var(--minimize));
       font-size: calc(15px * var(--minimize));
   }
   #character-image {
-      width: calc(180px * var(--minimize));
+      width: 180px;
   }
 
   #character-banner {
@@ -2011,7 +2011,7 @@ margin-top: calc(-2px * var(--minimize));
 #character-image {
   max-width: none;
   border-radius: calc(15px * var(--minimize)) calc(15px * var(--minimize)) calc(0px * var(--minimize)) calc(0px * var(--minimize));
-  width: calc(100% - calc(2px * var(--minimize)));
+  width: calc(100% - 2px);
 }
 
 #character-header {
