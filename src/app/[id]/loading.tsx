@@ -6,7 +6,7 @@ export default function Loading() {
         <body id="loading-body">
             
         <main id="loading-main">
-            <Image width={1000} height={600} src={'/images/characters-loading.gif'} unoptimized alt=""/>
+            <Image width={1000} height={600} src={'/images/characters-loading.gif'} loading="eager" unoptimized alt=""/>
         </main>
         <nav>
                         <h2>Menu Principal de Navegação</h2>
