@@ -1508,21 +1508,30 @@ export const characters = [
     {
         name: 'tighnari',
         function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'goldentroupe',
-        otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
+        bestWeapon: 'Hunters Path',
+        otherWeapons: ['Aqua Simulacra','Polar Star','Fading Twilight'],
+        bestArtifacts: 'Wanderers Troupe',
+        otherArtifacts: ['Gilded Dreams'],
+        teams: [
+            [
+                {"keqing": 'mainDps'},
+                {"fischl": 'subDps'},
+                {"tighnari": 'subDps'},
+                {"kaedehara-kazuha": 'support'}
+            ],
+            [
+                {"tighnari": 'mainDps'},
+                {"fischl": 'subDps'},
+                {"collei": 'subDps'},
+                {"zhongli": 'support'}
+            ]
+        ],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        mainStatsArtifacts: ['atkPercent',"dendroBonus", "critRateOrDamage"],
+        subStatsArtifacts: ['critRate',"critDamage", "elementalMastery","atkPercent"],
+        weapon: 'WEAPON_BOW',
+        twoPieces: ['Deepwood Memories','Wanderers Troupe']
     },
     {
         name: 'traveler-anemo',
