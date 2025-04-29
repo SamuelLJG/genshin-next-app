@@ -357,13 +357,13 @@ switch (travelerName) {
         <source media="(min-width: 826px)" srcSet={`/images/Icons/${formatarNome(id)}.png`} />
         <Image
         id="character-image"
-        priority
         className={`star${characterData.rarity}`}
         src={`/images/Banners/${formatarNome(id)}_Card.png`}
         alt="Imagem Mobile"
-        loading="eager"
         width={560}
         height={315}
+        loading="eager"
+        priority
       />
       </picture>
       

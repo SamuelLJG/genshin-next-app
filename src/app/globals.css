@@ -474,6 +474,7 @@ background-size: 100%;
   border-top: none;
   border-left: none;
   margin-top: calc(6px * var(--minimize));
+  aspect-ratio: 16/9;
 }
 
 #weapon-container {
