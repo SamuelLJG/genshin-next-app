@@ -1,6 +1,7 @@
 import Image from "next/image"
 import {characters} from "@/data/characters"
 import Link from "next/link";
+import Filter from "@/components/full-filter";
 
 export default function Home() {
     function formatarNome(nome:string) {
@@ -59,16 +60,21 @@ export default function Home() {
       }
     return (
         <body>
-            
         <main id="main-index"> 
+        
             <h1 id="index-h1">Genshin Impact Lista de Personagens</h1>
             <br />
+            <Filter/>
+            <hr />
             <div id="main-characters-flex">
             {characters.map((char:any,i:any)=> (
-                <Link href={`/${char.name}`} key={i} className={`character-card ${char.elementType}`}>
-            <Image width={100} height={100} src={`/images/Icons/${formatarNome(char.name)}.png`} alt="" loading="eager"/>
+                <Link href={`/${char.name}`} key={i} className={`character-card ${char.elementType} ${char.name} ${char.weapon}`}>
+            <Image width={169} height={169} src={`/images/Icons/${formatarNome(char.name)}.png`} alt="" loading="eager"/>
             <p>{formatCharacterName(formatarNomeComEspaco(formatarNome(char.name)))}</p>
+            {char.newCharacter != null ? <span>{char.newCharacter}</span> : ''  }
+            
             </Link>
+            
         ))}</div></main>
         <nav>
                         <h2>Menu Principal de Navegação</h2>

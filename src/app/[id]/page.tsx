@@ -8,6 +8,8 @@ import ptBr from '@/data/pt-br.json'
 import Link from "next/link";
 import ScriptsClient from "@/components/scripts-client";
 import type { Metadata } from "next";
+import weaponStats from "@/data/newWeaponsFolder/symphonist-of-scents.json"
+import weaponNew from "@/data/newWeaponsData/symphonist-of-scents.json"
 
 type Props = {
   params: Promise<{ id: string }>
@@ -25,30 +27,53 @@ export const generateMetadata = async ({
 }: Props): Promise<Metadata> => {
   const id = (await params).id;
   return {
-    title: `${formatarUrl(id)}`
+    title: `${formatarUrl(id)} Build - Melhores Armas, Artefatos e Times`,
+    description: `Descubra as melhores builds e times para ${formatarUrl(id)} em Genshin Impact! Confira também suas armas, artefatos, habilidades e muito mais!`
   }
 }
 
 export default async function Home( { params }:any ) {
   
     let { id } = await params;
+    let path;
+
+    if (id === 'escoffier') {
+      path = 'escoffier';
+    } else {
+      path = 'ifa';
+    }
+
+    const jsonModule1 = await import(`@/data/newCharactersData/${path}.json`);
+    const jsonData1 = jsonModule1.default;
+    const jsonModule2 = await import(`@/data/newCharactersFolder/${path}.json`);
+    const jsonData2 = jsonModule2.default;
+    const jsonModule3 = await import(`@/data/newCharactersTalents/${path}.json`);
+    const jsonData3 = jsonModule3.default;
+    const jsonModule4 = await import(`@/data/newCharactersConstellations/${path}.json`);
+    const jsonData4 = jsonModule4.default;
     const characterBuild:any = characters.find(p => p.name === id);
+    const nomesDosArtefatos = [characterBuild.bestArtifacts, ...characterBuild.otherArtifacts ? [...characterBuild.otherArtifacts] : []]
 
     const nomesDasArmas = [characterBuild.bestWeapon, ...characterBuild.otherWeapons];
-    const nomesDosArtefatos = [characterBuild.bestArtifacts, ...characterBuild.otherArtifacts ? [...characterBuild.otherArtifacts] : []]
     const apiUrl = 'https://genshin-db-api.vercel.app/api/v5/'
 async function getArmasEArtefatos() {
-    const baseURLWeapon = `${apiUrl}weapons?query=`;
+  const baseURLWeapon = `${apiUrl}weapons?query=`;
+
+  // Armas em Português
+  const responsesPTWeapons = await Promise.all(
+    nomesDasArmas.map(nome => {
+      const nomeLimpo = encodeURIComponent(nome.trim());
+      return fetch(`${baseURLWeapon}${nomeLimpo}&resultLanguage=portuguese`, { cache: 'force-cache' });
+    })
+  );
+
+  const armasPT = await Promise.all(responsesPTWeapons.map(res => res.json()));
+
+  if (id === 'escoffier') {
+    armasPT[0] = weaponNew;
+  }
+
     const baseURLArtifact = `${apiUrl}artifacts?query=`;
-  
-    // Armas em Português
-    const responsesPTWeapons = await Promise.all(
-      nomesDasArmas.map(nome => {
-        const nomeLimpo = encodeURIComponent(nome.trim());
-        return fetch(`${baseURLWeapon}${nomeLimpo}&resultLanguage=portuguese`, { cache: 'force-cache' });
-      })
-    );
-    const armasPT = await Promise.all(responsesPTWeapons.map(res => res.json()));
     
     const responsesPTArtifacts = await Promise.all(
       nomesDosArtefatos.map(nome => {
@@ -106,36 +131,57 @@ switch (id) {
     id3 = id.replace(/-/g, "");
     break;
 }
-      formatarParaKebabCase(id2)
-    async function getData() {
-     
-      const urls = [
-        `${apiUrl}characters?query=${id2}&resultLanguage=portuguese`,
-        `${apiUrl}stats?folder=characters&query=${id2}`,
-        `${apiUrl}stats?folder=weapons&query=${characterBuild.bestWeapon}`,
-        `${apiUrl}talents?query=${id3}&resultLanguage=portuguese`,
-        `${apiUrl}constellations?query=${id3}&resultLanguage=portuguese`
-      ];
-      const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'force-cache' })));
-      const data = await Promise.all(responses.map(res => res.json()));
-      return {
-        characterData: data[0],
-        characterFolder: data[1],
-        characterWeapons: data[2],
-        characterTalents: data[3],
-        characterConstellations: data[4]
-      };
-    }
-    const { characterData, characterFolder, characterWeapons, characterTalents, characterConstellations } = await getData();
+      id2.toLowerCase().trim().replace(/\s+/g, '-') 
+      
+      async function getData() {
+        if (id === 'escoffier') {
+          return {
+            characterWeapons: weaponStats,
+            characterData: jsonData1,
+            characterFolder: jsonData2,
+            characterTalents: jsonData3,
+            characterConstellations: jsonData4
+          };
+        } else if (id === 'ifa') {
+          const weaponResponse = await fetch(
+            `${apiUrl}stats?folder=weapons&query=${characterBuild.bestWeapon}`,
+            { cache: 'force-cache' }
+          );
+          const weaponData = await weaponResponse.json();
+          return {
+            
+            characterWeapons: weaponData,
+            characterData: jsonData1,
+            characterFolder: jsonData2,
+            characterTalents: jsonData3,
+            characterConstellations: jsonData4
+          };
+        } else {
+          const urls = [
+            `${apiUrl}characters?query=${id2}&resultLanguage=portuguese`,
+            `${apiUrl}stats?folder=characters&query=${id2}`,
+            `${apiUrl}stats?folder=weapons&query=${characterBuild.bestWeapon}`,
+            `${apiUrl}talents?query=${id3}&resultLanguage=portuguese`,
+            `${apiUrl}constellations?query=${id3}&resultLanguage=portuguese`
+          ];
+          const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'force-cache' })));
+          const data = await Promise.all(responses.map(res => res.json()));
+          return {
+            characterData: data[0],
+            characterFolder: data[1],
+            characterWeapons: data[2],
+            characterTalents: data[3],
+            characterConstellations: data[4]
+          };
+        }
+      }
+      
+      let { characterWeapons, characterData, characterFolder, characterTalents, characterConstellations } = await getData();
+
     function extrairAtePrimeiroPonto(texto: string) {
         return texto.split('.')[0];
       }
-      function formatarParaKebabCase(texto: string) {
-        return texto
-          .toLowerCase()               // tudo minúsculo
-          .trim()                      // remove espaços extras no começo/fim
-          .replace(/\s+/g, '-')        // troca espaços internos por hífens
-      }
+     
       function formatCharacterName(name: string) {
         if (name === "Shogun Raiden") {
           const parts = name.split(" ");
@@ -198,7 +244,6 @@ switch (id) {
             break;
             
       }
-const element = characterData.elementText
 let elementFormatted;
 switch (travelerName) {
       case 'Viajante Anemo':
@@ -280,7 +325,8 @@ switch (travelerName) {
       .replace(/\u003Ccolor=#80FFD7FF\u003E/g, '<b style="color: var(--ct);">')
       .replace(/\u003Ccolor=#99FFFFFF\u003E/g, '<b style="color: var(--ct);">')
       .replace(/\u003Ccolor=#FF9999FF\u003E/g, '<b style="color: var(--ct);">')
-      .replace(/\u003Ci\u003E/g, '<i class="talent-description-i"> ') || '';
+      .replace(/\u003Ci\u003E/g, '<i class="talent-description-i"> ')
+      .replace(/\{F#.*?\}\{M#(.*?)\}/g, '$1') || '';
   };
     return (
       
@@ -331,7 +377,7 @@ switch (travelerName) {
                                         {characterData.weaponText}
                                     </p>
                                     <p id="element">
-                                        <Image width={23} height={23} src={`/images/${elementFormatted}.webp`} alt=""/>
+                                        <Image width={23} height={23} src={`/images/element-${elementFormatted.toLowerCase()}.webp`} alt=""/>
                                         {elementFormatted}
                                     </p>
                                 </div>
@@ -350,12 +396,12 @@ switch (travelerName) {
                             <p>{characterData.costs.ascend1[1].name}</p>
                         </li>
                         <li className="ascension-materials-items">
-                            <Image width={40} height={40} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend1[2].id}.png`}
+                            <Image width={40} height={40} src={id === path ? `https://api.hakush.in/gi/UI/UI_ItemIcon_${characterData.costs.ascend1[2].id}.webp` : `https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend1[2].id}.png`}
                             alt=""/>
                             <p>{characterData.costs.ascend1[2].name}</p>
                         </li>
                         <li className={id2=== 'aether' ? 'none' : 'ascension-materials-items'}>
-                            <Image width={40} height={40} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend5[2].id}.png`}
+                            <Image width={40} height={40} src={id === path ? `https://api.hakush.in/gi/UI/UI_ItemIcon_${characterData.costs.ascend5[2].id}.webp` : `https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend5[2].id}.png`}
                             alt=""/>
                             <p>{characterData.costs.ascend5[2].name}</p>
                         </li>
@@ -370,7 +416,7 @@ switch (travelerName) {
                             <p>{characterTalents.costs.lvl2[1].name}</p>
                         </li>
                         <li className="ascension-materials-items">
-                            <Image width={40} height={40} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterTalents.costs.lvl7[3].id}.png`}
+                            <Image width={40} height={40} src={id === path ? `https://api.hakush.in/gi/UI/UI_ItemIcon_${characterTalents.costs.lvl7[3].id}.webp` : `https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterTalents.costs.lvl7[3].id}.png`}
                             alt=""/>
                             <p>{characterTalents.costs.lvl7[3].name}</p>
                         </li>
@@ -384,7 +430,7 @@ switch (travelerName) {
                                 <div id="weapon-main">
                                     <Image
                                         className={`star${armasPT[0].rarity}`}
-                                        src={`https://gi.yatta.moe/assets/UI/${armasPT[0].images.filename_icon}.png`}
+                                        src={id === path ? `https://api.hakush.in/gi/UI/${armasPT[0].images.filename_icon}.webp` : `https://gi.yatta.moe/assets/UI/${armasPT[0].images.filename_icon}.png`}
                                         width={160}
                                         height={160}
                                         alt={armasPT[0].name}

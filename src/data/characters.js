@@ -1,5 +1,43 @@
 export const characters = [
-    
+    {
+        name: 'escoffier',
+        function: 'subDps',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [
+            [{"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}]
+        ],
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        newCharacter : 'new',
+        weapon: 'WEAPON_POLE'
+    },
+    {
+        name: 'ifa',
+        function: 'support',
+        bestWeapon: 'Sunny Morning Sleep-In',
+        otherWeapons: [' A Thousand Floating Dreams','Mappa Mare','Wandering Evenstar'],
+        bestArtifacts: ' Viridescent Venerer',
+        teams: [
+            [{"kamisato-ayato": 'mainDps'},
+            {"ororon": 'subDps'},
+            {"ifa": 'support'},
+            {"furina": 'support'}]
+        ],
+        talentPriority: ['elementalBurst','elementalSkill','normalAttack'],
+        elementType: 'anemo',
+        mainStatsArtifacts: ['elementalMastery',"elementalMastery", "elementalMastery"],
+        subStatsArtifacts: ['critRate', "elementalMastery","energyRecharge"],
+        newCharacter : 'new',
+        weapon: 'WEAPON_CATALYST'
+    },
     {
         name: 'albedo',
         function: 'subDps',
@@ -16,7 +54,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'alhaitham',
@@ -34,25 +73,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
-    },
-    {
-        name: 'aloy',
-        function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'goldentroupe',
-        otherArtifacts: ['tenacityofthemillelith'],
-        teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
-        elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'amber',
@@ -70,7 +92,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'arataki-itto',
@@ -96,7 +119,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
         mainStatsArtifacts: ['defPercent',"geoBonus", "critRateOrDamage"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","elementalMastery"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","elementalMastery"],
+        weapon: 'WEAPON_CLAYMORE'
     },
     {
         name: 'arlecchino',
@@ -114,7 +138,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
     },
     {
         name: 'baizhu',
@@ -132,7 +157,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'beidou',
@@ -150,7 +176,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CLAYMORE'
     },
     {
         name: 'barbara',
@@ -175,7 +202,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"hpPercent", "healingBonus"],
-        subStatsArtifacts: ['hpPercent',"hp", "energyRecharge"]
+        subStatsArtifacts: ['hpPercent',"hp", "energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'bennett',
@@ -199,7 +227,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'candace',
@@ -217,7 +246,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
     },
     {
         name: 'charlotte',
@@ -235,7 +265,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'chasca',
@@ -253,7 +284,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'chevreuse',
@@ -271,7 +303,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
     },
     {
         name: 'chiori',
@@ -289,7 +322,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'chongyun',
@@ -307,7 +341,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CLAYMORE'
     },
     {
         name: 'citlali',
@@ -325,7 +360,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'clorinde',
@@ -343,7 +379,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'collei',
@@ -361,7 +398,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'cyno',
@@ -379,7 +417,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
     },
     {
         name: 'dehya',
@@ -397,7 +436,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CLAYMORE'
     },
     {
         name: 'diluc',
@@ -415,7 +455,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CLAYMORE'
     },
     {
         name: 'diona',
@@ -433,7 +474,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'dori',
@@ -451,7 +493,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CLAYMORE'
     },
     {
         name: 'emilie',
@@ -469,7 +512,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
     },
     {
         name: 'eula',
@@ -487,7 +531,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CLAYMORE'
     },
     {
         name: 'faruzan',
@@ -505,7 +550,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'fischl',
@@ -523,7 +569,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'freminet',
@@ -541,7 +588,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CLAYMORE'
     },
     {
         name: 'furina',
@@ -560,7 +608,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'gaming',
@@ -578,7 +627,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CLAYMORE'
     },
     {
         name: 'ganyu',
@@ -596,7 +646,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'gorou',
@@ -614,7 +665,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'hu-tao',
@@ -632,7 +684,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
     },
     {
         name: 'iansan',
@@ -650,7 +703,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
     },
     {
         name: 'jean',
@@ -668,7 +722,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'kachina',
@@ -686,7 +741,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
     },
     {
         name: 'kaedehara-kazuha',
@@ -704,7 +760,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'kaeya',
@@ -722,7 +779,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'kamisato-ayaka',
@@ -740,7 +798,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'kamisato-ayato',
@@ -758,7 +817,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'kaveh',
@@ -776,7 +836,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CLAYMORE'
     },
     {
         name: 'keqing',
@@ -794,7 +855,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'kinich',
@@ -812,7 +874,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CLAYMORE'
     },
     {
         name: 'kirara',
@@ -830,7 +893,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'klee',
@@ -848,7 +912,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'kujou-sara',
@@ -866,7 +931,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'kuki-shinobu',
@@ -884,7 +950,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'lan-yan',
@@ -902,7 +969,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'layla',
@@ -920,7 +988,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'lisa',
@@ -938,7 +1007,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'lynette',
@@ -956,7 +1026,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'lyney',
@@ -974,7 +1045,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'mavuika',
@@ -992,7 +1064,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CLAYMORE'
     },
     {
         name: 'mika',
@@ -1010,7 +1083,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
     },
     {
         name: 'mona',
@@ -1028,7 +1102,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'mualani',
@@ -1046,15 +1121,16 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'nahida',
         function: 'subDps',
         bestWeapon: 'Floating Dreams',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'goldentroupe',
-        otherArtifacts: ['tenacityofthemillelith'],
+        bestArtifacts: 'Deepwood',
+        otherArtifacts: ['Gilded Dreams','Golden Troupe'],
         teams: [[
             {"nilou": 'mainDps'},
             {"navia": 'subDps'},
@@ -1064,7 +1140,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'navia',
@@ -1082,7 +1159,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CLAYMORE'
     },
     {
         name: 'neuvillette',
@@ -1101,7 +1179,8 @@ export const characters = [
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        twoPieces: ['Heart of Depth', 'Marechaussee Hunter']
+        twoPieces: ['Heart of Depth', 'Marechaussee Hunter'],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'nilou',
@@ -1119,7 +1198,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'ningguang',
@@ -1137,7 +1217,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'noelle',
@@ -1155,7 +1236,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CLAYMORE'
     },
     {
         name: 'ororon',
@@ -1173,7 +1255,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'qiqi',
@@ -1191,7 +1274,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'raiden-shogun',
@@ -1209,7 +1293,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
     },
     {
         name: 'razor',
@@ -1227,7 +1312,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CLAYMORE'
     },
     {
         name: 'rosaria',
@@ -1245,7 +1331,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
     },
     {
         name: 'sangonomiya-kokomi',
@@ -1263,7 +1350,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'sayu',
@@ -1281,7 +1369,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CLAYMORE'
     },
     {
         name: 'sethos',
@@ -1299,7 +1388,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'shenhe',
@@ -1317,7 +1407,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
     },
     {
         name: 'shikanoin-heizou',
@@ -1335,7 +1426,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'sigewinne',
@@ -1353,7 +1445,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'tartaglia',
@@ -1371,7 +1464,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'sucrose',
@@ -1389,7 +1483,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'thoma',
@@ -1407,7 +1502,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
     },
     {
         name: 'tighnari',
@@ -1425,7 +1521,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'traveler-anemo',
@@ -1443,7 +1540,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'traveler-geo',
@@ -1461,7 +1559,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'traveler-electro',
@@ -1479,7 +1578,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'traveler-dendro',
@@ -1497,7 +1597,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'traveler-hydro',
@@ -1515,7 +1616,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'traveler-pyro',
@@ -1533,7 +1635,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'varesa',
@@ -1551,7 +1654,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'venti',
@@ -1569,7 +1673,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'wanderer',
@@ -1589,6 +1694,7 @@ export const characters = [
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
         twoPieces: ['Desert Pavilion Chronicle', 'Viridescent Venerer'],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'wriothesley',
@@ -1606,7 +1712,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'xiangling',
@@ -1624,7 +1731,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
     },
     {
         name: 'xianyun',
@@ -1642,7 +1750,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'xiao',
@@ -1660,7 +1769,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
     },
     {
         name: 'xilonen',
@@ -1678,7 +1788,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'xingqiu',
@@ -1696,7 +1807,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_SWORD_ONE_HAND'
     },
     {
         name: 'xinyan',
@@ -1714,7 +1826,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CLAYMORE'
     },
     {
         name: 'yae-miko',
@@ -1732,7 +1845,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'yanfei',
@@ -1750,7 +1864,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'yaoyao',
@@ -1768,7 +1883,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
     },
     {
         name: 'yelan',
@@ -1786,7 +1902,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'yoimiya',
@@ -1804,7 +1921,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
     {
         name: 'yumemizuki-mizuki',
@@ -1822,7 +1940,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_CATALYST'
     },
     {
         name: 'yun-jin',
@@ -1840,7 +1959,8 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
     },
     {
         name: 'zhongli',
@@ -1858,7 +1978,27 @@ export const characters = [
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"]
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_POLE'
+    },
+    {
+        name: 'aloy',
+        function: 'subDps',
+        bestWeapon: 'Lost Prayer to the Sacred Winds',
+        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        bestArtifacts: 'goldentroupe',
+        otherArtifacts: ['tenacityofthemillelith'],
+        teams: [[
+            {"nilou": 'mainDps'},
+            {"navia": 'subDps'},
+            {"arlecchino": 'support'},
+            {"neuvillette": 'mainDps'}
+        ]],
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
+        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        weapon: 'WEAPON_BOW'
     },
 ]
   
