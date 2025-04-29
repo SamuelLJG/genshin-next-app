@@ -1466,6 +1466,20 @@ gap: calc(5px * var(--minimize)) ;
   height: 1px;
 }
 
+#loading-main {
+  position: fixed; /* ou absolute, dependendo do contexto */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#loading-main img {
+  width: 200px;
+  height: auto;
+}
+
+
+
 @media (min-width: 1355px) {
  
   #artifacts-main-stats-section {
