@@ -32,7 +32,7 @@ export const generateMetadata = async ({
   }
 }
 
-export default async function Home( { params }:any ) {
+export default async function getStaticProps( { params }:any ) {
   
     let { id } = await params;
     let path;
