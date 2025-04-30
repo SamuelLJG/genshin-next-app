@@ -2314,7 +2314,7 @@ margin-top: calc(-2px * var(--minimize));
       text-overflow: ellipsis;
   }
 }
-@media (max-width:422) {
+@media (max-width:422px) {
   #main-characters-flex {
     grid-template-columns: repeat(3, 1fr);
 ;
@@ -2336,10 +2336,6 @@ margin-top: calc(-2px * var(--minimize));
 }
 @media (max-width: 320px) {
   
-  #main-characters-flex {
-    grid-template-columns: repeat(3, 1fr);
-;
-}
 .character-card p {
   font-size: calc(12px * var(--minimize));
 }
