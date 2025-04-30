@@ -1,0 +1,31 @@
+"effectTemplateRaw": "Quando a Vida do personagem que está com essa arma equipada aumenta ou cai, aumenta o Dano causado por sua Habilidade Elemental em \u003Ccolor=#99FFFFFF\u003E{0}\u003C/color\u003E. Esse efeito dura 6s, pode ser acumulado 3 vezes e pode ser desencadeado uma vez a cada 0.2s. Quando a Vida dos outros personagens da equipe aumenta ou cai, aumenta a Vida Máxima do personagem que está com essa arma equipada em \u003Ccolor=#99FFFFFF\u003E{1}\u003C/color\u003E. Esse efeito dura 6s, pode ser acumulado até 2 vezes e pode ser desencadeado uma vez a cada 0.2s. O efeito pode ser ativado mesmo que o personagem com a arma equipada não esteja ativo no campo de batalha.",
+  "r1": {
+    "values": [
+      "8%",
+      "14%"
+    ]
+  },
+  "r2": {
+    "values": [
+      "10%",
+      "17.5%"
+    ]
+  },
+  "r3": {
+    "values": [
+      "12%",
+      "21%"
+    ]
+  },
+  "r4": {
+    "values": [
+      "14%",
+      "24.5%"
+    ]
+  },
+  "r5": {
+    "values": [
+      "16%",
+      "28%"
+    ]
+  },

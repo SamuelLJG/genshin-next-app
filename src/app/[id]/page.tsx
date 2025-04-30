@@ -10,6 +10,8 @@ import ScriptsClient from "@/components/scripts-client";
 import type { Metadata } from "next";
 import weaponStats from "@/data/newWeaponsFolder/symphonist-of-scents.json"
 import weaponNew from "@/data/newWeaponsData/symphonist-of-scents.json"
+import AscensionSlider from "@/components/AscensionSlider";
+import TalentsSlider from "@/components/TalentsSlider";
 
 type Props = {
   params: Promise<{ id: string }>
@@ -631,6 +633,16 @@ switch (travelerName) {
 
                 </section>
                 
+<section id="ascension-costs-section">
+  <h2 className="titles-h2">{travelerName}{" "}{ptBr.ascensionCosts}</h2>
+  <AscensionSlider currentCosts={characterData.costs}/>
+</section>
+<section id="talents-costs-section">
+  <h2 className="titles-h2">{travelerName}{" "}{ptBr.talentCosts}</h2>
+  <TalentsSlider currentCosts={characterTalents.costs}/>
+</section>
+
+
                 <section>
                 <h2 className="titles-h2">{travelerName}{" "}{ptBr.talents}</h2>
             <div className="talents-ul">

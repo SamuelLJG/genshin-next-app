@@ -1185,7 +1185,7 @@ export const characters = [
     {
         name: 'nahida',
         function: 'subDps',
-        bestWeapon: 'Floating Dreams',
+        bestWeapon: 'A Thousand Floating Dreams',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
         bestArtifacts: 'Deepwood',
         otherArtifacts: ['Gilded Dreams','Golden Troupe'],
