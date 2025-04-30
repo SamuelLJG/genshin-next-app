@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://genshin-next-app.vercel.app/sitemap.xml

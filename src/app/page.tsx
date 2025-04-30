@@ -2,6 +2,7 @@ import Image from "next/image"
 import {characters} from "@/data/characters"
 import Link from "next/link";
 import Filter from "@/components/full-filter";
+import Nav from "@/components/navGeneric";
 
 export default function Home() {
     function formatarNome(nome:string) {
@@ -60,62 +61,23 @@ export default function Home() {
       }
     return (
         <body>
-        <main id="main-index"> 
+        <main id="main-index" className="iii"> 
         
-            <h1 id="index-h1">Genshin Impact Lista de Personagens</h1>
-            <br />
+        <div id="h1-flex">
+            <Image src="/images/list-paper-school-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} alt="" loading="eager" /> <h1 id="index-h1">Genshin Impact Lista de Personagens</h1>
+          </div>
             <Filter/>
-            <hr />
             <div id="main-characters-flex">
             {characters.map((char:any,i:any)=> (
-                <Link href={`/${char.name}`} key={i} className={`character-card ${char.elementType} ${char.name} ${char.weapon}`}>
-            <Image width={100} height={100} src={`/images/Icons/${formatarNome(char.name)}.png`} alt="" loading="eager"/>
+                <Link href={`/${char.name}`} key={i} className={`character-card ${char.elementType} ${char.name} ${char.weapon} rarity-${char.rarity}`}>
+            <Image width={100} height={100} src={`/images/Team-Icons/${formatarNome(char.name)}.png`} alt="" className={`rarity-${char.rarity}`} loading="eager" priority/>
             <p>{formatCharacterName(formatarNomeComEspaco(formatarNome(char.name)))}</p>
             {char.newCharacter != null ? <span>{char.newCharacter}</span> : ''  }
             
             </Link>
             
         ))}</div></main>
-        <nav>
-                        <h2>Menu Principal de Navegação</h2>
-                        <Link href="" id="titlessss">
-                            <div>
-                            <Image width={52} height={52} loading="eager" src={`/images/Icons/Layla.png`} alt=""/></div>
-                            <div id="logo">genshinbuild.com</div>
-                        </Link>
-                        <a href="/" className="links">
-                            <div>
-                            <Image width={22} height={22} loading="eager" src="/images/header-icons/tierlist.svg" alt=""/>
-                            </div>
-                            <span className="names">Tier-List</span>
-                        </a>
-                        <a href="/" className="links">
-                            <div>
-                            <Image width={22} height={22} loading="eager" src="/images/header-icons/weapons.svg" alt=""/>
-                            </div>
-                            
-                            <span className="names">Armas</span>
-                        </a>
-                        <a href="/" className="links" id="home">
-                            <div>
-                            <Image width={22} height={22} loading="eager" src="/images/header-icons/home.svg" alt=""/>
-                            </div>
-                            <span className="names">Início</span>
-                        </a>    
-                        <a href="/" className="links">
-                            <div>
-                            <Image width={22} height={22} loading="eager" src="/images/header-icons/artifacts.svg" alt=""/>
-                            </div>
-                            <span className="names">Artefatos</span>
-                        </a>
-                        <a href="/" className="links">
-                            <div>
-                            <Image width={22} height={22} loading="eager" src="/images/header-icons/farming.svg" alt=""/>
-                            </div>    
-                            <span className="names">Farming</span>
-        
-                        </a>
-                    </nav>
+        <Nav/>
         </body>
     )
 }

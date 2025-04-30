@@ -730,38 +730,38 @@ switch (travelerName) {
                     <Image width={52} height={52} loading="eager" src={`/images/Icons/${formatarNome(id)}.png`} alt=""/></div>
                     <div id="logo">genshinbuild.com</div>
                 </Link>
-                <a href="/" className="links">
+                <Link href="/" className="links">
                     <div>
                     <Image width={22} height={22} loading="eager" src="/images/header-icons/tierlist.svg" alt=""/>
                     </div>
                     <span className="names">Tier-List</span>
-                </a>
-                <a href="/" className="links">
+                </Link>
+                <Link href="/weapons" className="links">
                     <div>
                     <Image width={22} height={22} loading="eager" src="/images/header-icons/weapons.svg" alt=""/>
                     </div>
                     
                     <span className="names">Armas</span>
-                </a>
-                <a href="/" className="links" id="home">
+                </Link>
+                <Link href="/" className="links" id="home">
                     <div>
                     <Image width={22} height={22} loading="eager" src="/images/header-icons/home.svg" alt=""/>
                     </div>
                     <span className="names">Início</span>
-                </a>    
-                <a href="/" className="links">
+                </Link>    
+                <Link href="/artifacts" className="links">
                     <div>
                     <Image width={22} height={22} loading="eager" src="/images/header-icons/artifacts.svg" alt=""/>
                     </div>
                     <span className="names">Artefatos</span>
-                </a>
-                <a href="/" className="links">
+                </Link>
+                <Link href="/" className="links">
                     <div>
                     <Image width={22} height={22} src="/images/header-icons/farming.svg" alt=""/>
                     </div>    
                     <span className="names">Farming</span>
 
-                </a>
+                </Link>
             </nav>
             <ScriptsClient/>
             <SliderHighlight />

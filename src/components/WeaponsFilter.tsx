@@ -10,26 +10,15 @@ const weaponOptions = [
   { label: 'Catalisador', value: 'WEAPON_CATALYST' }
 ];
 
-const elementOptions = [
-  { label: 'Anemo', value: 'anemo' },
-  { label: 'Cryo', value: 'cryo' },
-  { label: 'Dendro', value: 'dendro' },
-  { label: 'Electro', value: 'electro' },
-  { label: 'Geo', value: 'geo' },
-  { label: 'Hydro', value: 'hydro' },
-  { label: 'Pyro', value: 'pyro' }
-];
-
 export default function WeaponsFilter() {
   const [searchFilter, setSearchFilter] = useState('');
   const [activeRarity, setActiveRarity] = useState<string | null>(null);
   const [activeWeapon, setActiveWeapon] = useState<string | null>(null);
-  const [activeElement, setActiveElement] = useState<string | null>(null);
 
-  const ignoreClasses = ['character-card', ...weaponOptions.map(w => w.value)];
+  const ignoreClasses = ['weapon-card', ...weaponOptions.map(w => w.value)];
 
   useEffect(() => {
-    const cards = document.querySelectorAll<HTMLElement>('.character-card');
+    const cards = document.querySelectorAll<HTMLElement>('.weapon-card');
 
     cards.forEach((card) => {
       const classList = Array.from(card.classList);
@@ -40,14 +29,13 @@ export default function WeaponsFilter() {
         cls.toLowerCase().includes(searchFilter.toLowerCase())
       );
 
-      const matchesRarity = activeRarity ? classList.includes(`rarity-${activeRarity}`) : true;
+      const matchesRarity = activeRarity ? classList.includes(`rarity-${activeRarity}-weapon`) : true;
       const matchesWeapon = activeWeapon ? classList.includes(activeWeapon) : true;
-      const matchesElement = activeElement ? classList.includes(activeElement) : true;
 
-      const isVisible = matchesSearch && matchesRarity && matchesWeapon && matchesElement;
+      const isVisible = matchesSearch && matchesRarity && matchesWeapon;
       card.style.display = isVisible ? '' : 'none';
     });
-  }, [searchFilter, activeRarity, activeWeapon, activeElement]);
+  }, [searchFilter, activeRarity, activeWeapon]);
 
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchFilter(e.target.value);
@@ -63,16 +51,11 @@ export default function WeaponsFilter() {
     setActiveWeapon(value === '' ? null : value);
   };
 
-  const handleElementChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    const value = e.target.value;
-    setActiveElement(value === '' ? null : value);
-  };
-
   return (
     <div id='filter-section2'>
       {/* Barra de Pesquisa */}
       <div className='top-name'>
-      <label htmlFor='index-search'>Pesquise</label>
+        <label htmlFor='index-search'>Pesquise</label>
         <input
           type="text"
           placeholder="Digite um nome..."
@@ -83,28 +66,20 @@ export default function WeaponsFilter() {
       </div>
 
       <div id='select-box'>
-      <div className='top-name2'>
-      <label htmlFor='weapons-element'>Elemento</label>
-            <select onChange={handleElementChange} value={activeElement ?? ''} id='weapons-element'>
-              <option value="">Todos</option>
-              {elementOptions.map(({ label, value }) => (
-                <option key={value} value={value}>{label}</option>
-              ))}
-            </select>
-          </div>
           {/* Select de Raridade */}
           <div className='top-name2'>
-          <label htmlFor='weapons-select'>Raridade</label>
+            <label htmlFor='weapons-select'>Raridade</label>
             <select onChange={handleRarityChange} value={activeRarity ?? ''} id='weapons-select'>
               <option value="">Todas</option>
               <option value="5">5 Estrelas</option>
               <option value="4">4 Estrelas</option>
+              <option value="3">3 Estrelas</option>
+              <option value="2">2 Estrelas</option>
+              <option value="1">1 Estrela</option>
             </select>
           </div>
           {/* Select de Arma (substituto dos botões) */}
-          
-      </div>
-      <div className='top-name2'>
+          <div className='top-name2'>
             <label htmlFor='weapon-type-select'>Tipo de Arma</label>
             <select onChange={handleWeaponChange} value={activeWeapon ?? ''} id='weapon-type-select'>
               <option value="">Todas</option>
@@ -113,6 +88,7 @@ export default function WeaponsFilter() {
               ))}
             </select>
           </div>
+      </div>
     </div>
   );
 }

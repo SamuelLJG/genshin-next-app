@@ -323,18 +323,29 @@ color: #ffd270;
 .three-Star img {
   background-image: url(https://images.genshin-builds.com/genshin/3-Star.webp);
 }
-*/      .star4 {
-background-image: url(/images/Background_Item_4_Star.webp);
-
-background-size: 100%;
-}
+*/      
 .star5 {
   background-image: url(/images/Background_Item_5_Star.webp);
   
   background-size: 100%;
 }
+.star4 {
+  background-image: url(/images/Background_Item_4_Star.webp);
+  
+  background-size: 100%;
+}
 .star3 {
   background-image: url(/images/Background_Item_3_Star.webp);
+  
+  background-size: 100%;
+}
+.star2 {
+  background-image: url(/images/Background_Item_2_Star.webp);
+  
+  background-size: 100%;
+}
+.star1 {
+  background-image: url(/images/Background_Item_1_Star.webp);
   
   background-size: 100%;
 }
@@ -829,47 +840,147 @@ li {
 }
 
 
-.character-card {
+.weapon-card {
   display: flex;
+  align-items: center;
+  background: #3739417e;
+  border: 1px solid var(--bd);
+  font-style: italic;
+  border-radius: 4px;
+}
+
+.weapon-card div {
+  margin-left: 7px;
+}
+select {
+  margin: 0;
+  background-color: #2f3038;
+  border: 1px solid var(--bd);
+  border-radius: 3px;
+  outline: none;
+  padding: calc(10px * var(--minimize));
+  font-family: Plus Jakarta Sans;
+  font-weight: 500;
+  color: hsla(0, 0%, 100%, .6); 
+  font-size: calc(14px * var(--minimize));
+  
+}
+#select-box {
+  display: flex;
+  gap: calc(15px * var(--minimize));
+}
+#weapons-select option:nth-of-type(2) {
+  color: #ffdb39;
+}
+#weapons-select option:nth-of-type(3) {
+  color: #d139ff;
+}
+#weapons-select option:nth-of-type(4) {
+  color: #39ffe5;
+}
+#weapons-select option:nth-of-type(5) {
+  color: #88ff39;
+}
+#weapons-select option:nth-of-type(6) {
+  color: #b3b3b3;
+}
+#weapons-select option#two-star-option {
+  color: #88ff39;
+}
+
+#weapons-element option:nth-of-type(2) {
+  color: #39ffa3;
+}
+#weapons-element option:nth-of-type(3) {
+  color: #8ffff9;
+}
+#weapons-element option:nth-of-type(4) {
+  color: #a9ff39;
+}
+#weapons-element option:nth-of-type(5) {
+  color: #9f39ff;
+}
+#weapons-element option:nth-of-type(6) {
+  color: #ffc400;
+}
+#weapons-element option:nth-of-type(7) {
+  color: #3988ff;
+}
+#weapons-element option:nth-of-type(8) {
+  color: #ff6720;
+}
+
+#weapons-select , option{
+  cursor: pointer;
+}
+
+.weapon-card p:first-of-type {
+  font-size: calc(17px * var(--minimize));
+  font-weight: 700;
+  padding-right: 2px;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 200px;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+.weapon-card p:last-of-type {
+  font-size: calc(14px * var(--minimize));
+  font-weight: 400;
+  margin-top: calc(3px * var(--minimize));
+  color: hsla(0, 0%, 100%, .75);
+}
+.weapon-card img {
+  width: calc(75px * var(--minimize));
+  height: auto;
+}
+#weapons-flex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(10px * var(--minimize)) ;
+}
+
+.character-card {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: #3739417e;
-  border: 2px solid var(--bd);
-  border-radius: calc(4px * var(--minimize));
   position: relative;
 }
-.geo {
+
+
+#main-characters-flex .geo img {
   
   border-bottom: 3px solid #ffbb00;
 }
 
-.hydro {
+#main-characters-flex .hydro img {
   
   border-bottom: 3px solid #1596e0;
 }
 
-.anemo {
+#main-characters-flex .anemo img {
   
   border-bottom: 3px solid #47ffc2;
 }
 
-.dendro {
+#main-characters-flex .dendro  img{
   
   border-bottom: 3px solid #b3ff00;
 }
 
-.electro {
+#main-characters-flex .electro img {
   
   border-bottom: 3px solid #ae4aff;
 }
 
-.cryo {
+#main-characters-flex .cryo img {
   
   border-bottom: 3px solid #71fff8;
 }
 
-.pyro {
+#main-characters-flex .pyro  img{
   
   border-bottom: 3px solid #ff7c10;
 }
@@ -881,40 +992,68 @@ li {
   bottom: 0;
   width: 100%;
   text-align: center;
-  font-size: calc(15px * var(--minimize));
+  font-size: calc(14px * var(--minimize))
 }
 .character-card span {
-  background: #00aeff;
-  color: var(--sub);
-  border-radius: calc(7px * var(--minimize));
+  background: #0059ff;
+  color: #ffffff;
   padding: calc(3px * var(--minimize)) calc(6px * var(--minimize));
   text-transform: uppercase;
   font-weight: bold;
   position: absolute;
-  rotate: -28deg;
-  top: calc(-10px * var(--minimize));
-  left: calc(-20px * var(--minimize));
+  top: 0;
+  left: 0;
 }
-.character-card img:first-of-type {
-  width: calc(100px * var(--minimize));
-  height: calc(100px * var(--minimize));
+.character-card img {
+  width: 100%;
+  height: auto;
   border-top: none;
   border-left: none;
-  padding-top: calc(10px * var(--minimize));
   
 }
-
-.character-card:hover {
-  box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 2px;
+#main-characters-flex {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 15px calc(45px * var(--minimize));
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--bd);
 }
 
+
+.rarity-5 img{
+  background: linear-gradient(180deg, #885550, #c9a36a 53%);
+  background-size:100% ;
+}
+.rarity-4  img{
+  background: linear-gradient(180deg, #343659, #8a5fcc 53%);
+  background-size:100% ;
+}
+/*
+.rarity-5-weapon {
+  border-bottom: 4px solid #c9a36a;
+}
+.rarity-4-weapon {
+  border-bottom: 4px solid #9a6ddd;
+}
+.rarity-3-weapon {
+  border-bottom: 4px solid #77a8bb;
+}
+.rarity-2-weapon {
+  border-bottom: 4px solid #70886b;
+}
+.rarity-1-weapon {
+  border-bottom: 4px solid #8b8f8a;
+}
+*/
 #index-search {
   box-sizing: border-box;
   font-family: Plus Jakarta Sans;
   margin: 0;
-  background-color: #373941a6;
-  border: 0;
-  border-radius: calc(4px * var(--minimize));
+  background-color: #2f3038;
+
+  border: 1px solid var(--bd);
+  border-radius: calc(3px * var(--minimize));
   color: #fff;
   font-size: calc(16px * var(--minimize));
   outline: none;
@@ -928,12 +1067,7 @@ li {
   text-transform: uppercase;
   font-size: calc(13.5px * var(--minimize));
 }
-#index-h1 {
-  font-size: calc(24px * var(--minimize));
-  text-transform: uppercase;
-  margin-bottom: calc(10px * var(--minimize));
 
-}
 #main-index hr {
   border: 0;
   height: 2px; 
@@ -941,14 +1075,39 @@ li {
   margin-top: calc(20px * var(--minimize));
   margin-bottom: calc(30px * var(--minimize));
 }
-.top-name p {
+.top-name label, .top-name2 label {
   font-size: calc(14px * var(--minimize));
+  display: block;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: calc(5px * var(--minimize));
 }
 .top-name {
   width: 100%;
+}
+
+#h1-flex {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+border-bottom: 3px solid  var(--ct);
+margin-bottom: 15px;
+align-items: stretch;
+}
+#index-h1 {
+  font-size: calc(24px * var(--minimize));
+  text-transform: uppercase;
+  padding: 5px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.index-h1-icon {
+  background: var(--ct);
+  padding: 5px 7px;
+  color: var(--sub);
+  height: auto;
+  aspect-ratio: 1/1;
 }
 #main-index {
   max-width: 955px;
@@ -957,17 +1116,12 @@ li {
   margin-bottom: 80px;
   padding: 0px calc(20px * var(--minimize));
 }
-#main-characters-flex {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: calc(13px * var(--minimize)) ;
-}
 
 
 .buttons-flex {
   display: flex;
   align-items: center;
-  gap: calc(15px * var(--minimize));
+  gap: calc(10px * var(--minimize));
 }
 .buttons-flex button {
   
@@ -975,13 +1129,14 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: calc(7px * var(--minimize));
+  padding: calc(6px * var(--minimize));
   cursor: pointer;
-  border-radius: calc(5px * var(--minimize));
-  border: 0;
+  border-radius: calc(3px * var(--minimize));
+
+  border: 1px solid var(--bd);
 }
 
-#filter-section {
+#filter-section, #filter-section2 {
   display: flex;
   gap: calc(15px * var(--minimize))
 }
@@ -990,8 +1145,8 @@ button.button-active{
   box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 2px;
 }
 button.button-not-active {
-  background: #373941;
-  border: 0;
+  background: #2f3038;
+  border: 1px solid var(--bd);
 }
 .buttons-flex img {
   filter:  contrast(0) brightness(.4);
@@ -1004,7 +1159,7 @@ button.button-not-active {
   filter:  contrast(1) brightness(1000%);
 }
 .buttons-weapons button {
-  padding: calc(4px * var(--minimize));
+  padding: calc(3px * var(--minimize));
 }
 #we-section {
   display: flex;
@@ -1613,7 +1768,25 @@ overflow: hidden;
   }
   
 }
+@media (max-width: 1069px) {
+  #main-characters-flex {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px calc(20px * var(--minimize));
+    
+  }
+}
 @media (min-width: 971px) {
+  .character-card:hover img {
+    width: calc(100% + 8px);
+    margin-top: -8px;
+    transition: ease .3s;
+  }
+  
+  .character-card:hover span {
+    top: -8px;
+    left: -4px;
+    transition: ease .3s;
+  }
   .links:hover img {
   filter: brightness(-1000%);
 }
@@ -1640,14 +1813,20 @@ nav:hover {
   width: calc(250px * var(--minimize));
   transition: 0.3s; 
 }
-body.loaded nav {
-  transition: .3s; 
-}
+
 #home {
   display: none;
  }
 }
+@media (max-width: 992px) {
+  .weapon-card p:first-of-type {
+   max-width: 150px;
+  }
+ }
 @media (max-width: 970px) {
+  select {
+    padding: calc(9px * var(--minimize));
+  }
   #filter-section {
     flex-wrap: wrap;
   }
@@ -1655,7 +1834,7 @@ body.loaded nav {
     width: 100%;
 }
   #main-index {
-    margin-top: 40px;
+    margin-top: calc(20px * var(--minimize));
   }
   #character-banner {gap: 15px;}
   #character-h1 {
@@ -1723,8 +1902,16 @@ text-overflow: ellipsis;
 font-size: calc(11px * var(--minimize));display: block;
 margin-top: calc(-2px * var(--minimize));
 }
+#weapons-flex {
+  grid-template-columns: repeat(3, 1fr);
+;
 
 }
+.weapon-card p:first-of-type {
+  max-width: 140px;
+ }
+}
+
 @media (min-width: 826px) {
   #artifacts-sub-stats li {
      width: 100%;
@@ -1853,7 +2040,10 @@ margin-top: calc(-2px * var(--minimize));
     grid-template-columns: repeat(2, 1fr);
     display: grid;
 }
-
+.weapon-card img {
+  width: calc(65px * var(--minimize));
+  height: calc(65px * var(--minimize));
+}
 }
 
 @media (min-width: 711px) {
@@ -1873,6 +2063,14 @@ margin-top: calc(-2px * var(--minimize));
   }
 }
 @media (max-width: 710px) {
+  #weapons-flex {
+    grid-template-columns: repeat(2, 1fr);
+  ;
+  
+  }
+  .weapon-card p:first-of-type {
+    max-width: 32vw;
+   }
   #main-characters-flex {
     grid-template-columns: repeat(5, 1fr);
 ;
@@ -2017,11 +2215,44 @@ margin-top: calc(-2px * var(--minimize));
 #character-header {
   gap: calc(10px * var(--minimize));
 }
+.iii #filter-section2 {
+  flex-wrap: wrap;
+}
+.iii .top-name2,.iii #weapons-select, .iii #weapon-type-select, .iii #select-box, .iii #weapons-element {
+  width: 100%;
+}
+ 
+}
+@media (max-width: 524px) {
+#weapons-flex {
+  grid-template-columns: repeat(1, 1fr);
+;
+
+}
+
+.weapon-card p:first-of-type {
+  max-width: 60vw;
+ }
+ .weapon-card img {
+  width: calc(75px * var(--minimize));
+  height: calc(75px * var(--minimize));
+}
 }
 
 @media (max-width: 485px) {
+  #filter-section2 {
+    flex-wrap: wrap;
+  }
+  
+  .top-name2,#weapons-select, #weapon-type-select {
+    width: 100%;
+  }
+  #select-box {
+    
+    width: 100%;
+  }
   #main-characters-flex {
-    grid-template-columns: repeat(3, 1fr);
+    gap:  10px;
 ;
 }
   #other-weapons-list div {
@@ -2082,23 +2313,17 @@ margin-top: calc(-2px * var(--minimize));
       overflow: hidden;
       text-overflow: ellipsis;
   }
-  .character-card img:first-of-type {
-    width: calc(90px * var(--minimize));
-    height: calc(90px * var(--minimize));
+}
+@media (max-width:422) {
+  #main-characters-flex {
+    grid-template-columns: repeat(3, 1fr);
+;
 }
 }
-
 @media (max-width: 340px) {
   #weapon-main img, #artifacts-main img {
     width: calc(110px * var(--minimize));
     height: calc(110px * var(--minimize));
-}
-.character-card img:first-of-type {
-  width: calc(80px * var(--minimize));
-  height: calc(80px * var(--minimize));
-}
-.character-card p {
-  font-size: calc(14px * var(--minimize));
 }
 #artifacts-h3, #weapon-header h3 {
   -webkit-line-clamp: 1;
@@ -2110,10 +2335,14 @@ margin-top: calc(-2px * var(--minimize));
 }
 }
 @media (max-width: 320px) {
+  
   #main-characters-flex {
-    grid-template-columns: repeat(2, 1fr);
-  ;
-  }
+    grid-template-columns: repeat(3, 1fr);
+;
+}
+.character-card p {
+  font-size: calc(12px * var(--minimize));
+}
   .buttons-flex button {
     padding: calc(5px * var(--minimize));
 ;

@@ -17,7 +17,8 @@ export const characters = [
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
         newCharacter : 'new',
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '5'
     },
     {
         name: 'ifa',
@@ -36,7 +37,8 @@ export const characters = [
         mainStatsArtifacts: ['elementalMastery',"elementalMastery", "elementalMastery"],
         subStatsArtifacts: ['critRate', "elementalMastery","energyRecharge"],
         newCharacter : 'new',
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '4'
     },
     {
         name: 'albedo',
@@ -55,7 +57,8 @@ export const characters = [
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'alhaitham',
@@ -74,7 +77,8 @@ export const characters = [
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'amber',
@@ -93,7 +97,8 @@ export const characters = [
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '4'
     },
     {
         name: 'arataki-itto',
@@ -120,7 +125,8 @@ export const characters = [
         elementType: 'geo',
         mainStatsArtifacts: ['defPercent',"geoBonus", "critRateOrDamage"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","elementalMastery"],
-        weapon: 'WEAPON_CLAYMORE'
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '5'
     },
     {
         name: 'arlecchino',
@@ -139,7 +145,8 @@ export const characters = [
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '5'
     },
     {
         name: 'baizhu',
@@ -158,7 +165,8 @@ export const characters = [
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '5'
     },
     {
         name: 'beidou',
@@ -177,7 +185,8 @@ export const characters = [
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CLAYMORE'
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '4'
     },
     {
         name: 'barbara',
@@ -203,7 +212,8 @@ export const characters = [
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"hpPercent", "healingBonus"],
         subStatsArtifacts: ['hpPercent',"hp", "energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '4'
     },
     {
         name: 'bennett',
@@ -228,7 +238,8 @@ export const characters = [
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '4'
     },
     {
         name: 'candace',
@@ -247,7 +258,8 @@ export const characters = [
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '4'
     },
     {
         name: 'charlotte',
@@ -266,7 +278,8 @@ export const characters = [
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '4'
     },
     {
         name: 'chasca',
@@ -285,7 +298,8 @@ export const characters = [
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '5'
     },
     {
         name: 'chevreuse',
@@ -304,7 +318,8 @@ export const characters = [
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '4'
     },
     {
         name: 'chiori',
@@ -323,7 +338,8 @@ export const characters = [
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'chongyun',
@@ -342,7 +358,8 @@ export const characters = [
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CLAYMORE'
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '4'
     },
     {
         name: 'citlali',
@@ -361,7 +378,8 @@ export const characters = [
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '5'
     },
     {
         name: 'clorinde',
@@ -380,7 +398,8 @@ export const characters = [
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'collei',
@@ -399,7 +418,8 @@ export const characters = [
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '4'
     },
     {
         name: 'cyno',
@@ -418,7 +438,8 @@ export const characters = [
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '5'
     },
     {
         name: 'dehya',
@@ -437,7 +458,8 @@ export const characters = [
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CLAYMORE'
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '5'
     },
     {
         name: 'diluc',
@@ -456,7 +478,8 @@ export const characters = [
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CLAYMORE'
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '5'
     },
     {
         name: 'diona',
@@ -475,7 +498,8 @@ export const characters = [
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '4'
     },
     {
         name: 'dori',
@@ -494,7 +518,8 @@ export const characters = [
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CLAYMORE'
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '4'
     },
     {
         name: 'emilie',
@@ -513,7 +538,8 @@ export const characters = [
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '5'
     },
     {
         name: 'eula',
@@ -532,7 +558,8 @@ export const characters = [
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CLAYMORE'
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '5'
     },
     {
         name: 'faruzan',
@@ -551,7 +578,8 @@ export const characters = [
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '4'
     },
     {
         name: 'fischl',
@@ -570,7 +598,8 @@ export const characters = [
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '4'
     },
     {
         name: 'freminet',
@@ -589,7 +618,8 @@ export const characters = [
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CLAYMORE'
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '4'
     },
     {
         name: 'furina',
@@ -609,7 +639,8 @@ export const characters = [
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'gaming',
@@ -628,7 +659,8 @@ export const characters = [
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CLAYMORE'
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '4'
     },
     {
         name: 'ganyu',
@@ -647,7 +679,8 @@ export const characters = [
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '5'
     },
     {
         name: 'gorou',
@@ -666,7 +699,8 @@ export const characters = [
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '4'
     },
     {
         name: 'hu-tao',
@@ -685,7 +719,8 @@ export const characters = [
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '5'
     },
     {
         name: 'iansan',
@@ -704,7 +739,8 @@ export const characters = [
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '4'
     },
     {
         name: 'jean',
@@ -723,7 +759,8 @@ export const characters = [
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'kachina',
@@ -742,7 +779,8 @@ export const characters = [
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '4'
     },
     {
         name: 'kaedehara-kazuha',
@@ -761,7 +799,8 @@ export const characters = [
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'kaeya',
@@ -780,7 +819,8 @@ export const characters = [
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '4'
     },
     {
         name: 'kamisato-ayaka',
@@ -799,7 +839,8 @@ export const characters = [
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'kamisato-ayato',
@@ -818,7 +859,8 @@ export const characters = [
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'kaveh',
@@ -837,7 +879,8 @@ export const characters = [
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CLAYMORE'
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '4'
     },
     {
         name: 'keqing',
@@ -856,7 +899,8 @@ export const characters = [
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'kinich',
@@ -875,7 +919,8 @@ export const characters = [
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CLAYMORE'
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '5'
     },
     {
         name: 'kirara',
@@ -894,7 +939,8 @@ export const characters = [
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '4'
     },
     {
         name: 'klee',
@@ -913,7 +959,8 @@ export const characters = [
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '5'
     },
     {
         name: 'kujou-sara',
@@ -932,7 +979,8 @@ export const characters = [
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '4'
     },
     {
         name: 'kuki-shinobu',
@@ -951,7 +999,8 @@ export const characters = [
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '4'
     },
     {
         name: 'lan-yan',
@@ -970,7 +1019,8 @@ export const characters = [
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '4'
     },
     {
         name: 'layla',
@@ -989,7 +1039,8 @@ export const characters = [
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '4'
     },
     {
         name: 'lisa',
@@ -1008,7 +1059,8 @@ export const characters = [
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '4'
     },
     {
         name: 'lynette',
@@ -1027,7 +1079,8 @@ export const characters = [
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '4'
     },
     {
         name: 'lyney',
@@ -1046,7 +1099,8 @@ export const characters = [
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '5'
     },
     {
         name: 'mavuika',
@@ -1065,7 +1119,8 @@ export const characters = [
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CLAYMORE'
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '5'
     },
     {
         name: 'mika',
@@ -1084,7 +1139,8 @@ export const characters = [
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '4'
     },
     {
         name: 'mona',
@@ -1103,7 +1159,8 @@ export const characters = [
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '5'
     },
     {
         name: 'mualani',
@@ -1122,7 +1179,8 @@ export const characters = [
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '5'
     },
     {
         name: 'nahida',
@@ -1141,7 +1199,8 @@ export const characters = [
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '5'
     },
     {
         name: 'navia',
@@ -1160,7 +1219,8 @@ export const characters = [
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CLAYMORE'
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '5'
     },
     {
         name: 'neuvillette',
@@ -1180,7 +1240,8 @@ export const characters = [
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
         twoPieces: ['Heart of Depth', 'Marechaussee Hunter'],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '5'
     },
     {
         name: 'nilou',
@@ -1199,7 +1260,8 @@ export const characters = [
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'ningguang',
@@ -1218,7 +1280,8 @@ export const characters = [
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '4'
     },
     {
         name: 'noelle',
@@ -1237,7 +1300,8 @@ export const characters = [
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CLAYMORE'
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '4'
     },
     {
         name: 'ororon',
@@ -1256,7 +1320,8 @@ export const characters = [
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '4'
     },
     {
         name: 'qiqi',
@@ -1275,7 +1340,8 @@ export const characters = [
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'raiden-shogun',
@@ -1294,7 +1360,8 @@ export const characters = [
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '5'
     },
     {
         name: 'razor',
@@ -1313,7 +1380,8 @@ export const characters = [
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CLAYMORE'
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '4'
     },
     {
         name: 'rosaria',
@@ -1332,7 +1400,8 @@ export const characters = [
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '4'
     },
     {
         name: 'sangonomiya-kokomi',
@@ -1351,7 +1420,8 @@ export const characters = [
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '5'
     },
     {
         name: 'sayu',
@@ -1370,7 +1440,8 @@ export const characters = [
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CLAYMORE'
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '4'
     },
     {
         name: 'sethos',
@@ -1389,7 +1460,8 @@ export const characters = [
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '4'
     },
     {
         name: 'shenhe',
@@ -1408,7 +1480,8 @@ export const characters = [
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '5'
     },
     {
         name: 'shikanoin-heizou',
@@ -1427,7 +1500,8 @@ export const characters = [
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '4'
     },
     {
         name: 'sigewinne',
@@ -1446,7 +1520,8 @@ export const characters = [
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '5'
     },
     {
         name: 'tartaglia',
@@ -1465,7 +1540,8 @@ export const characters = [
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '5'
     },
     {
         name: 'sucrose',
@@ -1484,7 +1560,8 @@ export const characters = [
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '4'
     },
     {
         name: 'thoma',
@@ -1503,7 +1580,8 @@ export const characters = [
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '4'
     },
     {
         name: 'tighnari',
@@ -1531,7 +1609,8 @@ export const characters = [
         mainStatsArtifacts: ['atkPercent',"dendroBonus", "critRateOrDamage"],
         subStatsArtifacts: ['critRate',"critDamage", "elementalMastery","atkPercent"],
         weapon: 'WEAPON_BOW',
-        twoPieces: ['Deepwood Memories','Wanderers Troupe']
+        twoPieces: ['Deepwood Memories','Wanderers Troupe'],
+        rarity: '5'
     },
     {
         name: 'traveler-anemo',
@@ -1550,7 +1629,8 @@ export const characters = [
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'traveler-geo',
@@ -1569,7 +1649,8 @@ export const characters = [
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'traveler-electro',
@@ -1588,7 +1669,8 @@ export const characters = [
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'traveler-dendro',
@@ -1607,7 +1689,8 @@ export const characters = [
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'traveler-hydro',
@@ -1626,7 +1709,8 @@ export const characters = [
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'traveler-pyro',
@@ -1645,7 +1729,8 @@ export const characters = [
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'varesa',
@@ -1664,7 +1749,8 @@ export const characters = [
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '5'
     },
     {
         name: 'venti',
@@ -1683,7 +1769,8 @@ export const characters = [
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '5'
     },
     {
         name: 'wanderer',
@@ -1703,7 +1790,8 @@ export const characters = [
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
         twoPieces: ['Desert Pavilion Chronicle', 'Viridescent Venerer'],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '5'
     },
     {
         name: 'wriothesley',
@@ -1722,7 +1810,8 @@ export const characters = [
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '5'
     },
     {
         name: 'xiangling',
@@ -1741,7 +1830,8 @@ export const characters = [
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '4'
     },
     {
         name: 'xianyun',
@@ -1760,7 +1850,8 @@ export const characters = [
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '5'
     },
     {
         name: 'xiao',
@@ -1779,7 +1870,8 @@ export const characters = [
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '5'
     },
     {
         name: 'xilonen',
@@ -1798,7 +1890,8 @@ export const characters = [
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5'
     },
     {
         name: 'xingqiu',
@@ -1817,7 +1910,8 @@ export const characters = [
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_SWORD_ONE_HAND'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '4'
     },
     {
         name: 'xinyan',
@@ -1836,7 +1930,8 @@ export const characters = [
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CLAYMORE'
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '4'
     },
     {
         name: 'yae-miko',
@@ -1855,7 +1950,8 @@ export const characters = [
         elementType: 'electro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '5'
     },
     {
         name: 'yanfei',
@@ -1874,7 +1970,8 @@ export const characters = [
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '4'
     },
     {
         name: 'yaoyao',
@@ -1893,7 +1990,8 @@ export const characters = [
         elementType: 'dendro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '4'
     },
     {
         name: 'yelan',
@@ -1912,7 +2010,8 @@ export const characters = [
         elementType: 'hydro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '5'
     },
     {
         name: 'yoimiya',
@@ -1931,7 +2030,8 @@ export const characters = [
         elementType: 'pyro',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '5'
     },
     {
         name: 'yumemizuki-mizuki',
@@ -1950,7 +2050,8 @@ export const characters = [
         elementType: 'anemo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_CATALYST'
+        weapon: 'WEAPON_CATALYST',
+        rarity: '5'
     },
     {
         name: 'yun-jin',
@@ -1969,7 +2070,8 @@ export const characters = [
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '4'
     },
     {
         name: 'zhongli',
@@ -1988,7 +2090,8 @@ export const characters = [
         elementType: 'geo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_POLE'
+        weapon: 'WEAPON_POLE',
+        rarity: '5'
     },
     {
         name: 'aloy',
@@ -2007,7 +2110,8 @@ export const characters = [
         elementType: 'cryo',
         mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
         subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
-        weapon: 'WEAPON_BOW'
+        weapon: 'WEAPON_BOW',
+        rarity: '5'
     },
 ]
   
