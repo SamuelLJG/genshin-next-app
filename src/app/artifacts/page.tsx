@@ -28,7 +28,7 @@ export default async function Page() {
           <br />
               <div id="weapons-flex">
                   {armasPT.map((post: any, i: number) => (
-                    <Link href={data[i].replace(/'/g, '').toLowerCase().replace(/ /g, '-')} key={i} className={`weapon-card ${post.name} rarity-${post.rarityList[post.rarityList.length - 1]}-weapon`}>
+                    <Link href={`artifacts/${data[i].replace(/'/g, '').toLowerCase().replace(/ /g, '-')}`} key={i} className={`weapon-card ${post.name} rarity-${post.rarityList[post.rarityList.length - 1]}-weapon`}>
                         <Image width={150} height={150} src={!circletOnly.includes(data[i].replace(/'/g, '')) ? `https://enka.network/ui/${post.images.filename_flower}.png` : `https://enka.network/ui/${post.images.filename_circlet}.png`} alt="" className={`star${post.rarityList[post.rarityList.length - 1]}`} loading="eager" priority/>
                         <div>
                             <p>{post.name}</p>

@@ -4,6 +4,7 @@ import Image from "next/image"
 import Stars from "./Stars"
 import { useState } from "react";
 import SliderHighlight from "./SliderHighlight";
+import Link from "next/link";
 
 function formatEffect(effectTemplateRaw: string, refinementLevel: number, ptData: any) {
     const refinementKey = `r${refinementLevel}`;
@@ -24,7 +25,60 @@ function formatEffect(effectTemplateRaw: string, refinementLevel: number, ptData
     return formattedEffect;
   }
    // ou use um state p/ controlar o nível (de 1 a 5)
-
+   function formatarNome(nome:string) {
+    return nome
+      .split('-')
+      .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
+      .join('_');
+  }
+  function formatarNomeComEspaco(nome: string) {
+    return nome
+      .split('_')
+      .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
+      .join(' ');
+  }
+  function formatCharacterName(name: string) {
+   
+    if (name === 'Traveler Hydro' ||
+        name === 'Traveler Dendro' ||
+        name === 'Traveler Anemo' ||
+        name === 'Traveler Geo' ||
+        name === 'Traveler Electro' ||
+        name === 'Traveler Pyro') {
+        return 'Viajante';
+      }
+      if (name === 'Raiden Shogun') {
+        return 'Raiden';
+      }
+      if (name === 'Arataki Itto') {
+        return 'Itto';
+      }
+      if (name === 'Kamisato Ayaka') {
+        return 'Ayaka';
+      }
+      if (name === 'Kamisato Ayato') {
+        return 'Ayato';
+      }
+      if (name === 'Yumemizuki Mizuki') {
+        return 'Mizuki';
+      }
+      if (name === 'Kujou Sara') {
+        return 'Sara';
+      }
+      if (name === 'Shikanoin Heizou') {
+        return 'Heizou';
+      }
+      if (name === 'Sangonomiya Kokomi') {
+        return 'Kokomi';
+      }
+      if (name === 'Kaedehara Kazuha') {
+        return 'Kazuha';
+      }
+      if (name === 'Kuki Shinobu') {
+        return 'Kuki';
+      }
+    return name;
+  }
 
 export default function WeaponSlider ({ ptData, matchedCharacters,folderData }: any) {
     console.log()
@@ -54,7 +108,7 @@ export default function WeaponSlider ({ ptData, matchedCharacters,folderData }: 
             <div id="character-h1">
                 <div id="header-container">
                     <div className="header-icon">
-                        <svg id="weapon-icon-svg" viewBox="0 0 24 24" fill="#23242a"> <path fill="none" d="M0 0h24v24H0z"></path> <path fillRule="nonzero" d="M7.05 13.406l3.534 3.536-1.413 1.414 1.415 1.415-1.414 1.414-2.475-2.475-2.829 2.829-1.414-1.414 2.829-2.83-2.475-2.474 1.414-1.414 1.414 1.413 1.413-1.414zM3 3l3.546.003 11.817 11.818 1.415-1.414 1.414 1.414-2.474 2.475 2.828 2.829-1.414 1.414-2.829-2.829-2.475 2.475-1.414-1.414 1.414-1.415L3.003 6.531 3 3zm14.457 0L21 3.003l.002 3.523-4.053 4.052-3.536-3.535L17.457 3z"></path> </svg>
+                        <svg className="icon" viewBox="0 0 24 24" fill="#23242a"> <path fill="none" d="M0 0h24v24H0z"></path> <path fillRule="nonzero" d="M7.05 13.406l3.534 3.536-1.413 1.414 1.415 1.415-1.414 1.414-2.475-2.475-2.829 2.829-1.414-1.414 2.829-2.83-2.475-2.474 1.414-1.414 1.414 1.413 1.413-1.414zM3 3l3.546.003 11.817 11.818 1.415-1.414 1.414 1.414-2.474 2.475 2.828 2.829-1.414 1.414-2.829-2.829-2.475 2.475-1.414-1.414 1.414-1.415L3.003 6.531 3 3zm14.457 0L21 3.003l.002 3.523-4.053 4.052-3.536-3.535L17.457 3z"></path> </svg>
                     </div>
                     <div id="h1-box">
                         <h1 id="header-title">
@@ -79,7 +133,7 @@ export default function WeaponSlider ({ ptData, matchedCharacters,folderData }: 
                             </>
                             : ''}
                             
-                            <div><Stars /></div>
+                            <div><Stars starClass={ptData.rarity}/></div>
                         </div>
                         <Image width={215} height={215} src={`https://gi.yatta.moe/assets/UI/${ptData.images.filename_icon}.png`} id="weapon-full-image" alt="" loading="eager" priority />
                     </section>
@@ -87,8 +141,7 @@ export default function WeaponSlider ({ ptData, matchedCharacters,folderData }: 
                     <div id="wee-level"> <span> Nv. {level2}</span><input type="range" min="1" max={dd2} defaultValue={level2} onChange={handleChange2} id="ascension-costs-slider" /></div>
                    
                 </section>
-                <br />
-                <section>
+                {ptData.effectTemplateRaw != null ? <section>
                     <h2 className="titles-h2">Refinamento</h2>
                     <div className="ascension-costs-flex">
                                <label htmlFor="talents-costs-slider">Rank. {level3}</label>
@@ -101,12 +154,11 @@ export default function WeaponSlider ({ ptData, matchedCharacters,folderData }: 
                                 id="ascension-costs-slider"
                             /> 
                              </div>
-                    <div id="refinement-description">
+                    <div className="refinement-description">
                         <p id="effect-name">{ptData.effectName}</p>
                         <div dangerouslySetInnerHTML={{ __html: formatEffect(ptData.effectTemplateRaw, refinementLevel, ptData) }}/>
                     </div>
-                </section>
-                <br />
+                </section> : ''}
                     <section> 
                                 <h2 className="titles-h2">Custos de Ascensão</h2>
                        <div className="ascension-costs-flex">
@@ -133,11 +185,29 @@ export default function WeaponSlider ({ ptData, matchedCharacters,folderData }: 
                                            </ul>
                         
                         </section>
-               
+                                 {matchedCharacters != false ? 
+                                 <section>
+                                 <h2 className="titles-h2">Personagens Recomendados</h2>
+                                 <div id="character-weapons-flex">
+                                 {matchedCharacters.map((c: any, i: any) => (
+                                         <Link key={i} href={`/${c.name}`}>
+                                             <Image width={100} height={100} src={`/images/Team-Icons/${formatarNome(c.name)}.png`} alt="" />
+                                        <p>{formatCharacterName(formatarNomeComEspaco(formatarNome(c.name)))}</p>
+                                         </Link>
+                                     ))}
+                                     </div>
+                             </section>
+                                 : ''}
+                        
+                                 {ptData.story != "" ?
+                                 <section>
 
-                <section>
-                    {matchedCharacters.map((c: any, i: any) => c.name)}
-                </section>
+                                 <h2 className="titles-h2">História</h2>
+                                 <div className="story-description"><p dangerouslySetInnerHTML={{ __html: ptData.story.replace(/\n/g, '<br />')}}/></div>
+                                </section>
+                                 : ''}
+                                 
+                
             </main>
             <SliderHighlight/>
         </>

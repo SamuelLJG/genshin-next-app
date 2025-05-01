@@ -437,6 +437,7 @@ switch (travelerName) {
                         <div id="weapon-container">
                             <section id="weapon-section">
                                 <div id="weapon-main">
+                                  <Link href={`/weapons/${characterBuild.bestWeapon.toLowerCase().trim().replace(/\s+/g, '-')}`}>
                                     <Image
                                         className={`star${armasPT[0].rarity}`}
                                         src={id === path ? `https://api.hakush.in/gi/UI/${armasPT[0].images.filename_icon}.webp` : `https://gi.yatta.moe/assets/UI/${armasPT[0].images.filename_icon}.png`}
@@ -444,6 +445,7 @@ switch (travelerName) {
                                         height={160}
                                         alt={armasPT[0].name}
                                     />
+                                    </Link>
                                     <div id="weapon-header">
                                         <h3 className={`wa-${armasPT[0].rarity}`}>{armasPT[0].name}</h3>
                                         <div id="weapon-refinement">
@@ -458,9 +460,9 @@ switch (travelerName) {
 
                             <section id="other-weapons-section">
                                 <h3 className="titles-h3">{ptBr.otherWeapons}</h3>
-                                <ol id="other-weapons-list">
+                                <div id="other-weapons-list">
                                     {armasPT.slice(1).map((weapons:any, i:any) => (
-                                        <li key={i}>
+                                        <Link key={i} href={`/weapons/${characterBuild.otherWeapons[i].toLowerCase().trim().replace(/\s+/g, '-')}`}> 
                                         <span className="other-weapons-rank">{i+2}{ptBr.degree}</span>
                                             <Image
                                                 className={`star${weapons.rarity}`}
@@ -473,10 +475,10 @@ switch (travelerName) {
                                             <p>{weapons.name}</p>
                                             <p>{weapons.mainStatText}</p>
                                         </div>
-                                    </li>
+                                        </Link>
                                     ))}
                                    
-                                </ol>
+                                </div>
                             </section>
                         </div>
                 </section>
@@ -485,9 +487,9 @@ switch (travelerName) {
                     <div id="artifacts-container">
                         <div id="artifacts-section">
                             <section id="artifacts-main">
-                              <div id="artifact-img-box">
+                              <Link id="artifact-img-box" href={`/artifacts/${characterBuild.bestArtifacts.toLowerCase().trim().replace(/\s+/g, '-')}`}> 
                             <Image width={160} height={160} className="star5" src={`https://enka.network/ui/${artefatosPT[0].images.filename_flower}.png`} alt=""/>
-                            </div>
+                            </Link>
                                 <div id="artifacts-header">
                                     <div>
                                         <h3 id="artifacts-h3" className="wa-5">{artefatosPT[0].name}</h3>
@@ -532,11 +534,11 @@ switch (travelerName) {
                 </section>
                 {...characterBuild.otherArtifacts ? [<section>
                     <h2 className="titles-h2">{ptBr.otherArtifacts}</h2>
-                    <ul id="other-artifacts">
+                    <div id="other-artifacts">
                     {artefatosPT.slice(1).map((art, i) => (
                     
                         
-                        <li key={i}>
+                    <Link key={i} href={`/artifacts/${characterBuild.otherArtifacts[i].toLowerCase().trim().replace(/\s+/g, '-')}`}> 
                             <span className="other-artifacts-set">{i+2}{ptBr.degree}</span>
                                         <div className="other-artifacts-box">
                                           <Image width={160} height={160} src={`https://enka.network/ui/${art.images.filename_flower}.png`} alt=""/>
@@ -545,7 +547,7 @@ switch (travelerName) {
                                           
                                                                           </div>
                                         </div>
-                        </li>
+                                        </Link>
                         ))}
                         {characterBuild.twoPieces!= null ? 
                         twoPiecesArtifacts.map((_, i) => {
@@ -559,7 +561,7 @@ switch (travelerName) {
                           const pairIndex = i / 2 + 2
                           
                           return (
-                            <li key={i}>
+                            <Link key={i} href={`/artifacts/${characterBuild.twoPieces[i].toLowerCase().trim().replace(/\s+/g, '-')}`}>
                               <span className="other-artifacts-set">{(characterBuild.otherArtifacts.length === 0) ? (
   pairIndex 
 ): (pairIndex+1)}{ptBr.degree}</span>
@@ -574,10 +576,10 @@ switch (travelerName) {
                                   </div>
                                 </div>
                               </div>
-                            </li>
+                              </Link>
                           );
                         }) : ''}
-                    </ul>
+                    </div >
                 </section>] : []}
                 
                 <section id="character-talent-priority">

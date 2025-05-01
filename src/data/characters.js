@@ -625,7 +625,7 @@ export const characters = [
         name: 'furina',
         function: 'subDps',
         bestWeapon: 'Splendor of Tranquil Waters',
-        otherWeapons: ['Primordial Jadecutter','Festering Desire ','Key of Khaj-Nisut'],
+        otherWeapons: ['Primordial Jade Cutter','Festering Desire','Key of Khaj-Nisut'],
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         twoPieces: ['Tenacity of the Millelith', 'Golden Troupe'],
@@ -847,7 +847,7 @@ export const characters = [
         function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'goldentroupe',
+        bestArtifacts: 'Echoes of an Offering',
         otherArtifacts: ['tenacityofthemillelith'],
         teams: [[
             {"nilou": 'mainDps'},
@@ -1187,7 +1187,7 @@ export const characters = [
         function: 'subDps',
         bestWeapon: 'A Thousand Floating Dreams',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Deepwood',
+        bestArtifacts: 'Deepwood Memories',
         otherArtifacts: ['Gilded Dreams','Golden Troupe'],
         teams: [[
             {"nilou": 'mainDps'},

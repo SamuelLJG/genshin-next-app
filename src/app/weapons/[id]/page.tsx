@@ -5,6 +5,7 @@ import { characters } from '@/data/characters';
 import Stars from "@/components/Stars";
 import ptBr from "@/data/pt-br.json"
 import WeaponSlider from "@/components/WeaponsSlider";
+import ScriptsClient from "@/components/scripts-client";
 
 export default async function Page({params}:any) {
     let { id } = await params;
@@ -29,6 +30,7 @@ export default async function Page({params}:any) {
              
              <WeaponSlider ptData={ptData} matchedCharacters={matchedCharacters} folderData={folderData}/>
           <Nav/>
+          <ScriptsClient/>
     </body>
   );
 }
