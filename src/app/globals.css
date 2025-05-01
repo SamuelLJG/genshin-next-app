@@ -837,7 +837,10 @@ gap: calc(10px * var(--minimize));
 .spp {
   margin-right: -50px;
 }
-
+#main-content a:hover {
+  opacity: 0.5;
+  transition: .1s;
+}
 #other-artifacts a{
   display: flex;
   height: fit-content;
