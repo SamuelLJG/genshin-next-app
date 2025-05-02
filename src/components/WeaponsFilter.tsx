@@ -2,15 +2,16 @@
 
 import { useEffect, useState, ChangeEvent } from 'react';
 
-const weaponOptions = [
-  { label: 'Espada', value: 'WEAPON_SWORD_ONE_HAND' },
-  { label: 'Espadão', value: 'WEAPON_CLAYMORE' },
-  { label: 'Lança', value: 'WEAPON_POLE' },
-  { label: 'Arco', value: 'WEAPON_BOW' },
-  { label: 'Catalisador', value: 'WEAPON_CATALYST' }
-];
 
-export default function WeaponsFilter() {
+
+export default function WeaponsFilter({ptBr}:any) {
+  const weaponOptions = [
+  { label: ptBr.sword, value: 'WEAPON_SWORD_ONE_HAND' },
+  { label: ptBr.claymore, value: 'WEAPON_CLAYMORE' },
+  { label: ptBr.polearm, value: 'WEAPON_POLE' },
+  { label: ptBr.bow, value: 'WEAPON_BOW' },
+  { label: ptBr.catalyst, value: 'WEAPON_CATALYST' }
+];
   const [searchFilter, setSearchFilter] = useState('');
   const [activeRarity, setActiveRarity] = useState<string | null>(null);
   const [activeWeapon, setActiveWeapon] = useState<string | null>(null);
@@ -55,7 +56,7 @@ export default function WeaponsFilter() {
     <div id='filter-section2'>
       {/* Barra de Pesquisa */}
       <div className='top-name'>
-        <label htmlFor='index-search'>Pesquise</label>
+        <label htmlFor='index-search'>{ptBr.search}</label>
         <input
           type="text"
           placeholder="Digite um nome..."
@@ -68,21 +69,21 @@ export default function WeaponsFilter() {
       <div id='select-box'>
           {/* Select de Raridade */}
           <div className='top-name2'>
-            <label htmlFor='weapons-select'>Raridade</label>
+            <label htmlFor='weapons-select'>{ptBr.rarity}</label>
             <select onChange={handleRarityChange} value={activeRarity ?? ''} id='weapons-select'>
-              <option value="">Todas</option>
-              <option value="5">5 Estrelas</option>
-              <option value="4">4 Estrelas</option>
-              <option value="3">3 Estrelas</option>
-              <option value="2">2 Estrelas</option>
-              <option value="1">1 Estrela</option>
+              <option value="">{ptBr.allA}</option>
+              <option value="5">5 {ptBr.stars}</option>
+              <option value="4">4 {ptBr.stars}</option>
+              <option value="3">3 {ptBr.stars}</option>
+              <option value="2">2 {ptBr.stars}</option>
+              <option value="1">1 {ptBr.star}</option>
             </select>
           </div>
           {/* Select de Arma (substituto dos botões) */}
           <div className='top-name2'>
-            <label htmlFor='weapon-type-select'>Tipo de Arma</label>
+            <label htmlFor='weapon-type-select'>{ptBr.weaponType}</label>
             <select onChange={handleWeaponChange} value={activeWeapon ?? ''} id='weapon-type-select'>
-              <option value="">Todas</option>
+              <option value="">{ptBr.allA}</option>
               {weaponOptions.map(({ label, value }) => (
                 <option key={value} value={value}>{label}</option>
               ))}

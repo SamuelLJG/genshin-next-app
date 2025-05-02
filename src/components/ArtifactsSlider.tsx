@@ -1,8 +1,6 @@
 'use client'
 
 import Image from "next/image"
-import Stars from "./Stars"
-import { useState } from "react";
 import SliderHighlight from "./SliderHighlight";
 import Link from "next/link";
 
@@ -63,7 +61,7 @@ import Link from "next/link";
   }
 
   const artifacts = ['flower', 'plume', 'sands', 'goblet', 'circlet']
-export default function WeaponSlider ({ ptData, matchedCharacters }: any) {
+export default function WeaponSlider ({ ptData, matchedCharacters, ptBr }: any) {
     return (
         <>
             <div id="character-h1">
@@ -92,22 +90,22 @@ export default function WeaponSlider ({ ptData, matchedCharacters }: any) {
                 </section>
                 {ptData.effect1Pc != null ? 
                 <section className="refinement-description2">
-                <p id="effect-name">Efeito 1 Peça</p> {ptData.effect1Pc}
+                <p id="effect-name">{ptBr.effect} {ptBr.onePiece}</p> {ptData.effect1Pc}
                 </section>
                 : 
                 <>
                 <section className="refinement-description2">
-                <p id="effect-name">Efeito 2 Peças</p> {ptData.effect2Pc}
+                <p id="effect-name">{ptBr.effect} {ptBr.twoPieces}</p> {ptData.effect2Pc}
                 </section>
                 <section className="refinement-description2" id="special-ref">
-                <p id="effect-name">Efeito 4 Peças</p> {ptData.effect4Pc}
+                <p id="effect-name">{ptBr.effect} {ptBr.fourPieces}</p> {ptData.effect4Pc}
                 </section>
                 </>
                 }
                 
                 {matchedCharacters != false ? 
                                  <section>
-                                 <h2 className="titles-h2">Personagens Recomendados</h2>
+                                 <h2 className="titles-h2">{ptBr.recommendedCharacters}</h2>
                                  <div id="character-weapons-flex">
                                  {matchedCharacters.map((c: any, i: any) => (
                                          <Link key={i} href={`/${c.name}`}>
@@ -119,7 +117,7 @@ export default function WeaponSlider ({ ptData, matchedCharacters }: any) {
                              </section>
                                  : ''}   
                     <section>
-                  <h2 className="titles-h2">Peças dos Artefatos</h2>
+                  <h2 className="titles-h2">{ptBr.artifactsPieces}</h2>
                       <div id="artifacts-flexx">
                       
                           {artifacts.map((c:any,i:any) => (

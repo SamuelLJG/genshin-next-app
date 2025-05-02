@@ -20,7 +20,7 @@ const elementOptions = [
   { label: 'Pyro', value: 'pyro' }
 ];
 
-export default function WeaponsFilter() {
+export default function WeaponsFilter({ptBr}:any) {
   const [searchFilter, setSearchFilter] = useState('');
   const [activeRarity, setActiveRarity] = useState<string | null>(null);
   const [activeWeapon, setActiveWeapon] = useState<string | null>(null);
@@ -72,7 +72,7 @@ export default function WeaponsFilter() {
     <div id='filter-section2'>
       {/* Barra de Pesquisa */}
       <div className='top-name'>
-      <label htmlFor='index-search'>Pesquise</label>
+      <label htmlFor='index-search'>{ptBr.search}</label>
         <input
           type="text"
           placeholder="Digite um nome..."
@@ -84,9 +84,9 @@ export default function WeaponsFilter() {
 
       <div id='select-box'>
       <div className='top-name2'>
-      <label htmlFor='weapons-element'>Elemento</label>
+      <label htmlFor='weapons-element'>{ptBr.element}</label>
             <select onChange={handleElementChange} value={activeElement ?? ''} id='weapons-element'>
-              <option value="">Todos</option>
+              <option value="">{ptBr.allB}</option>
               {elementOptions.map(({ label, value }) => (
                 <option key={value} value={value}>{label}</option>
               ))}
@@ -94,20 +94,20 @@ export default function WeaponsFilter() {
           </div>
           {/* Select de Raridade */}
           <div className='top-name2'>
-          <label htmlFor='weapons-select'>Raridade</label>
+          <label htmlFor='weapons-select'>{ptBr.rarity}</label>
             <select onChange={handleRarityChange} value={activeRarity ?? ''} id='weapons-select'>
-              <option value="">Todas</option>
-              <option value="5">5 Estrelas</option>
-              <option value="4">4 Estrelas</option>
+              <option value="">{ptBr.allA}</option>
+              <option value="5">5 {ptBr.stars}</option>
+              <option value="4">4 {ptBr.stars}</option>
             </select>
           </div>
           {/* Select de Arma (substituto dos botões) */}
           
       </div>
       <div className='top-name2'>
-            <label htmlFor='weapon-type-select'>Tipo de Arma</label>
+            <label htmlFor='weapon-type-select'>{ptBr.weaponType}</label>
             <select onChange={handleWeaponChange} value={activeWeapon ?? ''} id='weapon-type-select'>
-              <option value="">Todas</option>
+              <option value="">{ptBr.allA}</option>
               {weaponOptions.map(({ label, value }) => (
                 <option key={value} value={value}>{label}</option>
               ))}

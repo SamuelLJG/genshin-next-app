@@ -1,11 +1,11 @@
 import Image from "next/image"
 import {characters} from "@/data/characters"
 import Link from "next/link";
-import Filter from "@/components/full-filter";
+import TeamsFilter from "@/components/TeamSlider";
 import Nav from "@/components/navGeneric";
 import ptBr from "@/data/pt-br.json"
 
-export default function Home() {
+export default function Teams() {
     function formatarNome(nome:string) {
         return nome
           .split('-')
@@ -18,7 +18,7 @@ export default function Home() {
           .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
           .join(' ');
       }
-      function formatCharacterName(name: string) {
+      function formatarNomeEspecial(name: string) {
        
         if (name === 'Traveler Hydro' ||
             name === 'Traveler Dendro' ||
@@ -65,19 +65,51 @@ export default function Home() {
         <main id="main-index" className="iii"> 
         
         <div id="h1-flex">
-            <Image src="/images/list-paper-school-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} alt="" loading="eager" /> <h1 id="index-h1">Genshin Impact {ptBr.charactersList}</h1>
+            <Image src="/images/team-3-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} alt="" loading="eager" /> <h1 id="index-h1">Genshin Impact {ptBr.bestTeams}</h1>
           </div>
-            <Filter ptBr={ptBr}/>
-            <div id="main-characters-flex">
-            {characters.map((char:any,i:any)=> (
-                <Link href={`/${char.name}`} key={i} className={`character-card ${char.elementType} ${char.name} ${char.weapon} rarity-${char.rarity}`}>
-            <Image width={100} height={100} src={`/images/Team-Icons/${formatarNome(char.name)}.png`} alt="" className={`rarity-${char.rarity}`} loading="eager" priority/>
-            <p>{formatCharacterName(formatarNomeComEspaco(formatarNome(char.name)))}</p>
-            {char.newCharacter != null ? <span>{char.newCharacter}</span> : ''  }
+            <TeamsFilter ptBr={ptBr}/>
+            <br />
+            <ul id="teams-list">
             
-            </Link>
+            {characters.map((character: any, i: number) =>
+  [character.teams[0]].map((team: any[], teamIndex: number) => (
+    <li className={`team-card ${character.name}`} key={`${character.name}-${teamIndex}`}>
+      <table>
+        <caption>{ptBr.bestTeam} {formatarNomeComEspaco(formatarNome(character.name))}</caption>
+        <thead>
+          <tr>
+            {team.map((member, j) => {
+              const role = Object.values(member)[0];
+              return <th key={j}>{ptBr[role as keyof typeof ptBr]}</th>;
+            })}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {team.map((member, j) => {
+              const characterName = Object.keys(member)[0];
+              return (
+                <td key={j} className="team-character">
+                  <Link href={`/${characterName}`}>
+                    <Image
+                      width={74}
+                      height={74}
+                      src={`/images/Team-Icons/${formatarNome(characterName)}.png`}
+                      alt={formatarNomeComEspaco(formatarNome(characterName))}
+                    />
+                  </Link>
+                  <p>{formatarNomeEspecial(formatarNomeComEspaco(formatarNome(characterName)))}</p>
+                </td>
+              );
+            })}
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  ))
+)}
             
-        ))}</div></main>
+            </ul></main>
         <Nav/>
         </body>
     )

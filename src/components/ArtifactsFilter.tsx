@@ -10,7 +10,7 @@ const weaponOptions = [
   { label: 'Catalisador', value: 'WEAPON_CATALYST' }
 ];
 
-export default function ArtifactsFilter() {
+export default function ArtifactsFilter({ptBr}:any) {
   const [searchFilter, setSearchFilter] = useState('');
   const [activeRarity, setActiveRarity] = useState<string | null>(null);
 
@@ -50,7 +50,7 @@ export default function ArtifactsFilter() {
     <div id='filter-section2'>
       {/* Barra de Pesquisa */}
       <div className='top-name'>
-        <label htmlFor='index-search'>Pesquise</label>
+        <label htmlFor='index-search'>{ptBr.search}</label>
         <input
           type="text"
           placeholder="Digite um nome..."
@@ -61,12 +61,12 @@ export default function ArtifactsFilter() {
       </div>
 
           <div className='top-name2'>
-            <label htmlFor='weapons-select'>Raridade</label>
+            <label htmlFor='weapons-select'>{ptBr.rarity}</label>
             <select onChange={handleRarityChange} value={activeRarity ?? ''} id='weapons-select'>
-              <option value="">Todos</option>
-              <option value="5">5 Estrelas</option>
-              <option value="4">4 Estrelas</option>
-              <option value="3">3 Estrelas</option>
+              <option value="">{ptBr.allB}</option>
+              <option value="5">5 {ptBr.stars}</option>
+              <option value="4">4 {ptBr.stars}</option>
+              <option value="3">3 {ptBr.stars}</option>
             </select>
           </div>
     </div>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Nav from "@/components/navGeneric";
 import ArtifactsFilter from "@/components/ArtifactsFilter";
+import ptBr from "@/data/pt-br.json"
 
 export default async function Page() {
   const response = await fetch('https://genshin-db-api.vercel.app/api/v5/artifacts?query=names&matchCategories=true');
@@ -22,9 +23,9 @@ export default async function Page() {
         
           <main id="main-index">
             <div id="h1-flex">
-            <Image src="/images/flower-with-heart-petals-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} loading="eager" alt="" /> <h1 id="index-h1">Genshin Impact Lista de Artefatos</h1>
+            <Image src="/images/flower-with-heart-petals-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} loading="eager" alt="" /> <h1 id="index-h1">Genshin Impact {ptBr.artifactsList}</h1>
           </div>
-          <ArtifactsFilter/>
+          <ArtifactsFilter ptBr={ptBr}/>
           <br />
               <div id="weapons-flex">
                   {armasPT.map((post: any, i: number) => (

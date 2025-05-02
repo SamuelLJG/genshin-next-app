@@ -11,6 +11,7 @@ import type { Metadata } from "next";
 import weaponStats from "@/data/newWeaponsFolder/symphonist-of-scents.json"
 import weaponNew from "@/data/newWeaponsData/symphonist-of-scents.json"
 import AscensionSlider from "@/components/AscensionSlider";
+import { notFound } from 'next/navigation'
 import TalentsSlider from "@/components/TalentsSlider";
 
 type Props = {
@@ -37,6 +38,8 @@ export const generateMetadata = async ({
 export default async function Home( { params }:any ) {
   
     let { id } = await params;
+    const characterBuild:any = characters.find(p => p.name === id);
+    if (!characterBuild) return notFound()
     let path;
 
     if (id === 'escoffier') {
@@ -53,49 +56,40 @@ export default async function Home( { params }:any ) {
     const jsonData3 = jsonModule3.default;
     const jsonModule4 = await import(`@/data/newCharactersConstellations/${path}.json`);
     const jsonData4 = jsonModule4.default;
-    const characterBuild:any = characters.find(p => p.name === id);
-    const nomesDosArtefatos = [characterBuild.bestArtifacts, ...characterBuild.otherArtifacts ? [...characterBuild.otherArtifacts] : []]
 
-    const nomesDasArmas = [characterBuild.bestWeapon, ...characterBuild.otherWeapons];
-    const apiUrl = 'https://genshin-db-api.vercel.app/api/v5/'
+   const apiUrl = 'https://genshin-db-api.vercel.app/api/v5/';
+const baseURLWeapon = `${apiUrl}weapons?query=`;
+const baseURLArtifact = `${apiUrl}artifacts?query=`;
+
+const fetchJson = (url: string) => fetch(url).then(res => res.json());
+const fetchWeaponData = (name: string) =>
+  fetchJson(`${baseURLWeapon}${encodeURIComponent(name)}&resultLanguage=portuguese`);
+const fetchArtifactData = (name: string) =>
+  fetchJson(`${baseURLArtifact}${encodeURIComponent(name.trim())}&resultLanguage=portuguese`);
+
+const nomesDosArtefatos = [
+  characterBuild.bestArtifacts,
+  ...(characterBuild.otherArtifacts || [])
+];
+
 async function getArmasEArtefatos() {
-  const baseURLWeapon = `${apiUrl}weapons?query=`;
+  const armasPT = id !== 'escoffier'
+    ? await Promise.all([
+        fetchWeaponData(characterBuild.bestWeapon),
+        ...characterBuild.otherWeapons.map(fetchWeaponData)
+      ])
+    : [weaponNew, ...await Promise.all(characterBuild.otherWeapons.map(fetchWeaponData))];
 
-  // Armas em Português
-  const responsesPTWeapons = await Promise.all(
-    nomesDasArmas.map(nome => {
-      const nomeLimpo = encodeURIComponent(nome.trim());
-      return fetch(`${baseURLWeapon}${nomeLimpo}&resultLanguage=portuguese`, { cache: 'force-cache' });
-    })
-  );
+  const artefatosPT = await Promise.all(nomesDosArtefatos.map(fetchArtifactData));
 
-  const armasPT = await Promise.all(responsesPTWeapons.map(res => res.json()));
+  const twoPiecesArtifacts = characterBuild.twoPieces
+    ? await Promise.all(characterBuild.twoPieces.map(fetchArtifactData))
+    : [];
 
-  if (id === 'escoffier') {
-    armasPT[0] = weaponNew;
-  }
+  return { armasPT, artefatosPT, twoPiecesArtifacts };
+}
 
-    const baseURLArtifact = `${apiUrl}artifacts?query=`;
-    
-    const responsesPTArtifacts = await Promise.all(
-      nomesDosArtefatos.map(nome => {
-        const nomeLimpo = encodeURIComponent(nome.trim());
-        return fetch(`${baseURLArtifact}${nomeLimpo}&resultLanguage=portuguese`, { cache: 'force-cache' });
-      })
-    );
-    const doisArtefatos = characterBuild.twoPieces ? [...characterBuild.twoPieces] : [];
-    const responsestwoPieces = await Promise.all(
-        doisArtefatos.map(nome => {
-          const nomeLimpo = encodeURIComponent(nome.trim());
-          return fetch(`${baseURLArtifact}${nomeLimpo}&resultLanguage=portuguese`, { cache: 'force-cache' });
-        })
-      );
-    const twoPiecesArtifacts = await Promise.all(responsestwoPieces.map(res => res.json()));
-    const artefatosPT = await Promise.all(responsesPTArtifacts.map(res => res.json()));
-    return { armasPT, artefatosPT, twoPiecesArtifacts };
-  }
-  
-  const { armasPT, artefatosPT, twoPiecesArtifacts } = await getArmasEArtefatos();
+const { armasPT, artefatosPT, twoPiecesArtifacts } = await getArmasEArtefatos();
     const id2 = (
         id === 'traveler-hydro' ||
         id === 'traveler-dendro' ||
@@ -526,7 +520,7 @@ switch (travelerName) {
                             <h3 className="titles-h3">{ptBr.artifactsSubStats}</h3>
                             <ul>
                               {characterBuild.subStatsArtifacts.map((art:any,i:any) => (
-                                <li key={i}><p>&bull; {ptBr[art as keyof typeof ptBr]}</p></li>
+                                <li key={i}><p>{ptBr[art as keyof typeof ptBr]}</p></li>
                               ))}
                             </ul>
                         </section>
@@ -561,7 +555,7 @@ switch (travelerName) {
                           const pairIndex = i / 2 + 2
                           
                           return (
-                            <Link key={i} href={`/artifacts/${characterBuild.twoPieces[i].toLowerCase().trim().replace(/\s+/g, '-')}`}>
+                            <Link key={i} href={`/artifacts/${characterBuild.twoPieces[1].toLowerCase().trim().replace(/\s+/g, '-')}`}>
                               <span className="other-artifacts-set">{(characterBuild.otherArtifacts.length === 0) ? (
   pairIndex 
 ): (pairIndex+1)}{ptBr.degree}</span>
@@ -637,11 +631,11 @@ switch (travelerName) {
                 
 <section id="ascension-costs-section">
   <h2 className="titles-h2">{travelerName}{" "}{ptBr.ascensionCosts}</h2>
-  <AscensionSlider currentCosts={characterData.costs}/>
+  <AscensionSlider currentCosts={characterData.costs} ptBr={ptBr}/>
 </section>
 <section id="talents-costs-section">
   <h2 className="titles-h2">{travelerName}{" "}{ptBr.talentCosts}</h2>
-  <TalentsSlider currentCosts={characterTalents.costs}/>
+  <TalentsSlider currentCosts={characterTalents.costs} ptBr={ptBr}/>
 </section>
 
 
@@ -745,37 +739,37 @@ switch (travelerName) {
                     <div id="logo">genshinbuild.com</div>
                 </Link>
                 <Link href="/" className="links">
-                    <div>
-                    <Image width={22} height={22} loading="eager" src="/images/header-icons/tierlist.svg" alt=""/>
-                    </div>
-                    <span className="names">Tier-List</span>
-                </Link>
-                <Link href="/weapons" className="links">
-                    <div>
-                    <Image width={22} height={22} loading="eager" src="/images/header-icons/weapons.svg" alt=""/>
-                    </div>
-                    
-                    <span className="names">Armas</span>
-                </Link>
-                <Link href="/" className="links" id="home">
-                    <div>
-                    <Image width={22} height={22} loading="eager" src="/images/header-icons/home.svg" alt=""/>
-                    </div>
-                    <span className="names">Início</span>
-                </Link>    
-                <Link href="/artifacts" className="links">
-                    <div>
-                    <Image width={22} height={22} loading="eager" src="/images/header-icons/artifacts.svg" alt=""/>
-                    </div>
-                    <span className="names">Artefatos</span>
-                </Link>
-                <Link href="/" className="links">
-                    <div>
-                    <Image width={22} height={22} src="/images/header-icons/farming.svg" alt=""/>
-                    </div>    
-                    <span className="names">Farming</span>
-
-                </Link>
+                            <div>
+                            <Image width={22} height={22} loading="eager" src="/images/header-icons/tierlist.svg" alt=""/>
+                            </div>
+                            <span className="names">Tier-List</span>
+                        </Link>
+                        <Link href="/weapons" className="links">
+                            <div>
+                            <Image width={22} height={22} loading="eager" src="/images/header-icons/weapons.svg" alt=""/>
+                            </div>
+                            
+                            <span className="names">Armas</span>
+                        </Link>
+                        <Link href="/" className="links" id="home">
+                            <div>
+                            <Image width={22} height={22} loading="eager" src="/images/header-icons/home.svg" alt=""/>
+                            </div>
+                            <span className="names">Início</span>
+                        </Link>    
+                        <Link href="/artifacts" className="links">
+                            <div>
+                            <Image width={22} height={22} loading="eager" src="/images/header-icons/artifacts.svg" alt=""/>
+                            </div>
+                            <span className="names">Artefatos</span>
+                        </Link>
+                        <Link href="/teams" className="links">
+                            <div>
+                            <Image width={22} height={22} loading="eager" src="/images/header-icons/teams.svg" alt=""/>
+                            </div>    
+                            <span className="names">Times</span>
+        
+                        </Link>
             </nav>
             <ScriptsClient/>
             <SliderHighlight />

@@ -80,7 +80,7 @@ function formatEffect(effectTemplateRaw: string, refinementLevel: number, ptData
     return name;
   }
 
-export default function WeaponSlider ({ ptData, matchedCharacters,folderData }: any) {
+export default function WeaponSlider ({ ptData, matchedCharacters,folderData, id, ptBr }: any) {
     console.log()
     // Conta quantos níveis de ascensão existem com base nas chaves que começam com "ascend"
     const ascendLevels = Object.keys(ptData.costs).filter(key => key.startsWith('ascend')).length;
@@ -122,7 +122,7 @@ export default function WeaponSlider ({ ptData, matchedCharacters,folderData }: 
                     <section id="wee-section" className={`wee-${ptData.rarity}`}>
                         <div id="stt-box">
                             <span>{ptData.weaponText}</span>
-                            <p>Ataque Básico</p>
+                            <p>{ptBr.basicAttack}</p>
                             <span>{Math.round(folderData[level2].attack)}</span>
                             {ptData.mainStatText != null ? 
                             <>
@@ -135,14 +135,15 @@ export default function WeaponSlider ({ ptData, matchedCharacters,folderData }: 
                             
                             <div><Stars starClass={ptData.rarity}/></div>
                         </div>
-                        <Image width={215} height={215} src={`https://gi.yatta.moe/assets/UI/${ptData.images.filename_icon}.png`} id="weapon-full-image" alt="" loading="eager" priority />
+                        <Image width={215} height={215} src={id != ptData.name3 ? `https://gi.yatta.moe/assets/UI/${ptData.images.filename_icon}.png` : `https://api.hakush.in/gi/UI/${ptData.images.filename_icon}.webp`
+                      } id="weapon-full-image" alt="" loading="eager" priority />
                     </section>
                     <section id="wee-level-section">
-                    <div id="wee-level"> <span> Nv. {level2}</span><input type="range" min="1" max={dd2} defaultValue={level2} onChange={handleChange2} id="ascension-costs-slider" /></div>
+                    <div id="wee-level"> <span> {ptBr.lvl}. {level2}</span><input type="range" min="1" max={dd2} defaultValue={level2} onChange={handleChange2} id="ascension-costs-slider" /></div>
                    
                 </section>
                 {ptData.effectTemplateRaw != null ? <section>
-                    <h2 className="titles-h2">Refinamento</h2>
+                    <h2 className="titles-h2">{ptBr.refinement}</h2>
                     <div className="ascension-costs-flex">
                                <label htmlFor="talents-costs-slider">Rank. {level3}</label>
                                <input
@@ -160,9 +161,9 @@ export default function WeaponSlider ({ ptData, matchedCharacters,folderData }: 
                     </div>
                 </section> : ''}
                     <section> 
-                                <h2 className="titles-h2">Custos de Ascensão</h2>
+                                <h2 className="titles-h2">{ptBr.ascensionCosts}</h2>
                        <div className="ascension-costs-flex">
-                               <label htmlFor="talents-costs-slider">Custo {level-1}→{level} <Image width={50} height={50} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${currentCosts[0].id}.png`} alt={currentCosts[0].name}/>{currentCosts[0].count/1000}K</label>
+                               <label htmlFor="talents-costs-slider">{ptBr.cost} {level-1}→{level} <Image width={50} height={50} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${currentCosts[0].id}.png`} alt={currentCosts[0].name}/>{currentCosts[0].count/1000}K</label>
                                <input
                                 type="range"
                                 min="1"
@@ -187,7 +188,7 @@ export default function WeaponSlider ({ ptData, matchedCharacters,folderData }: 
                         </section>
                                  {matchedCharacters != false ? 
                                  <section>
-                                 <h2 className="titles-h2">Personagens Recomendados</h2>
+                                 <h2 className="titles-h2">{ptBr.recommendedCharacters}</h2>
                                  <div id="character-weapons-flex">
                                  {matchedCharacters.map((c: any, i: any) => (
                                          <Link key={i} href={`/${c.name}`}>
@@ -202,7 +203,7 @@ export default function WeaponSlider ({ ptData, matchedCharacters,folderData }: 
                                  {ptData.story != "" ?
                                  <section>
 
-                                 <h2 className="titles-h2">História</h2>
+                                 <h2 className="titles-h2">{ptBr.story}</h2>
                                  <div className="story-description"><p dangerouslySetInnerHTML={{ __html: ptData.story.replace(/\n/g, '<br />')}}/></div>
                                 </section>
                                  : ''}

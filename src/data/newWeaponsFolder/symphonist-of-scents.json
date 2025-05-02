@@ -2,542 +2,542 @@
   "1": {
     "level": 1,
     "ascension": 0,
-    "attack": 44.3358,
-    "specialized": 0.192
+    "attack": 45.94,
+    "specialized": 0.144
   },
   "2": {
     "level": 2,
     "ascension": 0,
-    "attack": 47.8383282,
-    "specialized": 0.192
+    "attack": 49.4428,
+    "specialized": 0.144
   },
   "3": {
     "level": 3,
     "ascension": 0,
-    "attack": 51.3851922,
-    "specialized": 0.192
+    "attack": 52.9456,
+    "specialized": 0.144
   },
   "4": {
     "level": 4,
     "ascension": 0,
-    "attack": 54.8877204,
-    "specialized": 0.192
+    "attack": 56.4484,
+    "specialized": 0.144
   },
   "5": {
     "level": 5,
     "ascension": 0,
-    "attack": 58.3902486,
-    "specialized": 0.223104
+    "attack": 59.9512,
+    "specialized": 0.144
   },
   "6": {
     "level": 6,
     "ascension": 0,
-    "attack": 61.848441,
-    "specialized": 0.223104
+    "attack": 63.454,
+    "specialized": 0.144
   },
   "7": {
     "level": 7,
     "ascension": 0,
-    "attack": 65.3509692,
-    "specialized": 0.223104
+    "attack": 66.9568,
+    "specialized": 0.144
   },
   "8": {
     "level": 8,
     "ascension": 0,
-    "attack": 68.8091616,
-    "specialized": 0.223104
+    "attack": 70.4596,
+    "specialized": 0.144
   },
   "9": {
     "level": 9,
     "ascension": 0,
-    "attack": 72.3116898,
-    "specialized": 0.223104
+    "attack": 73.9624,
+    "specialized": 0.144
   },
   "10": {
     "level": 10,
     "ascension": 0,
-    "attack": 75.7698822,
-    "specialized": 0.261696
+    "attack": 77.4652,
+    "specialized": 0.144
   },
   "11": {
     "level": 11,
     "ascension": 0,
-    "attack": 79.2280746,
-    "specialized": 0.261696
+    "attack": 80.968,
+    "specialized": 0.144
   },
   "12": {
     "level": 12,
     "ascension": 0,
-    "attack": 82.686267,
-    "specialized": 0.261696
+    "attack": 84.4708,
+    "specialized": 0.144
   },
   "13": {
     "level": 13,
     "ascension": 0,
-    "attack": 86.1001236,
-    "specialized": 0.261696
+    "attack": 87.9736,
+    "specialized": 0.144
   },
   "14": {
     "level": 14,
     "ascension": 0,
-    "attack": 89.558316,
-    "specialized": 0.261696
+    "attack": 91.4764,
+    "specialized": 0.144
   },
   "15": {
     "level": 15,
     "ascension": 0,
-    "attack": 93.0165084,
-    "specialized": 0.30048
+    "attack": 94.9792,
+    "specialized": 0.144
   },
   "16": {
     "level": 16,
     "ascension": 0,
-    "attack": 96.430365,
-    "specialized": 0.30048
+    "attack": 98.482,
+    "specialized": 0.144
   },
   "17": {
     "level": 17,
     "ascension": 0,
-    "attack": 99.8885574,
-    "specialized": 0.30048
+    "attack": 101.9848,
+    "specialized": 0.144
   },
   "18": {
     "level": 18,
     "ascension": 0,
-    "attack": 103.302414,
-    "specialized": 0.30048
+    "attack": 105.4876,
+    "specialized": 0.144
   },
   "19": {
     "level": 19,
     "ascension": 0,
-    "attack": 106.7606064,
-    "specialized": 0.30048
+    "attack": 108.9904,
+    "specialized": 0.144
   },
   "20": {
     "level": 20,
     "ascension": 0,
-    "attack": 110.174463,
-    "specialized": 0.339264
+    "attack": 121.73,
+    "specialized": 0.2544
   },
   "21": {
     "level": 21,
     "ascension": 1,
-    "attack": 144.6883196,
-    "specialized": 0.339264
+    "attack": 125.2328,
+    "specialized": 0.2544
   },
   "22": {
     "level": 22,
     "ascension": 1,
-    "attack": 148.1021762,
-    "specialized": 0.339264
+    "attack": 128.7356,
+    "specialized": 0.2544
   },
   "23": {
     "level": 23,
     "ascension": 1,
-    "attack": 151.5603686,
-    "specialized": 0.339264
+    "attack": 132.2384,
+    "specialized": 0.2544
   },
   "24": {
     "level": 24,
     "ascension": 1,
-    "attack": 154.9742252,
-    "specialized": 0.339264
+    "attack": 135.7412,
+    "specialized": 0.2544
   },
   "25": {
     "level": 25,
     "ascension": 1,
-    "attack": 158.3880818,
-    "specialized": 0.378048
+    "attack": 139.244,
+    "specialized": 0.2544
   },
   "26": {
     "level": 26,
     "ascension": 1,
-    "attack": 161.8019384,
-    "specialized": 0.378048
+    "attack": 142.7468,
+    "specialized": 0.2544
   },
   "27": {
     "level": 27,
     "ascension": 1,
-    "attack": 165.2601308,
-    "specialized": 0.378048
+    "attack": 146.2496,
+    "specialized": 0.2544
   },
   "28": {
     "level": 28,
     "ascension": 1,
-    "attack": 168.6739874,
-    "specialized": 0.378048
+    "attack": 149.7524,
+    "specialized": 0.2544
   },
   "29": {
     "level": 29,
     "ascension": 1,
-    "attack": 172.087844,
-    "specialized": 0.378048
+    "attack": 153.2552,
+    "specialized": 0.2544
   },
   "30": {
     "level": 30,
     "ascension": 1,
-    "attack": 175.5017006,
-    "specialized": 0.416832
+    "attack": 152.83,
+    "specialized": 0.2544
   },
   "31": {
     "level": 31,
     "ascension": 1,
-    "attack": 178.9155572,
-    "specialized": 0.416832
+    "attack": 156.3328,
+    "specialized": 0.2544
   },
   "32": {
     "level": 32,
     "ascension": 1,
-    "attack": 182.3737496,
-    "specialized": 0.416832
+    "attack": 159.8356,
+    "specialized": 0.2544
   },
   "33": {
     "level": 33,
     "ascension": 1,
-    "attack": 185.7876062,
-    "specialized": 0.416832
+    "attack": 163.3384,
+    "specialized": 0.2544
   },
   "34": {
     "level": 34,
     "ascension": 1,
-    "attack": 189.2014628,
-    "specialized": 0.416832
+    "attack": 166.8412,
+    "specialized": 0.2544
   },
   "35": {
     "level": 35,
     "ascension": 1,
-    "attack": 192.6596552,
-    "specialized": 0.455616
+    "attack": 170.344,
+    "specialized": 0.2544
   },
   "36": {
     "level": 36,
     "ascension": 1,
-    "attack": 196.0735118,
-    "specialized": 0.455616
+    "attack": 173.8468,
+    "specialized": 0.2544
   },
   "37": {
     "level": 37,
     "ascension": 1,
-    "attack": 199.4873684,
-    "specialized": 0.455616
+    "attack": 177.3496,
+    "specialized": 0.2544
   },
   "38": {
     "level": 38,
     "ascension": 1,
-    "attack": 202.9455608,
-    "specialized": 0.455616
+    "attack": 180.8524,
+    "specialized": 0.2544
   },
   "39": {
     "level": 39,
     "ascension": 1,
-    "attack": 206.3594174,
-    "specialized": 0.455616
+    "attack": 184.3552,
+    "specialized": 0.2544
   },
   "40": {
     "level": 40,
     "ascension": 1,
-    "attack": 209.8176098,
-    "specialized": 0.4944
+    "attack": 235.2,
+    "specialized": 0.3708
   },
   "41": {
     "level": 41,
-    "ascension": 2,
-    "attack": 244.3758022,
-    "specialized": 0.4944
+    "ascension": 1,
+    "attack": 238.7028,
+    "specialized": 0.3708
   },
   "42": {
     "level": 42,
-    "ascension": 2,
-    "attack": 247.7896588,
-    "specialized": 0.4944
+    "ascension": 1,
+    "attack": 242.2056,
+    "specialized": 0.3708
   },
   "43": {
     "level": 43,
-    "ascension": 2,
-    "attack": 251.2478512,
-    "specialized": 0.4944
+    "ascension": 1,
+    "attack": 245.7084,
+    "specialized": 0.3708
   },
   "44": {
     "level": 44,
-    "ascension": 2,
-    "attack": 254.7060436,
-    "specialized": 0.4944
+    "ascension": 1,
+    "attack": 249.2112,
+    "specialized": 0.3708
   },
   "45": {
     "level": 45,
-    "ascension": 2,
-    "attack": 258.1199002,
-    "specialized": 0.533184
+    "ascension": 1,
+    "attack": 252.714,
+    "specialized": 0.3708
   },
   "46": {
     "level": 46,
-    "ascension": 2,
-    "attack": 261.5780926,
-    "specialized": 0.533184
+    "ascension": 1,
+    "attack": 256.2168,
+    "specialized": 0.3708
   },
   "47": {
     "level": 47,
-    "ascension": 2,
-    "attack": 265.036285,
-    "specialized": 0.533184
+    "ascension": 1,
+    "attack": 259.7196,
+    "specialized": 0.3708
   },
   "48": {
     "level": 48,
-    "ascension": 2,
-    "attack": 268.4944774,
-    "specialized": 0.533184
+    "ascension": 1,
+    "attack": 263.2224,
+    "specialized": 0.3708
   },
   "49": {
     "level": 49,
-    "ascension": 2,
-    "attack": 271.9526698,
-    "specialized": 0.533184
+    "ascension": 1,
+    "attack": 266.7252,
+    "specialized": 0.3708
   },
   "50": {
     "level": 50,
-    "ascension": 2,
-    "attack": 275.455198,
-    "specialized": 0.571968
+    "ascension": 1,
+    "attack": 308.42,
+    "specialized": 0.429
   },
   "51": {
     "level": 51,
-    "ascension": 3,
-    "attack": 310.1133904,
-    "specialized": 0.571968
+    "ascension": 1,
+    "attack": 311.9228,
+    "specialized": 0.429
   },
   "52": {
     "level": 52,
-    "ascension": 3,
-    "attack": 313.5715828,
-    "specialized": 0.571968
+    "ascension": 1,
+    "attack": 315.4256,
+    "specialized": 0.429
   },
   "53": {
     "level": 53,
-    "ascension": 3,
-    "attack": 317.0297752,
-    "specialized": 0.571968
+    "ascension": 1,
+    "attack": 318.9284,
+    "specialized": 0.429
   },
   "54": {
     "level": 54,
-    "ascension": 3,
-    "attack": 320.5323034,
-    "specialized": 0.571968
+    "ascension": 1,
+    "attack": 322.4312,
+    "specialized": 0.429
   },
   "55": {
     "level": 55,
-    "ascension": 3,
-    "attack": 323.9904958,
-    "specialized": 0.610752
+    "ascension": 1,
+    "attack": 325.934,
+    "specialized": 0.429
   },
   "56": {
     "level": 56,
-    "ascension": 3,
-    "attack": 327.493024,
-    "specialized": 0.610752
+    "ascension": 1,
+    "attack": 329.4368,
+    "specialized": 0.429
   },
   "57": {
     "level": 57,
-    "ascension": 3,
-    "attack": 330.9955522,
-    "specialized": 0.610752
+    "ascension": 1,
+    "attack": 332.9396,
+    "specialized": 0.429
   },
   "58": {
     "level": 58,
-    "ascension": 3,
-    "attack": 334.4537446,
-    "specialized": 0.610752
+    "ascension": 1,
+    "attack": 336.4424,
+    "specialized": 0.429
   },
   "59": {
     "level": 59,
-    "ascension": 3,
-    "attack": 337.9562728,
-    "specialized": 0.610752
+    "ascension": 1,
+    "attack": 339.9452,
+    "specialized": 0.429
   },
   "60": {
     "level": 60,
-    "ascension": 3,
-    "attack": 341.458801,
-    "specialized": 0.649536
+    "ascension": 1,
+    "attack": 382.43,
+    "specialized": 0.4872
   },
   "61": {
     "level": 61,
-    "ascension": 4,
-    "attack": 376.0613292,
-    "specialized": 0.649536
+    "ascension": 1,
+    "attack": 385.9328,
+    "specialized": 0.4872
   },
   "62": {
     "level": 62,
-    "ascension": 4,
-    "attack": 379.5638574,
-    "specialized": 0.649536
+    "ascension": 1,
+    "attack": 389.4356,
+    "specialized": 0.4872
   },
   "63": {
     "level": 63,
-    "ascension": 4,
-    "attack": 383.1107214,
-    "specialized": 0.649536
+    "ascension": 1,
+    "attack": 392.9384,
+    "specialized": 0.4872
   },
   "64": {
     "level": 64,
-    "ascension": 4,
-    "attack": 386.6132496,
-    "specialized": 0.649536
+    "ascension": 1,
+    "attack": 396.4412,
+    "specialized": 0.4872
   },
   "65": {
     "level": 65,
-    "ascension": 4,
-    "attack": 390.1157778,
-    "specialized": 0.68832
+    "ascension": 1,
+    "attack": 399.944,
+    "specialized": 0.4872
   },
   "66": {
     "level": 66,
-    "ascension": 4,
-    "attack": 393.6626418,
-    "specialized": 0.68832
+    "ascension": 1,
+    "attack": 403.4468,
+    "specialized": 0.4872
   },
   "67": {
     "level": 67,
-    "ascension": 4,
-    "attack": 397.16517,
-    "specialized": 0.68832
+    "ascension": 1,
+    "attack": 406.9496,
+    "specialized": 0.4872
   },
   "68": {
     "level": 68,
-    "ascension": 4,
-    "attack": 400.712034,
-    "specialized": 0.68832
+    "ascension": 1,
+    "attack": 410.4524,
+    "specialized": 0.4872
   },
   "69": {
     "level": 69,
-    "ascension": 4,
-    "attack": 404.258898,
-    "specialized": 0.68832
+    "ascension": 1,
+    "attack": 413.9552,
+    "specialized": 0.4872
   },
   "70": {
     "level": 70,
-    "ascension": 4,
-    "attack": 407.805762,
-    "specialized": 0.726912
+    "ascension": 1,
+    "attack": 456.99,
+    "specialized": 0.5452
   },
   "71": {
     "level": 71,
-    "ascension": 5,
-    "attack": 442.452626,
-    "specialized": 0.726912
+    "ascension": 1,
+    "attack": 460.4928,
+    "specialized": 0.5452
   },
   "72": {
     "level": 72,
-    "ascension": 5,
-    "attack": 445.99949,
-    "specialized": 0.726912
+    "ascension": 1,
+    "attack": 463.9956,
+    "specialized": 0.5452
   },
   "73": {
     "level": 73,
-    "ascension": 5,
-    "attack": 449.546354,
-    "specialized": 0.726912
+    "ascension": 1,
+    "attack": 467.4984,
+    "specialized": 0.5452
   },
   "74": {
     "level": 74,
-    "ascension": 5,
-    "attack": 453.093218,
-    "specialized": 0.726912
+    "ascension": 1,
+    "attack": 471.0012,
+    "specialized": 0.5452
   },
   "75": {
     "level": 75,
-    "ascension": 5,
-    "attack": 456.6844178,
-    "specialized": 0.765696
+    "ascension": 1,
+    "attack": 474.504,
+    "specialized": 0.5452
   },
   "76": {
     "level": 76,
-    "ascension": 5,
-    "attack": 460.2312818,
-    "specialized": 0.765696
+    "ascension": 1,
+    "attack": 478.0068,
+    "specialized": 0.5452
   },
   "77": {
     "level": 77,
-    "ascension": 5,
-    "attack": 463.8224816,
-    "specialized": 0.765696
+    "ascension": 1,
+    "attack": 481.5096,
+    "specialized": 0.5452
   },
   "78": {
     "level": 78,
-    "ascension": 5,
-    "attack": 467.4136814,
-    "specialized": 0.765696
+    "ascension": 1,
+    "attack": 485.0124,
+    "specialized": 0.5452
   },
   "79": {
     "level": 79,
-    "ascension": 5,
-    "attack": 470.9605454,
-    "specialized": 0.765696
+    "ascension": 1,
+    "attack": 488.5152,
+    "specialized": 0.5452
   },
   "80": {
     "level": 80,
-    "ascension": 5,
-    "attack": 474.5517452,
-    "specialized": 0.80448
+    "ascension": 1,
+    "attack": 532.23,
+    "specialized": 0.6034
   },
   "81": {
     "level": 81,
-    "ascension": 6,
-    "attack": 509.242945,
-    "specialized": 0.80448
+    "ascension": 1,
+    "attack": 535.7328,
+    "specialized": 0.6034
   },
   "82": {
     "level": 82,
-    "ascension": 6,
-    "attack": 512.8784806,
-    "specialized": 0.80448
+    "ascension": 1,
+    "attack": 539.2356,
+    "specialized": 0.6034
   },
   "83": {
     "level": 83,
-    "ascension": 6,
-    "attack": 516.4696804,
-    "specialized": 0.80448
+    "ascension": 1,
+    "attack": 542.7384,
+    "specialized": 0.6034
   },
   "84": {
     "level": 84,
-    "ascension": 6,
-    "attack": 520.0608802,
-    "specialized": 0.80448
+    "ascension": 1,
+    "attack": 546.2412,
+    "specialized": 0.6034
   },
   "85": {
     "level": 85,
-    "ascension": 6,
-    "attack": 523.6964158,
-    "specialized": 0.843264
+    "ascension": 1,
+    "attack": 549.744,
+    "specialized": 0.6034
   },
   "86": {
     "level": 86,
-    "ascension": 6,
-    "attack": 527.2876156,
-    "specialized": 0.843264
+    "ascension": 1,
+    "attack": 553.2468,
+    "specialized": 0.6034
   },
   "87": {
     "level": 87,
-    "ascension": 6,
-    "attack": 530.9231512,
-    "specialized": 0.843264
+    "ascension": 1,
+    "attack": 556.7496,
+    "specialized": 0.6034
   },
   "88": {
     "level": 88,
-    "ascension": 6,
-    "attack": 534.5586868,
-    "specialized": 0.843264
+    "ascension": 1,
+    "attack": 560.2524,
+    "specialized": 0.6034
   },
   "89": {
     "level": 89,
-    "ascension": 6,
-    "attack": 538.1942224,
-    "specialized": 0.843264
+    "ascension": 1,
+    "attack": 563.7552,
+    "specialized": 0.6034
   },
   "90": {
     "level": 90,
-    "ascension": 6,
-    "attack": 541.829758,
-    "specialized": 0.882048
+    "ascension": 1,
+    "attack": 608.07,
+    "specialized": 0.6615
   },
   "20+": {
     "level": 20,

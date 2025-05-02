@@ -837,10 +837,7 @@ gap: calc(10px * var(--minimize));
 .spp {
   margin-right: -50px;
 }
-#main-content a:hover {
-  opacity: 0.5;
-  transition: .1s;
-}
+
 #other-artifacts a{
   display: flex;
   height: fit-content;
@@ -873,6 +870,7 @@ li {
 .four-pieces-name {
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  padding-right: 2px;
   line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -1264,11 +1262,74 @@ align-items: stretch;
   display: flex;
   align-items: center;
 }
+#tier-list-flex {
+  border: 1px solid var(--bd);
+  border-bottom: none;
+}
+.tiers-flex {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 2px solid var(--bd);
+}
+.tiers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sub);
+  font-weight: bold;
+  font-size: 30px;
+  width: 50px;
+}
+.tiers-functions {
+  width: 100%;
+}
+.tiers-functions img {
+  margin-bottom: -4px;
+}
+.tier-list-characters-flex {
+  padding: 10px;
+}
 
+.function-name {
+  background: #25262c;
+  border-bottom: 2px solid var(--bd);
+  padding: 4px 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  font-style: italic;
+}
+.tiers-flex:nth-last-of-type(5) .tiers {
+  
+  background: #ffee00;
+}
+.tiers-flex:nth-last-of-type(4) .tiers {
+  
+  background: #86f508;
+}
+.tiers-flex:nth-last-of-type(3) .tiers {
+  
+  background: #08f5c2;
+}
+.tiers-flex:nth-last-of-type(2) .tiers {
+  
+  background: #086ff5;
+}
+.tiers-flex:nth-last-of-type(1) .tiers {
+  
+  background: #4f08f5;
+}
+.tiers-funtcions {
+  display: grid;
+  width: 100%;
+  text-align: center;
+}
 .index-h1-icon {
   background: var(--ct);
   padding: 5px 7px;
   color: var(--sub);
+  width: 30px;
   height: auto;
   aspect-ratio: 1/1;
 }
@@ -1512,6 +1573,7 @@ button.button-not-active {
 }
 #weapon-main img {
   border-radius: calc(7px * var(--minimize));
+  margin-bottom: -4px;
   width: calc(150px * var(--minimize));
   height: calc(150px * var(--minimize));
 }
@@ -1942,6 +2004,10 @@ gap: calc(5px * var(--minimize)) ;
   max-width: 140px;
   height: auto;
 }
+.nowrap {
+  display: inline-block;
+  white-space: nowrap;
+}
 @media (min-width: 1355px) {
  
   #artifacts-main-stats-section {
@@ -2088,7 +2154,13 @@ overflow: hidden;
     margin-top: -8px;
     transition: ease .3s;
   }
-  
+  #main-content a:hover,#teams-list a:hover, #main-content #artifact-img-box img:hover {
+    opacity: 0.5;
+    transition: .1s;
+  }
+  #main-content #artifact-img-box:hover {
+    opacity: 1;
+  }
   .character-card:hover span {
     top: -8px;
     left: -4px;

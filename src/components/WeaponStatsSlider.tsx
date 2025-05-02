@@ -3,7 +3,7 @@
 import { match } from 'assert'
 import { useState } from 'react'
 
-export default function WeaponStatsSlider({ arma2,arma3, arma4 }: any ) {
+export default function WeaponStatsSlider({ arma2,arma3, arma4}: any ) {
     const [weaponstats, setWeaponStats] = useState(90)
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -23,7 +23,7 @@ export default function WeaponStatsSlider({ arma2,arma3, arma4 }: any ) {
     return (
             <div id="weapon-stats">
             <div id="weapon-level">
-                <div><span>Nível.</span><span> {weaponstats}</span></div>
+                <div><span>{arma4.level}.</span><span> {weaponstats}</span></div>
             <input className="slider" type="range" defaultValue="90" min="1" max="90" onChange={handleChange} />
             </div>
                 <ul id="weapon-main-stats">
