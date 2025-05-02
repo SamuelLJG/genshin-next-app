@@ -14,12 +14,14 @@ export default function Teams() {
       }
       
       type Role = 'mainDps' | 'subDps' | 'support';
-      const functions = ['mainDps', 'subDps', 'support'];
-      const functionLabels: Record<Role, string> = {
-        mainDps: 'Main DPS',
-        subDps: 'Sub-DPS',
-        support: 'Suporte',
-      };
+
+const functions: Role[] = ['mainDps', 'subDps', 'support'];
+
+const functionLabels: Record<Role, string> = {
+  mainDps: 'Main DPS',
+  subDps: 'Sub-DPS',
+  support: 'Suporte',
+};
       
       const ranks = ['S', 'A', 'B', 'C', 'D'];
     return (

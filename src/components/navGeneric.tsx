@@ -10,7 +10,7 @@ export default function Nav() {
                             <Image width={52} height={52} loading="eager" src={`/images/Icons/Layla.png`} alt=""/></div>
                             <div id="logo">genshinbuild.com</div>
                         </Link>
-                        <Link href="/" className="links">
+                        <Link href="/tier-list" className="links">
                             <div>
                             <Image width={22} height={22} loading="eager" src="/images/header-icons/tierlist.svg" alt=""/>
                             </div>
