@@ -1,5 +1,5 @@
 
-import Nav from "@/components/navGeneric";
+
 import { characters } from '@/data/characters';
 import ArtifactsSlider from "@/components/ArtifactsSlider";
 import ScriptsClient from "@/components/scripts-client";
@@ -37,12 +37,8 @@ export default async function Page({params}:any) {
       (char.twoPieces ?? []).some((w) => w === weapon)
       );
       
-  return (
-    <body id="weapons-body">
-             
+  return <>
              <ArtifactsSlider ptData={ptData} matchedCharacters={matchedCharacters} ptBr={ptBr}/>
-          <Nav/>
           <ScriptsClient/>
-    </body>
-  );
+          </>
 }

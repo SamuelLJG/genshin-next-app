@@ -326,9 +326,9 @@ switch (travelerName) {
   };
     return (
       
-        <body id={elementFormatted}>
-            <div id="character-h1">
-                <div id="header-container">
+        <>
+            <div id="character-h1" className={elementFormatted}>
+                <div id="header-container" >
                     <div className="header-icon">
                         <svg className="icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book" role="img" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 448 512">
@@ -347,7 +347,7 @@ switch (travelerName) {
                 </div>
             </div>
 
-            <main id="main-content">
+            <main id="main-content" className={elementFormatted}>
                 <section id="character-banner">
         <Image
         id="character-image"
@@ -555,7 +555,7 @@ switch (travelerName) {
                           const pairIndex = i / 2 + 2
                           
                           return (
-                            <Link key={i} href={`/artifacts/${characterBuild.twoPieces[1].toLowerCase().trim().replace(/\s+/g, '-')}`}>
+                            <Link key={i} href={`/artifacts/${characterBuild.twoPieces[i].toLowerCase().trim().replace(/\s+/g, '-')}`}>
                               <span className="other-artifacts-set">{(characterBuild.otherArtifacts.length === 0) ? (
   pairIndex 
 ): (pairIndex+1)}{ptBr.degree}</span>
@@ -731,48 +731,9 @@ switch (travelerName) {
         </section>
 
             </main>
-            <nav>
-                <h2>Menu Principal de Navegação</h2>
-                <Link href="/" id="titlessss">
-                    <div>
-                    <Image width={52} height={52} loading="eager" src={`/images/Icons/${formatarNome(id)}.png`} alt=""/></div>
-                    <div id="logo">genshinbuild.com</div>
-                </Link>
-                <Link href="/" className="links">
-                            <div>
-                            <Image width={22} height={22} loading="eager" src="/images/header-icons/tierlist.svg" alt=""/>
-                            </div>
-                            <span className="names">Tier-List</span>
-                        </Link>
-                        <Link href="/weapons" className="links">
-                            <div>
-                            <Image width={22} height={22} loading="eager" src="/images/header-icons/weapons.svg" alt=""/>
-                            </div>
-                            
-                            <span className="names">Armas</span>
-                        </Link>
-                        <Link href="/" className="links" id="home">
-                            <div>
-                            <Image width={22} height={22} loading="eager" src="/images/header-icons/home.svg" alt=""/>
-                            </div>
-                            <span className="names">Início</span>
-                        </Link>    
-                        <Link href="/artifacts" className="links">
-                            <div>
-                            <Image width={22} height={22} loading="eager" src="/images/header-icons/artifacts.svg" alt=""/>
-                            </div>
-                            <span className="names">Artefatos</span>
-                        </Link>
-                        <Link href="/teams" className="links">
-                            <div>
-                            <Image width={22} height={22} loading="eager" src="/images/header-icons/teams.svg" alt=""/>
-                            </div>    
-                            <span className="names">Times</span>
-        
-                        </Link>
-            </nav>
+            
             <ScriptsClient/>
             <SliderHighlight />
-        </body>
+        </>
     )
     }

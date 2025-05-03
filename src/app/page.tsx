@@ -2,7 +2,6 @@ import Image from "next/image"
 import {characters} from "@/data/characters"
 import Link from "next/link";
 import Filter from "@/components/full-filter";
-import Nav from "@/components/navGeneric";
 import ptBr from "@/data/pt-br.json"
 
 export default function Home() {
@@ -61,7 +60,6 @@ export default function Home() {
         return name;
       }
     return (
-        <body>
         <main id="main-index" className="iii"> 
         
         <div id="h1-flex">
@@ -78,7 +76,5 @@ export default function Home() {
             </Link>
             
         ))}</div></main>
-        <Nav/>
-        </body>
     )
 }

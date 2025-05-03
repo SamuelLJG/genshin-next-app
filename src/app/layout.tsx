@@ -2,6 +2,7 @@ import { Anuphan, Plus_Jakarta_Sans } from 'next/font/google'
 import "./globals.css";
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Nav from '@/components/nav';
 
 
 
@@ -26,7 +27,10 @@ export default async function RootLayout({ children }: {children: React.ReactNod
 
   return (
     <html lang="en">
-      {children}
+      <body>
+      <Nav/>
+        {children}
+      </body>
       <SpeedInsights />
     </html>
   );

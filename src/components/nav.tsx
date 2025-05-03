@@ -3,14 +3,14 @@ import Image from "next/image"
 
 export default function Nav() {
     return (
-        <nav>
-                        <h2>Menu Principal de Navegação</h2>
-                        <Link href="/" id="titlessss">
-                            <div>
-                            <Image width={52} height={52} loading="eager" src={`/images/Icons/Layla.png`} alt=""/></div>
-                            <div id="logo">genshinbuild.com</div>
-                        </Link>
-                        <Link href="/tier-list" className="links">
+        <nav id="header-nav">
+                <h2>Menu Principal de Navegação</h2>
+                <Link href="/" id="titlessss">
+                    <div>
+                    <Image width={52} height={52} loading="eager" src={`/images/Icons/Layla.png`} alt=""/></div>
+                    <div id="logo">genshinbuild.com</div>
+                </Link>
+                <Link href="/tier-list" className="links">
                             <div>
                             <Image width={22} height={22} loading="eager" src="/images/header-icons/tierlist.svg" alt=""/>
                             </div>
@@ -27,7 +27,7 @@ export default function Nav() {
                             <div>
                             <Image width={22} height={22} loading="eager" src="/images/header-icons/home.svg" alt=""/>
                             </div>
-                            <span className="names">Início</span>
+                            <span className="names">Personagens</span>
                         </Link>    
                         <Link href="/artifacts" className="links">
                             <div>
@@ -42,6 +42,6 @@ export default function Nav() {
                             <span className="names">Times</span>
         
                         </Link>
-                    </nav>
+            </nav>
     )
 }

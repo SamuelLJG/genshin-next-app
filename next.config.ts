@@ -3,7 +3,26 @@ import type { NextConfig } from "next";
 // next.config.ts
 const nextConfig: NextConfig = {
   images: {
-    domains: ['gi.yatta.moe','enka.network', 'api.hakush.in']
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'gi.yatta.moe',
+        port: '',
+        search: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'enka.network',
+        port: '',
+        search: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'api.hakush.in',
+        port: '',
+        search: '',
+      }
+    ]
   },
   async redirects() {
     return [

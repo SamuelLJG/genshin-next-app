@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import Nav from "@/components/navGeneric";
 import ArtifactsFilter from "@/components/ArtifactsFilter";
 import ptBr from "@/data/pt-br.json"
 
@@ -19,7 +18,6 @@ export default async function Page() {
   const circletOnly = ['Prayers for Destiny', 'Prayers for Illumination', 'Prayers for Wisdom', 'Prayers to Springtime'];
   
   return (
-    <body>
         
           <main id="main-index">
             <div id="h1-flex">
@@ -39,7 +37,5 @@ export default async function Page() {
                   ))}
               </div>
           </main>
-        <Nav/>
-    </body>
   );
 }

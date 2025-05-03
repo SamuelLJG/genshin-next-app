@@ -1,4 +1,3 @@
-import Nav from "@/components/navGeneric";
 import { characters } from '@/data/characters';
 import ptBr from "@/data/pt-br.json"
 import WeaponSlider from "@/components/WeaponsSlider";
@@ -44,7 +43,6 @@ if(id != weaponNew.name2.replace(/'/g, '').toLowerCase().replace(/ /g, '-')) {
   folderData = weaponStats
   weapon = enData.name2.replace(/'/g, "")
 }
-      console.log(weapon)
        
       
       const matchedCharacters = characters.filter((char) => 
@@ -52,12 +50,9 @@ if(id != weaponNew.name2.replace(/'/g, '').toLowerCase().replace(/ /g, '-')) {
         char.otherWeapons.some((w) => w === weapon)
       );
       
-  return (
-    <body id="weapons-body">
+  return <>
              
              <WeaponSlider ptData={ptData} matchedCharacters={matchedCharacters} folderData={folderData} id={id} ptBr={ptBr}/>
-          <Nav/>
           <ScriptsClient/>
-    </body>
-  );
+      </>
 }

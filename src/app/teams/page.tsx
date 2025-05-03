@@ -2,7 +2,6 @@ import Image from "next/image"
 import {characters} from "@/data/characters"
 import Link from "next/link";
 import TeamsFilter from "@/components/TeamSlider";
-import Nav from "@/components/navGeneric";
 import ptBr from "@/data/pt-br.json"
 
 export default function Teams() {
@@ -61,7 +60,6 @@ export default function Teams() {
         return name;
       }
     return (
-        <body>
         <main id="main-index" className="iii"> 
         
         <div id="h1-flex">
@@ -110,7 +108,5 @@ export default function Teams() {
 )}
             
             </ul></main>
-        <Nav/>
-        </body>
     )
 }

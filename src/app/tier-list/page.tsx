@@ -1,7 +1,6 @@
 import Image from "next/image"
 import {characters} from "@/data/characters"
 import Link from "next/link";
-import Nav from "@/components/navGeneric";
 import ptBr from "@/data/pt-br.json"
 import React from "react";
 
@@ -25,7 +24,6 @@ const functionLabels: Record<Role, string> = {
       
       const ranks = ['S', 'A', 'B', 'C', 'D'];
     return (
-        <body>
         <main id="main-index" className="iii"> 
         
         <div id="h1-flex">
@@ -47,7 +45,7 @@ const functionLabels: Record<Role, string> = {
               return (
                 <React.Fragment key={func}>
                   <li className="function-name">{functionLabels[func]}</li>
-                  <li className="tier-list-characters-flex">{chars.map((p) => <Link href={p.name} key={p.name}><Image width={60} height={60} src={`/images/Team-Icons/${formatarNome(p.name)}.png`} alt="" /></Link>)}
+                  <li className="tier-list-characters-flex">{chars.map((p) => <Link href={p.name} key={p.name}><Image width={100} height={100} src={`/images/Team-Icons/${formatarNome(p.name)}.png`} alt="" /></Link>)}
                   </li>
                 </React.Fragment>
               );
@@ -57,7 +55,5 @@ const functionLabels: Record<Role, string> = {
       ))}
     </ul>
             </main>
-        <Nav/>
-        </body>
     )
 }

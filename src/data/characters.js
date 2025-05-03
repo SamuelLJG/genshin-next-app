@@ -7,15 +7,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [
-            [{"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"escoffier": 'support'},
-            {"neuvillette": 'mainDps'}]
+            [{'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'escoffier': 'support'},
+            {'neuvillette': 'mainDps'}]
         ],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         newCharacter : 'new',
         weapon: 'WEAPON_POLE',
         rarity: '5',
@@ -27,18 +27,18 @@ export const characters = [
         otherWeapons: ['A Thousand Floating Dreams','Mappa Mare','Wandering Evenstar'],
         bestArtifacts: 'Viridescent Venerer',
         teams: [
-            [{"kamisato-ayato": 'mainDps'},
-            {"ororon": 'subDps'},
-            {"ifa": 'support'},
-            {"furina": 'support'}]
+            [{'kamisato-ayato': 'mainDps'},
+            {'ororon': 'subDps'},
+            {'ifa': 'support'},
+            {'furina': 'support'}]
         ],
         talentPriority: ['elementalBurst','elementalSkill','normalAttack'],
         elementType: 'anemo',
-        mainStatsArtifacts: ['elementalMastery',"elementalMastery", "elementalMastery"],
-        subStatsArtifacts: ['critRate', "elementalMastery","energyRecharge"],
+        mainStatsArtifacts: ['elementalMastery','elementalMastery', 'elementalMastery'],
+        subStatsArtifacts: ['critRate', 'elementalMastery','energyRecharge'],
         newCharacter : 'new',
         weapon: 'WEAPON_CATALYST',
-        rarity: '4',
+        rarity: '4'
     },
     {
         name: 'albedo',
@@ -49,19 +49,19 @@ export const characters = [
         otherArtifacts: ['Golden Troupe'],
         twoPieces: ['Husk of Opulent Dreams', 'Archaic Petra'],
         teams: [
-            [{"arataki-itto": 'mainDps'},
-            {"albedo": 'subDps'},
-            {"gorou": 'support'},
-            {"zhongli": 'support'}],
-            [{"navia": 'mainDps'},
-            {"albedo": 'subDps'},
-            {"xiangling": 'subDps'},
-            {"bennett": 'support'}]
+            [{'arataki-itto': 'mainDps'},
+            {'albedo': 'subDps'},
+            {'gorou': 'support'},
+            {'zhongli': 'support'}],
+            [{'navia': 'mainDps'},
+            {'albedo': 'subDps'},
+            {'xiangling': 'subDps'},
+            {'bennett': 'support'}]
         ],
         talentPriority: ['elementalSkill','elementalBurst'],
         elementType: 'geo',
-        mainStatsArtifacts: ['defPercent',"geoBonus", "critRateOrDamage"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['defPercent','geoBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'defPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '5',
         rank: 'b'
@@ -75,19 +75,19 @@ export const characters = [
         otherArtifacts: ['Deepwood Memories'],
         twoPieces: ['Deepwood Memories', 'Emblem of Severed Fate'],
         teams: [
-            [{"alhaitham": 'mainDps'},
-            {"xingqiu": 'subDps'},
-            {"nahida": 'support'},
-            {"kuki-shinobu": 'support'}],
-            [{"alhaitham": 'mainDps'},
-            {"yae-miko": 'subDps'},
-            {"nahida": 'subDps'},
-            {"kuki-shinobu": 'support'}]
+            [{'alhaitham': 'mainDps'},
+            {'xingqiu': 'subDps'},
+            {'nahida': 'support'},
+            {'kuki-shinobu': 'support'}],
+            [{'alhaitham': 'mainDps'},
+            {'yae-miko': 'subDps'},
+            {'nahida': 'subDps'},
+            {'kuki-shinobu': 'support'}]
         ],
         talentPriority: ['elementalSkill','normalAttack','elementalBurst'],
         elementType: 'dendro',
-        mainStatsArtifacts: ['atkPercentOrElementalMastery',"dendroBonus", "critRateOrDamage"],
-        subStatsArtifacts: ['critRateOrDamage',"elementalMastery", "atkPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercentOrElementalMastery','dendroBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRateOrDamage','elementalMastery', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '5',
         rank: 'a'
@@ -95,70 +95,83 @@ export const characters = [
     {
         name: 'amber',
         function: 'subDps',
-        bestWeapon: 'Polar Star',
-        otherWeapons: ['Elegy for the End','Mouuns Moon','The Stringless'],
-        bestArtifacts: 'Emblem Of Severed Fate',
-        otherArtifacts: ['Instructor', 'The Exile'],
+        bestWeapon: 'the First Great Magic',
+        otherWeapons: ['Aqua Simulacra','Elegy for the End','Hamayumi'],
+        bestArtifacts: 'Wanderers Troupe',
+        otherArtifacts: ['Shimenawas Reminiscence', 'Instructor'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'amber': 'subDps'},
+            {'rosaria': 'subDps'},
+            {'bennett': 'support'},
+            {'diona': 'support'}
+        ],
+        [
+            {'hu-tao': 'mainDps'},
+            {'amber': 'support'},
+            {'xingqiu': 'subDps'},
+            {'sucrose': 'support'}
+        ]
+        ],
+        talentPriority: ['normalAttack','elementalBurst','elementalSkill'],
         elementType: 'pyro',
-        mainStatsArtifacts: ['atkPercent',"pyroBonus", "critRateOrDamage"],
-        subStatsArtifacts: ['critRateOrDamage',"elementalMastery", "atkPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercentOrEnergyRecharge','pyroBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRateOrDamage','elementalMastery', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_BOW',
-        rarity: '4'
+        rarity: '4',
+        rank:'d'
     },
     {
         name: 'arataki-itto',
-        function: 'subDps',
+        function: 'mainDps',
         bestWeapon: 'Redhorn Stonethresher',
         otherWeapons: ['Serpent Spine','Skyward Pride','Whiteblind'],
         bestArtifacts: 'Husk of Opulent Dreams',
         otherArtifacts: ['Desert Pavilion Chronicle', 'Retracing Bolide'],
-        teams: [
-            [{"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"kaedehara-kazuha": 'mainDps'}],
-            [{"nahida": 'mainDps'},
-                {"navia": 'subDps'},
-                {"arlecchino": 'support'},
-                {"kaedehara-kazuha": 'mainDps'}],
-                [{"ningguang": 'mainDps'},
-                    {"navia": 'subDps'},
-                    {"arlecchino": 'support'},
-                    {"kaedehara-kazuha": 'mainDps'}]
+        teams: [[
+            {'arataki-itto': 'mainDps'},
+            {'albedo': 'subDps'},
+            {'gorou': 'support'},
+            {'zhongli': 'support'}
+            ],
+            [{'arataki-itto': 'mainDps'},
+            {'chiori': 'subDps'},
+            {'gorou': 'support'},
+            {'furina': 'subDps'}
+        ]
         ],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        talentPriority: ['elementalBurst', 'normalAttack', 'elementalSkill'],
         elementType: 'geo',
-        mainStatsArtifacts: ['defPercent',"geoBonus", "critRateOrDamage"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","elementalMastery"],
+        mainStatsArtifacts: ['defPercent','geoBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'defPercent','energyRecharge'],
         weapon: 'WEAPON_CLAYMORE',
-        rarity: '5'
+        rarity: '5',
+        rank: 'b'
     },
     {
         name: 'arlecchino',
-        function: 'subDps',
+        function: 'mainDps',
         bestWeapon: 'Crimson Moons Semblance',
         otherWeapons: ['Primordial Jade Winged-Spear','Staff of the Scarlet Sands','Deathmatch'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith', 'Gilded Dreams'],
+        bestArtifacts: 'Fragment of Harmonic Whimsy',
+        otherArtifacts: ['Gladiators Finale', 'Crimson Witch of Flames'],
         teams: [[
-            {"arataki-itto": 'mainDps'},
-            {"gorou": 'support'},
-            {"albedo": 'support'},
-            {"zhongli": 'support'}]
+            {'arlecchino': 'mainDps'},
+            {'yelan': 'subDps'},
+            {'xingqiu': 'subDps'},
+            {'kaedehara-kazuha': 'support'}],
+            [
+            {'arlecchino': 'mainDps'},
+            {'fischl': 'subDps'},
+            {'chevreuse': 'support'},
+            {'bennett': 'support'}]
         ],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        talentPriority: ['normalAttack','elementalBurst','elementalSkill'],
         elementType: 'pyro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','pyroBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','elementalMastery'],
         weapon: 'WEAPON_POLE',
-        rarity: '5'
+        rarity: '5',
+        rank: 's'
     },
     {
         name: 'baizhu',
@@ -168,257 +181,333 @@ export const characters = [
         bestArtifacts: 'Deepwood Memories',
         otherArtifacts: ['Ocean-Hued Clam', 'Instructor'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"nahida": 'subDps'},
-            {"xingqiu": 'subDps'},
-            {"baizhu": 'support'}
+            {'nilou': 'mainDps'},
+            {'nahida': 'subDps'},
+            {'xingqiu': 'subDps'},
+            {'baizhu': 'support'}
         ],
         [
-            {"cyno": 'mainDps'},
-            {"nahida": 'subDps'},
-            {"yelan": 'subDps'},
-            {"baizhu": 'support'}
+            {'cyno': 'mainDps'},
+            {'nahida': 'subDps'},
+            {'yelan': 'subDps'},
+            {'baizhu': 'support'}
         ]
         ],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
-        mainStatsArtifacts: ['hpPercent',"hpPercent", "hpPercent"],
-        subStatsArtifacts: ['energyRecharge', "hpPercent","hp"],
+        mainStatsArtifacts: ['hpPercent','hpPercent', 'hpPercent'],
+        subStatsArtifacts: ['energyRecharge', 'hpPercent','hp'],
         weapon: 'WEAPON_CATALYST',
-        rarity: '5'
+        rarity: '5',
+        rank: 's'
     },
     {
         name: 'beidou',
         function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        bestWeapon: 'Wolfs Gravestone',
+        otherWeapons: ['Serpent Spine','Beacon of the Reed Sea','Redhorn Stonethresher'],
+        bestArtifacts: 'Emblem of Severed Fate',
+        otherArtifacts: [],
+        twoPieces: ['Noblesse Oblige','Emblem of Severed Fate', 'Thundering Fury', 'Emblem of Severed Fate'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'sucrose': 'support'},
+            {'fischl': 'subDps'},
+            {'beidou': 'subDps'},
+            {'xingqiu': 'subDps'}
+        ],
+        [
+            {'yoimiya': 'mainDps'},
+            {'fischl': 'subDps'},
+            {'beidou': 'subDps'},
+            {'xingqiu': 'subDps'}
+        ]
+        ],
+        talentPriority: ['elementalBurst','elementalSkill','normalAttack'],
         elementType: 'electro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercentOrEnergyRecharge','electroBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CLAYMORE',
-        rarity: '4'
+        rarity: '4',
+        rank: 'b'
     },
     {
         name: 'barbara',
         function: 'support',
         bestWeapon: 'Thrilling Tales of Dragon Slayers',
         otherWeapons: ['Everlasting Moonglow','Prototype Amber','Favonius Codex'],
-        bestArtifacts: 'Maiden Beloved',
-        otherArtifacts: [],
-        twoPieces: ['Maiden Beloved','Tenacity of the Millelith','Maiden Beloved','Ocean-Hued Clam'],
+        bestArtifacts: 'Ocean-Hued Clam',
+        otherArtifacts: ['Tenacity of the Millelith', 'Instrutor'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"xingqiu": 'subDps'},
-            {"nahida": 'subDps'},
-            {"barbara": 'support'}
+            {'nilou': 'mainDps'},
+            {'xingqiu': 'subDps'},
+            {'nahida': 'subDps'},
+            {'barbara': 'support'}
         ],
         [
-            {"kamisato-ayaka": 'mainDps'},
-            {"shenhe": 'subDps'},
-            {"kaedehara-kazuha": 'support'},
-            {"barbara": 'support'}
+            {'kamisato-ayaka': 'mainDps'},
+            {'shenhe': 'subDps'},
+            {'kaedehara-kazuha': 'support'},
+            {'barbara': 'support'}
         ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        talentPriority: ['elementalSkill','elementalBurst'],
         elementType: 'hydro',
-        mainStatsArtifacts: ['hpPercent',"hpPercent", "healingBonus"],
-        subStatsArtifacts: ['hpPercent',"hp", "energyRecharge"],
+        mainStatsArtifacts: ['hpPercent','hpPercent', 'healingBonus'],
+        subStatsArtifacts: ['hpPercent','hp', 'energyRecharge'],
         weapon: 'WEAPON_CATALYST',
-        rarity: '4'
+        rarity: '4',
+        rank: 'c'
     },
     {
         name: 'bennett',
-        function: 'subDps',
-        bestWeapon: 'FAVONIUSSWORD',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
+        function: 'support',
+        bestWeapon: 'Mistsplitter Reforged',
+        otherWeapons: ['Aquila Favonia','Skyward Blade','Sapwood Blade'],
         bestArtifacts: 'Noblesse Oblige',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        otherArtifacts: ['Emblem of Severed Fate', 'Crimson Witch of Flames'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"xingqiu": 'subDps'},
-            {"nahida": 'subDps'},
-            {"barbara": 'support'}
+            {'tartaglia': 'mainDps'},
+            {'xiangling': 'subDps'},
+            {'kaedehara-kazuha': 'support'},
+            {'bennett': 'support'}
         ],
         [
-            {"kamisato-ayaka": 'mainDps'},
-            {"shenhe": 'subDps'},
-            {"kaedehara-kazuha": 'support'},
-            {"barbara": 'support'}
+            {'raiden-shogun': 'mainDps'},
+            {'xiangling': 'subDps'},
+            {'xingqiu': 'subDps'},
+            {'bennett': 'support'}
         ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        talentPriority: ['elementalBurst','elementalSkill','normalAttack'],
         elementType: 'pyro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercentOrEnergyRecharge','pyroBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
-        rarity: '4'
+        rarity: '4',
+        rank: 's'
     },
     {
         name: 'candace',
-        function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        function: 'support',
+        bestWeapon: 'Favonius Lance',
+        otherWeapons: ['Black Tassel','Staff of Homa','Skyward Spine'],
+        bestArtifacts: 'Noblesse Oblige',
+        otherArtifacts: ['the Exile'],
+        twoPieces: ['Emblem of Severed Fate', 'Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'yoimiya': 'mainDps'},
+            {'xingqiu': 'subDps'},
+            {'bennett': 'support'},
+            {'candace': 'support'}
+        ],
+        [
+            {'noelle': 'mainDps'},
+            {'furina': 'subDps'},
+            {'yelan': 'subDps'},
+            {'candace': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalBurst', 'elementalSkill'],
         elementType: 'hydro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['hpPercentOrEnergyRecharge','hpPercent', 'hpPercent'],
+        subStatsArtifacts: ['energyRecharge','hpPercent', 'hp'],
         weapon: 'WEAPON_POLE',
-        rarity: '4'
+        rarity: '4',
+        rank: 'c'
     },
     {
         name: 'charlotte',
-        function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        function: 'support',
+        bestWeapon: 'Prototype Amber',
+        otherWeapons: ['Favonius Codex','Thrilling Tales of Dragon Slayers','Oathsworn Eye'],
+        bestArtifacts: 'Noblesse Oblige',
+        otherArtifacts: ['Tenacity of the Millelith', 'Ocean-Hued Clam'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'wriothesley': 'mainDps'},
+            {'xingqiu': 'subDps'},
+            {'kaedehara-kazuha': 'support'},
+            {'charlotte': 'support'}
+        ],
+        [
+            {'xiangling': 'subDps'},
+            {'xingqiu': 'subDps'},
+            {'bennett': 'support'},
+            {'charlotte': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalBurst', 'elementalSkill'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercentOrEnergyRecharge','atkPercent', 'healingBonus'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CATALYST',
-        rarity: '4'
+        rarity: '4',
+        rank: 'b'
     },
     {
         name: 'chasca',
-        function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        function: 'mainDps',
+        bestWeapon: 'Astral Vultures Crimson Plumage',
+        otherWeapons: ['the First Great Magic','Aqua Simulacra','Hamayumi'],
+        bestArtifacts: 'Obsidian Codex',
+        otherArtifacts: ['Desert Pavilion Chronicle', 'Wanderers Troupe'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'chasca': 'mainDps'},
+            {'ororon': 'subDps'},
+            {'furina': 'subDps'},
+            {'bennett': 'support'}
+        ],
+        [
+            {'chasca': 'mainDps'},
+            {'furina': 'subDps'},
+            {'xilonen': 'support'},
+            {'bennett': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalSkill','elementalBurst'],
         elementType: 'anemo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRateOrDamage','atkPercent','energyRecharge', 'elementalMastery'],
         weapon: 'WEAPON_BOW',
-        rarity: '5'
+        rarity: '5',
+        rank: 's'
     },
     {
         name: 'chevreuse',
-        function: 'subDps',
-        bestWeapon: 'favonius lance',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        function: 'support',
+        bestWeapon: 'Favonius Lance',
+        otherWeapons: ['Rightful Reward','Dialogues of the Desert Sages','Black Tassel'],
+        bestArtifacts: 'Song of Days Past',
+        otherArtifacts: ['Ocean-Hued Clam', 'Noblesse Oblige'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'raiden-shogun': 'mainDps'},
+            {'kujou-sara': 'support'},
+            {'bennett': 'support'},
+            {'chevreuse': 'support'}
+        ],
+        [
+            {'yoimiya': 'mainDps'},
+            {'fischl': 'support'},
+            {'bennett': 'support'},
+            {'chevreuse': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalSkill','elementalBurst'],
         elementType: 'pyro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['hpPercentOrEnergyRecharge','hpPercent', 'hpPercent'],
+        subStatsArtifacts: ['hpPercent','energyRecharge', 'hp'],
         weapon: 'WEAPON_POLE',
-        rarity: '4'
+        rarity: '4',
+        rank: 'b'
     },
     {
         name: 'chiori',
         function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        bestWeapon: 'Uraku Misugiri',
+        otherWeapons: ['Wolf-Fang','Cinnabar Spindle','Harbinger of Dawn'],
+        bestArtifacts: 'Husk of Opulent Dreams',
+        otherArtifacts: ['Golden Troupe'],
+        twoPieces: ['Archaic Petra', 'Husk of Opulent Dreams'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'navia': 'mainDps'},
+            {'chiori': 'subDps'},
+            {'xiangling': 'subDps'},
+            {'bennett': 'support'}
+            ],
+            [{'arataki-itto': 'mainDps'},
+            {'chiori': 'subDps'},
+            {'gorou': 'support'},
+            {'zhongli': 'support'}
         ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        talentPriority: ['elementalSkill','elementalBurst'],
         elementType: 'geo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['defPercent','geoBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'defPercent','atkPercent'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
-        rarity: '5'
+        rarity: '5',
+        rank: 'a'
     },
     {
         name: 'chongyun',
-        function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        function: 'support',
+        bestWeapon: 'Wolfs Gravestone',
+        otherWeapons: ['Skyward Pride','Sacrificial Greatsword','Serpent Spine'],
+        bestArtifacts: 'Emblem of Severed Fate',
+        otherArtifacts: ['Noblesse Oblige'],
+        twoPieces: ['Blizzard Strayer', 'Noblesse Oblige'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'rosaria': 'subDps'},
+            {'xiangling': 'subDps'},
+            {'chongyun': 'support'},
+            {'bennett': 'support'}
+        ],
+        [
+            {'kaeya': 'subDps'},
+            {'xingqiu': 'subDps'},
+            {'chongyun': 'support'},
+            {'kaedehara-kazuha': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalBurst','elementalSkill'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercentOrEnergyRecharge','cryoBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CLAYMORE',
-        rarity: '4'
+        rarity: '4',
+        rank: 'c'
     },
     {
         name: 'citlali',
-        function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        function: 'support',
+        bestWeapon: 'Starcallers Watch',
+        otherWeapons: ['A Thousand Floating Dreams','Favonius Codex','Sacrificial Fragments'],
+        bestArtifacts: 'Scroll of the Hero of Cinder City',
+        otherArtifacts: ['Tenacity of the Millelith', 'Instructor'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'mavuika': 'mainDps'},
+            {'xilonen': 'support'},
+            {'citlali': 'support'},
+            {'bennett': 'support'}
+        ],
+        [
+            {'arlecchino': 'mainDps'},
+            {'rosaria': 'support'},
+            {'citlali': 'support'},
+            {'bennett': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalBurst','elementalSkill'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['energyRechargeOrElementalMastery','elementalMastery', 'elementalMastery'],
+        subStatsArtifacts: ['critRate', 'elementalMastery','energyRecharge'],
         weapon: 'WEAPON_CATALYST',
-        rarity: '5'
+        rarity: '5',
+        rank: 's'
     },
     {
         name: 'clorinde',
-        function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        function: 'mainDps',
+        bestWeapon: 'Absolution',
+        otherWeapons: ['Haran Geppaku Futsu','Mistsplitter Reforged','Finale of the Deep'],
+        bestArtifacts: 'Fragment of Harmonic Whimsy',
+        otherArtifacts: ['Thundering Fury', 'Echoes of An offering'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'clorinde': 'mainDps'},
+            {'fischl': 'subDps'},
+            {'thoma': 'support'},
+            {'chevreuse': 'support'}
+        ],
+        [
+            {'clorinde': 'mainDps'},
+            {'yae-miko': 'subDps'},
+            {'nahida': 'subDps'},
+            {'zhongli': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalSkill','elementalBurst'],
         elementType: 'electro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','electroBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRateOrDamage','atkPercent', 'elementalMastery','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
-        rarity: '5'
+        rarity: '5',
+        rank: 'a'
     },
     {
         name: 'collei',
@@ -428,15 +517,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_BOW',
         rarity: '4'
     },
@@ -448,15 +537,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_POLE',
         rarity: '5'
     },
@@ -468,37 +557,45 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CLAYMORE',
         rarity: '5'
     },
     {
         name: 'diluc',
-        function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        function: 'mainDps',
+        bestWeapon: 'Redhorn Stonethresher',
+        otherWeapons: ['Beacon of the Reed Sea','Serpent Spine','Wolfs Gravestone'],
+        bestArtifacts: 'Crimson Witch of Flames',
+        otherArtifacts: ['Gilded Dreams', 'Gladiators Finale'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'diluc': 'mainDps'},
+            {'furina': 'subDps'},
+            {'bennett': 'support'},
+            {'xianyun': 'support'}
+        ],
+        [
+            {'diluc': 'mainDps'},
+            {'xingqiu': 'subDps'},
+            {'bennett': 'support'},
+            {'sucrose': 'support'}
+        ]
+        ],
+        talentPriority: ['normalAttack', 'elementalSkill','elementalBurst'],
         elementType: 'pyro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercentOrElementalMastery','pyroBonus','critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','elementalMastery'],
         weapon: 'WEAPON_CLAYMORE',
-        rarity: '5'
+        rarity: '5',
+        rank: 'c'
     },
     {
         name: 'diona',
@@ -508,15 +605,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_BOW',
         rarity: '4'
     },
@@ -528,15 +625,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CLAYMORE',
         rarity: '4'
     },
@@ -548,15 +645,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_POLE',
         rarity: '5'
     },
@@ -568,15 +665,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CLAYMORE',
         rarity: '5'
     },
@@ -588,15 +685,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_BOW',
         rarity: '4'
     },
@@ -608,15 +705,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_BOW',
         rarity: '4'
     },
@@ -628,42 +725,43 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CLAYMORE',
         rarity: '4'
     },
     {
         name: 'furina',
-        function: 'support',
+        function: 'subDps',
         bestWeapon: 'Splendor of Tranquil Waters',
         otherWeapons: ['Primordial Jade Cutter','Festering Desire','Favonius Sword'],
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         twoPieces: ['Tenacity of the Millelith', 'Golden Troupe'],
         teams: [
-            [{"neuvillette": 'mainDps'},
-            {"xilonen": 'support'},
-            {"furina": 'support'},
-            {"kaedehara-kazuha": 'support'}],
-            [{"mavuika": 'mainDps'},
-                {"xilonen": 'support'},
-                {"furina": 'support'},
-                {"bennett": 'support'}]
+            [{'neuvillette': 'mainDps'},
+            {'xilonen': 'support'},
+            {'furina': 'subDps'},
+            {'kaedehara-kazuha': 'support'}],
+            [{'mavuika': 'mainDps'},
+                {'xilonen': 'support'},
+                {'furina': 'subDps'},
+                {'bennett': 'support'}]
         ],
         talentPriority: ['elementalSkill','elementalBurst'],
         elementType: 'hydro',
-        mainStatsArtifacts: ['hpPercent',"hpPercent", "critRateOrDamage"],
-        subStatsArtifacts: ['critRateOrDamage',"hpPercent", "energyRecharge", "elementalMastery"],
+        mainStatsArtifacts: ['hpPercent','hpPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRateOrDamage','hpPercent', 'energyRecharge', 'elementalMastery'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
-        rarity: '5'
+        rarity: '5',
+        rank: 's'
     },
     {
         name: 'gaming',
@@ -673,15 +771,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CLAYMORE',
         rarity: '4'
     },
@@ -693,15 +791,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_BOW',
         rarity: '5'
     },
@@ -713,15 +811,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_BOW',
         rarity: '4'
     },
@@ -733,77 +831,102 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_POLE',
         rarity: '5'
     },
     {
         name: 'iansan',
-        function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        function: 'support',
+        bestWeapon: 'Calamity Queller',
+        otherWeapons: ['Engulfing Lightning','Favonius Lance','Tamayuratei no Ohanashi'],
+        bestArtifacts: 'Scroll of the Hero of Cinder City',
+        otherArtifacts: ['Noblesse Oblige'],
+        twoPieces: ['Emblem of Severed Fate', 'Gladiators Finale'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'varesa': 'mainDps'},
+            {'furina': 'subDps'},
+            {'iansan': 'support'},
+            {'xianyun': 'support'}
+        ],
+        [
+            {'mavuika': 'mainDps'},
+            {'citlali': 'support'},
+            {'iansan': 'support'},
+            {'xilonen': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalBurst', 'elementalSkill'],
         elementType: 'electro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercentOrEnergyRecharge','atkPercent', 'atkPercent'],
+        subStatsArtifacts: ['atkPercent','energyRecharge', 'critRate'],
         weapon: 'WEAPON_POLE',
-        rarity: '4'
+        rarity: '4',
+        rank: 's'
     },
     {
         name: 'jean',
-        function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        function: 'support',
+        bestWeapon: 'Primordial Jade Cutter',
+        otherWeapons: ['Freedom-Sworn','Favonius Sword','Amenoma Kageuchi'],
+        bestArtifacts: 'Viridescent Venerer',
+        otherArtifacts: ['Noblesse Oblige', 'Ocean-Hued Clam'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'neuvillette': 'mainDps'},
+            {'fischl': 'subDps'},
+            {'furina': 'subDps'},
+            {'jean': 'support'}
+        ],
+        [
+            {'kamisato-ayato': 'mainDps'},
+            {'fischl': 'subDps'},
+            {'beidou': 'subDps'},
+            {'jean': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalBurst','elementalSkill'],
         elementType: 'anemo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercentOrEnergyRecharge','anemoBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
-        rarity: '5'
+        rarity: '5',
+        rank: 'b'
     },
     {
         name: 'kachina',
         function: 'subDps',
-        bestWeapon: 'dragon spear',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        bestWeapon: 'Footprint of the Rainbow',
+        otherWeapons: ['Favonius Lance','Engulfing Lightning','Deathmatch'],
+        bestArtifacts: 'Scroll of the Hero of Cinder City',
+        otherArtifacts: ['Husk of Opulent Dreams','Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'arataki-itto': 'mainDps'},
+            {'kachina': 'subDps'},
+            {'chiori': 'subDps'},
+            {'zhongli': 'support'}
+        ],
+        [
+            {'mualani': 'mainDps'},
+            {'kachina': 'subDps'},
+            {'kaedehara-kazuha': 'support'},
+            {'bennett': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalSkill','elementalBurst'],
         elementType: 'geo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['defPercentOrEnergyRecharge','geoBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'defPercent','energyRecharge'],
         weapon: 'WEAPON_POLE',
-        rarity: '4'
+        rarity: '4',
+        rank: 'b'
     },
     {
         name: 'kaedehara-kazuha',
@@ -813,37 +936,46 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '5'
     },
     {
         name: 'kaeya',
         function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        bestWeapon: 'Mistsplitter Reforged',
+        otherWeapons: ['Favonius Sword','Lions Roar','Harbinger of Dawn'],
+        bestArtifacts: 'Emblem of Severed Fate',
+        otherArtifacts: [],
+        twoPieces: ['Blizzard Strayer', 'Noblesse Oblige', 'Emblem of Severed Fate', 'Noblesse Oblige'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'xiangling': 'subDps'},
+            {'rosaria': 'support'},
+            {'kaeya': 'subDps'},
+            {'bennett': 'support'} 
+        ],
+        [
+            {'chongyun': 'support'},
+            {'xingqiu': 'subDps'},
+            {'kaeya': 'subDps'},
+            {'bennett': 'support'} 
+        ]
+        ],
+        talentPriority: ['elementalBurst','normalAttack','elementalSkill'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercentOrEnergyRecharge','cryoBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['energyRecharge', 'critRate','critDamage', 'atkPercent'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
-        rarity: '4'
+        rarity: '4',
+        rank: 'c'
     },
     {
         name: 'kamisato-ayaka',
@@ -853,15 +985,15 @@ export const characters = [
         bestArtifacts: 'Blizzard Strayer',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '5'
     },
@@ -870,18 +1002,18 @@ export const characters = [
         function: 'subDps',
         bestWeapon: 'Lost Prayer to the Sacred Winds',
         otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Echoes of an Offering',
+        bestArtifacts: 'Echoes of an offering',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '5'
     },
@@ -893,15 +1025,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CLAYMORE',
         rarity: '4'
     },
@@ -913,37 +1045,44 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '5'
     },
     {
         name: 'kinich',
-        function: 'subDps',
+        function: 'mainDps',
         bestWeapon: 'Fang of the Mountain King',
         otherWeapons: ['Beacon of the Reed Sea','Serpent Spine','Verdict'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        bestArtifacts: 'Obsidian Codex',
+        otherArtifacts: ['Unfinished Reverie', 'Deepwood Memories'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'kinich': 'mainDps'},
+            {'emilie': 'subDps'},
+            {'xiangling': 'subDps'},
+            {'bennett': 'support'}
+        ],
+        [
+        {'kinich': 'mainDps'},
+        {'furina': 'subDps'},
+        {'xiangling': 'subDps'},
+        {'bennett': 'support'}
         ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        talentPriority: ['elementalSkill','elementalBurst'],
         elementType: 'dendro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','dendroBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CLAYMORE',
-        rarity: '5'
+        rarity: '5',
+        rank: 's'
     },
     {
         name: 'kirara',
@@ -953,15 +1092,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '4'
     },
@@ -973,15 +1112,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CATALYST',
         rarity: '5'
     },
@@ -993,15 +1132,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_BOW',
         rarity: '4'
     },
@@ -1013,15 +1152,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '4'
     },
@@ -1033,15 +1172,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CATALYST',
         rarity: '4'
     },
@@ -1053,37 +1192,45 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '4'
     },
     {
         name: 'lisa',
-        function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        function: 'support',
+        bestWeapon: 'Kaguras Verity',
+        otherWeapons: ['Lost Prayer to the Sacred Winds','Skyward Atlas','The Widsith'],
+        bestArtifacts: 'Thundering Fury',
+        otherArtifacts: ['Gilded Dreams', 'Thundersoother'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'alhaitham': 'mainDps'},
+            {'nahida': 'support'},
+            {'lisa': 'support'},
+            {'kuki-shinobu': 'support'}
+        ],
+        [
+            {'cyno': 'mainDps'},
+            {'nahida': 'support'},
+            {'lisa': 'support'},
+            {'zhongli': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalBurst','elementalSkill','normalAttack'],
         elementType: 'electro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercentOrElementalMastery','electroBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','elementalMastery'],
         weapon: 'WEAPON_CATALYST',
-        rarity: '4'
+        rarity: '4',
+        rank: 'c'
     },
     {
         name: 'lynette',
@@ -1093,15 +1240,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '4'
     },
@@ -1113,37 +1260,46 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_BOW',
         rarity: '5'
     },
     {
         name: 'mavuika',
-        function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
-        teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        function: 'mainDps',
+        bestWeapon: 'A Thousand Blazing Suns',
+        otherWeapons: ['Beacon of the Reed Sea','Verdict','Serpent Spine'],
+        bestArtifacts: 'Obsidian Codex',
+        otherArtifacts: ['Marechaussee Hunter', 'Crimson Witch of Flames'],
+        teams: [
+        [
+            {'mavuika': 'mainDps'},
+            {'furina': 'subDps'},
+            {'xilonen': 'support'},
+            {'bennett': 'support'}
+        ],
+        [
+            {'mavuika': 'mainDps'},
+            {'citlali': 'support'},
+            {'xilonen': 'support'},
+            {'bennett': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalBurst', 'elementalSkill'],
         elementType: 'pyro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercentOrElementalMastery','pyroBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CLAYMORE',
-        rarity: '5'
+        rarity: '5',
+        rank: 's'
     },
     {
         name: 'mika',
@@ -1153,15 +1309,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_POLE',
         rarity: '4'
     },
@@ -1173,37 +1329,45 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CATALYST',
         rarity: '5'
     },
     {
         name: 'mualani',
-        function: 'subDps',
+        function: 'mainDps',
         bestWeapon: 'Surfs Up',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        otherWeapons: ['Sacrificial Jade','Tome of the Eternal Flow','Ring of Yaxche'],
+        bestArtifacts: 'Obsidian Codex',
+        otherArtifacts: ['Heart of Depth', 'Marechaussee Hunter'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'mualani': 'mainDps'},
+            {'dehya': 'subDps'},
+            {'emilie': 'subDps'},
+            {'nahida': 'subDps'}
+        ],
+        [
+            {'mualani': 'mainDps'},
+            {'xiangling': 'subDps'},
+            {'furina': 'subDps'},
+            {'xilonen': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalSkill','elementalBurst'],
         elementType: 'hydro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['hpPercent','hydroBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRateOrDamage', 'hpPercent','energyRecharge','elementalMastery'],
         weapon: 'WEAPON_CATALYST',
-        rarity: '5'
+        rarity: '5',
+        rank: 'a'
     },
     {
         name: 'nahida',
@@ -1213,15 +1377,15 @@ export const characters = [
         bestArtifacts: 'Deepwood Memories',
         otherArtifacts: ['Gilded Dreams','Golden Troupe'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CATALYST',
         rarity: '5'
     },
@@ -1233,15 +1397,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CLAYMORE',
         rarity: '5'
     },
@@ -1253,15 +1417,15 @@ export const characters = [
         bestArtifacts: 'Marechaussee Hunter',
         otherArtifacts: ['Heart of Depth'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         twoPieces: ['Heart of Depth', 'Marechaussee Hunter'],
         weapon: 'WEAPON_CATALYST',
         rarity: '5'
@@ -1274,15 +1438,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '5'
     },
@@ -1294,15 +1458,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CATALYST',
         rarity: '4'
     },
@@ -1314,37 +1478,45 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CLAYMORE',
         rarity: '4'
     },
     {
         name: 'ororon',
         function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        bestWeapon: 'Elegy for the End',
+        otherWeapons: ['Aqua Simulacra','Amos Bow','Chain Breaker'],
+        bestArtifacts: 'Scroll of the Hero of Cinder City',
+        otherArtifacts: ['Thundering Fury', 'Emblem of Severed Fate'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'kamisato-ayato': 'mainDps'},
+            {'ororon': 'subDps'},
+            {'fischl': 'subDps'},
+            {'sucrose': 'support'}
+        ],
+        [
+            {'chasca': 'mainDps'},
+            {'ororon': 'subDps'},
+            {'furina': 'subDps'},
+            {'bennett': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalBurst', 'elementalSkill'],
         elementType: 'electro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercentOrEnergyRecharge','electroBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_BOW',
-        rarity: '4'
+        rarity: '4',
+        rank: 's'
     },
     {
         name: 'qiqi',
@@ -1354,61 +1526,71 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '5'
     },
     {
         name: 'raiden-shogun',
-        function: 'mainDps',
+        function: 'subDps',
         bestWeapon: 'Engulfing Lightning',
-        otherWeapons: ['The Catch','Staff of Homa','Dragons Bane'],
+        otherWeapons: ['the Catch','Staff of Homa','Dragons Bane'],
         bestArtifacts: 'Emblem of Severed Fate',
         otherArtifacts: ['Thundering Fury', 'Flower of Paradise Lost'],
         teams: [
-            [{"raiden-shogun": 'mainDps'},
-            {"xingqiu": 'subDps'},
-            {"xiangling": 'subDps'},
-            {"bennett": 'support'}],
-            [{"raiden-shogun": 'subDps'},
-            {"xingqiu": 'subDps'},
-            {"nahida": 'subDps'},
-            {"baizhu": 'support'}]
+            [{'raiden-shogun': 'mainDps'},
+            {'xingqiu': 'subDps'},
+            {'xiangling': 'subDps'},
+            {'bennett': 'support'}],
+            [{'raiden-shogun': 'subDps'},
+            {'xingqiu': 'subDps'},
+            {'nahida': 'subDps'},
+            {'baizhu': 'support'}]
         ],
         talentPriority: ['elementalBurst','elementalSkill','normalAttack'],
         elementType: 'electro',
-        mainStatsArtifacts: ['energyRechargeOrElementalMastery',"atkPercentOrElementalMastery", "critRateOrElementalMastery"],
-        subStatsArtifacts: ["critRateOrDamage", "energyRecharge", 'atkPercent', "elementalMastery"],
+        mainStatsArtifacts: ['energyRechargeOrElementalMastery','atkPercentOrElementalMastery', 'critRateOrElementalMastery'],
+        subStatsArtifacts: ['critRateOrDamage', 'energyRecharge', 'atkPercent', 'elementalMastery'],
         weapon: 'WEAPON_POLE',
-        rarity: '5'
+        rarity: '5',
+        rank: 'a'
     },
     {
         name: 'razor',
-        function: 'subDps',
-        bestWeapon: 'Wolf ',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
-        teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        function: 'mainDps',
+        bestWeapon: 'Song of Broken Pines',
+        otherWeapons: ['Wolfs Gravestone', 'Serpent Spine', 'Prototype Archaic'],
+        bestArtifacts: 'Pale Flame',
+        otherArtifacts: ['Gladiators Finale', 'Bloodstained Chivalry'],
+        teams: [
+          [
+            {'rosaria': 'subDps'},
+            {'fischl': 'subDps'},
+            {'diona': 'support'},
+            {'xingqiu': 'support'}
+          ],
+          [
+            {'kamisato-ayaka': 'subDps'},
+            {'mika': 'support'},
+            {'bennett': 'support'},
+            {'yun-jin': 'support'}
+          ]
+        ],
+        talentPriority: ['normalAttack', 'elementalBurst', 'elementalSkill'],
         elementType: 'electro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent', 'physicalDamageBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate', 'critDamage', 'atkPercent', 'energyRecharge'],
         weapon: 'WEAPON_CLAYMORE',
-        rarity: '4'
+        rarity: '4',
+        rank: 'b'
     },
     {
         name: 'rosaria',
@@ -1418,15 +1600,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_POLE',
         rarity: '4'
     },
@@ -1438,15 +1620,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CATALYST',
         rarity: '5'
     },
@@ -1458,15 +1640,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CLAYMORE',
         rarity: '4'
     },
@@ -1478,15 +1660,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_BOW',
         rarity: '4'
     },
@@ -1498,15 +1680,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_POLE',
         rarity: '5'
     },
@@ -1518,15 +1700,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CATALYST',
         rarity: '4'
     },
@@ -1538,15 +1720,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_BOW',
         rarity: '5'
     },
@@ -1558,15 +1740,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_BOW',
         rarity: '5'
     },
@@ -1578,15 +1760,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CATALYST',
         rarity: '4'
     },
@@ -1598,15 +1780,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_POLE',
         rarity: '4'
     },
@@ -1619,22 +1801,22 @@ export const characters = [
         otherArtifacts: ['Gilded Dreams'],
         teams: [
             [
-                {"keqing": 'mainDps'},
-                {"fischl": 'subDps'},
-                {"tighnari": 'subDps'},
-                {"kaedehara-kazuha": 'support'}
+                {'keqing': 'mainDps'},
+                {'fischl': 'subDps'},
+                {'tighnari': 'subDps'},
+                {'kaedehara-kazuha': 'support'}
             ],
             [
-                {"tighnari": 'mainDps'},
-                {"fischl": 'subDps'},
-                {"collei": 'subDps'},
-                {"zhongli": 'support'}
+                {'tighnari': 'mainDps'},
+                {'fischl': 'subDps'},
+                {'collei': 'subDps'},
+                {'zhongli': 'support'}
             ]
         ],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
-        mainStatsArtifacts: ['atkPercent',"dendroBonus", "critRateOrDamage"],
-        subStatsArtifacts: ['critRate',"critDamage", "elementalMastery","atkPercent"],
+        mainStatsArtifacts: ['atkPercent','dendroBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'elementalMastery','atkPercent'],
         weapon: 'WEAPON_BOW',
         twoPieces: ['Deepwood Memories','Wanderers Troupe'],
         rarity: '5'
@@ -1647,15 +1829,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"traveler-anemo": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'traveler-anemo': 'subDps'},
+            {'arlecchino': 'support'},
+            {'neuvillette': 'mainDps'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '5'
     },
@@ -1667,15 +1849,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '5'
     },
@@ -1687,15 +1869,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '5'
     },
@@ -1707,15 +1889,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '5'
     },
@@ -1727,15 +1909,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '5'
     },
@@ -1747,37 +1929,45 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '5'
     },
     {
         name: 'varesa',
-        function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        function: 'mainDps',
+        bestWeapon: 'Vivid Notions',
+        otherWeapons: ['Lost Prayer To The Sacred Winds','The Widsith','Skyward Atlas'],
+        bestArtifacts: 'Long Nights Oath',
+        otherArtifacts: ['Obsidian Codex', 'Thundering Fury'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'varesa': 'mainDps'},
+            {'furina': 'subDps'},
+            {'iansan': 'support'},
+            {'xianyun': 'support'}
+        ],
+        [
+            {'varesa': 'mainDps'},
+            {'xiangling': 'subDps'},
+            {'iansan': 'support'},
+            {'chevreuse': 'support'}
+        ]
+        ],
+        talentPriority: ['normalAttack','elementalBurst', 'elementalSkill'],
         elementType: 'electro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','electroBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRateOrDamage', 'atkPercent','energyRecharge','elementalMastery'],
         weapon: 'WEAPON_CATALYST',
-        rarity: '5'
+        rarity: '5',
+        rank: 'a'
     },
     {
         name: 'venti',
@@ -1787,15 +1977,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_BOW',
         rarity: '5'
     },
@@ -1807,15 +1997,15 @@ export const characters = [
         bestArtifacts: 'Desert Pavilion Chronicle',
         otherArtifacts: ['Shimenawas Reminiscence'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"traveler-anemo": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'traveler-anemo': 'subDps'},
+            {'arlecchino': 'support'},
+            {'neuvillette': 'mainDps'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         twoPieces: ['Desert Pavilion Chronicle', 'Viridescent Venerer'],
         weapon: 'WEAPON_CATALYST',
         rarity: '5'
@@ -1828,15 +2018,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CATALYST',
         rarity: '5'
     },
@@ -1848,15 +2038,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_POLE',
         rarity: '4'
     },
@@ -1868,15 +2058,15 @@ export const characters = [
         bestArtifacts: 'Viridescent Venerer',
         otherArtifacts: ['Noblesse Oblige', 'Song of Days Past'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CATALYST',
         rarity: '5'
     },
@@ -1888,37 +2078,45 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_POLE',
         rarity: '5'
     },
     {
         name: 'xilonen',
-        function: 'subDps',
-        bestWeapon: 'Lost Prayer to the Sacred Winds',
-        otherWeapons: ['Kaguras Verity','Sacrificial Fragments','Wandering Evenstar'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Tenacity of the Millelith'],
+        function: 'support',
+        bestWeapon: 'Peak Patrol Song',
+        otherWeapons: ['Freedom-Sworn','Favonius Sword','Flute of Ezpitzal'],
+        bestArtifacts: 'Scroll of the Hero of Cinder City',
+        otherArtifacts: ['Archaic Petra', 'Noblesse Oblige'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
-        ]],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+            {'neuvillette': 'mainDps'},
+            {'furina': 'subDps'},
+            {'xilonen': 'support'},
+            {'kaedehara-kazuha': 'support'}
+        ],
+        [
+            {'mavuika': 'mainDps'},
+            {'furina': 'subDps'},
+            {'xilonen': 'support'},
+            {'citlali': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalSkill','elementalBurst'],
         elementType: 'geo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['defPercentOrEnergyRecharge','defPercent', 'defPercent'],
+        subStatsArtifacts: ['critRate','defPercent', 'def','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
-        rarity: '5'
+        rarity: '5',
+        rank: 's'
     },
     {
         name: 'xingqiu',
@@ -1928,15 +2126,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_SWORD_ONE_HAND',
         rarity: '4'
     },
@@ -1948,15 +2146,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CLAYMORE',
         rarity: '4'
     },
@@ -1968,15 +2166,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'electro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CATALYST',
         rarity: '5'
     },
@@ -1988,15 +2186,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CATALYST',
         rarity: '4'
     },
@@ -2008,15 +2206,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'dendro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_POLE',
         rarity: '4'
     },
@@ -2028,15 +2226,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'hydro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_BOW',
         rarity: '5'
     },
@@ -2048,15 +2246,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'pyro',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_BOW',
         rarity: '5'
     },
@@ -2068,15 +2266,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'anemo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_CATALYST',
         rarity: '5'
     },
@@ -2088,15 +2286,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'geo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_POLE',
         rarity: '4'
     },
@@ -2108,24 +2306,25 @@ export const characters = [
         bestArtifacts: 'Millelith',
         otherArtifacts: ['Archaic Petra', 'Scroll of the Hero of Cinder City'],
         teams: [[
-            {"arataki-itto": 'mainDps'},
-            {"albedo": 'subDps'},
-            {"gorou": 'support'},
-            {"zhongli": 'support'}
+            {'arataki-itto': 'mainDps'},
+            {'albedo': 'subDps'},
+            {'gorou': 'support'},
+            {'zhongli': 'support'}
         ],
         [
-            {"hu-tao": 'mainDps'},
-            {"yelan": 'subDps'},
-            {"xingqiu": 'subDps'},
-            {"zhongli": 'support'}
+            {'hu-tao': 'mainDps'},
+            {'yelan': 'subDps'},
+            {'xingqiu': 'subDps'},
+            {'zhongli': 'support'}
         ]
         ],
         talentPriority: ['elementalSkill','elementalBurst'],
         elementType: 'geo',
-        mainStatsArtifacts: ['hpPercent',"hpPercent", "hpPercent"],
-        subStatsArtifacts: ['hpPercent',"hp","energyRecharge"],
+        mainStatsArtifacts: ['hpPercent','hpPercent', 'hpPercent'],
+        subStatsArtifacts: ['hpPercent','hp','energyRecharge'],
         weapon: 'WEAPON_POLE',
-        rarity: '5'
+        rarity: '5',
+        rank: 'a'
     },
     {
         name: 'aloy',
@@ -2135,15 +2334,15 @@ export const characters = [
         bestArtifacts: 'Golden Troupe',
         otherArtifacts: ['Tenacity of the Millelith'],
         teams: [[
-            {"nilou": 'mainDps'},
-            {"navia": 'subDps'},
-            {"arlecchino": 'support'},
-            {"neuvillette": 'mainDps'}
+            {'nilou': 'mainDps'},
+            {'navia': 'subDps'},
+            {'arlecchino': 'subDps'},
+            {'neuvillette': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['hpPercent',"elementalMastery", "atkPercent"],
-        subStatsArtifacts: ['critRate',"critDamage", "defPercent","energyRecharge"],
+        mainStatsArtifacts: ['atkPercent','atkPercent', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
         weapon: 'WEAPON_BOW',
         rarity: '5'
     },

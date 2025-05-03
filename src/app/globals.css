@@ -24,37 +24,37 @@ body {
   font-size: calc(16px * var(--minimize));
 }
 
-#Hydro {
+.Hydro {
   --ct: #42b7ee;
   --ct2: #1596e0;
 }
 
-#Dendro {
+.Dendro {
   --ct: #b3ff00;
   --ct2: #b3ff00;
 }
 
-#Geo {
+.Geo {
   --ct: #ffbb00;
   --ct2: #ffbb00;
 }
 
-#Anemo {
+.Anemo {
   --ct: #47ffc2;
   --ct2: #47ffc2;
 }
 
-#Pyro {
+.Pyro {
   --ct: #ff7c10;
   --ct2: #ff7c10;
 }
 
-#Cryo {
+.Cryo {
   --ct: #71fff8;
   --ct2: #80edf5;
 }
 
-#Electro {
+.Electro {
   --ct: #ae4aff;
   --ct2: #9748ff;
 }
@@ -136,10 +136,10 @@ div::-webkit-scrollbar-thumb:active {
   margin: calc(0px * var(--minimize)) auto;
   margin-bottom: 100px;
 }
-nav h2 {
+#header-nav h2 {
   display: none;
 }
-nav {
+#header-nav {
   gap: calc(10px * var(--minimize));
   display: flex;
   padding: calc(10px * var(--minimize));
@@ -154,7 +154,6 @@ nav {
   padding-top: calc(20px * var(--minimize));
   border-right: calc(1px * var(--minimize)) solid var(--bd);
 }
-
 
 
 
@@ -174,8 +173,10 @@ nav {
   border-radius: calc(10px * var(--minimize));
   overflow: hidden;
 }
+
+
 .links div {
-  min-width: calc(27.5px * var(--minimize));
+  min-width: calc(26.5px * var(--minimize));
   height: calc(35px * var(--minimize));
   display: flex;
   align-items: center;
@@ -193,7 +194,7 @@ nav {
 }
 
 
-nav a:first-of-type { 
+#header-nav a:first-of-type { 
   padding: calc(0px * var(--minimize)) calc(0px * var(--minimize));
   color: hsla(0, 0%, 100%, .75);
   display: flex;
@@ -1265,11 +1266,11 @@ align-items: stretch;
 #tier-list-flex {
   border: 1px solid var(--bd);
   border-bottom: none;
+  border-top: none;
 }
 .tiers-flex {
   display: flex;
   align-items: stretch;
-  border-bottom: 2px solid var(--bd);
 }
 .tiers {
   display: flex;
@@ -1278,27 +1279,32 @@ align-items: stretch;
   color: var(--sub);
   font-weight: bold;
   font-size: 30px;
-  width: 50px;
+  width: 50px;border-bottom: 1px solid var(--bd);
+  border-top: 1px solid var(--bd);
 }
 .tiers-functions {
   width: 100%;
 }
 .tiers-functions img {
   margin-bottom: -4px;
+  width: 55px;
+  height: 55px;
 }
 .tier-list-characters-flex {
   padding: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .function-name {
   background: #25262c;
-  border-bottom: 2px solid var(--bd);
-  padding: 4px 0px;
+  border-bottom: 1px solid var(--bd);
+  border-top: 1px solid var(--bd);
+  padding: 3px 0px;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
-  font-style: italic;
 }
 .tiers-flex:nth-last-of-type(5) .tiers {
   
@@ -1973,7 +1979,7 @@ gap: calc(5px * var(--minimize)) ;
   font-style: italic;
   font-weight: bold;
   white-space: nowrap;
-  max-width: 29vw;
+  max-width: clamp(1px, 29vw, 330px);
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -2007,6 +2013,50 @@ gap: calc(5px * var(--minimize)) ;
 .nowrap {
   display: inline-block;
   white-space: nowrap;
+}
+.discord {
+  display: inline-flex;
+  border-radius: calc(6px * var(--minimize));
+  gap: calc(7px * var(--minimize));
+  align-items: center;
+  font-size: calc(14px * var(--minimize));
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+#nav-footer img{
+  margin-bottom: -2px;
+  width: calc(25px * var(--minimize));
+  filter: contrast(.1) brightness(1.4);
+  height:  calc(25px * var(--minimize));
+}
+
+#nav-footer {
+  white-space: nowrap;
+  gap: calc(40px * var(--minimize));
+  display: flex;
+  border-bottom: 1px solid  var(--bd);
+  padding-bottom: calc(10px * var(--minimize));
+}
+#footer-description {
+  font-size: calc(15px * var(--minimize));
+  color: rgba(255, 255, 255, 0.7);
+  line-height: calc(23px * var(--minimize));
+}
+
+#footer-description b {
+  font-family: Plus Jakarta Sans;
+}
+
+footer {
+  max-width: 955px;
+  display: flex;
+  gap: calc(15px * var(--minimize));
+  justify-content: space-between;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: calc(96x * var(--minimize));
+  padding: 0px calc(20px * var(--minimize));
 }
 @media (min-width: 1355px) {
  
@@ -2136,7 +2186,7 @@ overflow: hidden;
 }
 
 @media (min-width: 971px) and (max-width: 1142px) {
-  #main-index {
+  #main-index, footer {
     margin-left: 75px;
   }
   
@@ -2149,6 +2199,28 @@ overflow: hidden;
   }
 }
 @media (min-width: 971px) {
+  
+
+
+  .links:nth-last-of-type(5) {
+    order: 3;
+  }
+
+.links:nth-last-of-type(4) {
+  order: 4;
+}
+#home {
+  order: 2;
+}
+.links:nth-last-of-type(2) {
+  order: 5;
+}
+
+.links:nth-last-of-type(1) {
+  order: 6;
+}
+
+
   .character-card:hover img {
     width: calc(100% + 8px);
     margin-top: -8px;
@@ -2169,33 +2241,31 @@ overflow: hidden;
   .links:hover img {
   filter: brightness(-1000%);
 }
-nav:hover .names {
+#header-nav:hover .names {
   margin-left: calc(9px * var(--minimize));
 }
-nav:hover #logo {
+#header-nav:hover #logo {
   margin-left: calc(0px * var(--minimize));
 }
 
-nav a:first-of-type:hover {
+#header-nav a:first-of-type:hover {
   background: none;
   opacity: 0.8;
   transition: 0.2s;
   color: #f5f5f5;
 }
-nav a:hover {
+#header-nav a:hover {
   background: var(--ct);
   transition: 0.1s;
   color: var(--bg);
 }
 
-nav:hover {
+#header-nav:hover {
   width: calc(250px * var(--minimize));
   transition: 0.3s; 
 }
 
-#home {
-  display: none;
- }
+
 }
 @media (max-width: 992px) {
   .weapon-card p:first-of-type {
@@ -2203,6 +2273,9 @@ nav:hover {
   }
  }
 @media (max-width: 970px) {
+  footer {
+    margin-bottom: 100px;
+  }
   #main-content #index-h1 {
     margin-top:  calc(20px * var(--minimize));
   }
@@ -2243,8 +2316,8 @@ margin-bottom: 80px;
 transform: none;
   }
 
-  nav #titlessss{display: none;}
-nav {
+  #header-nav #titlessss{display: none;}
+#header-nav {
 flex-direction: row;
 display: grid ;
 grid-template-columns: repeat(5, 1fr);
@@ -2648,6 +2721,14 @@ margin-top: calc(-2px * var(--minimize));
 }
 }
 
+@media (max-width: 507px) {
+  #nav-footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(10px * var(--minimize)) calc(20px * var(--minimize));
+  }
+}
+
 @media (max-width: 485px) {
   .ascension-materials-ul {
     display: grid;
@@ -2677,7 +2758,7 @@ margin-top: calc(-2px * var(--minimize));
   #weapon-main-stats li {
       gap: 4px;
   }
-  nav {
+  #header-nav {
       gap: calc(0px * var(--minimize));
       padding: calc(10px * var(--minimize)) calc(5px * var(--minimize));
       width: calc(100% - calc(10px * var(--minimize)));
