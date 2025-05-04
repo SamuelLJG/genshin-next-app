@@ -238,7 +238,7 @@ a {
 
 }
 #titlessss img {
-   border: calc(2px * var(--minimize)) solid var(--ct); border-left: none; border-radius: 50%; border-top: none;
+   border: calc(2px * var(--minimize)) solid hwb(182 39% 0%); border-left: none; border-radius: 50%; border-top: none;
   width: calc(50px * var(--minimize));
   height: calc(50px * var(--minimize));
   margin-left: calc(0px * var(--minimize));
@@ -1854,10 +1854,10 @@ gap: calc(5px * var(--minimize)) ;
 }
 
 #loading-main {
-  position: fixed; /* ou absolute, dependendo do contexto */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 104dvh;
+  margin-top: 34dvh;
 }
 
 #loading-main img {
@@ -1904,9 +1904,13 @@ gap: calc(5px * var(--minimize)) ;
   font-style: italic;
 }
 #character-weapons-flex {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  padding-left: 3px;
   flex-wrap: wrap;
-  gap: calc(15px * var(--minimize));
+  width: calc(100% - 6px);
+  text-align: center;
+  gap: calc(12px * var(--minimize)) calc(20px * var(--minimize));
 }
 
 #character-weapons-flex p{
@@ -1930,13 +1934,13 @@ gap: calc(5px * var(--minimize)) ;
   text-transform: uppercase;
   font-weight: bold;
   align-items: center;
-  border: 2px solid var(--ct);
-  border-radius: 4px;
-  background: var(--sub);
 }
 #character-weapons-flex img {
-  width: calc(100px * var(--minimize));
-  height: calc(100px * var(--minimize));
+  width: 100%;
+  height: auto;
+  border: 4px solid var(--bd);
+  border-bottom: 5px solid var(--ct);
+  background: var(--sub);
 }
 .refinement-description b {
   color: var(--ct);
@@ -2055,7 +2059,7 @@ footer {
   justify-content: space-between;
   flex-direction: column;
   margin: auto;
-  margin-bottom: calc(96x * var(--minimize));
+  margin-bottom: calc(96px * var(--minimize));
   padding: 0px calc(20px * var(--minimize));
 }
 @media (min-width: 1355px) {
@@ -2399,6 +2403,11 @@ margin-top: calc(-2px * var(--minimize));
     grid-template-columns: repeat(6, 1fr);
 ;
 }
+
+#character-weapons-flex {
+  grid-template-columns: repeat(9, 1fr);
+}
+
 .ascension-materials-ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2522,6 +2531,9 @@ margin-top: calc(-2px * var(--minimize));
   }
 }
 @media (max-width: 710px) {
+  #character-weapons-flex {
+    grid-template-columns: repeat(8, 1fr);
+  }
   #weapons-flex {
     grid-template-columns: repeat(2, 1fr);
   ;
@@ -2590,6 +2602,9 @@ margin-top: calc(-2px * var(--minimize));
 }
 }
 @media (max-width: 584px) {
+  #character-weapons-flex {
+    grid-template-columns: repeat(7, 1fr);
+  }
   #artifacts-flexx h3 {
     max-width: 58vw;
   }
@@ -2719,6 +2734,9 @@ margin-top: calc(-2px * var(--minimize));
   width: calc(75px * var(--minimize));
   height: calc(75px * var(--minimize));
 }
+#character-weapons-flex {
+  grid-template-columns: repeat(6, 1fr);
+}
 }
 
 @media (max-width: 507px) {
@@ -2730,6 +2748,9 @@ margin-top: calc(-2px * var(--minimize));
 }
 
 @media (max-width: 485px) {
+  #character-weapons-flex {
+    grid-template-columns: repeat(5, 1fr);
+  }
   .ascension-materials-ul {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -2813,8 +2834,15 @@ margin-top: calc(-2px * var(--minimize));
     grid-template-columns: repeat(3, 1fr);
 ;
 }
+
+}
+@media (max-width: 370px) {
+#character-weapons-flex {
+  grid-template-columns: repeat(4, 1fr);
+}
 }
 @media (max-width: 340px) {
+  
   #weapon-main img, #artifacts-main img {
     width: calc(110px * var(--minimize));
     height: calc(110px * var(--minimize));
@@ -2829,6 +2857,9 @@ margin-top: calc(-2px * var(--minimize));
 }
 }
 @media (max-width: 320px) {
+  #character-weapons-flex {
+    grid-template-columns: repeat(3, 1fr);
+  }
   #weapon-full-image {
     width: calc(160px * var(--minimize));
     height: calc(160px * var(--minimize));

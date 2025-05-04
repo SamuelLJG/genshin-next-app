@@ -193,7 +193,6 @@ export default function WeaponSlider ({ ptData, matchedCharacters,folderData, id
                                  {matchedCharacters.map((c: any, i: any) => (
                                          <Link key={i} href={`/${c.name}`}>
                                              <Image width={100} height={100} src={`/images/Team-Icons/${formatarNome(c.name)}.png`} alt="" />
-                                        <p>{formatCharacterName(formatarNomeComEspaco(formatarNome(c.name)))}</p>
                                          </Link>
                                      ))}
                                      </div>

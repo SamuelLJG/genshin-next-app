@@ -8,22 +8,33 @@ import weaponNew from "@/data/newWeaponsData/symphonist-of-scents.json"
 
 export default async function Page({params}:any) {
     let { id } = await params;
-    const idNormalizado = id.replace(/-/g, '');
+    
 
 const validIds = await fetch('https://genshin-db-api.vercel.app/api/v5/weapons?query=names&matchCategories=true')
   .then(res => res.json());
 
-const idList = validIds.map((name: string) =>
+  let idList, idNormalizado;
+  if (id != 'the-catch') {
+   
+idList = validIds.map((name: string) =>
   name.replace(/'/g, '').toLowerCase().replace(/ /g, '-')
+
 )
-;
+idNormalizado = id.replace(/-/g, '');
+}
+
+else {
+idList = 'the-catch'
+idNormalizado = 'thecatch'
+}
+ 
+
 
 let ptData, enData, folderData, weapon;
 
 
 if(id != weaponNew.name2.replace(/'/g, '').toLowerCase().replace(/ /g, '-')) {
   if (!idList.includes(id)) return notFound();
-
   const urls = [
     `weapons?query=${idNormalizado}&resultLanguage=portuguese`,
     `weapons?query=${idNormalizado}`,
@@ -35,7 +46,12 @@ if(id != weaponNew.name2.replace(/'/g, '').toLowerCase().replace(/ /g, '-')) {
       fetch(`https://genshin-db-api.vercel.app/api/v5/${endpoint}`).then(res => res.json())
     )
   );
+  if (id != 'the-catch') {
    weapon = enData.name.replace(/'/g, "")
+  }
+  else {
+    weapon = 'The Catch'
+  }
 } else {
   
   ptData = weaponNew

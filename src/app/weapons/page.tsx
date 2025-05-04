@@ -31,13 +31,16 @@ export default async function Page() {
                         <p>{post.name}</p>
                         <p>{post.mainStatText}</p></div>
                         </Link>
+                        
                   {armasPT.map((post: any, i: number) => (
-                    <Link href={`weapons/${data[i].replace(/'/g, '').toLowerCase().replace(/ /g, '-')}`} key={i} className={`weapon-card ${post.weaponType} ${post.name} rarity-${post.rarity}-weapon`}>
+                    data[i].replace(/'/g, '').toLowerCase().replace(/ /g, '-') != 'prized-isshin-blade' ? 
+                    <Link href={data[i].replace(/'/g, '').toLowerCase().replace(/ /g, '-') != '"the-catch"' ? `weapons/${data[i].replace(/'/g, '').toLowerCase().replace(/ /g, '-')}`: `weapons/the-catch`} key={i} className={`weapon-card ${post.weaponType} ${post.name} rarity-${post.rarity}-weapon`}>
                         <Image width={100} height={100} src={`https://enka.network/ui/${post.images.filename_icon}.png`} alt="" className={`star${post.rarity}`} loading="eager" priority/>
                         <div>
                         <p>{post.name}</p>
                         <p>{post.mainStatText}</p></div>
                         </Link>
+                        : ''
                   ))}
               </div>
           </main>
