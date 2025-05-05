@@ -7,6 +7,7 @@ import weaponStats from "@/data/newWeaponsFolder/symphonist-of-scents.json"
 import weaponNew from "@/data/newWeaponsData/symphonist-of-scents.json"
 import { Metadata } from 'next';
 
+
 type PageProps = {
   params: { id: string };
 };
@@ -16,31 +17,15 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { id } = params;
 
-  try {
-    const res = await fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${id.replace(/-/g, '')}&resultLanguage=portuguese`, {
-      next: { revalidate: 3600 },
-    });
+  const res = await fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${id.replace(/-/g, '')}&resultLanguage=portuguese`);
+  const data = await res.json();
 
-    if (!res.ok) throw new Error('Erro ao buscar dados');
-
-    const data = await res.json();
-
-    return {
-      title: `${data.name} Build | Genshin Impact`,
-      description: `Build ideal para ${data.name} com armas, artefatos e mais.`,
-      openGraph: {
-        title: `${data.name} Build | Genshin Impact`,
-        description: `Guia completo para ${data.name} em Genshin Impact.`,
-        images: [`https://genshinbuild.com/images/Banners/${id}_Card.png`],
-      },
-    };
-  } catch {
-    return {
-      title: 'Builds de Personagens | Genshin Impact',
-      description: 'Explore builds detalhadas de personagens do Genshin.',
-    };
-  }
+  return {
+    title: `${data.name} | Arma de Genshin Impact`,
+    description: `Veja os atributos, passivas e personagens recomendados para a arma ${data.name} em Genshin Impact.`,
+  };
 }
+
 
 export default async function Page({params}:any) {
     let { id } = await params;
