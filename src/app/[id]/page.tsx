@@ -70,8 +70,8 @@ export default async function Home( { params }:any ) {
           "url": "https://genshinbuild.com/images/genshinbuild-image.png"
         }
       },
-      "datePublished": "2025-05-05",
-      "dateModified": "2025-05-05",
+      "datePublished": "2025-05-05T04:23:35-04:00",
+      "dateModified": "2025-05-05T04:23:35-04:00",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": `https://genshinbuild.com/${id}`
