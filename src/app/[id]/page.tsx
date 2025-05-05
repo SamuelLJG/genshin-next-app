@@ -53,11 +53,31 @@ export default async function Home( { params }:any ) {
     let path;
     const schemaData = {
       "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": `Build ${formatarUrl(id)} | Genshin Impact`,
-      "description": `Build ideal para ${formatarUrl(id)} com artefatos, armas, talentos e composições recomendadas para maximizar o dano em Genshin Impact.",
-      "url": "https://genshin-next-app.vercel.app/${id}`
-    };
+      "@type": "BlogPosting",
+      "headline": `${formatarUrl(id)} Build | Genshin Impact`,
+      "description": `Build ideal para ${formatarUrl(id)} em Genshin Impact com melhores armas, artefatos, times e muito mais.`,
+      "url": `https://genshinbuild.com/${id}`,
+      "author": {
+        "@type": "Organization",
+        "name": "Genshin Build Team",
+        "url": "https://genshinbuild.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Genshin Build",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://genshinbuild.com/images/genshinbuild-image.png"
+        }
+      },
+      "datePublished": "2025-05-05",
+      "dateModified": "2025-05-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://genshinbuild.com/${id}`
+      },
+      "image": "https://genshinbuild.com/images/Banners/${id}_Card.png"
+    }
     if (id === 'escoffier') {
       path = 'escoffier';
     } else {
