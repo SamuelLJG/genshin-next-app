@@ -63,7 +63,7 @@ export default function Teams() {
         <main id="main-index" className="iii"> 
         
         <div id="h1-flex">
-            <Image src="/images/team-3-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} alt="" loading="eager" /> <h1 id="index-h1">Genshin Impact {ptBr.bestTeams}</h1>
+            <Image src="/images/team-3-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} alt={ptBr.bestTeams} loading="eager" /> <h1 id="index-h1">Genshin Impact {ptBr.bestTeams}</h1>
           </div>
             <TeamsFilter ptBr={ptBr}/>
             <br />

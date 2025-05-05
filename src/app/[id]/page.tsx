@@ -31,7 +31,13 @@ export const generateMetadata = async ({
   const id = (await params).id;
   return {
     title: `${formatarUrl(id)} Build - Melhores Armas, Artefatos e Times`,
-    description: `Descubra as melhores builds e times para ${formatarUrl(id)} em Genshin Impact! Confira também suas armas, artefatos, habilidades e muito mais!`
+    description: `Descubra as melhores builds e times para ${formatarUrl(id)} em Genshin Impact! Confira também suas armas, artefatos, habilidades e muito mais!`,
+    alternates: {
+      canonical: id
+    },
+    openGraph: {
+      images: `/images/Banners/${formatarUrl(id)}_Card.png`
+    },
   }
 }
 
@@ -354,7 +360,7 @@ switch (travelerName) {
         id="character-image"
         className={`star${characterData.rarity}  character-icon-mobile`}
         src={`/images/Banners/${formatarNome(id)}_Card.png`}
-        alt="Imagem Mobile"
+        alt={characterData.name}
         width={560}
         height={315}
         loading="eager"
@@ -364,7 +370,7 @@ switch (travelerName) {
         id="character-image"
         className={`star${characterData.rarity} character-icon-pc`}
         src={`/images/Icons/${formatarNome(id)}.png`}
-        alt="Imagem Pc"
+        alt={characterData.name}
         width={256}
         height={256}
         loading="eager"
@@ -377,11 +383,11 @@ switch (travelerName) {
                                    <div id="character-name-box"><h2 id="character-name" className={id=== 'sangonomiya-kokomi' ? 'compress-title' : ''}>{travelerName}</h2><span id={`r${characterData.rarity}`} aria-hidden="true">{characterData.rarity}★</span> </div>  
                                 <div id="character-type">
                                     <p>
-                                        <Image width={25} height={25} src={`/images/${characterData.weaponType}.webp`} alt=""/>
+                                        <Image width={25} height={25} src={`/images/${characterData.weaponType}.webp`} alt={characterData.weaponText}/>
                                         {characterData.weaponText}
                                     </p>
                                     <p id="element">
-                                        <Image width={23} height={23} src={`/images/element-${elementFormatted.toLowerCase()}.webp`} alt=""/>
+                                        <Image width={23} height={23} src={`/images/element-${elementFormatted.toLowerCase()}.webp`} alt={elementFormatted}/>
                                         {elementFormatted}
                                     </p>
                                 </div>
@@ -396,32 +402,32 @@ switch (travelerName) {
                     <ul id="ascension-materials-list">
                         <li className="ascension-materials-items">
                             <Image width={60} height={60} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend1[1].id}.png`}
-                            alt=""/>
+                            alt={characterData.costs.ascend1[1].name}/>
                             <p>{characterData.costs.ascend1[1].name}</p>
                         </li>
                         <li className="ascension-materials-items">
                             <Image width={40} height={40} src={id === path ? `https://api.hakush.in/gi/UI/UI_ItemIcon_${characterData.costs.ascend1[2].id}.webp` : `https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend1[2].id}.png`}
-                            alt=""/>
+                            alt={characterData.costs.ascend1[2].name}/>
                             <p>{characterData.costs.ascend1[2].name}</p>
                         </li>
                         <li className={id2=== 'aether' ? 'none' : 'ascension-materials-items'}>
                             <Image width={40} height={40} src={id === path ? `https://api.hakush.in/gi/UI/UI_ItemIcon_${characterData.costs.ascend5[2].id}.webp` : `https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend5[2].id}.png`}
-                            alt=""/>
+                            alt={characterData.costs.ascend5[2].name}/>
                             <p>{characterData.costs.ascend5[2].name}</p>
                         </li>
                         <li className="ascension-materials-items">
                             <Image width={40} height={40} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend1[3].id}.png`}
-                            alt=""/>
+                            alt={characterData.costs.ascend1[3].name}/>
                             <p>{characterData.costs.ascend1[3].name}</p>
                         </li>
                         <li className="ascension-materials-items">
                             <Image width={40} height={40} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterTalents.costs.lvl2[1].id}.png`}
-                            alt=""/>
+                            alt={characterTalents.costs.lvl2[1].name}/>
                             <p>{characterTalents.costs.lvl2[1].name}</p>
                         </li>
                         <li className="ascension-materials-items">
                             <Image width={40} height={40} src={id === path ? `https://api.hakush.in/gi/UI/UI_ItemIcon_${characterTalents.costs.lvl7[3].id}.webp` : `https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterTalents.costs.lvl7[3].id}.png`}
-                            alt=""/>
+                            alt={characterTalents.costs.lvl7[3].name}/>
                             <p>{characterTalents.costs.lvl7[3].name}</p>
                         </li>
                     </ul>
@@ -483,7 +489,7 @@ switch (travelerName) {
                         <div id="artifacts-section">
                             <section id="artifacts-main">
                               <Link id="artifact-img-box" href={`/artifacts/${characterBuild.bestArtifacts.toLowerCase().trim().replace(/\s+/g, '-')}`}> 
-                            <Image width={160} height={160} className="star5" src={`https://enka.network/ui/${artefatosPT[0].images.filename_flower}.png`} alt=""/>
+                            <Image width={160} height={160} className="star5" src={`https://enka.network/ui/${artefatosPT[0].images.filename_flower}.png`} alt={artefatosPT[0].name}/>
                             </Link>
                                 <div id="artifacts-header">
                                     <div>
@@ -503,15 +509,15 @@ switch (travelerName) {
                                 <h3 className="titles-h3">{ptBr.artifactsMainStats}</h3>
                                 <ul id="artifacts-main-stats">
                                     <li>
-                                        <div className="stats-div"><Image width={30} height={30} src="/images/sands.webp" alt=""/><div><div>{ptBr.sands}:</div></div></div>
+                                        <div className="stats-div"><Image width={30} height={30} src="/images/sands.webp" alt={ptBr.sands}/><div><div>{ptBr.sands}:</div></div></div>
                                         <p>{ptBr[characterBuild.mainStatsArtifacts[0] as keyof typeof ptBr]}</p>
                                     </li>
                                     <li>
-                                        <div className="stats-div"><Image width={30} height={30} src="/images/goblet.webp" alt=""/><div><div>{ptBr.goblet}:</div></div></div>
+                                        <div className="stats-div"><Image width={30} height={30} src="/images/goblet.webp" alt={ptBr.goblet}/><div><div>{ptBr.goblet}:</div></div></div>
                                         <p>{ptBr[characterBuild.mainStatsArtifacts[1] as keyof typeof ptBr]}</p>
                                     </li>
                                     <li>
-                                        <div className="stats-div"><Image width={30} height={30} src="/images/circlet.webp" alt=""/><div><div>{ptBr.circlet}:</div></div></div>
+                                        <div className="stats-div"><Image width={30} height={30} src="/images/circlet.webp" alt={ptBr.circlet}/><div><div>{ptBr.circlet}:</div></div></div>
                                         <p>{ptBr[characterBuild.mainStatsArtifacts[2] as keyof typeof ptBr]}</p>
                                     </li>
                                 </ul>
@@ -536,7 +542,7 @@ switch (travelerName) {
                     <Link key={i} href={`/artifacts/${characterBuild.otherArtifacts[i].toLowerCase().trim().replace(/\s+/g, '-')}`}> 
                             <span className="other-artifacts-set">{i+2}{ptBr.degree}</span>
                                         <div className="other-artifacts-box">
-                                          <Image width={160} height={160} src={`https://enka.network/ui/${art.images.filename_flower}.png`} alt=""/>
+                                          <Image width={160} height={160} src={`https://enka.network/ui/${art.images.filename_flower}.png`} alt={art.name}/>
                                           <div className="other-artifacts-set-description">
                                             <span className="four-pieces-name">4x&nbsp;{art.name}</span>
                                           
@@ -561,8 +567,8 @@ switch (travelerName) {
   pairIndex 
 ): (pairIndex+1)}{ptBr.degree}</span>
                               <div className="other-artifacts-box">
-                                <Image width={160} height={160} src={`https://enka.network/ui/${first.images.filename_flower}.png`} className="spp" alt="" />
-                                <Image width={160} height={160} src={`https://enka.network/ui/${second.images.filename_flower}.png`} alt="" />
+                                <Image width={160} height={160} src={`https://enka.network/ui/${first.images.filename_flower}.png`} className="spp" alt={first.name} />
+                                <Image width={160} height={160} src={`https://enka.network/ui/${second.images.filename_flower}.png`} alt={second.name} />
                                 
                                 <div className="other-artifacts-set-description">
                                   <div>

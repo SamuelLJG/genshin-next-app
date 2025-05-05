@@ -197,9 +197,9 @@ export const characters = [
         bestArtifacts: 'Deepwood Memories',
         otherArtifacts: ['Ocean-Hued Clam', 'Instructor'],
         teams: [[
-            {'nilou': 'mainDps'},
+            {'kamisato-ayato': 'mainDps'},
             {'nahida': 'subDps'},
-            {'xingqiu': 'subDps'},
+            {'yae-miko': 'subDps'},
             {'baizhu': 'support'}
         ],
         [
@@ -254,15 +254,15 @@ export const characters = [
         bestArtifacts: 'Ocean-Hued Clam',
         otherArtifacts: ['Tenacity of the Millelith', 'Instrutor'],
         teams: [[
-            {'nilou': 'mainDps'},
-            {'xingqiu': 'subDps'},
-            {'nahida': 'subDps'},
+            {'klee': 'mainDps'},
+            {'xiangling': 'support'},
+            {'sucrose': 'support'},
             {'barbara': 'support'}
         ],
         [
-            {'kamisato-ayaka': 'mainDps'},
-            {'shenhe': 'subDps'},
-            {'kaedehara-kazuha': 'support'},
+            {'razor': 'mainDps'},
+            {'beidou': 'subDps'},
+            {'sucrose': 'support'},
             {'barbara': 'support'}
         ]],
         talentPriority: ['elementalSkill','elementalBurst'],

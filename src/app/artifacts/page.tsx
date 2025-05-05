@@ -21,14 +21,14 @@ export default async function Page() {
         
           <main id="main-index">
             <div id="h1-flex">
-            <Image src="/images/flower-with-heart-petals-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} loading="eager" alt="" /> <h1 id="index-h1">Genshin Impact {ptBr.artifactsList}</h1>
+            <Image src="/images/flower-with-heart-petals-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} loading="eager" alt={ptBr.artifactsList} /> <h1 id="index-h1">Genshin Impact {ptBr.artifactsList}</h1>
           </div>
           <ArtifactsFilter ptBr={ptBr}/>
           <br />
               <div id="weapons-flex">
                   {armasPT.map((post: any, i: number) => (
                     <Link href={`artifacts/${data[i].replace(/'/g, '').toLowerCase().replace(/ /g, '-')}`} key={i} className={`weapon-card ${post.name} rarity-${post.rarityList[post.rarityList.length - 1]}-weapon`}>
-                        <Image width={150} height={150} src={!circletOnly.includes(data[i].replace(/'/g, '')) ? `https://enka.network/ui/${post.images.filename_flower}.png` : `https://enka.network/ui/${post.images.filename_circlet}.png`} alt="" className={`star${post.rarityList[post.rarityList.length - 1]}`} loading="eager" priority/>
+                        <Image width={150} height={150} src={!circletOnly.includes(data[i].replace(/'/g, '')) ? `https://enka.network/ui/${post.images.filename_flower}.png` : `https://enka.network/ui/${post.images.filename_circlet}.png`} alt={post.name} className={`star${post.rarityList[post.rarityList.length - 1]}`} loading="eager" priority/>
                         <div>
                             <p>{post.name}</p>
                             <p>{post.description}</p>

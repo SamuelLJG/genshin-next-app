@@ -1,6 +1,5 @@
 // components/WeaponStatsSlider.tsx
 'use client'
-import { match } from 'assert'
 import { useState } from 'react'
 
 export default function WeaponStatsSlider({ arma2,arma3, arma4}: any ) {

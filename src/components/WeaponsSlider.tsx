@@ -37,49 +37,6 @@ function formatEffect(effectTemplateRaw: string, refinementLevel: number, ptData
       .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
       .join(' ');
   }
-  function formatCharacterName(name: string) {
-   
-    if (name === 'Traveler Hydro' ||
-        name === 'Traveler Dendro' ||
-        name === 'Traveler Anemo' ||
-        name === 'Traveler Geo' ||
-        name === 'Traveler Electro' ||
-        name === 'Traveler Pyro') {
-        return 'Viajante';
-      }
-      if (name === 'Raiden Shogun') {
-        return 'Raiden';
-      }
-      if (name === 'Arataki Itto') {
-        return 'Itto';
-      }
-      if (name === 'Kamisato Ayaka') {
-        return 'Ayaka';
-      }
-      if (name === 'Kamisato Ayato') {
-        return 'Ayato';
-      }
-      if (name === 'Yumemizuki Mizuki') {
-        return 'Mizuki';
-      }
-      if (name === 'Kujou Sara') {
-        return 'Sara';
-      }
-      if (name === 'Shikanoin Heizou') {
-        return 'Heizou';
-      }
-      if (name === 'Sangonomiya Kokomi') {
-        return 'Kokomi';
-      }
-      if (name === 'Kaedehara Kazuha') {
-        return 'Kazuha';
-      }
-      if (name === 'Kuki Shinobu') {
-        return 'Kuki';
-      }
-    return name;
-  }
-
 export default function WeaponSlider ({ ptData, matchedCharacters,folderData, id, ptBr }: any) {
     console.log()
     // Conta quantos níveis de ascensão existem com base nas chaves que começam com "ascend"
@@ -136,7 +93,7 @@ export default function WeaponSlider ({ ptData, matchedCharacters,folderData, id
                             <div><Stars starClass={ptData.rarity}/></div>
                         </div>
                         <Image width={215} height={215} src={id != ptData.name3 ? `https://gi.yatta.moe/assets/UI/${ptData.images.filename_icon}.png` : `https://api.hakush.in/gi/UI/${ptData.images.filename_icon}.webp`
-                      } id="weapon-full-image" alt="" loading="eager" priority />
+                      } id="weapon-full-image" alt={ptData.name} loading="eager" priority />
                     </section>
                     <section id="wee-level-section">
                     <div id="wee-level"> <span> {ptBr.lvl}. {level2}</span><input type="range" min="1" max={dd2} defaultValue={level2} onChange={handleChange2} id="ascension-costs-slider" /></div>
@@ -192,7 +149,7 @@ export default function WeaponSlider ({ ptData, matchedCharacters,folderData, id
                                  <div id="character-weapons-flex">
                                  {matchedCharacters.map((c: any, i: any) => (
                                          <Link key={i} href={`/${c.name}`}>
-                                             <Image width={100} height={100} src={`/images/Team-Icons/${formatarNome(c.name)}.png`} alt="" />
+                                             <Image width={100} height={100} src={`/images/Team-Icons/${formatarNome(c.name)}.png`} alt={formatarNomeComEspaco(formatarNome(c.name))} />
                                          </Link>
                                      ))}
                                      </div>

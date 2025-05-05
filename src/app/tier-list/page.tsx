@@ -10,7 +10,12 @@ export default function Teams() {
       .map((palavra) => palavra.charAt(0).toUpperCase() + palavra.slice(1))
       .join("_");
   }
-
+  function formatarNomeComEspaco(nome: string) {
+    return nome
+      .split('_')
+      .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
+      .join(' ');
+  }
   const ranks = ["S", "A", "B", "C", "D"];
 
   return (
@@ -45,7 +50,7 @@ export default function Teams() {
                         width={100}
                         height={100}
                         src={`/images/Team-Icons/${formatarNome(p.name)}.png`}
-                        alt=""
+                        alt={formatarNomeComEspaco(formatarNome(p.name))}
                         className={`border-${p.elementType}`}
                       />
                     </Link>

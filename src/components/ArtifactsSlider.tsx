@@ -17,49 +17,7 @@ import Link from "next/link";
       .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
       .join(' ');
   }
-  function formatCharacterName(name: string) {
-   
-    if (name === 'Traveler Hydro' ||
-        name === 'Traveler Dendro' ||
-        name === 'Traveler Anemo' ||
-        name === 'Traveler Geo' ||
-        name === 'Traveler Electro' ||
-        name === 'Traveler Pyro') {
-        return 'Viajante';
-      }
-      if (name === 'Raiden Shogun') {
-        return 'Raiden';
-      }
-      if (name === 'Arataki Itto') {
-        return 'Itto';
-      }
-      if (name === 'Kamisato Ayaka') {
-        return 'Ayaka';
-      }
-      if (name === 'Kamisato Ayato') {
-        return 'Ayato';
-      }
-      if (name === 'Yumemizuki Mizuki') {
-        return 'Mizuki';
-      }
-      if (name === 'Kujou Sara') {
-        return 'Sara';
-      }
-      if (name === 'Shikanoin Heizou') {
-        return 'Heizou';
-      }
-      if (name === 'Sangonomiya Kokomi') {
-        return 'Kokomi';
-      }
-      if (name === 'Kaedehara Kazuha') {
-        return 'Kazuha';
-      }
-      if (name === 'Kuki Shinobu') {
-        return 'Kuki';
-      }
-    return name;
-  }
-
+ 
   const artifacts = ['flower', 'plume', 'sands', 'goblet', 'circlet']
 export default function WeaponSlider ({ ptData, matchedCharacters, ptBr }: any) {
     return (
@@ -83,7 +41,7 @@ export default function WeaponSlider ({ ptData, matchedCharacters, ptBr }: any) 
                 {artifacts.map((c:any,i:any) => (
                           
                           ptData.images[`filename_${c}`] != null ?
-                            <Image width={140} height={140} key={i} src={`https://enka.network/ui/${ptData.images[`filename_${c}`]}.png`} alt="" loading="eager" priority />
+                            <Image width={140} height={140} key={i} src={`https://enka.network/ui/${ptData.images[`filename_${c}`]}.png`} alt={ptData.name} loading="eager" priority />
                         
                         :''
                       )) }
@@ -109,7 +67,7 @@ export default function WeaponSlider ({ ptData, matchedCharacters, ptBr }: any) 
                                  <div id="character-weapons-flex">
                                  {matchedCharacters.map((c: any, i: any) => (
                                          <Link key={i} href={`/${c.name}`}>
-                                             <Image width={100} height={100} src={`/images/Team-Icons/${formatarNome(c.name)}.png`} alt="" />
+                                             <Image width={100} height={100} src={`/images/Team-Icons/${formatarNome(c.name)}.png`} alt={formatarNomeComEspaco(formatarNome(c.name))} />
                                          </Link>
                                      ))}
                                      </div>
@@ -123,7 +81,7 @@ export default function WeaponSlider ({ ptData, matchedCharacters, ptBr }: any) 
                       
                               ptData.images[`filename_${c}`] != null ?<div key={i} className="box-art">
                                 <div className="box-art-flex">
-                                <Image width={120} height={120} src={`https://enka.network/ui/${ptData.images[`filename_${c}`]}.png`} alt="" loading="eager" priority />
+                                <Image width={120} height={120} src={`https://enka.network/ui/${ptData.images[`filename_${c}`]}.png`} alt={ptData[c].name} loading="eager" priority />
                                 <h3>{ ptData[c].name}</h3></div>
                              <p> { ptData[c].description}</p>
                       
