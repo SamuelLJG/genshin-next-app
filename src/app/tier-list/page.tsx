@@ -2,6 +2,9 @@ import Image from "next/image";
 import { characters } from "@/data/characters";
 import Link from "next/link";
 import React from "react";
+import { Metadata } from "next";
+
+
 
 export default function Teams() {
   function formatarNome(nome: string) {

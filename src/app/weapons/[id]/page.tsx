@@ -5,6 +5,41 @@ import ScriptsClient from "@/components/scripts-client";
 import { notFound } from "next/navigation";
 import weaponStats from "@/data/newWeaponsFolder/symphonist-of-scents.json"
 import weaponNew from "@/data/newWeaponsData/symphonist-of-scents.json"
+import { Metadata } from 'next';
+
+type Props = {
+  params: { id: string };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = params;
+
+  try {
+    const res = await fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${id.replace(/-/g, '')}&resultLanguage=portuguese`, {
+      next: { revalidate: 3600 },
+    });
+
+    if (!res.ok) throw new Error('Erro ao buscar personagem');
+
+    const data = await res.json();
+
+    return {
+      title: `${data.name} Build | Genshin Impact`,
+      description: `Build ideal para ${data.name} com armas, artefatos e times recomendados.`,
+      openGraph: {
+        title: `${data.name} Build | Genshin Impact`,
+        description: `Guia completo para ${data.name} em Genshin Impact.`,
+        images: [`https://genshinbuild.com/images/Banners/${id}_Card.png`],
+      },
+    };
+  } catch (e) {
+    return {
+      title: 'Build de Personagem | Genshin Impact',
+      description: 'Explore builds de personagens em Genshin Impact.',
+    };
+  }
+}
+
 
 export default async function Page({params}:any) {
     let { id } = await params;

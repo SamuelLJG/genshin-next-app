@@ -4,6 +4,19 @@ import Link from "next/link";
 import Image from "next/image";
 import ArtifactsFilter from "@/components/ArtifactsFilter";
 import ptBr from "@/data/pt-br.json"
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Lista de Artefatos de Genshin Impact",
+  description: "Lista de todos os conjuntos de artefatos de Genshin Impact com nomes e raridade disponíveis.",
+  metadataBase: new URL('https://genshinbuild.com'),
+  alternates: {
+    canonical: '/artifacts'
+  },
+  openGraph: {
+    images: `/images/genshinbuild-image.png`
+  }
+};
 
 export default async function Page() {
   const response = await fetch('https://genshin-db-api.vercel.app/api/v5/artifacts?query=names&matchCategories=true');

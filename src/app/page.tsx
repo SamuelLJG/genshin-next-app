@@ -59,9 +59,35 @@ export default function Home() {
           }
         return name;
       }
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Genshin Build",
+        "url": "https://genshinbuild.com",
+        "description": "Descubra as melhores builds de personagens para Genshin Impact com armas, artefatos, equipes e dicas atualizadas.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Genshin Build",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://genshinbuild.com/images/genshinbuild-image.png"
+          }
+        },
+        "mainEntity": {
+          "@type": "CollectionPage",
+          "name": "Builds de Genshin Impact",
+          "about": {
+            "@type": "Thing",
+            "name": "Genshin Impact"
+          }
+        }
+      }
     return (
         <main id="main-index" className="iii"> 
-        
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
         <div id="h1-flex">
             <Image src="/images/list-paper-school-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} alt={ptBr.charactersList} loading="eager" /> <h1 id="index-h1">Genshin Impact {ptBr.charactersList}</h1>
           </div>

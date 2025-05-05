@@ -30,14 +30,14 @@ export const generateMetadata = async ({
 }: Props): Promise<Metadata> => {
   const id = (await params).id;
   return {
-    title: `${formatarUrl(id)} Build - Melhores Armas, Artefatos e Times`,
+    title: `${formatarUrl(id)} Build - Guia com Melhores Armas, Artefatos e Times`,
     description: `Descubra as melhores builds e times para ${formatarUrl(id)} em Genshin Impact! Confira também suas armas, artefatos, habilidades e muito mais!`,
     alternates: {
       canonical: id
     },
     openGraph: {
       images: `/images/Banners/${formatarUrl(id)}_Card.png`
-    },
+    }
   }
 }
 
@@ -76,7 +76,7 @@ export default async function Home( { params }:any ) {
         "@type": "WebPage",
         "@id": `https://genshinbuild.com/${id}`
       },
-      "image": "https://genshinbuild.com/images/Banners/${id}_Card.png"
+      "image": `https://genshinbuild.com/images/Banners/${id}_Card.png`
     }
     if (id === 'escoffier') {
       path = 'escoffier';

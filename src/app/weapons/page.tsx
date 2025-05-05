@@ -5,6 +5,19 @@ import Image from "next/image";
 import WeaponsFilter from "@/components/WeaponsFilter";
 import post from "@/data/newWeaponsData/symphonist-of-scents.json"
 import ptBr from "@/data/pt-br.json"
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Lista de Armas de Genshin Impact",
+  description: "Lista completa de armas de Genshin Impact separadas por tipo, raridade e nome. Veja todas as espadas, lanças, arcos e mais.",
+  metadataBase: new URL('https://genshinbuild.com'),
+  alternates: {
+    canonical: '/weapons'
+  },
+  openGraph: {
+    images: `/images/genshinbuild-image.png`
+  }
+};
 
 export default async function Page() {
   const response = await fetch('https://genshin-db-api.vercel.app/api/v5/weapons?query=names&matchCategories=true');
