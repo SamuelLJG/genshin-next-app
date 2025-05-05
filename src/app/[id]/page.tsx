@@ -53,8 +53,8 @@ export default async function Home( { params }:any ) {
     let path;
     const schemaData = {
       "@context": "https://schema.org",
-      "@type": "VideoGameCharacter",
-      "name": formatarUrl(id),
+      "@type": "WebPage",
+      "name": `Build ${formatarUrl(id)} | Genshin Impact`,
       "description": `Build ideal para ${formatarUrl(id)} com artefatos, armas, talentos e composições recomendadas para maximizar o dano em Genshin Impact.",
       "url": "https://genshin-next-app.vercel.app/${id}`
     };
