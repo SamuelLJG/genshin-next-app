@@ -42,19 +42,28 @@ export const generateMetadata = async ({
 }
 
 
+
 export default async function Home( { params }:any ) {
   
+  
+
     let { id } = await params;
     const characterBuild:any = characters.find(p => p.name === id);
     if (!characterBuild) return notFound()
     let path;
-
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@type": "VideoGameCharacter",
+      "name": formatarUrl(id),
+      "description": `Build ideal para ${formatarUrl(id)} com artefatos, armas, talentos e composições recomendadas para maximizar o dano em Genshin Impact.",
+      "url": "https://genshin-next-app.vercel.app/${id}`
+    };
     if (id === 'escoffier') {
       path = 'escoffier';
     } else {
       path = 'ifa';
     }
-
+    
     const jsonModule1 = await import(`@/data/newCharactersData/${path}.json`);
     const jsonData1 = jsonModule1.default;
     const jsonModule2 = await import(`@/data/newCharactersFolder/${path}.json`);
@@ -334,6 +343,10 @@ switch (travelerName) {
     return (
       
         <>
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
             <div id="character-h1" className={elementFormatted}>
                 <div id="header-container" >
                     <div className="header-icon">
