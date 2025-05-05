@@ -13,13 +13,6 @@ export const metadata: Metadata = {
 };
 
 
-const nextConfig = {
-  scrollRestoration: true,
-  experimental: {
-      scrollRestoration: true,
-  },
-};
-
 const anuphan = Anuphan({
   subsets: ['latin'],
   display: 'swap',

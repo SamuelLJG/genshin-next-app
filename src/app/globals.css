@@ -1293,6 +1293,7 @@ align-items: stretch;
 .tier-list-characters-flex {
   padding: 10px;
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -1856,7 +1857,7 @@ gap: calc(5px * var(--minimize)) ;
 #loading-main {
   display: flex;
   justify-content: center;
-  margin-bottom: 104dvh;
+  margin-bottom: 34dvh;
   margin-top: 34dvh;
 }
 
