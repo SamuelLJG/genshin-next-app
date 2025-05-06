@@ -1171,6 +1171,23 @@ select {
   top: 0;
   left: 0;
 }
+
+.adsbygoogle {
+  background: var(--sub);
+  border-radius: 4px;
+  border: 1px solid var(--bd);
+  position: relative;
+}
+
+.adsbygoogle::after {
+  content: 'Este site é suportado por anúncios.';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: calc(15px * var(--minimize))
+}
+
 .character-card img {
   width: 100%;
   height: auto;
