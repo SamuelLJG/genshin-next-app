@@ -13,6 +13,7 @@ import weaponNew from "@/data/newWeaponsData/symphonist-of-scents.json"
 import AscensionSlider from "@/components/AscensionSlider";
 import { notFound } from 'next/navigation'
 import TalentsSlider from "@/components/TalentsSlider";
+import AdDisplay from "@/components/ads/AdDisplay";
 
 type Props = {
   params: Promise<{ id: string }>
@@ -86,7 +87,7 @@ export default async function Home( { params }:any ) {
         "@type": "WebPage",
         "@id": `https://genshinbuild.com/${id}`
       },
-      "image": `https://genshinbuild.com/images/Banners/${id}_Card.png`
+      "image": `https://genshinbuild.com/images/Banners/${formatarUrl(id)}_Card.png`
     }
     if (id === 'escoffier') {
       path = 'escoffier';
@@ -475,7 +476,7 @@ switch (travelerName) {
                         </li>
                     </ul>
                 </section>
-                
+              <AdDisplay/>
                 <section>
                     <h2 className="titles-h2">{travelerName}{" "}{ptBr.bestWeapon}</h2>
                         <div id="weapon-container">
