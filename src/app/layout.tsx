@@ -4,9 +4,7 @@ import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Nav from '@/components/nav';
 import Footer from '@/components/footer';
-import Head from 'next/head';
-
-
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: "Genshin Build | Melhores Builds de Personagens Genshin Impact",
@@ -35,9 +33,7 @@ export default async function RootLayout({ children }: {children: React.ReactNod
 
   return (
     <html lang="pt-br">
-      <Head>
-          <meta name="robots" content="max-image-preview:large" />
-        </Head>
+      <GoogleTagManager gtmId="G-ZMW5Q2STCE" />
       <body>
         <Nav/>
         {children}
