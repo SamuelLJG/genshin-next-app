@@ -2443,7 +2443,7 @@ border-top: calc(1px * var(--minimize)) solid var(--bd);
 border-bottom: calc(2px * var(--minimize)) solid var(--bd);
 border-right: none;
 background: var(--bg);
-height: fit-content;
+height: 48.33px;
 transition: 0s;
 }
 
