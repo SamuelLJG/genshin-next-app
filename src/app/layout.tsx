@@ -1,7 +1,6 @@
 import { Anuphan, Plus_Jakarta_Sans } from 'next/font/google'
 import "./globals.css";
 import type { Metadata } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import Nav from '@/components/nav';
 import Footer from '@/components/footer';
 import { GoogleAnalytics } from '@next/third-parties/google'
@@ -47,7 +46,6 @@ export default async function RootLayout({ children }: {children: React.ReactNod
         {children}
         <Footer/>
       </body>
-      <SpeedInsights />
     </html>
   );
 }
