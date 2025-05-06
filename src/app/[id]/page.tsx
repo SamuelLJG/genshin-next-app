@@ -13,7 +13,6 @@ import weaponNew from "@/data/newWeaponsData/symphonist-of-scents.json"
 import AscensionSlider from "@/components/AscensionSlider";
 import { notFound } from 'next/navigation'
 import TalentsSlider from "@/components/TalentsSlider";
-import AdDisplay from "@/components/ads/AdDisplay";
 
 type Props = {
   params: Promise<{ id: string }>
@@ -477,9 +476,6 @@ switch (travelerName) {
                         </li>
                     </ul>
                 </section>
-                <div className="adbox">
-              <AdDisplay/>
-              </div>
                 <section>
                     <h2 className="titles-h2">{travelerName}{" "}{ptBr.bestWeapon}</h2>
                         <div id="weapon-container">
