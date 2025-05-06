@@ -17,7 +17,7 @@ export default function Analytics() {
     const url = pathname + (searchParams?.toString() ? `?${searchParams}` : '');
 
     if (window.gtag) {
-      window.gtag('config', 'G-XXXXXXXXXX', {
+      window.gtag('config', 'G-ZMW5Q2STCE', {
         page_path: url,
       });
     }
