@@ -34,6 +34,11 @@ export default async function RootLayout({ children }: {children: React.ReactNod
   return (
     <html lang="pt-br">
       <GoogleAnalytics gaId="G-ZMW5Q2STCE" />
+      <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1999593447203691"
+            crossOrigin="anonymous"
+          ></script>
       <body>
         <Nav/>
         {children}
