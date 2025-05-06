@@ -30,7 +30,7 @@ export async function generateMetadata(
     title: `${product.name} | Genshin Impact Conjunto de Artefatos`,
     description: `Veja os detalhes completos do conjunto de artefatos ${product.name} de Genshin Impact, incluindo seus efeitos e os melhores personagens recomendados para aproveitá-lo ao máximo.`,
     openGraph: {
-      images: `https://gi.yatta.moe/assets/UI/${product.images.filename_icon}.png`
+      images: `https://gi.yatta.moe/assets/UI/${product.images.filename_flower}.png`
     }
   }
   
