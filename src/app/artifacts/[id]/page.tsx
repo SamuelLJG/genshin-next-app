@@ -27,10 +27,10 @@ export async function generateMetadata(
   // optionally access and extend (rather than replace) parent meta
  
   return {
-    title: `${product.name} | Genshin Impact Conjunto de Artefatos`,
+    title: `${product.name} | Genshin Impact Conjuntos de Artefatos`,
     description: `Veja os detalhes completos do conjunto de artefatos ${product.name} de Genshin Impact, incluindo seus efeitos e os melhores personagens recomendados para aproveitá-lo ao máximo.`,
     openGraph: {
-      images: `https://gi.yatta.moe/assets/UI/${product.images.filename_flower}.png`
+      images: `https://enka.network/ui/${product.images.filename_flower}.png`
     }
   }
   
