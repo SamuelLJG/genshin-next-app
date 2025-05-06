@@ -14,7 +14,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: `/images/genshinbuild-image.png`,
-    url: '/artifacts'
+    url: '/artifacts',
+    type: 'website'
   }
 };
 

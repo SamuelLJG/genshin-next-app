@@ -34,7 +34,8 @@ export async function generateMetadata(
     },
     openGraph: {
       images: `https://enka.network/ui/${product.images.filename_flower}.png`,
-      url: `/artifacts/${id}`
+      url: `/artifacts/${id}`,
+      type: 'website'
     }
   }
   

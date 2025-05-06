@@ -12,7 +12,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: `/images/genshinbuild-image.png`,
-    url: '/tier-list'
+    url: '/tier-list',
+    type: 'website'
   }
 };
 

@@ -14,7 +14,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: `/images/genshinbuild-image.png`,
-    url: '/'
+    url: '/',
+    type: 'website'
   },
   icons: {
     icon: '/favicon.ico', // caminho dentro de /public

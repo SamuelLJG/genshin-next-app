@@ -31,7 +31,8 @@ export async function generateMetadata(
     description: product.description,
     openGraph: {
       images: `https://gi.yatta.moe/assets/UI/${product.images.filename_icon}.png`,
-      url: `/weapons/${id}`
+      url: `/weapons/${id}`,
+      type: 'website'
     },
     alternates: {
       canonical: `/weapons/${id}`
@@ -42,7 +43,8 @@ export async function generateMetadata(
       description: 'Uma lança elegante, dizem que foi a batuta de um maestro, empunhada por um grande músico para ser a ponte entre a música e o bom gosto.',
       openGraph: {
         images: 'https://api.hakush.in/gi/UI/UI_EquipIcon_Pole_Trident.webp',
-        url: `/weapons/symphonist-of-scents`
+        url: `/weapons/symphonist-of-scents`,
+        type: 'website'
       },
       alternates: {
         canonical: `/weapons/symphonist-of-scents`

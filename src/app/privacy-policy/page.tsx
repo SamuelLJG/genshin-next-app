@@ -9,7 +9,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: `/images/genshinbuild-image.png`,
-    url: '/privacy-policy'
+    url: '/privacy-policy',
+    type: 'website'
   }
 };
 

@@ -37,7 +37,8 @@ export const generateMetadata = async ({
     },
     openGraph: {
       images: `/images/Banners/${formatarUrl(id)}_Card.png`,
-      url: id
+      url: id,
+      type: 'website'
     },
     robots: {
       index: true,

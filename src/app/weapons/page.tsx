@@ -16,7 +16,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: `/images/genshinbuild-image.png`,
-    url: '/weapons'
+    url: '/weapons',
+    type: 'website'
   }
 };
 
