@@ -13,7 +13,8 @@ export const metadata: Metadata = {
     canonical: '/artifacts'
   },
   openGraph: {
-    images: `/images/genshinbuild-image.png`
+    images: `/images/genshinbuild-image.png`,
+    url: '/artifacts'
   }
 };
 

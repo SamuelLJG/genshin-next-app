@@ -12,7 +12,8 @@ export const metadata: Metadata = {
     canonical: '/teams'
   },
   openGraph: {
-    images: `/images/genshinbuild-image.png`
+    images: `/images/genshinbuild-image.png`,
+    url: '/teams'
   }
 };
 

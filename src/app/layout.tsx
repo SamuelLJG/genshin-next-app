@@ -13,10 +13,21 @@ export const metadata: Metadata = {
     canonical: '/'
   },
   openGraph: {
-    images: `/images/genshinbuild-image.png`
+    images: `/images/genshinbuild-image.png`,
+    url: '/'
   },
   icons: {
     icon: '/favicon.ico', // caminho dentro de /public
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      'max-image-preview': 'large'
+    }
   }
 }
 

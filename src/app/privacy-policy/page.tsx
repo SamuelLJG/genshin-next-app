@@ -8,7 +8,8 @@ export const metadata: Metadata = {
     canonical: '/privacy-policy'
   },
   openGraph: {
-    images: `/images/genshinbuild-image.png`
+    images: `/images/genshinbuild-image.png`,
+    url: '/privacy-policy'
   }
 };
 
@@ -76,7 +77,7 @@ export default function PoliticaPrivacidade() {
         <br />
         <p>
           Você pode solicitar a exclusão de seus dados ou tirar dúvidas através da página{" "}
-          <a href="/contato">Contato</a>.
+          <a href="https://mail.google.com/mail/?view=cm&to=genshinbuildsite@gmail.com">Contato</a>.
         </p>
         <br />
         <h2>6. Alterações nesta política</h2>

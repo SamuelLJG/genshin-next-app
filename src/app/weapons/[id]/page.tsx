@@ -30,7 +30,8 @@ export async function generateMetadata(
     title: `${product.name} | Genshin Impact Armas`,
     description: product.description,
     openGraph: {
-      images: `https://gi.yatta.moe/assets/UI/${product.images.filename_icon}.png`
+      images: `https://gi.yatta.moe/assets/UI/${product.images.filename_icon}.png`,
+      url: `/weapons/${id}`
     },
     alternates: {
       canonical: `/weapons/${id}`
@@ -40,7 +41,8 @@ export async function generateMetadata(
       title: 'Sinfonista de Aromas | Genshin Impact Armas',
       description: 'Uma lança elegante, dizem que foi a batuta de um maestro, empunhada por um grande músico para ser a ponte entre a música e o bom gosto.',
       openGraph: {
-        images: 'https://api.hakush.in/gi/UI/UI_EquipIcon_Pole_Trident.webp'
+        images: 'https://api.hakush.in/gi/UI/UI_EquipIcon_Pole_Trident.webp',
+        url: `/weapons/symphonist-of-scents`
       },
       alternates: {
         canonical: `/weapons/symphonist-of-scents`
@@ -58,19 +60,12 @@ const validIds = await fetch('https://genshin-db-api.vercel.app/api/v5/weapons?q
   .then(res => res.json());
 
   let idList, idNormalizado;
-  if (id != 'the-catch') {
-   
 idList = validIds.map((name: string) =>
-  name.replace(/'/g, '').toLowerCase().replace(/ /g, '-')
+  name.replace(/'/g, '').replace(/"/g, '').toLowerCase().replace(/ /g, '-')
 
 )
 idNormalizado = id.replace(/-/g, '');
-}
 
-else {
-idList = 'the-catch'
-idNormalizado = 'thecatch'
-}
  
 
 

@@ -15,7 +15,8 @@ export const metadata: Metadata = {
     canonical: '/weapons'
   },
   openGraph: {
-    images: `/images/genshinbuild-image.png`
+    images: `/images/genshinbuild-image.png`,
+    url: '/weapons'
   }
 };
 
@@ -47,7 +48,7 @@ export default async function Page() {
                         
                   {armasPT.map((post: any, i: number) => (
                     data[i].replace(/'/g, '').toLowerCase().replace(/ /g, '-') != 'prized-isshin-blade' ? 
-                    <Link href={data[i].replace(/'/g, '').toLowerCase().replace(/ /g, '-') != '"the-catch"' ? `weapons/${data[i].replace(/'/g, '').toLowerCase().replace(/ /g, '-')}`: `weapons/the-catch`} key={i} className={`weapon-card ${post.weaponType} ${post.name} rarity-${post.rarity}-weapon`}>
+                    <Link href={`weapons/${data[i].replace(/'/g, '').replace(/"/g, '').toLowerCase().replace(/ /g, '-')}`} key={i} className={`weapon-card ${post.weaponType} ${post.name} rarity-${post.rarity}-weapon`}>
                         <Image width={100} height={100} src={`https://enka.network/ui/${post.images.filename_icon}.png`} alt={post.name} className={`star${post.rarity}`} loading="eager" priority/>
                         <div>
                         <p>{post.name}</p>

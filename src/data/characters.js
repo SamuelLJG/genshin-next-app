@@ -252,7 +252,7 @@ export const characters = [
         bestWeapon: 'Thrilling Tales of Dragon Slayers',
         otherWeapons: ['Everlasting Moonglow','Prototype Amber','Favonius Codex'],
         bestArtifacts: 'Ocean-Hued Clam',
-        otherArtifacts: ['Tenacity of the Millelith', 'Instrutor'],
+        otherArtifacts: ['Tenacity of the Millelith', 'Instructor'],
         teams: [[
             {'klee': 'mainDps'},
             {'xiangling': 'support'},
@@ -1658,7 +1658,7 @@ export const characters = [
         name: 'navia',
         function: 'mainDps',
         bestWeapon: 'Verdict',
-        otherWeapons: ['A Thousand Blazing Sun','Serpent Spine','Beacon of the Reed Sea'],
+        otherWeapons: ['A Thousand Blazing Suns','Serpent Spine','Beacon of the Reed Sea'],
         bestArtifacts: 'Nighttime Whispers in the Echoing Woods',
         otherArtifacts: ['Golden Troupe', 'Marechaussee Hunter'],
         teams: [[
@@ -2562,7 +2562,7 @@ export const characters = [
         name: 'xiao',
         function: 'mainDps',
         bestWeapon: 'Primordial Jade Winged-Spear',
-        otherWeapons: ['Staff of Homa','Deathmatch','Blackliff Pole'],
+        otherWeapons: ['Staff of Homa','Deathmatch','Blackcliff Pole'],
         bestArtifacts: 'Long Nights Oath',
         otherArtifacts: ['Vermillion Hereafter', 'Marechaussee Hunter'],
         teams: [[
@@ -2872,7 +2872,7 @@ export const characters = [
         function: 'support',
         bestWeapon: 'Black Tassel',
         otherWeapons: ['Favonius Lance','Staff of Homa','Skyward Spine'],
-        bestArtifacts: 'Millelith',
+        bestArtifacts: 'Tenacity of the Millelith',
         otherArtifacts: ['Archaic Petra', 'Scroll of the Hero of Cinder City'],
         teams: [[
             {'arataki-itto': 'mainDps'},

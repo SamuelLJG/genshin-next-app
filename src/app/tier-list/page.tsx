@@ -8,10 +8,11 @@ export const metadata: Metadata = {
   title: "Tier List 5.5 | Genshin Impact ",
   description: "Confira a tier list atualizada de Genshin Impact com os melhores personagens. Veja quem está no topo do meta em 2025!",
   alternates: {
-    canonical: '/'
+    canonical: '/tier-list'
   },
   openGraph: {
-    images: `/images/genshinbuild-image.png`
+    images: `/images/genshinbuild-image.png`,
+    url: '/tier-list'
   }
 };
 
@@ -38,7 +39,7 @@ export default function Teams() {
           className="index-h1-icon"
           width={30}
           height={30}
-          alt=""
+          alt="Tier-List Ranking"
           loading="eager"
         />
         <h1 id="index-h1" style={{ display: "block" }}>
