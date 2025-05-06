@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: `/images/genshinbuild-image.png`
+  },
+  icons: {
+    icon: "/favicon.ico",
   }
 }
 
