@@ -476,7 +476,9 @@ switch (travelerName) {
                         </li>
                     </ul>
                 </section>
+                <div className="adbox">
               <AdDisplay/>
+              </div>
                 <section>
                     <h2 className="titles-h2">{travelerName}{" "}{ptBr.bestWeapon}</h2>
                         <div id="weapon-container">

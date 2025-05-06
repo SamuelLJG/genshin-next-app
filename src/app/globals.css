@@ -1172,16 +1172,19 @@ select {
   left: 0;
 }
 
-.adsbygoogle {
+.adbox {
   background: var(--sub);
   border-radius: 4px;
   border: 1px solid var(--bd);
   position: relative;
+  min-height: 90px;
 }
 
-.adsbygoogle::after {
+.adbox::before {
   content: 'Este site é suportado por anúncios.';
   position: absolute;
+  width: 100%;
+  text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
