@@ -5,6 +5,36 @@ import ArtifactsSlider from "@/components/ArtifactsSlider";
 import ScriptsClient from "@/components/scripts-client";
 import { notFound } from "next/navigation";
 import ptBr from "@/data/pt-br.json"
+import type { Metadata, ResolvingMetadata } from 'next'
+
+
+
+type Props = {
+  params: Promise<{ id: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+ 
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  let { id } = await params
+ 
+  // fetch data
+  const product = await fetch(`https://genshin-db-api.vercel.app/api/v5/artifacts?query=${id.replace(/-/g, ' ')}&resultLanguage=portuguese`).then((res) => res.json())
+ 
+  // optionally access and extend (rather than replace) parent meta
+ 
+  return {
+    title: `${product.name} | Genshin Impact Conjunto de Artefatos`,
+    description: `Veja os detalhes completos do conjunto de artefatos ${product.name} de Genshin Impact, incluindo seus efeitos e os melhores personagens recomendados para aproveitá-lo ao máximo.`,
+    openGraph: {
+      images: `https://gi.yatta.moe/assets/UI/${product.images.filename_icon}.png`
+    }
+  }
+  
+}
 
 export default async function Page({params}:any) {
     let { id } = await params;

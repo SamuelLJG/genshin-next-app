@@ -18,15 +18,28 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   // read route params
-  const { id } = await params
+  let { id } = await params
  
+  if(id != 'symphonist-of-scents') {
   // fetch data
   const product = await fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${id.replace(/-/g, ' ')}&resultLanguage=portuguese`).then((res) => res.json())
  
   // optionally access and extend (rather than replace) parent meta
  
   return {
-    title: product.name
+    title: `${product.name} | Genshin Impact Armas`,
+    description: product.description,
+    openGraph: {
+      images: `https://gi.yatta.moe/assets/UI/${product.images.filename_icon}.png`
+    }
+  }} else {
+    return {
+      title: 'Sinfonista de Aromas | Genshin Impact Armas',
+      description: 'Uma lança elegante, dizem que foi a batuta de um maestro, empunhada por um grande músico para ser a ponte entre a música e o bom gosto.',
+      openGraph: {
+        images: 'https://api.hakush.in/gi/UI/UI_EquipIcon_Pole_Trident.webp'
+      }
+    }
   }
 }
 
