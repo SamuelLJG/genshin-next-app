@@ -30,13 +30,23 @@ export const generateMetadata = async ({
 }: Props): Promise<Metadata> => {
   const id = (await params).id;
   return {
-    title: `${formatarUrl(id)} Build - Guia com Melhores Armas, Artefatos e Times`,
+    title: `${formatarUrl(id)} Build | Guia com Melhores Armas, Artefatos e Times`,
     description: `Descubra as melhores builds e times para ${formatarUrl(id)} em Genshin Impact! Confira também suas armas, artefatos, habilidades e muito mais!`,
     alternates: {
       canonical: id
     },
     openGraph: {
       images: `/images/Banners/${formatarUrl(id)}_Card.png`
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        noimageindex: false,
+        'max-image-preview': 'large'
+      }
     }
   }
 }

@@ -3,6 +3,18 @@ import {characters} from "@/data/characters"
 import Link from "next/link";
 import TeamsFilter from "@/components/TeamSlider";
 import ptBr from "@/data/pt-br.json"
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Melhores Times | Genshin Impact",
+  description: "Descubra os melhores times com funções bem definidas para cada personagem em Genshin Impact!",
+  alternates: {
+    canonical: '/teams'
+  },
+  openGraph: {
+    images: `/images/genshinbuild-image.png`
+  }
+};
 
 export default function Teams() {
     function formatarNome(nome:string) {

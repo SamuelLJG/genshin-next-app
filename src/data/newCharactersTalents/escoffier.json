@@ -2,9 +2,8 @@
     "id": 2301,
     "name": "Xiangling",
     "combat1": {
-      "name": "Ataque Normal: Pastelaria Kung Fu",
-      "descriptionRaw": "\u003Ccolor=#FFD780FF\u003EAtaque Normal\u003C/color\u003E\nRealiza até 3 golpes rápidos.\n\n\u003Ccolor=#FFD780FF\u003EAtaque Carregado\u003C/color\u003E\nConsome uma certa quantidade de Stamina para desferir um Ataque de Impulso Ascendente.\n\n\u003Ccolor=#FFD780FF\u003EAtaque Imersivo\u003C/color\u003E\nMergulha em pleno ar para golpear o chão, causando dano aos inimigos ao longo do caminho e infligindo Dano em uma AdE durante o impacto.",
-      "description": "Ataque Normal\nRealiza até 5 golpes com a lança.\n\nAtaque Carregado\nConsome uma certa quantidade de Stamina para se lançar para frente, infligindo Dano em seu trajeto.\n\nAtaque Imersivo\nMergulha em pleno ar para golpear o chão, causando dano aos inimigos ao longo do caminho e infligindo Dano em uma AdE durante o impacto.",
+      "name": "Ataque Normal: Habilidades Culinárias",
+      "descriptionRaw": "<color=#FFD780FF>Ataque Normal</color>\nRealiza até 3 golpes rápidos.\n\n<color=#FFD780FF>Ataque Carregado</color>\nConsome uma certa quantidade de Stamina para desferir um Ataque de Impulso Ascendente.\n\n<color=#FFD780FF>Ataque Imersivo</color>\nMergulha em pleno ar para golpear o chão, causando dano aos inimigos ao longo do caminho e infligindo Dano em uma AdE durante o impacto.",
       "attributes": {
         "labels": [
           "Dano do 1° Golpe|{param1:F1P}",
@@ -32,10 +31,8 @@
       }
     },
     "combat2": {
-      "name": "Ataque de Guoba",
-      "descriptionRaw": "Invoca Guoba, o Panda. Guoba continua exalando fogo contra o inimigo, causando \u003Ccolor=#FF9999FF\u003EDano Pyro de AdE\u003C/color\u003E.\n\n\u003Ci\u003EGuoba ama comidas picantes. O problema é que seu estômago não suporta comida tão picante.\u003C/i\u003E",
-      "description": "Invoca Guoba, o Panda. Guoba continua exalando fogo contra o inimigo, causando Dano Pyro de AdE.",
-      "flavorText": "Guoba ama comidas picantes. O problema é que seu estômago não suporta comida tão picante.",
+      "name": "Culinária ao Fogo Baixo",
+      "descriptionRaw": "<color=#FFD780FF>Contemple o verdadeiro significado de cozinhar!</color>\nDemonstre as diferentes técnicas culinárias de Fontaine ao pressionar ou manter pressionado.\n\n<color=#FFD780FF>Pressionar</color>\nAtiva o Robô Culinário Multiuso no seu modo de Armazenamento Frio, causando Dano Cryo em AdE contra os inimigos ao redor.\n\n<color=#FFD780FF>Modo Robô Culinário: Armazenamento Frio</color>\nAcompanha o personagem ativo e periodicamente dispara um Parfait Congelado contra os inimigos próximos, causando Dano Cryo.\n\n<color=#FFD780FF>Arkhe: Ousia</color>\nQuando Escoffier periodicamente ativar o Robô Culinário com o modo Armazenamento Frio, invoca uma Lâmina da Fluidez, causando Dano Cryo em AdE com Ousia.\n\n<color=#FFD780FF>Manter pressionado</color>\nUsa o modo Culinária Improvisada para ativar o Robô Culinário Multiuso.",
       "attributes": {
         "labels": [
           "Dano de Lança-Chamas|{param1:P}",
@@ -48,9 +45,8 @@
       }
     },
     "combat3": {
-      "name": "Pyronado",
-      "descriptionRaw": "Exibindo seu domínio sobre o fogo e as armas de fogo, Xiangling envia um Pyronado girando ao seu redor.\nO Pyronado se moverá com o seu personagem enquanto a habilidade persistir, causando \u003Ccolor=#FF9999FF\u003EDano Pyro\u003C/color\u003E a todos os inimigos em seu caminho.\n\n\u003Ci\u003EO calor nunca será suficiente. Nunca!\u003C/i\u003E",
-      "description": "Exibindo seu domínio sobre o fogo e as armas de fogo, Xiangling envia um Pyronado girando ao seu redor.\nO Pyronado se moverá com o seu personagem enquanto a habilidade persistir, causando Dano Pyro a todos os inimigos em seu caminho.",
+      "name": "Técnica de Corte Refinado",
+      "descriptionRaw": "Demonstrando suas habilidades excepcionais com a faca, Escoffier causa Dano Cryo em uma AdE e restaura a Vida de todos os membros próximos da equipe com base em seu ATQ.",
       "flavorText": "O calor nunca será suficiente. Nunca!",
       "attributes": {
         "labels": [
@@ -74,18 +70,18 @@
       }
     },
     "passive1": {
-      "name": "Fogo Cruzado",
-      "descriptionRaw": "A distância do lança-chamas de Guoba aumenta 20%.",
+      "name": "A Postos para Improvisar",
+      "descriptionRaw": "Ao manter pressionado para lançar a Habilidade Elemental Culinária ao Fogo Baixo Usará o modo Culinária Improvisada para ativar o Robô Culinário Multiuso.\n\n<color=#FFD780FF>Robô Culinário: Modo Culinária Improvisada</color>\n· Coloca o Robô Culinário no campo. O Robô Culinário pode absorver os ataques Elementais. Quando a Energia Elemental absorvida alcançar o limite, Escoffier poderá converter os ingredientes colocados dentro em comidas fantásticas.\n· Escoffier precisa de tempo para coletar ingredientes novos. É possível fazer uma certa quantidade de Pratos por semana dessa maneira. A contagem de Prato é redefinida toda segunda-feira às 04:00 da manhã.",
       "description": "A distância do lança-chamas de Guoba aumenta 20%."
     },
     "passive2": {
-      "name": "Cuidado, Está Muito Quente!",
-      "descriptionRaw": "Quando o efeito do \u003Ccolor=#FFD780FF\u003EAtaque de Guoba\u003C/color\u003E terminar, Guoba deixa uma pimenta no ponto onde desapareceu. Ao pegar a pimenta, aumenta o ATQ em 10% por 10s.",
+      "name": "A Comida é o Melhor Remédio",
+      "descriptionRaw": "Após usar o Supremo Técnica de Corte Refinado, Escoffier obterá o efeito de Terapia Alimentar por 9s: Restaura Vida para o personagem ativo próximo a cada 1 segundo em 138.24% do ATQ de Escoffier.",
       "description": "Quando o efeito do Ataque de Guoba terminar, Guoba deixa uma pimenta no ponto onde desapareceu. Ao pegar a pimenta, aumenta o ATQ em 10% por 10s."
     },
     "passive3": {
-      "name": "Chefe de Cozinha",
-      "descriptionRaw": "Quando uma Culinária Perfeita é feita em uma comida de aumento de ATQ, Xiangling tem uma chance de 12% de receber o dobro de produção.",
+      "name": "Inspiração Temperada",
+      "descriptionRaw": "Quando o grupo tiver 1/2/3/4 personagens Hydro ou Cryo, Escoffier reduzirá a RES Hydro e a RES Cryo de inimigos atingidos por sua Habilidade Elemental, Culinária ao Fogo Baixo, ou por seu Supremo, Técnica de Corte Refinado, em 5%/10%/15%/55% por 12s.",
       "description": "Quando uma Culinária Perfeita é feita em uma comida de aumento de ATQ, Xiangling tem uma chance de 12% de receber o dobro de produção."
     },
     "costs": {
@@ -96,13 +92,13 @@
           "count": 12500
         },
         {
-          "id": 104313,
-          "name": "Ensinamentos de Esforço",
+          "id": 104341,
+          "name": "Ensinamentos da Justiça",
           "count": 3
         },
         {
-          "id": 112002,
-          "name": "Condensado de Slime",
+          "id": 112083,
+          "name": "Engrenagem Transmissora",
           "count": 6
         }
       ],
@@ -113,13 +109,13 @@
           "count": 17500
         },
         {
-          "id": 104314,
-          "name": "Guia de Esforço",
+          "id": 104342,
+          "name": "Guia da Justiça",
           "count": 2
         },
         {
-          "id": 112003,
-          "name": "Secreção de Slime",
+          "id": 112084,
+          "name": "Engrenagem Reta",
           "count": 3
         }
       ],
@@ -130,13 +126,13 @@
           "count": 25000
         },
         {
-          "id": 104314,
-          "name": "Guia de Esforço",
+          "id": 104342,
+          "name": "Guia da Justiça",
           "count": 4
         },
         {
-          "id": 112003,
-          "name": "Secreção de Slime",
+          "id": 112084,
+          "name": "Engrenagem Reta",
           "count": 4
         }
       ],
@@ -147,13 +143,13 @@
           "count": 30000
         },
         {
-          "id": 104314,
-          "name": "Guia de Esforço",
+          "id": 104342,
+          "name": "Guia da Justiça",
           "count": 6
         },
         {
-          "id": 112003,
-          "name": "Secreção de Slime",
+          "id": 112084,
+          "name": "Engrenagem Reta",
           "count": 6
         }
       ],
@@ -164,13 +160,13 @@
           "count": 37500
         },
         {
-          "id": 104314,
-          "name": "Guia de Esforço",
+          "id": 104342,
+          "name": "Guia da Justiça",
           "count": 9
         },
         {
-          "id": 112003,
-          "name": "Secreção de Slime",
+          "id": 112084,
+          "name": "Engrenagem Reta",
           "count": 9
         }
       ],
@@ -181,18 +177,18 @@
           "count": 120000
         },
         {
-          "id": 104315,
-          "name": "Filosofia de Esforço",
+          "id": 104343,
+          "name": "Filosofia da Justiça",
           "count": 4
         },
         {
-          "id": 112004,
-          "name": "Essência de Slime",
+          "id": 112085,
+          "name": "Engrenagem Dinâmica",
           "count": 4
         },
         {
-          "id": 113004,
-          "name": "Garra do Vento Oriental",
+          "id": 113068,
+          "name": "Chifre Erodido",
           "count": 1
         }
       ],
@@ -203,18 +199,18 @@
           "count": 260000
         },
         {
-          "id": 104315,
-          "name": "Filosofia de Esforço",
+          "id": 104343,
+          "name": "Filosofia da Justiça",
           "count": 6
         },
         {
-          "id": 112004,
-          "name": "Essência de Slime",
+          "id": 112085,
+          "name": "Engrenagem Dinâmica",
           "count": 6
         },
         {
-          "id": 113004,
-          "name": "Garra do Vento Oriental",
+          "id": 113068,
+          "name": "Chifre Erodido",
           "count": 1
         }
       ],
@@ -225,18 +221,18 @@
           "count": 450000
         },
         {
-          "id": 104315,
-          "name": "Filosofia de Esforço",
+          "id": 104343,
+          "name": "Filosofia da Justiça",
           "count": 12
         },
         {
-          "id": 112004,
-          "name": "Essência de Slime",
+          "id": 112085,
+          "name": "Engrenagem Dinâmica",
           "count": 9
         },
         {
-          "id": 113004,
-          "name": "Garra do Vento Oriental",
+          "id": 113068,
+          "name": "Chifre Erodido",
           "count": 2
         }
       ],
@@ -247,18 +243,18 @@
           "count": 700000
         },
         {
-          "id": 104315,
-          "name": "Filosofia de Esforço",
+          "id": 104343,
+          "name": "Filosofia da Justiça",
           "count": 16
         },
         {
-          "id": 112004,
-          "name": "Essência de Slime",
+          "id": 112085,
+          "name": "Engrenagem Dinâmica",
           "count": 12
         },
         {
-          "id": 113004,
-          "name": "Garra do Vento Oriental",
+          "id": 113068,
+          "name": "Chifre Erodido",
           "count": 2
         },
         {

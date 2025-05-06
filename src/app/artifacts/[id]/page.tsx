@@ -29,6 +29,9 @@ export async function generateMetadata(
   return {
     title: `${product.name} | Genshin Impact Conjuntos de Artefatos`,
     description: `Veja os detalhes completos do conjunto de artefatos ${product.name} de Genshin Impact, incluindo seus efeitos e os melhores personagens recomendados para aproveitá-lo ao máximo.`,
+    alternates: {
+      canonical: `/artifacts/${id}`
+    },
     openGraph: {
       images: `https://enka.network/ui/${product.images.filename_flower}.png`
     }

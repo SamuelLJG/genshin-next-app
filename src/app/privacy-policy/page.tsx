@@ -1,15 +1,20 @@
-import Head from "next/head";
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Política de Privacidade | genshinbuild.com",
+  description: "Entenda como coletamos, usamos e protegemos suas informações em nosso site. Leia nossa política de privacidade completa para garantir transparência e segurança dos seus dados.",
+  alternates: {
+    canonical: '/privacy-policy'
+  },
+  openGraph: {
+    images: `/images/genshinbuild-image.png`
+  }
+};
 
 export default function PoliticaPrivacidade() {
   return (
     <>
-      <Head>
-        <title>Política de Privacidade | genshinbuild.com</title>
-        <meta
-          name="description"
-          content="Veja como a genshinbuild.com coleta, usa e protege suas informações. Política de privacidade conforme exigências do Google AdSense."
-        />
-      </Head>
       <main id="main-index">
         <h1>Política de Privacidade</h1>
         <br />

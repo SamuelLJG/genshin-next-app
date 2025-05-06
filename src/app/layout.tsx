@@ -4,11 +4,12 @@ import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Nav from '@/components/nav';
 import Footer from '@/components/footer';
+import Head from 'next/head';
 
 
 
 export const metadata: Metadata = {
-  title: "Genshin Build - Melhores Builds de Personagens Genshin Impact",
+  title: "Genshin Build | Melhores Builds de Personagens Genshin Impact",
   description: "Encontre as builds ideais para seus personagens favoritos de Genshin Impact com guias de armas, artefatos, equipes e mais.",
   metadataBase: new URL('https://genshinbuild.com'),
   alternates: {
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: `/images/genshinbuild-image.png`
   }
-};
+}
 
 
 const anuphan = Anuphan({
@@ -34,6 +35,9 @@ export default async function RootLayout({ children }: {children: React.ReactNod
 
   return (
     <html lang="pt-br">
+      <Head>
+          <meta name="robots" content="max-image-preview:large" />
+        </Head>
       <body>
         <Nav/>
         {children}

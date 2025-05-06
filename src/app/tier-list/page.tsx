@@ -4,7 +4,16 @@ import Link from "next/link";
 import React from "react";
 import { Metadata } from "next";
 
-
+export const metadata: Metadata = {
+  title: "Tier List 5.5 | Genshin Impact ",
+  description: "Confira a tier list atualizada de Genshin Impact com os melhores personagens. Veja quem está no topo do meta em 2025!",
+  alternates: {
+    canonical: '/'
+  },
+  openGraph: {
+    images: `/images/genshinbuild-image.png`
+  }
+};
 
 export default function Teams() {
   function formatarNome(nome: string) {
@@ -33,7 +42,7 @@ export default function Teams() {
           loading="eager"
         />
         <h1 id="index-h1" style={{ display: "block" }}>
-          Genshin Impact <span className="nowrap"> Tier-List</span>
+          Genshin Impact <span className="nowrap"> Tier-List 5.5</span>
         </h1>
       </div>
       <ul id="tier-list-flex">

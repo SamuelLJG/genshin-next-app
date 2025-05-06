@@ -1162,7 +1162,7 @@ select {
   font-size: calc(14px * var(--minimize))
 }
 .character-card span {
-  background: #0059ff;
+  background: #58c202;
   color: #ffffff;
   padding: calc(3px * var(--minimize)) calc(6px * var(--minimize));
   text-transform: uppercase;
@@ -1926,8 +1926,31 @@ gap: calc(5px * var(--minimize)) ;
   height: 100dvh;
 }
 
+#not-found-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#not-found-main a {
+  background: var(--ct);
+  color: var(--sub);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: calc(21px * var(--minimize));
+}
+
+#not-found-main a:hover {
+  opacity: .65;
+}
+
 #loading-main img {
-  width: 200px;
+  width: calc(200px * var(--minimize));
   height: auto;
 }
 .refinement-description {
