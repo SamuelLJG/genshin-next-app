@@ -1,5 +1,6 @@
 
 import { Metadata } from "next";
+import AdComponent from "@/components/Adsense";
 
 export const metadata: Metadata = {
   title: "Política de Privacidade | genshinbuild.com",
@@ -18,6 +19,7 @@ export default function PoliticaPrivacidade() {
   return (
     <>
       <main id="main-index">
+        <AdComponent/>
         <h1>Política de Privacidade</h1>
         <br />
         <p><strong>Última atualização:</strong> 03 de maio de 2025</p>

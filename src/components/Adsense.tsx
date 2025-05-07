@@ -1,27 +1,30 @@
-'use client';
+'use client'
 
-import { useEffect } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
+import React, { useEffect } from 'react';
 
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-  }
+interface AdComponentProps {
+  adFormat?: string;
+  adLayout?: string;
 }
 
-export default function Analytics() {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
+const AdComponent: React.FC<AdComponentProps> = ({adFormat = 'auto', adLayout = '' }) => {
   useEffect(() => {
-    const url = pathname + (searchParams?.toString() ? `?${searchParams}` : '');
-
-    if (window.gtag) {
-      window.gtag('config', 'G-ZMW5Q2STCE', {
-        page_path: url,
-      });
+    try {
+      (window as any).adsbygoogle = (window as any).adsbygoogle || [];
+      (window as any).adsbygoogle.push({});
+    } catch (e) {
+      console.error('Error loading ads:', e);
     }
-  }, [pathname, searchParams]);
+  }, []);
 
-  return null;
-}
+  return (
+    <ins className="adsbygoogle"
+         style={{ display:'inline-block',width:'970px',height:'90px' }}
+         data-ad-client="ca-pub-1999593447203691"
+         data-ad-slot= '4182635974'
+         data-ad-format={adFormat}
+         data-ad-layout={adLayout}></ins>
+  );
+};
+
+export default AdComponent;

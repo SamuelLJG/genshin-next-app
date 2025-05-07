@@ -32,10 +32,7 @@ const nextConfig: NextConfig = {
         permanent: false,
       }
     ];
-  },
-  experimental: {
-      scrollRestoration: true,
-  },
+  }
 };
 
 export default nextConfig;
