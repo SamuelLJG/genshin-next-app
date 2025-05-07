@@ -22,7 +22,7 @@ export async function generateMetadata(
   let { id } = await params
  
   // fetch data
-  const product = await fetch(`https://genshin-db-api.vercel.app/api/v5/artifacts?query=${id.replace(/-/g, ' ')}&resultLanguage=portuguese`).then((res) => res.json())
+  const product = await fetch(`https://genshin-db-api.vercel.app/api/v5/artifacts?query=${id.replace(/-/g, '')}&resultLanguage=portuguese`).then((res) => res.json())
  
   // optionally access and extend (rather than replace) parent meta
  
