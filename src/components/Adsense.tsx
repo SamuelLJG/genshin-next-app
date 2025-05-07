@@ -1,10 +1,9 @@
 'use client'
 
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
+export default function AdComponent(){
 
-
-const AdComponent: React.FC = () => {
   useEffect(() => {
     try {
       (window as any).adsbygoogle = (window as any).adsbygoogle || [];
@@ -21,6 +20,6 @@ const AdComponent: React.FC = () => {
          data-ad-slot='4805769734'
          ></ins>
   );
-};
 
-export default AdComponent;
+
+}
