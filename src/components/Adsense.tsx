@@ -7,7 +7,7 @@ interface AdComponentProps {
   adLayout?: string;
 }
 
-const AdComponent: React.FC<AdComponentProps> = ({adFormat = 'horizontal', adLayout = '' }) => {
+const AdComponent: React.FC<AdComponentProps> = ({adFormat = 'auto', adLayout = '' }) => {
   useEffect(() => {
     try {
       (window as any).adsbygoogle = (window as any).adsbygoogle || [];
@@ -24,6 +24,7 @@ const AdComponent: React.FC<AdComponentProps> = ({adFormat = 'horizontal', adLay
          data-ad-slot='2646193026'
          data-ad-format={adFormat}
          data-ad-layout={adLayout}
+         data-full-width-responsive="true"
          ></ins>
   );
 };
