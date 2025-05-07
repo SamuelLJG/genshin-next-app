@@ -1175,15 +1175,9 @@ select {
 
 
 
-.adbox::before {
-  content: 'Este site é suportado por anúncios.';
-  position: absolute;
-  width: 100%;
+.adbox {
+  margin: 0px auto;
   text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: calc(15px * var(--minimize))
 }
 
 .character-card img {
