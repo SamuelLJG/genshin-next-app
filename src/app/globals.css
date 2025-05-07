@@ -1177,8 +1177,23 @@ select {
 
 
 .adbox {
-  margin: 0px auto;
   text-align: center;
+  border-radius: 4px;
+  border: 1px solid var(--bd);
+  position: relative;
+  overflow: hidden;
+}
+
+.adbox::before {
+  content: 'Este site suporta Anúncios';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.adsbygoogle {
+  z-index: 3;
 }
 
 .character-card img {
