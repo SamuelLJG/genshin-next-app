@@ -20,8 +20,18 @@ export default function PoliticaPrivacidade() {
     <>
       <main id="main-index">
         <h1>Política de Privacidade</h1>
-        <script data-cfasync="false" src="//pl26588047.profitableratecpm.com/3b58e09bf81256052fff86378d01e7cd/invoke.js"></script>
-<div id="container-3b58e09bf81256052fff86378d01e7cd"></div>
+        <script type="text/javascript">
+        {`
+          atOptions = {
+            'key' : '84bf3c167863791e80a1c8306eddfee3',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        `}
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/84bf3c167863791e80a1c8306eddfee3/invoke.js"></script>
         <br />
         <p><strong>Última atualização:</strong> 03 de maio de 2025</p>
         <br />
