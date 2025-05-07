@@ -17,9 +17,6 @@ export const metadata: Metadata = {
     url: '/',
     type: 'website'
   },
-  icons: {
-    icon: '/favicon.ico', // caminho dentro de /public
-  },
   robots: {
     index: true,
     follow: true,
