@@ -1208,7 +1208,6 @@ select {
   grid-template-columns: repeat(7, 1fr);
   gap: 15px calc(45px * var(--minimize));
   margin-top: calc(10px * var(--minimize));
-  border-top: 1px solid var(--bd);
 }
 
 
