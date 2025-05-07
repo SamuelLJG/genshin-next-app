@@ -7,7 +7,7 @@ interface AdComponentProps {
   adLayout?: string;
 }
 
-const AdComponent: React.FC<AdComponentProps> = ({adFormat = 'horizontal' , adLayout = ''}) => {
+const AdComponent: React.FC<AdComponentProps> = ({adFormat = 'horizontal', adLayout = '' }) => {
   useEffect(() => {
     try {
       (window as any).adsbygoogle = (window as any).adsbygoogle || [];
@@ -18,15 +18,12 @@ const AdComponent: React.FC<AdComponentProps> = ({adFormat = 'horizontal' , adLa
   }, []);
 
   return (
-    <div className='adbox'>
     <ins className="adsbygoogle"
-         style={{display:'block'}}
+         style={{ display:'inline-block',width:'728px',height:'90px' }}
          data-ad-client="ca-pub-1999593447203691"
          data-ad-slot= '8942974229'
          data-ad-format={adFormat}
-         data-ad-layout={adLayout}
-         data-full-width-responsive="true"></ins>
-    </div>
+         data-ad-layout={adLayout}></ins>
   );
 };
 
