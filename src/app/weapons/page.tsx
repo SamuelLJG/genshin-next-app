@@ -6,6 +6,7 @@ import WeaponsFilter from "@/components/WeaponsFilter";
 import post from "@/data/newWeaponsData/symphonist-of-scents.json"
 import ptBr from "@/data/pt-br.json"
 import { Metadata } from "next";
+import AdComponent from "@/components/Adsense";
 
 export const metadata: Metadata = {
   title: "Lista de Armas | Genshin Impact",
@@ -38,7 +39,7 @@ export default async function Page() {
             <Image src="/images/sword-fill-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} alt={ptBr.weaponList} loading="eager" /> <h1 id="index-h1">Genshin Impact {ptBr.weaponList}</h1>
           </div>
             <WeaponsFilter ptBr={ptBr}/>
-            <br />
+            <AdComponent/>
               <div id="weapons-flex">
               <Link href={`weapons/${post.name3}`} className={`weapon-card ${post.weaponType} ${post.name} rarity-${post.rarity}-weapon`}>
                         <Image width={100} height={100} src={`https://api.hakush.in/gi/UI/${post.images.filename_icon}.webp`} alt={post.name} className={`star${post.rarity}`} loading="eager" priority/>

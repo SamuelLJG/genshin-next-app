@@ -4,6 +4,7 @@ import Link from "next/link";
 import TeamsFilter from "@/components/TeamSlider";
 import ptBr from "@/data/pt-br.json"
 import { Metadata } from "next";
+import AdComponent from "@/components/Adsense";
 
 export const metadata: Metadata = {
   title: "Melhores Times | Genshin Impact",
@@ -80,7 +81,7 @@ export default function Teams() {
             <Image src="/images/team-3-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} alt={ptBr.bestTeams} loading="eager" /> <h1 id="index-h1">Genshin Impact {ptBr.bestTeams}</h1>
           </div>
             <TeamsFilter ptBr={ptBr}/>
-            <br />
+            <AdComponent/>
             <ul id="teams-list">
             
             {characters.map((character: any, i: number) =>

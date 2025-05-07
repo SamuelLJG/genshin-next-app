@@ -3,6 +3,7 @@
 import Image from "next/image"
 import SliderHighlight from "./SliderHighlight";
 import Link from "next/link";
+import AdComponent from "./Adsense";
 
    // ou use um state p/ controlar o nível (de 1 a 5)
    function formatarNome(nome:string) {
@@ -60,7 +61,7 @@ export default function WeaponSlider ({ ptData, matchedCharacters, ptBr }: any) 
                 </section>
                 </>
                 }
-                
+                <AdComponent/>
                 {matchedCharacters != false ? 
                                  <section>
                                  <h2 className="titles-h2">{ptBr.recommendedCharacters}</h2>

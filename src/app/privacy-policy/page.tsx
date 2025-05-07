@@ -1,6 +1,5 @@
 
 import { Metadata } from "next";
-import AdComponent from "@/components/Adsense";
 
 export const metadata: Metadata = {
   title: "Política de Privacidade | genshinbuild.com",
@@ -19,7 +18,6 @@ export default function PoliticaPrivacidade() {
   return (
     <>
       <main id="main-index">
-        <AdComponent/>
         <h1>Política de Privacidade</h1>
         <br />
         <p><strong>Última atualização:</strong> 03 de maio de 2025</p>
@@ -51,7 +49,6 @@ export default function PoliticaPrivacidade() {
           <li>Exibir anúncios relevantes com base nos seus interesses;</li>
           <li>Medir o desempenho dos anúncios exibidos.</li>
         </ul>
-        <AdComponent/>
         <p >
           Você pode desativar os cookies nas configurações do seu navegador. Saiba mais em:{" "}
           <a
@@ -90,7 +87,6 @@ export default function PoliticaPrivacidade() {
           Esta política pode ser atualizada sem aviso prévio. Recomendamos revisá-la regularmente.
         </p>
         <br />
-        <AdComponent/>
         <p>
           genshinbuild.com não é afiliado, associado ou endossado pela miHoYo/HoYoverse. Todo o conteúdo é
           criado com o objetivo de ajudar a comunidade de jogadores de Genshin Impact.

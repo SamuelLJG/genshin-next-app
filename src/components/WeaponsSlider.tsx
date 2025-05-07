@@ -5,6 +5,7 @@ import Stars from "./Stars"
 import { useState } from "react";
 import SliderHighlight from "./SliderHighlight";
 import Link from "next/link";
+import AdComponent from "@/components/Adsense";
 
 function formatEffect(effectTemplateRaw: string, refinementLevel: number, ptData: any) {
     const refinementKey = `r${refinementLevel}`;
@@ -99,6 +100,7 @@ export default function WeaponSlider ({ ptData, matchedCharacters,folderData, id
                     <div id="wee-level"> <span> {ptBr.lvl}. {level2}</span><input type="range" min="1" max={dd2} defaultValue={level2} onChange={handleChange2} id="ascension-costs-slider" /></div>
                    
                 </section>
+                <AdComponent/>
                 {ptData.effectTemplateRaw != null ? <section>
                     <h2 className="titles-h2">{ptBr.refinement}</h2>
                     <div className="ascension-costs-flex">

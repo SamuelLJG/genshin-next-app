@@ -150,7 +150,7 @@ div::-webkit-scrollbar-thumb:active {
   height: 100%;
   width: calc(55px * var(--minimize));
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   padding-top: calc(20px * var(--minimize));
   border-right: calc(1px * var(--minimize)) solid var(--bd);
 }
@@ -1106,6 +1106,7 @@ select {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: calc(10px * var(--minimize)) ;
+  margin-top: calc(10px * var(--minimize)) ;
 }
 
 .character-card {
@@ -1191,8 +1192,7 @@ select {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 15px calc(45px * var(--minimize));
-  margin-top: 15px;
-  padding-top: 15px;
+  margin-top: calc(10px * var(--minimize));
   border-top: 1px solid var(--bd);
 }
 
@@ -1281,6 +1281,7 @@ align-items: stretch;
   border: 1px solid var(--bd);
   border-bottom: none;
   border-top: none;
+  margin-top: calc(15px * var(--minimize));
 }
 
 .tiers {
@@ -1443,7 +1444,8 @@ align-items: stretch;
 
 #filter-section, #filter-section2 {
   display: flex;
-  gap: calc(15px * var(--minimize))
+  gap: calc(15px * var(--minimize));
+  margin-bottom: calc(10px * var(--minimize));
 }
 button.button-active{
   background: #373941;
@@ -1739,6 +1741,7 @@ display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: calc(20px * var(--minimize));
 max-width: calc(1000px * var(--minimize));
+margin-top: calc(10px * var(--minimize));
 }
 .team-card {
 list-style: none;
@@ -2298,6 +2301,12 @@ overflow: hidden;
     grid-template-columns: repeat(7, 1fr);
     gap: 15px calc(20px * var(--minimize));
     
+
+  }
+  #main-index {
+    padding: 0;
+    margin-right: calc(20px * var(--minimize));
+    margin-left: calc(95px * var(--minimize));
   }
 }
 @media (min-width: 971px) {
@@ -2375,6 +2384,11 @@ overflow: hidden;
   }
  }
 @media (max-width: 970px) {
+  #main-index {
+    padding: 0;
+    margin-right: calc(20px * var(--minimize));
+    margin-left: calc(20px * var(--minimize));
+  }
   footer {
     margin-bottom: 100px;
   }
@@ -2410,11 +2424,12 @@ overflow: hidden;
   flex-direction: column;
   }
   #main-content {
-      padding: calc(0px * var(--minimize)) calc(20px * var(--minimize)) calc(0px * var(--minimize)) calc(20px * var(--minimize));
+     
 width: auto;
 max-width: none;
-margin: calc(0px * var(--minimize));
-margin-bottom: 80px;
+margin: calc(20px * var(--minimize));
+margin-top: 0px;
+margin-bottom: calc(80px * var(--minimize));
 transform: none;
   }
 

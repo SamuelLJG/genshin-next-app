@@ -5,6 +5,7 @@ import Image from "next/image";
 import ArtifactsFilter from "@/components/ArtifactsFilter";
 import ptBr from "@/data/pt-br.json"
 import { Metadata } from "next";
+import AdComponent from "@/components/Adsense";
 
 export const metadata: Metadata = {
   title: "Lista de Artefatos | Genshin Impact",
@@ -38,7 +39,7 @@ export default async function Page() {
             <Image src="/images/flower-with-heart-petals-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} loading="eager" alt={ptBr.artifactsList} /> <h1 id="index-h1">Genshin Impact {ptBr.artifactsList}</h1>
           </div>
           <ArtifactsFilter ptBr={ptBr}/>
-          <br />
+          <AdComponent/>
               <div id="weapons-flex">
                   {armasPT.map((post: any, i: number) => (
                     <Link href={`artifacts/${data[i].replace(/'/g, '').toLowerCase().replace(/ /g, '-')}`} key={i} className={`weapon-card ${post.name} rarity-${post.rarityList[post.rarityList.length - 1]}-weapon`}>

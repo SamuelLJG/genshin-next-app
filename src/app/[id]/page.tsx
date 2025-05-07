@@ -13,6 +13,7 @@ import weaponNew from "@/data/newWeaponsData/symphonist-of-scents.json"
 import AscensionSlider from "@/components/AscensionSlider";
 import { notFound } from 'next/navigation'
 import TalentsSlider from "@/components/TalentsSlider";
+import AdComponent from "@/components/Adsense";
 
 type Props = {
   params: Promise<{ id: string }>
@@ -527,6 +528,7 @@ switch (travelerName) {
                             </section>
                         </div>
                 </section>
+                <AdComponent/>
                 <section>
                     <h2 className="titles-h2">{travelerName}{" "}{ptBr.bestArtifacts}</h2>
                     <div id="artifacts-container">
@@ -679,7 +681,7 @@ switch (travelerName) {
 </ol>
 
                 </section>
-                
+                <AdComponent/>       
 <section id="ascension-costs-section">
   <h2 className="titles-h2">{travelerName}{" "}{ptBr.ascensionCosts}</h2>
   <AscensionSlider currentCosts={characterData.costs} ptBr={ptBr}/>

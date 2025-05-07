@@ -3,6 +3,7 @@ import { characters } from "@/data/characters";
 import Link from "next/link";
 import React from "react";
 import { Metadata } from "next";
+import AdComponent from "@/components/Adsense";
 
 export const metadata: Metadata = {
   title: "Tier List 5.5 | Genshin Impact ",
@@ -47,6 +48,7 @@ export default function Teams() {
           Genshin Impact <span className="nowrap"> Tier-List 5.5</span>
         </h1>
       </div>
+      <AdComponent/>
       <ul id="tier-list-flex">
         {ranks.map((rank) => {
           const chars = characters.filter(

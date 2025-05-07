@@ -3,6 +3,7 @@ import {characters} from "@/data/characters"
 import Link from "next/link";
 import Filter from "@/components/full-filter";
 import ptBr from "@/data/pt-br.json"
+import AdComponent from "@/components/Adsense";
 
 export default function Home() {
     function formatarNome(nome:string) {
@@ -92,7 +93,7 @@ export default function Home() {
             <Image src="/images/list-paper-school-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} alt={ptBr.charactersList} loading="eager" /> <h1 id="index-h1">Genshin Impact {ptBr.charactersList}</h1>
           </div>
             <Filter ptBr={ptBr}/>
-           
+           <AdComponent/>
             <div id="main-characters-flex">
             {characters.map((char:any,i:any)=> (
                 <Link href={`/${char.name}`} key={i} className={`character-card ${char.elementType} ${char.name.replace(/-/g, '').replace(/traveler/gi, "viajante")} ${char.weapon} rarity-${char.rarity}`}>
