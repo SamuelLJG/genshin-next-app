@@ -7,7 +7,7 @@ interface AdComponentProps {
   adLayout?: string;
 }
 
-const AdComponent: React.FC<AdComponentProps> = ({adFormat = 'horizontal', adLayout = '' }) => {
+const AdComponent: React.FC<AdComponentProps> = ({adFormat = 'auto', adLayout = '' }) => {
   useEffect(() => {
     try {
       (window as any).adsbygoogle = (window as any).adsbygoogle || [];
