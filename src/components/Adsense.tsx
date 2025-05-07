@@ -1,9 +1,13 @@
 'use client'
 
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
-export default function AdComponent(){
+interface AdComponentProps {
+  adFormat?: string;
+  adLayout?: string;
+}
 
+const AdComponent: React.FC<AdComponentProps> = ({adFormat = 'auto', adLayout = '' }) => {
   useEffect(() => {
     try {
       (window as any).adsbygoogle = (window as any).adsbygoogle || [];
@@ -18,8 +22,11 @@ export default function AdComponent(){
          style={{display:'inline-block',width:'728px',height:'90px'}}
          data-ad-client="ca-pub-1999593447203691"
          data-ad-slot='4805769734'
+         data-ad-format={adFormat}
+         data-ad-layout={adLayout}
+         data-full-width-responsive="true"
          ></ins>
   );
+};
 
-
-}
+export default AdComponent;
