@@ -18,7 +18,7 @@ const AdComponent: React.FC<AdComponentProps> = ({adFormat = 'auto', adLayout = 
   }, []);
 
   return (
-    <div style={{textAlign: 'center', margin: '0px auto'}}>
+    <div style={{textAlign: 'center', margin: '0px auto', padding: '0px 20px'}}>
     <ins className="adsbygoogle"
          style={{display:'block'}}
          data-ad-client="ca-pub-1999593447203691"
