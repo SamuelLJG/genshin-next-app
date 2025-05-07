@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import Nav from '@/components/nav';
 import Footer from '@/components/footer';
 import { GoogleAnalytics } from '@next/third-parties/google'
-import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: "Genshin Build | Melhores Builds de Personagens Genshin Impact",
@@ -49,11 +48,11 @@ export default async function RootLayout({ children }: {children: React.ReactNod
   return (
     <html lang="pt-br">
       <GoogleAnalytics gaId="G-ZMW5Q2STCE" />
-      <Script
+      <script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1999593447203691"
             crossOrigin="anonymous"
-          ></Script>
+          ></script>
       <body>
         <Nav/>
         {children}
