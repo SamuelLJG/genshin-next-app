@@ -1,38 +1,39 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { usePathname } from 'next/navigation';
+// components/AdsenseAd.js
+import { useEffect, useRef } from "react";
 
-export default function Adsense() {
-  const pathname = usePathname();
-  const adRef = useRef<HTMLDivElement>(null);
+export default function AdsenseAd() {
+  const adRef = useRef(null);
 
   useEffect(() => {
-    const adBox = adRef.current?.querySelector('ins.adsbygoogle') as HTMLElement | null;
-
-    if (!adBox) return;
-
-    // Evita push duplo
-    const isProcessed = adBox.getAttribute('data-adsbygoogle-status') === 'done';
-    if (!isProcessed) {
+    const attemptAdLoad = () => {
       try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        if (window.adsbygoogle && adRef.current) {
+          window.adsbygoogle.push({});
+        }
       } catch (e) {
-        console.error('Adsense error:', e); 
+        console.error("Erro ao tentar carregar o anúncio:", e);
       }
-    }
-  }, [pathname]);
+    };
+
+    // Aguarda um pequeno tempo para garantir que o <ins> esteja no DOM
+    const timeout = setTimeout(attemptAdLoad, 100); // pode ajustar para 200ms se necessário
+
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
-    <div className='adbox' ref={adRef}>
+    <div className="adbox">
       <ins
+        ref={adRef}
         className="adsbygoogle"
-        style={{ display: 'block' }}
+        style={{ display: "block" }}
         data-ad-client="ca-pub-1999593447203691"
         data-ad-slot="5225041946"
         data-ad-format="auto"
         data-full-width-responsive="true"
       ></ins>
-    </div>
+      </div>
   );
 }
