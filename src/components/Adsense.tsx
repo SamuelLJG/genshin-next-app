@@ -1,34 +1,38 @@
-'use client'
+'use client';
 
-import React, { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 
-interface AdComponentProps {
-  adFormat?: string;
-  adLayout?: string;
-}
+export default function Adsense() {
+  const pathname = usePathname();
+  const adRef = useRef<HTMLDivElement>(null);
 
-const AdComponent: React.FC<AdComponentProps> = ({adFormat = 'auto', adLayout = '' }) => {
   useEffect(() => {
-    try {
-      (window as any).adsbygoogle = (window as any).adsbygoogle || [];
-      (window as any).adsbygoogle.push({});
-    } catch (e) {
-      console.error('Error loading ads:', e);
+    const adBox = adRef.current?.querySelector('ins.adsbygoogle') as HTMLElement | null;
+
+    if (!adBox) return;
+
+    // Evita push duplo
+    const isProcessed = adBox.getAttribute('data-adsbygoogle-status') === 'done';
+    if (!isProcessed) {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {
+        console.error('Adsense error:', e);
+      }
     }
-  }, []);
+  }, [pathname]);
 
   return (
-    <div className='adbox'>
-    <ins className="adsbygoogle"
-         style={{display:'block', margin: '0px auto'}}
-         data-ad-client="ca-pub-1999593447203691"
-         data-ad-slot='5225041946'
-         data-ad-format={adFormat}
-         data-ad-layout={adLayout}
-         data-full-width-responsive="true"
-         ></ins>
+    <div className='adbox' ref={adRef}>
+      <ins
+        className="adsbygoogle"
+        style={{ display: 'block' }}
+        data-ad-client="ca-pub-1999593447203691"
+        data-ad-slot="5225041946"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
     </div>
   );
-};
-
-export default AdComponent;
+}
