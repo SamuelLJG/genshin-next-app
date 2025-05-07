@@ -20,7 +20,7 @@ export default function Footer() {
                             <span>Discord</span>
         
                         </Link>
-            <Link href="/privacy-policy" target="_blank" className="discord">
+            <Link href="/privacy-policy" className="discord">
                             <div>
                             <Image width={22} height={22} loading="eager" src="/images/policy-round-svgrepo-com.svg" alt="Política de Privacidade"/>
                             </div>    
