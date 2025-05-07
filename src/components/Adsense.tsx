@@ -1,30 +1,26 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function Adsense() {
-  const pathname = usePathname();
-  const adRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const adBox = adRef.current?.querySelector('ins.adsbygoogle') as HTMLElement | null;
-
-    if (!adBox) return;
-
-    // Evita push duplo
-    const isProcessed = adBox.getAttribute('data-adsbygoogle-status') === 'done';
-    if (!isProcessed) {
-      try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (e) {
-        console.error('Adsense error:', e);
+    const initializeAds = () => {
+      if (typeof window !== "undefined" && (window as any).adsbygoogle) {
+        try {
+          ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
+        } catch (error: any) {
+          console.log(error.message);
+        }
       }
-    }
-  }, [pathname]);
+    };
+
+    initializeAds();
+
+  }, []);
 
   return (
-    <div className='adbox' ref={adRef}>
+    <div className='adbox'>
       <ins
         className="adsbygoogle"
         style={{ display: 'block' }}

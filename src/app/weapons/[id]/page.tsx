@@ -22,7 +22,7 @@ export async function generateMetadata(
  
   if(id != 'symphonist-of-scents') {
   // fetch data
-  const product = await fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${id.replace(/-/g, ' ')}&resultLanguage=portuguese`).then((res) => res.json())
+  const product = await fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${id.replace(/-/g, '')}&resultLanguage=portuguese`).then((res) => res.json())
  
   // optionally access and extend (rather than replace) parent meta
  
