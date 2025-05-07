@@ -1,6 +1,5 @@
 
 import { Metadata } from "next";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Política de Privacidade | genshinbuild.com",
@@ -20,18 +19,6 @@ export default function PoliticaPrivacidade() {
     <>
       <main id="main-index">
         <h1>Política de Privacidade</h1>
-        <script type="text/javascript">
-        {`
-          atOptions = {
-            'key' : '84bf3c167863791e80a1c8306eddfee3',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-          };
-        `}
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/84bf3c167863791e80a1c8306eddfee3/invoke.js"></script>
         <br />
         <p><strong>Última atualização:</strong> 03 de maio de 2025</p>
         <br />
