@@ -20,7 +20,7 @@ const AdComponent: React.FC<AdComponentProps> = ({adFormat = 'auto', adLayout = 
   return (
     <div style={{textAlign: 'center', margin: '0px auto', padding: '0px 20px'}}>
     <ins className="adsbygoogle"
-         style={{display:'block'}}
+         style={{display:'block', width: 'calc(100% - 20px)'}}
          data-ad-client="ca-pub-1999593447203691"
          data-ad-slot='5225041946'
          data-ad-format={adFormat}
