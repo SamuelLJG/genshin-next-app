@@ -18,14 +18,16 @@ const AdComponent: React.FC<AdComponentProps> = ({adFormat = 'auto', adLayout = 
   }, []);
 
   return (
+    <div style={{textAlign: 'center', margin: '0px auto'}}>
     <ins className="adsbygoogle"
-         style={{display:'inline-block',width:'728px',height:'90px'}}
+         style={{display:'block'}}
          data-ad-client="ca-pub-1999593447203691"
-         data-ad-slot='4805769734'
+         data-ad-slot='5225041946'
          data-ad-format={adFormat}
          data-ad-layout={adLayout}
          data-full-width-responsive="true"
          ></ins>
+    </div>
   );
 };
 
