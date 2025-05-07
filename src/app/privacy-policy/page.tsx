@@ -51,6 +51,7 @@ export default function PoliticaPrivacidade() {
           <li>Exibir anúncios relevantes com base nos seus interesses;</li>
           <li>Medir o desempenho dos anúncios exibidos.</li>
         </ul>
+        <AdComponent/>
         <p >
           Você pode desativar os cookies nas configurações do seu navegador. Saiba mais em:{" "}
           <a
@@ -89,6 +90,7 @@ export default function PoliticaPrivacidade() {
           Esta política pode ser atualizada sem aviso prévio. Recomendamos revisá-la regularmente.
         </p>
         <br />
+        <AdComponent/>
         <p>
           genshinbuild.com não é afiliado, associado ou endossado pela miHoYo/HoYoverse. Todo o conteúdo é
           criado com o objetivo de ajudar a comunidade de jogadores de Genshin Impact.
