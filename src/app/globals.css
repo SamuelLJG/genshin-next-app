@@ -1172,24 +1172,7 @@ select {
   left: 0;
 }
 
-.adbox {
-  background: var(--sub);
-  border-radius: 4px;
-  border: 1px solid var(--bd);
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 90px;
-  width: 100%;
-  height: auto;
-}
-.adsbygoogle {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 
 .adbox::before {
