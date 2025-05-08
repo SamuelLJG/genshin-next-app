@@ -6,6 +6,8 @@ import ptBr from "@/data/pt-br.json"
 import { Metadata } from "next";
 import AdComponent from "@/components/Adsense";
 
+export const runtime = "edge";
+
 export const metadata: Metadata = {
   title: "Melhores Times | Genshin Impact",
   description: "Descubra os melhores times com funções bem definidas para cada personagem em Genshin Impact!",

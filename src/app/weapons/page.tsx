@@ -8,6 +8,8 @@ import ptBr from "@/data/pt-br.json"
 import { Metadata } from "next";
 import AdComponent from "@/components/Adsense";
 
+export const runtime = "edge";
+
 export const metadata: Metadata = {
   title: "Lista de Armas | Genshin Impact",
   description: "Lista completa de armas de Genshin Impact separadas por tipo, raridade e nome. Veja todas as espadas, lanças, arcos e mais.",

@@ -7,6 +7,8 @@ import ptBr from "@/data/pt-br.json"
 import { Metadata } from "next";
 import AdComponent from "@/components/Adsense";
 
+export const runtime = "edge";
+
 export const metadata: Metadata = {
   title: "Lista de Artefatos | Genshin Impact",
   description: "Lista de todos os conjuntos de artefatos de Genshin Impact com nomes e raridade disponíveis.",

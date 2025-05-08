@@ -1,6 +1,8 @@
 
 import { Metadata } from "next";
 
+export const runtime = "edge";
+
 export const metadata: Metadata = {
   title: "Política de Privacidade | genshinbuild.com",
   description: "Entenda como coletamos, usamos e protegemos suas informações em nosso site. Leia nossa política de privacidade completa para garantir transparência e segurança dos seus dados.",

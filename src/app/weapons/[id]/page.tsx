@@ -6,6 +6,8 @@ import { notFound } from "next/navigation";
 import weaponStats from "@/data/newWeaponsFolder/symphonist-of-scents.json"
 import weaponNew from "@/data/newWeaponsData/symphonist-of-scents.json"
 
+export const runtime = "edge";
+
 import type { Metadata, ResolvingMetadata } from 'next'
  
 type Props = {
