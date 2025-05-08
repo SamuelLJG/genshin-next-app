@@ -18,9 +18,8 @@ export async function generateMetadata(
   // read route params
   let { id } = await params
  
-  if(id != 'symphonist-of-scents') {
-  // fetch data
-  const product = await fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${id.replace(/-/g, '')}&resultLanguage=portuguese`).then((res) => res.json())
+
+  const product = await fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${id.replace(/-/g, '')}&resultLanguage=portuguese`, { cache: 'default' }).then((res) => res.json())
  
   // optionally access and extend (rather than replace) parent meta
  
@@ -35,19 +34,6 @@ export async function generateMetadata(
     alternates: {
       canonical: `/weapons/${id}`
     }
-  }} else {
-    return {
-      title: 'Sinfonista de Aromas | Genshin Impact Armas',
-      description: 'Uma lança elegante, dizem que foi a batuta de um maestro, empunhada por um grande músico para ser a ponte entre a música e o bom gosto.',
-      openGraph: {
-        images: 'https://api.hakush.in/gi/UI/UI_EquipIcon_Pole_Trident.webp',
-        url: `/weapons/symphonist-of-scents`,
-        type: 'website'
-      },
-      alternates: {
-        canonical: `/weapons/symphonist-of-scents`
-      }
-    }
   }
 }
 
@@ -56,7 +42,7 @@ export default async function Page({ params }: Props) {
     let { id } = await params;
     
 
-const validIds = await fetch('https://genshin-db-api.vercel.app/api/v5/weapons?query=names&matchCategories=true')
+const validIds = await fetch('https://genshin-db-api.vercel.app/api/v5/weapons?query=names&matchCategories=true', { cache: 'default' })
   .then(res => res.json());
 
   let idList, idNormalizado;
@@ -82,7 +68,7 @@ let ptData, enData, folderData, weapon;
   
   [ptData, enData, folderData] = await Promise.all(
     urls.map(endpoint =>
-      fetch(`https://genshin-db-api.vercel.app/api/v5/${endpoint}`).then(res => res.json())
+      fetch(`https://genshin-db-api.vercel.app/api/v5/${endpoint}`, { cache: 'default' }).then(res => res.json())
     )
   );
   if (id != 'the-catch') {

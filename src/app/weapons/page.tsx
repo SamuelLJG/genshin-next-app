@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const response = await fetch('https://genshin-db-api.vercel.app/api/v5/weapons?query=names&matchCategories=true');
+  const response = await fetch('https://genshin-db-api.vercel.app/api/v5/weapons?query=names&matchCategories=true', { cache: 'default' });
   const data = await response.json();
   const responsesPTWeapons = await Promise.all(
     data.map((nome:any) => {
