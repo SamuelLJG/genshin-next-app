@@ -7,10 +7,6 @@ import { notFound } from "next/navigation";
 import ptBr from "@/data/pt-br.json"
 import type { Metadata, ResolvingMetadata } from 'next'
 
-
-export const runtime = "edge";
-
-
 type Props = {
   params: Promise<{ id: string }>
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>

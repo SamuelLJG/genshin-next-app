@@ -5,8 +5,6 @@ import React from "react";
 import { Metadata } from "next";
 import AdComponent from "@/components/Adsense";
 
-export const runtime = "edge";
-
 export const metadata: Metadata = {
   title: "Tier List 5.5 | Genshin Impact ",
   description: "Confira a tier list atualizada de Genshin Impact com os melhores personagens. Veja quem está no topo do meta em 2025!",

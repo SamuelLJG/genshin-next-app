@@ -15,8 +15,6 @@ import { notFound } from 'next/navigation'
 import TalentsSlider from "@/components/TalentsSlider";
 import AdComponent from "@/components/Adsense";
 
-export const runtime = "edge";
-
 type Props = {
   params: Promise<{ id: string }>
 }
