@@ -5,6 +5,8 @@ import Filter from "@/components/full-filter";
 import ptBr from "@/data/pt-br.json"
 import AdComponent from "@/components/Adsense";
 
+export const runtime = "edge";
+
 export default function Home() {
     function formatarNome(nome:string) {
         return nome
