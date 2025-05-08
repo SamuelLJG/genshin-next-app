@@ -42,7 +42,7 @@ export default function WeaponSlider ({ ptData, matchedCharacters, ptBr }: any) 
                 {artifacts.map((c:any,i:any) => (
                           
                           ptData.images[`filename_${c}`] != null ?
-                            <Image width={140} height={140} key={i} src={`https://enka.network/ui/${ptData.images[`filename_${c}`]}.png`} alt={ptData.name} loading="eager" priority />
+                            <Image width={140} height={140} key={i} src={`https://enka.network/ui/${ptData.images[`filename_${c}`]}.png`} alt={ptData[c].name} loading="eager" priority />
                         
                         :''
                       )) }

@@ -3,8 +3,6 @@ import ptBr from "@/data/pt-br.json"
 import WeaponSlider from "@/components/WeaponsSlider";
 import ScriptsClient from "@/components/scripts-client";
 import { notFound } from "next/navigation";
-import weaponStats from "@/data/newWeaponsFolder/symphonist-of-scents.json"
-import weaponNew from "@/data/newWeaponsData/symphonist-of-scents.json"
 
 import type { Metadata, ResolvingMetadata } from 'next'
  
@@ -74,7 +72,7 @@ idNormalizado = id.replace(/-/g, '');
 let ptData, enData, folderData, weapon;
 
 
-if(id != weaponNew.name2.replace(/'/g, '').toLowerCase().replace(/ /g, '-')) {
+
   if (!idList.includes(id)) return notFound();
   const urls = [
     `weapons?query=${idNormalizado}&resultLanguage=portuguese`,
@@ -93,13 +91,7 @@ if(id != weaponNew.name2.replace(/'/g, '').toLowerCase().replace(/ /g, '-')) {
   else {
     weapon = 'The Catch'
   }
-} else {
-  
-  ptData = weaponNew
-  enData =  weaponNew
-  folderData = weaponStats
-  weapon = enData.name2.replace(/'/g, "")
-}
+
        
       
       const matchedCharacters = characters.filter((char) => 

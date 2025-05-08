@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import WeaponsFilter from "@/components/WeaponsFilter";
-import post from "@/data/newWeaponsData/symphonist-of-scents.json"
 import ptBr from "@/data/pt-br.json"
 import { Metadata } from "next";
 import AdComponent from "@/components/Adsense";
@@ -28,7 +27,7 @@ export default async function Page() {
   const responsesPTWeapons = await Promise.all(
     data.map((nome:any) => {
       const nomeLimpo = encodeURIComponent(nome.trim());
-      return fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${nomeLimpo}&resultLanguage=portuguese`, { cache: 'force-cache' });
+      return fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${nomeLimpo}&resultLanguage=portuguese`, { cache: 'no-store' });
     })
   );
   const armasPT = await Promise.all(responsesPTWeapons.map(res => res.json()));
@@ -41,12 +40,7 @@ export default async function Page() {
             <WeaponsFilter ptBr={ptBr}/>
             <AdComponent/>
               <div id="weapons-flex">
-              <Link href={`weapons/${post.name3}`} className={`weapon-card ${post.weaponType} ${post.name} rarity-${post.rarity}-weapon`}>
-                        <Image width={100} height={100} src={`https://api.hakush.in/gi/UI/${post.images.filename_icon}.webp`} alt={post.name} className={`star${post.rarity}`} loading="eager" priority/>
-                        <div>
-                        <p>{post.name}</p>
-                        <p>{post.mainStatText}</p></div>
-                        </Link>
+             
                         
                   {armasPT.map((post: any, i: number) => (
                     data[i].replace(/'/g, '').toLowerCase().replace(/ /g, '-') != 'prized-isshin-blade' ? 

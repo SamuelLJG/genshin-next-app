@@ -8,8 +8,6 @@ import ptBr from '@/data/pt-br.json'
 import Link from "next/link";
 import ScriptsClient from "@/components/scripts-client";
 import type { Metadata } from "next";
-import weaponStats from "@/data/newWeaponsFolder/symphonist-of-scents.json"
-import weaponNew from "@/data/newWeaponsData/symphonist-of-scents.json"
 import AscensionSlider from "@/components/AscensionSlider";
 import { notFound } from 'next/navigation'
 import TalentsSlider from "@/components/TalentsSlider";
@@ -30,6 +28,13 @@ export const generateMetadata = async ({
   params,
 }: Props): Promise<Metadata> => {
   const id = (await params).id;
+  const characterBuild:any = characters.find(p => p.name === id);
+  if (!characterBuild) {
+     return {
+    title: `404 - Not Found`,
+  }
+  }
+  else {
   return {
     title: `${formatarUrl(id)} Build | Guia com Melhores Armas, Artefatos e Times`,
     description: `Descubra as melhores builds e times para ${formatarUrl(id)} em Genshin Impact! Confira também suas armas, artefatos, habilidades e muito mais!`,
@@ -52,6 +57,7 @@ export const generateMetadata = async ({
       }
     }
   }
+  }
 }
 
 
@@ -63,7 +69,6 @@ export default async function Home( { params }:any ) {
     let { id } = await params;
     const characterBuild:any = characters.find(p => p.name === id);
     if (!characterBuild) return notFound()
-    let path;
     const schemaData = {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
@@ -91,20 +96,7 @@ export default async function Home( { params }:any ) {
       },
       "image": `https://genshinbuild.com/images/Banners/${formatarUrl(id)}_Card.png`
     }
-    if (id === 'escoffier') {
-      path = 'escoffier';
-    } else {
-      path = 'ifa';
-    }
-    
-    const jsonModule1 = await import(`@/data/newCharactersData/${path}.json`);
-    const jsonData1 = jsonModule1.default;
-    const jsonModule2 = await import(`@/data/newCharactersFolder/${path}.json`);
-    const jsonData2 = jsonModule2.default;
-    const jsonModule3 = await import(`@/data/newCharactersTalents/${path}.json`);
-    const jsonData3 = jsonModule3.default;
-    const jsonModule4 = await import(`@/data/newCharactersConstellations/${path}.json`);
-    const jsonData4 = jsonModule4.default;
+  
 
    const apiUrl = 'https://genshin-db-api.vercel.app/api/v5/';
 const baseURLWeapon = `${apiUrl}weapons?query=`;
@@ -122,12 +114,10 @@ const nomesDosArtefatos = [
 ];
 
 async function getArmasEArtefatos() {
-  const armasPT = id !== 'escoffier'
-    ? await Promise.all([
-        fetchWeaponData(characterBuild.bestWeapon),
-        ...characterBuild.otherWeapons.map(fetchWeaponData)
-      ])
-    : [weaponNew, ...await Promise.all(characterBuild.otherWeapons.map(fetchWeaponData))];
+  const armasPT = [
+  await fetchWeaponData(characterBuild.bestWeapon),
+  ...await Promise.all(characterBuild.otherWeapons.map(fetchWeaponData))
+];
 
   const artefatosPT = await Promise.all(nomesDosArtefatos.map(fetchArtifactData));
 
@@ -179,29 +169,6 @@ switch (id) {
       id2.toLowerCase().trim().replace(/\s+/g, '-') 
       
       async function getData() {
-        if (id === 'escoffier') {
-          return {
-            characterWeapons: weaponStats,
-            characterData: jsonData1,
-            characterFolder: jsonData2,
-            characterTalents: jsonData3,
-            characterConstellations: jsonData4
-          };
-        } else if (id === 'ifa') {
-          const weaponResponse = await fetch(
-            `${apiUrl}stats?folder=weapons&query=${characterBuild.bestWeapon}`,
-            { cache: 'force-cache' }
-          );
-          const weaponData = await weaponResponse.json();
-          return {
-            
-            characterWeapons: weaponData,
-            characterData: jsonData1,
-            characterFolder: jsonData2,
-            characterTalents: jsonData3,
-            characterConstellations: jsonData4
-          };
-        } else {
           const urls = [
             `${apiUrl}characters?query=${id2}&resultLanguage=portuguese`,
             `${apiUrl}stats?folder=characters&query=${id2}`,
@@ -209,7 +176,7 @@ switch (id) {
             `${apiUrl}talents?query=${id3}&resultLanguage=portuguese`,
             `${apiUrl}constellations?query=${id3}&resultLanguage=portuguese`
           ];
-          const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'force-cache' })));
+          const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'no-store' })));
           const data = await Promise.all(responses.map(res => res.json()));
           return {
             characterData: data[0],
@@ -218,7 +185,7 @@ switch (id) {
             characterTalents: data[3],
             characterConstellations: data[4]
           };
-        }
+        
       }
       
       let { characterWeapons, characterData, characterFolder, characterTalents, characterConstellations } = await getData();
@@ -452,12 +419,12 @@ switch (travelerName) {
                             <p>{characterData.costs.ascend1[1].name}</p>
                         </li>
                         <li className="ascension-materials-items">
-                            <Image width={40} height={40} src={id === path ? `https://api.hakush.in/gi/UI/UI_ItemIcon_${characterData.costs.ascend1[2].id}.webp` : `https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend1[2].id}.png`}
+                            <Image width={40} height={40} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend1[2].id}.png`}
                             alt={characterData.costs.ascend1[2].name}/>
                             <p>{characterData.costs.ascend1[2].name}</p>
                         </li>
                         <li className={id2=== 'aether' ? 'none' : 'ascension-materials-items'}>
-                            <Image width={40} height={40} src={id === path ? `https://api.hakush.in/gi/UI/UI_ItemIcon_${characterData.costs.ascend5[2].id}.webp` : `https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend5[2].id}.png`}
+                            <Image width={40} height={40} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterData.costs.ascend5[2].id}.png`}
                             alt={characterData.costs.ascend5[2].name}/>
                             <p>{characterData.costs.ascend5[2].name}</p>
                         </li>
@@ -472,7 +439,7 @@ switch (travelerName) {
                             <p>{characterTalents.costs.lvl2[1].name}</p>
                         </li>
                         <li className="ascension-materials-items">
-                            <Image width={40} height={40} src={id === path ? `https://api.hakush.in/gi/UI/UI_ItemIcon_${characterTalents.costs.lvl7[3].id}.webp` : `https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterTalents.costs.lvl7[3].id}.png`}
+                            <Image width={40} height={40} src={`https://gi.yatta.moe/assets/UI/UI_ItemIcon_${characterTalents.costs.lvl7[3].id}.png`}
                             alt={characterTalents.costs.lvl7[3].name}/>
                             <p>{characterTalents.costs.lvl7[3].name}</p>
                         </li>
@@ -486,7 +453,7 @@ switch (travelerName) {
                                   <Link href={`/weapons/${characterBuild.bestWeapon.toLowerCase().trim().replace(/\s+/g, '-')}`}>
                                     <Image
                                         className={`star${armasPT[0].rarity}`}
-                                        src={id === path ? `https://api.hakush.in/gi/UI/${armasPT[0].images.filename_icon}.webp` : `https://gi.yatta.moe/assets/UI/${armasPT[0].images.filename_icon}.png`}
+                                        src={`https://gi.yatta.moe/assets/UI/${armasPT[0].images.filename_icon}.png`}
                                         width={160}
                                         height={160}
                                         alt={armasPT[0].name}
