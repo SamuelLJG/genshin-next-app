@@ -378,6 +378,7 @@ switch (travelerName) {
         height={315}
         loading="eager"
         priority={true}
+        fetchPriority="high"
       />
       <Image
         id="character-image"
@@ -388,6 +389,7 @@ switch (travelerName) {
         height={256}
         loading="eager"
         priority={true}
+        fetchPriority="high"
       />
       
                     <div id="character-main">
