@@ -2083,7 +2083,7 @@ export const characters = [
         name: 'sigewinne',
         function: 'support',
         bestWeapon: 'Silvershower Heartstrings',
-        otherWeapons: ['Elegy For The End','Recurve Bow','Favonius Warbow'],
+        otherWeapons: ['Sequence of Solitude','Recurve Bow','Favonius Warbow'],
         bestArtifacts: 'Ocean-Hued Clam',
         otherArtifacts: ['Song of Days Past', 'Tenacity of the Millelith'],
         teams: [[
