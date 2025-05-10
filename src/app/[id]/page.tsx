@@ -36,7 +36,7 @@ export const generateMetadata = async ({
   }
   else {
   return {
-    title: `${formatarUrl(id)} Build | Guia com Melhores Armas, Artefatos e Times`,
+    title: `${formatarUrl(id)} Build | Guide to the Best Weapons, Artifacts, and Teams`,
     description: `Descubra as melhores builds e times para ${formatarUrl(id)} em Genshin Impact! Confira também suas armas, artefatos, habilidades e muito mais!`,
     alternates: {
       canonical: id,

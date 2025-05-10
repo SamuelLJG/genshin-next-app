@@ -36,7 +36,7 @@ export const generateMetadata = async ({
   }
   else {
   return {
-    title: `${formatarUrl(id)} Build Guide | Best Weapons, Artifacts & Teams`,
+    title: `${formatarUrl(id)} Build | Guide Best Weapons, Artifacts & Teams`,
     description: `Discover the best builds and teams for ${formatarUrl(id)} in Genshin Impact! Check out their weapons, artifacts, skills, and much more!`,
     alternates: {
       canonical: `/en/${id}`,
