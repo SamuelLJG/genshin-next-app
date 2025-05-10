@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   }
 };
 
-export default function Teams({params:{locale}}:any) {
+export default function Teams() {
   
   state.locale = "en";
     function formatarNome(nome:string) {

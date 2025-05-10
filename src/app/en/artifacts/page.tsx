@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   }
 };
 
-export default async function Page({params:{locale}}:any) {
-    state.locale = locale;
+export default async function Page() {
+    state.locale = "en";
   const response = await fetch('https://genshin-db-api.vercel.app/api/v5/artifacts?query=names&matchCategories=true');
   const data = await response.json();
   const responsesPTWeapons = await Promise.all(

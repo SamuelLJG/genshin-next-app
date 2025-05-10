@@ -12,7 +12,6 @@ import AscensionSlider from "@/components/AscensionSlider";
 import { notFound } from 'next/navigation'
 import TalentsSlider from "@/components/TalentsSlider";
 import AdComponent from "@/components/Adsense";
-import { state } from "@/components/config";
 
 type Props = {
   params: Promise<{ id: string }>
@@ -71,7 +70,6 @@ export const generateMetadata = async ({
 export default async function Home( { params }:any ) {
   
   
-state.locale = "pt-br";
     let { id } = await params;
     const characterBuild:any = characters.find(p => p.name === id);
     if (!characterBuild) return notFound()

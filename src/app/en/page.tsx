@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   }
 }
 
-export default function Home({params:{locale}}:any) {
+export default function Home() {
   state.locale = "en";
     function formatarNome(nome:string) {
         return nome

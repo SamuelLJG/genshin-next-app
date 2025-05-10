@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   }
 };
 
-export default function PoliticaPrivacidade({params:{locale}}:any) {
-    state.locale = locale;
+export default function PoliticaPrivacidade() {
+    state.locale = "en";
   return (
     <>
       <main id="main-index">

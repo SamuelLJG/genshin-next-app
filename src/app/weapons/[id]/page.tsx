@@ -3,7 +3,6 @@ import ptBr from "@/data/pt-br.json"
 import WeaponSlider from "@/components/WeaponsSlider";
 import ScriptsClient from "@/components/scripts-client";
 import { notFound } from "next/navigation";
-import { state } from '@/components/config';
 
 import type { Metadata, ResolvingMetadata } from 'next'
  
@@ -46,7 +45,6 @@ export async function generateMetadata(
 
 export default async function Page({ params }: Props) {
     let { id } = await params;
-    state.locale = "pt-br";
 
 const validIds = await fetch('https://genshin-db-api.vercel.app/api/v5/weapons?query=names&matchCategories=true', { cache: 'default' })
   .then(res => res.json());

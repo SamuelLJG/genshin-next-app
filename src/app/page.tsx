@@ -27,7 +27,6 @@ export const metadata: Metadata = {
 
 
 export default function Home() {
-  state.locale = "pt-br"
     function formatarNome(nome:string) {
         return nome
           .split('-')
