@@ -51,7 +51,7 @@ const lang = await new Promise<string>((resolve) => {
             crossOrigin="anonymous"
           ></Script>
       <body>
-        <Nav/>
+        <Nav lang1={lang}/>
         {children}
         <Footer/>
       </body>

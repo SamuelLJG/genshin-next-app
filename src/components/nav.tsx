@@ -1,14 +1,12 @@
 import Link from "next/link"
 import Image from "next/image"
-import { state } from "./config"
 
 
 
-
-
-export default function Nav() {
+export default async function Nav({lang1}:any) {
+   
     return (
-        state.locale != "pt-br" ?
+        lang1 != "pt-br" ?
         <nav id="header-nav">
             
                 <h2>Main Navigation Menu</h2>
