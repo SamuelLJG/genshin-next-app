@@ -58,12 +58,12 @@ export const generateMetadata = async ({
 
 
 
-export default async function Home( { params }:any, {pp: locale}:any ) {
+export default async function Home( { params }:any ) {
   
   
 
     let { id } = await params;
-    state.locale = locale;
+    state.locale = "en";
     const characterBuild:any = characters.find(p => p.name === id);
     if (!characterBuild) return notFound()
     const schemaData = {
