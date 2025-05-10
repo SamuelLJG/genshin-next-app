@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 }
 
 export default function Home({params:{locale}}:any) {
-  state.locale = "en";
+  state.locale = locale;
     function formatarNome(nome:string) {
         return nome
           .split('-')

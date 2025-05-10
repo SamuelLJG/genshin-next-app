@@ -5,6 +5,7 @@ import Filter from "@/components/full-filter";
 import ptBr from "@/data/pt-br.json"
 import AdComponent from "@/components/Adsense";
 import { Metadata } from "next";
+import { state } from "@/components/config";
 
 export const metadata: Metadata = {
   title: "Genshin Build | Melhores Builds de Personagens Genshin Impact",
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
 
 
 export default function Home() {
+  state.locale = "pt-br"
     function formatarNome(nome:string) {
         return nome
           .split('-')
