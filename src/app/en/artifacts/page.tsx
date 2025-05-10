@@ -6,7 +6,6 @@ import ArtifactsFilter from "@/components/ArtifactsFilter";
 import ptBr from "@/data/en-us.json"
 import { Metadata } from "next";
 import AdComponent from "@/app/en/components/Adsense";
-import { state } from "@/components/config";
 
 export const metadata: Metadata = {
   title: "Artifacts List | Genshin Impact",
@@ -27,7 +26,6 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-    state.locale = "en";
   const response = await fetch('https://genshin-db-api.vercel.app/api/v5/artifacts?query=names&matchCategories=true');
   const data = await response.json();
   const responsesPTWeapons = await Promise.all(

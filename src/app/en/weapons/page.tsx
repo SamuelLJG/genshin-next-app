@@ -6,7 +6,6 @@ import WeaponsFilter from "@/components/WeaponsFilter";
 import ptBr from "@/data/en-us.json"
 import { Metadata } from "next";
 import AdComponent from "@/app/en/components/Adsense";
-import { state } from "@/components/config";
 
 export const metadata: Metadata = {
   title: "Weapons List | Genshin Impact",
@@ -27,8 +26,7 @@ export const metadata: Metadata = {
   }
 };
 
-export default async function Page({params:{locale}}:any) {
-    state.locale = locale;
+export default async function Page() {
   const response = await fetch('https://genshin-db-api.vercel.app/api/v5/weapons?query=names&matchCategories=true', { cache: 'default' });
   const data = await response.json();
   const responsesPTWeapons = await Promise.all(

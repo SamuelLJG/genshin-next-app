@@ -4,7 +4,6 @@ import Link from "next/link";
 import React from "react";
 import { Metadata } from "next";
 import AdComponent from "@/app/en/components/Adsense";
-import { state } from "@/components/config";
 
 export const metadata: Metadata = {
   title: "Tier List 5.5 | Genshin Impact ",
@@ -25,7 +24,6 @@ export const metadata: Metadata = {
 };
 
 export default function Teams() {
-    state.locale = "en";
   function formatarNome(nome: string) {
     return nome
       .split("-")

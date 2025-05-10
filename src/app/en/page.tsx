@@ -4,8 +4,9 @@ import Link from "next/link";
 import Filter from "@/components/full-filter";
 import ptBr from "@/data/en-us.json"
 import AdComponent from "./components/Adsense";
-import { state } from "@/components/config";
 import { Metadata } from "next";
+import { getLangResolve } from "../contexts";
+
 
 export const metadata: Metadata = {
   title: "Genshin Build | Top Character Builds for Genshin Impact",
@@ -29,8 +30,9 @@ export const metadata: Metadata = {
   }
 }
 
-export default function Home() {
-  state.locale = "en";
+export default async function Home() {
+   const  lang  = "en";
+  getLangResolve()(lang);
     function formatarNome(nome:string) {
         return nome
           .split('-')

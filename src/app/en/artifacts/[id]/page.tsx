@@ -6,7 +6,6 @@ import ScriptsClient from "@/components/scripts-client";
 import { notFound } from "next/navigation";
 import ptBr from "@/data/en-us.json"
 import type { Metadata, ResolvingMetadata } from 'next'
-import { state } from '@/components/config';
 
 type Props = {
   params: Promise<{ id: string }>
@@ -47,7 +46,6 @@ export async function generateMetadata(
 
 export default async function Page({params}:any) {
     let { id } = await params;
-    state.locale = "en";
     const idNormalizado = id.replace(/-/g, '');
 
     const validIds = await fetch('https://genshin-db-api.vercel.app/api/v5/artifacts?query=names&matchCategories=true', { cache: 'default' })

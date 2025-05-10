@@ -1,6 +1,5 @@
 
 import { Metadata } from "next";
-import { state } from "@/components/config";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | genshinbuild.com",
@@ -21,7 +20,6 @@ export const metadata: Metadata = {
 };
 
 export default function PoliticaPrivacidade() {
-    state.locale = "en";
   return (
     <>
       <main id="main-index">

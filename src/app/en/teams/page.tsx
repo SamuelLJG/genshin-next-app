@@ -5,7 +5,6 @@ import TeamsFilter from "@/components/TeamSlider";
 import ptBr from "@/data/en-us.json"
 import { Metadata } from "next";
 import AdComponent from "@/app/en/components/Adsense";
-import { state } from "@/components/config";
 
 export const metadata: Metadata = {
   title: "Best Teams | Genshin Impact",
@@ -26,8 +25,6 @@ export const metadata: Metadata = {
 };
 
 export default function Teams() {
-  
-  state.locale = "en";
     function formatarNome(nome:string) {
         return nome
           .split('-')

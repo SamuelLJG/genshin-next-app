@@ -6,6 +6,7 @@ import Footer from '@/components/footer';
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script';
 import { state } from "@/components/config";
+import { setLangResolve } from "./contexts";
 
 
 export const metadata: Metadata = {
@@ -37,9 +38,12 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 })
 
 export default async function RootLayout({ children }: {children: React.ReactNode;}) {
-
+const lang = await new Promise<string>((resolve) => {
+    setLangResolve(resolve);
+    setTimeout(() => resolve("pt-br"), 100); // fallback, just in case
+  });
   return (
-    <html lang={state.locale = "pt-br"}>
+    <html lang={lang}>
       <GoogleAnalytics gaId="G-ZMW5Q2STCE" />
       <Script
             async

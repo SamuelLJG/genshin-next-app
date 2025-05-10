@@ -12,7 +12,6 @@ import AscensionSlider from "@/components/AscensionSlider";
 import { notFound } from 'next/navigation'
 import TalentsSlider from "@/components/TalentsSlider";
 import AdComponent from "@/app/en/components/Adsense";
-import { state } from "@/components/config";
 
 type Props = {
   params: Promise<{ id: string }>
@@ -63,7 +62,6 @@ export default async function Home( { params }:any ) {
   
 
     let { id } = await params;
-    state.locale = "en";
     const characterBuild:any = characters.find(p => p.name === id);
     if (!characterBuild) return notFound()
     const schemaData = {
