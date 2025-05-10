@@ -16,7 +16,7 @@ export default function AdsenseAd() {
   }, []);
 
   return (
-    <div className="adbox ptdesc">
+    <div className="adbox endesc">
       <ins
         className="adsbygoogle"
         style={{ display: "block" }}

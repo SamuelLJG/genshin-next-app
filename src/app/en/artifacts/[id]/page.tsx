@@ -1,11 +1,12 @@
 
 
 import { characters } from '@/data/characters';
-import ArtifactsSlider from "@/components/ArtifactsSlider";
+import ArtifactsSlider from "@/app/en/components/ArtifactsSlider";
 import ScriptsClient from "@/components/scripts-client";
 import { notFound } from "next/navigation";
-import ptBr from "@/data/pt-br.json"
+import ptBr from "@/data/en-us.json"
 import type { Metadata, ResolvingMetadata } from 'next'
+import { state } from '@/components/config';
 
 type Props = {
   params: Promise<{ id: string }>
@@ -20,24 +21,24 @@ export async function generateMetadata(
   let { id } = await params
  
 
-  const product = await fetch(`https://genshin-db-api.vercel.app/api/v5/artifacts?query=${id.replace(/-/g, '')}&resultLanguage=portuguese`, { cache: 'default' }).then((res) => res.json())
+  const product = await fetch(`https://genshin-db-api.vercel.app/api/v5/artifacts?query=${id.replace(/-/g, '')}`, { cache: 'default' }).then((res) => res.json())
  
   // optionally access and extend (rather than replace) parent meta
  
   return {
-    title: `${product.name} | Genshin Impact Conjuntos de Artefatos`,
-    description: `Veja os detalhes completos do conjunto de artefatos ${product.name} de Genshin Impact, incluindo seus efeitos e os melhores personagens recomendados para aproveitá-lo ao máximo.`,
+    title: `${product.name} | Genshin Impact Artifacts Sets`,
+    description: `Check out the full details of the ${product.name} artifact set in Genshin Impact — including its effects and the best characters to get the most out of it.`,
     alternates: {
-      canonical: `/artifacts/${id}`,
-    languages: {
-      'en': `/en/artifacts/${id}`,
-      'pt-br': `/artifacts/${id}`,
-      'x-default': `/artifacts/${id}`
-    }
+      canonical: `/en/artifacts/${id}`,
+      languages: {
+        'en': `/en/artifacts/${id}`,
+        'pt-br': `/artifacts/${id}`,
+        'x-default': `/artifacts/${id}`
+      }
     },
     openGraph: {
       images: `https://enka.network/ui/${product.images.filename_flower}.png`,
-      url: `/artifacts/${id}`,
+      url: `/en/artifacts/${id}`,
       type: 'website'
     }
   }
@@ -46,6 +47,7 @@ export async function generateMetadata(
 
 export default async function Page({params}:any) {
     let { id } = await params;
+    state.locale = id;
     const idNormalizado = id.replace(/-/g, '');
 
     const validIds = await fetch('https://genshin-db-api.vercel.app/api/v5/artifacts?query=names&matchCategories=true', { cache: 'default' })
@@ -58,17 +60,16 @@ export default async function Page({params}:any) {
     if (!idList.includes(id)) return notFound();
     
     const urls = [
-      `artifacts?query=${idNormalizado}&resultLanguage=portuguese`,
-      `artifacts?query=${idNormalizado}`
+      `artifacts?query=${idNormalizado}`,
     ];
     
-    const [ptData, enData] = await Promise.all(
+    const [ptData] = await Promise.all(
       urls.map(endpoint =>
         fetch(`https://genshin-db-api.vercel.app/api/v5/${endpoint}`, { cache: 'default' }).then(res => res.json())
       )
     );
       
-    const weapon = enData.name.replace(/'/g, "")
+    const weapon = ptData.name.replace(/'/g, "")
       const matchedCharacters = characters.filter((char) => 
         char.bestArtifacts === weapon ||
       (char.otherArtifacts ?? []).some((w) => w === weapon)||

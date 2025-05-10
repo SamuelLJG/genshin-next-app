@@ -5,7 +5,12 @@ export const metadata: Metadata = {
   title: "Política de Privacidade | genshinbuild.com",
   description: "Entenda como coletamos, usamos e protegemos suas informações em nosso site. Leia nossa política de privacidade completa para garantir transparência e segurança dos seus dados.",
   alternates: {
-    canonical: '/privacy-policy'
+    canonical: '/privacy-policy',
+    languages: {
+      'en': `/en/privacy-policy`,
+      'pt-br': `/privacy-policy`,
+      'x-default': `/privacy-policy`
+    }
   },
   openGraph: {
     images: `/images/genshinbuild-image.png`,

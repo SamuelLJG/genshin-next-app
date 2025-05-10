@@ -23,7 +23,7 @@ export const characters = [
         elementType: 'cryo',
         mainStatsArtifacts: ['atkPercentOrEnergyRecharge','cryoBonus', 'critRateOrDamage'],
         subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
-        newCharacter : 'beta',
+        newCharacter : 'new',
         weapon: 'WEAPON_POLE',
         rarity: '5',
     },
@@ -52,7 +52,7 @@ export const characters = [
         elementType: 'anemo',
         mainStatsArtifacts: ['elementalMastery','elementalMastery', 'elementalMastery'],
         subStatsArtifacts: ['critRate', 'elementalMastery','energyRecharge'],
-        newCharacter : 'beta',
+        newCharacter : 'new',
         weapon: 'WEAPON_CATALYST',
         rarity: '4'
     },

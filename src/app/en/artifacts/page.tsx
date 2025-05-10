@@ -3,35 +3,37 @@
 import Link from "next/link";
 import Image from "next/image";
 import ArtifactsFilter from "@/components/ArtifactsFilter";
-import ptBr from "@/data/pt-br.json"
+import ptBr from "@/data/en-us.json"
 import { Metadata } from "next";
-import AdComponent from "@/components/Adsense";
+import AdComponent from "@/app/en/components/Adsense";
+import { state } from "@/components/config";
 
 export const metadata: Metadata = {
-  title: "Lista de Artefatos | Genshin Impact",
-  description: "Lista de todos os conjuntos de artefatos de Genshin Impact com nomes e raridade disponíveis.",
+  title: "Artifacts List | Genshin Impact",
+  description: "Complete List of All Genshin Impact Artifact Sets by Name and Rarity",
   alternates: {
-    canonical: '/artifacts',
+    canonical: '/en/artifacts',
     languages: {
-      'en': `/en/artifacts`,
-      'pt-br': `/artifacts`,
-      'x-default': `/artifacts`
+        'en': `/en/artifacts`,
+        'pt-br': `/artifacts`,
+        'x-default': `/artifacts`
     }
   },
   openGraph: {
     images: `/images/genshinbuild-image.png`,
-    url: '/artifacts',
+    url: '/en/artifacts',
     type: 'website'
   }
 };
 
-export default async function Page() {
+export default async function Page({params:{locale}}:any) {
+    state.locale = locale;
   const response = await fetch('https://genshin-db-api.vercel.app/api/v5/artifacts?query=names&matchCategories=true');
   const data = await response.json();
   const responsesPTWeapons = await Promise.all(
     data.map((nome:any) => {
       const nomeLimpo = encodeURIComponent(nome.trim());
-      return fetch(`https://genshin-db-api.vercel.app/api/v5/artifacts?query=${nomeLimpo}&resultLanguage=portuguese`, { cache: 'default' });
+      return fetch(`https://genshin-db-api.vercel.app/api/v5/artifacts?query=${nomeLimpo}`, { cache: 'default' });
     })
   );
   const armasPT = await Promise.all(responsesPTWeapons.map(res => res.json()));

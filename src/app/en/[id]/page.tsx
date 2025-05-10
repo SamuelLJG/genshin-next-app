@@ -4,14 +4,15 @@ import RefinamentoSlider from '@/components/RefinamentSlider'
 import WeaponStatsSlider from "@/components/WeaponStatsSlider";
 import CharacterStatsSlider from "@/components/CharacterStatsSlider";
 import SliderHighlight from '@/components/SliderHighlight';
-import ptBr from '@/data/pt-br.json'
+import ptBr from '@/data/en-us.json'
 import Link from "next/link";
 import ScriptsClient from "@/components/scripts-client";
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import AscensionSlider from "@/components/AscensionSlider";
 import { notFound } from 'next/navigation'
 import TalentsSlider from "@/components/TalentsSlider";
-import AdComponent from "@/components/Adsense";
+import AdComponent from "@/app/en/components/Adsense";
+import { state } from "@/components/config";
 
 type Props = {
   params: Promise<{ id: string }>
@@ -36,10 +37,10 @@ export const generateMetadata = async ({
   }
   else {
   return {
-    title: `${formatarUrl(id)} Build | Guia com Melhores Armas, Artefatos e Times`,
-    description: `Descubra as melhores builds e times para ${formatarUrl(id)} em Genshin Impact! Confira também suas armas, artefatos, habilidades e muito mais!`,
+    title: `${formatarUrl(id)} Build Guide | Best Weapons, Artifacts & Teams`,
+    description: `Discover the best builds and teams for ${formatarUrl(id)} in Genshin Impact! Check out their weapons, artifacts, skills, and much more!`,
     alternates: {
-      canonical: id,
+      canonical: `/en/${id}`,
       languages: {
         'en': `/en/${id}`,
         'pt-br': id,
@@ -48,18 +49,8 @@ export const generateMetadata = async ({
     },
     openGraph: {
       images: `/images/Banners/${formatarUrl(id)}_Card.png`,
-      url: id,
+      url: `/en/${id}`,
       type: 'website'
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        noimageindex: false,
-        'max-image-preview': 'large'
-      }
     }
   }
   }
@@ -72,13 +63,14 @@ export default async function Home( { params }:any ) {
   
 
     let { id } = await params;
+    state.locale = id;
     const characterBuild:any = characters.find(p => p.name === id);
     if (!characterBuild) return notFound()
     const schemaData = {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": `${formatarUrl(id)} Build | Genshin Impact`,
-      "description": `Build ideal para ${formatarUrl(id)} em Genshin Impact com melhores armas, artefatos, times e muito mais.`,
+      "description": `The perfect build for ${formatarUrl(id)} in Genshin Impact, featuring the best weapons, artifacts, teams, and more.`,
       "url": `https://genshinbuild.com/${id}`,
       "author": {
         "@type": "Organization",
@@ -97,7 +89,7 @@ export default async function Home( { params }:any ) {
       "dateModified": "2025-05-05T04:23:35-04:00",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": `https://genshinbuild.com/${id}`
+        "@id": `https://genshinbuild.com/en/${id}`
       },
       "image": `https://genshinbuild.com/images/Banners/${formatarUrl(id)}_Card.png`
     }
@@ -109,9 +101,9 @@ const baseURLArtifact = `${apiUrl}artifacts?query=`;
 
 const fetchJson = (url: string) => fetch(url, { cache: 'default' }).then(res => res.json());
 const fetchWeaponData = (name: string) =>
-  fetchJson(`${baseURLWeapon}${encodeURIComponent(name)}&resultLanguage=portuguese`);
+  fetchJson(`${baseURLWeapon}${encodeURIComponent(name)}`);
 const fetchArtifactData = (name: string) =>
-  fetchJson(`${baseURLArtifact}${encodeURIComponent(name.trim())}&resultLanguage=portuguese`);
+  fetchJson(`${baseURLArtifact}${encodeURIComponent(name.trim())}`);
 
 const nomesDosArtefatos = [
   characterBuild.bestArtifacts,
@@ -175,11 +167,11 @@ switch (id) {
       
       async function getData() {
           const urls = [
-            `${apiUrl}characters?query=${id2}&resultLanguage=portuguese`,
+            `${apiUrl}characters?query=${id2}`,
             `${apiUrl}stats?folder=characters&query=${id2}`,
             `${apiUrl}stats?folder=weapons&query=${characterBuild.bestWeapon}`,
-            `${apiUrl}talents?query=${id3}&resultLanguage=portuguese`,
-            `${apiUrl}constellations?query=${id3}&resultLanguage=portuguese`
+            `${apiUrl}talents?query=${id3}`,
+            `${apiUrl}constellations?query=${id3}`
           ];
           const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'default' })));
           const data = await Promise.all(responses.map(res => res.json()));
@@ -242,43 +234,43 @@ switch (id) {
       let travelerName = formattedName;
       switch (id3) {
             case 'Traveler (Geo)' :
-            travelerName = 'Viajante Geo'
+            travelerName = 'Traveler Geo'
             break;
             case 'Traveler (Anemo)' :
-            travelerName = 'Viajante Anemo'
+            travelerName = 'Traveler Anemo'
             break;
             case 'Traveler (Pyro)' :
-            travelerName = 'Viajante Pyro'
+            travelerName = 'Traveler Pyro'
             break;
             case 'Traveler (Dendro)' :
-            travelerName = 'Viajante Dendro'
+            travelerName = 'Traveler Dendro'
             break;
             case 'Traveler (Electro)' :
-            travelerName = 'Viajante Electro'
+            travelerName = 'Traveler Electro'
             break;
             case 'Traveler (Hydro)' :
-            travelerName = 'Viajante Hydro'
+            travelerName = 'Traveler Hydro'
             break;
             
       }
 let elementFormatted;
 switch (travelerName) {
-      case 'Viajante Anemo':
+      case 'Traveler Anemo':
         elementFormatted = 'Anemo';
       break;
-      case 'Viajante Hydro':
+      case 'Traveler Hydro':
         elementFormatted = 'Hydro';
       break;
-      case 'Viajante Dendro':
+      case 'Traveler Dendro':
         elementFormatted = 'Dendro';
       break;
-      case 'Viajante Geo':
+      case 'Traveler Geo':
         elementFormatted = 'Geo';
       break;
-      case 'Viajante Pyro':
+      case 'Traveler Pyro':
         elementFormatted = 'Pyro';
       break;
-      case 'Viajante Electro':
+      case 'Traveler Electro':
         elementFormatted = 'Electro';
       break;
     default:
@@ -294,7 +286,7 @@ switch (travelerName) {
       name === 'Traveler Geo' ||
       name === 'Traveler Electro' ||
       name === 'Traveler Pyro') {
-      return 'Viajante';
+      return 'Traveler';
     }
     if (name === 'Raiden Shogun') {
       return 'Raiden';
@@ -383,7 +375,6 @@ switch (travelerName) {
         height={315}
         loading="eager"
         priority={true}
-        fetchPriority="high"
       />
       <Image
         id="character-image"
@@ -394,7 +385,6 @@ switch (travelerName) {
         height={256}
         loading="eager"
         priority={true}
-        fetchPriority="high"
       />
       
                     <div id="character-main">
@@ -457,7 +447,7 @@ switch (travelerName) {
                         <div id="weapon-container">
                             <section id="weapon-section">
                                 <div id="weapon-main">
-                                  <Link href={`/weapons/${characterBuild.bestWeapon.toLowerCase().trim().replace(/\s+/g, '-')}`}>
+                                  <Link href={`/en/weapons/${characterBuild.bestWeapon.toLowerCase().trim().replace(/\s+/g, '-')}`}>
                                     <Image
                                         className={`star${armasPT[0].rarity}`}
                                         src={`https://gi.yatta.moe/assets/UI/${armasPT[0].images.filename_icon}.png`}
@@ -482,7 +472,7 @@ switch (travelerName) {
                                 <h3 className="titles-h3">{ptBr.otherWeapons}</h3>
                                 <div id="other-weapons-list">
                                     {armasPT.slice(1).map((weapons:any, i:any) => (
-                                        <Link key={i} href={`/weapons/${characterBuild.otherWeapons[i].toLowerCase().trim().replace(/\s+/g, '-')}`}> 
+                                        <Link key={i} href={`/en/weapons/${characterBuild.otherWeapons[i].toLowerCase().trim().replace(/\s+/g, '-')}`}> 
                                         <span className="other-weapons-rank">{i+2}{ptBr.degree}</span>
                                             <Image
                                                 className={`star${weapons.rarity}`}
@@ -508,7 +498,7 @@ switch (travelerName) {
                     <div id="artifacts-container">
                         <div id="artifacts-section">
                             <section id="artifacts-main">
-                              <Link id="artifact-img-box" href={`/artifacts/${characterBuild.bestArtifacts.toLowerCase().trim().replace(/\s+/g, '-')}`}> 
+                              <Link id="artifact-img-box" href={`/en/artifacts/${characterBuild.bestArtifacts.toLowerCase().trim().replace(/\s+/g, '-')}`}> 
                             <Image width={160} height={160} className="star5" src={`https://enka.network/ui/${artefatosPT[0].images.filename_flower}.png`} alt={artefatosPT[0].name}/>
                             </Link>
                                 <div id="artifacts-header">
@@ -559,7 +549,7 @@ switch (travelerName) {
                     {artefatosPT.slice(1).map((art, i) => (
                     
                         
-                    <Link key={i} href={`/artifacts/${characterBuild.otherArtifacts[i].toLowerCase().trim().replace(/\s+/g, '-')}`}> 
+                    <Link key={i} href={`/en/artifacts/${characterBuild.otherArtifacts[i].toLowerCase().trim().replace(/\s+/g, '-')}`}> 
                             <span className="other-artifacts-set">{i+2}{ptBr.degree}</span>
                                         <div className="other-artifacts-box">
                                           <Image width={160} height={160} src={`https://enka.network/ui/${art.images.filename_flower}.png`} alt={art.name}/>
@@ -582,7 +572,7 @@ switch (travelerName) {
                           const pairIndex = i / 2 + 2
                           
                           return (
-                            <Link key={i} href={`/artifacts/${characterBuild.twoPieces[i].toLowerCase().trim().replace(/\s+/g, '-')}`}>
+                            <Link key={i} href={`/en/artifacts/${characterBuild.twoPieces[i].toLowerCase().trim().replace(/\s+/g, '-')}`}>
                               <span className="other-artifacts-set">{(characterBuild.otherArtifacts.length === 0) ? (
   pairIndex 
 ): (pairIndex+1)}{ptBr.degree}</span>
@@ -636,7 +626,7 @@ switch (travelerName) {
               const characterName = Object.keys(character)[0]; // Pega o nome do personagem
               return (
                 <td key={j} className="team-character">
-                  <Link href={`/${characterName}`}>
+                  <Link href={`/en/${characterName}`}>
                   <Image width={74} height={74}
                     src={`/images/Team-Icons/${formatarNome(characterName)}.png`} 
                     alt={formatarNomeComEspaco(formatarNome(characterName))}

@@ -1,8 +1,9 @@
 import { characters } from '@/data/characters';
-import ptBr from "@/data/pt-br.json"
-import WeaponSlider from "@/components/WeaponsSlider";
+import ptBr from "@/data/en-us.json"
+import WeaponSlider from "@/app/en/components/WeaponsSlider";
 import ScriptsClient from "@/components/scripts-client";
 import { notFound } from "next/navigation";
+import { state } from '@/components/config';
 
 import type { Metadata, ResolvingMetadata } from 'next'
  
@@ -19,25 +20,25 @@ export async function generateMetadata(
   let { id } = await params
  
 
-  const product = await fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${id.replace(/-/g, '')}&resultLanguage=portuguese`, { cache: 'default' }).then((res) => res.json())
+  const product = await fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${id.replace(/-/g, '')}`, { cache: 'default' }).then((res) => res.json())
  
   // optionally access and extend (rather than replace) parent meta
  
   return {
-    title: `${product.name} | Genshin Impact Armas`,
+    title: `${product.name} | Genshin Impact Weapons`,
     description: product.description,
-    openGraph: {
-      images: `https://gi.yatta.moe/assets/UI/${product.images.filename_icon}.png`,
-      url: `/weapons/${id}`,
-      type: 'website'
-    },
     alternates: {
-      canonical: `/weapons/${id}`,
+      canonical: `/en/weapons/${id}`,
       languages: {
         'en': `/en/weapons/${id}`,
         'pt-br': `/weapons/${id}`,
         'x-default': `/weapons/${id}`
       }
+    },
+    openGraph: {
+      images: `https://gi.yatta.moe/assets/UI/${product.images.filename_icon}.png`,
+      url: `/en/weapons/${id}`,
+      type: 'website'
     }
   }
 }
@@ -46,6 +47,7 @@ export async function generateMetadata(
 export default async function Page({ params }: Props) {
     let { id } = await params;
     
+    state.locale = id;
 
 const validIds = await fetch('https://genshin-db-api.vercel.app/api/v5/weapons?query=names&matchCategories=true', { cache: 'default' })
   .then(res => res.json());
@@ -60,24 +62,23 @@ idNormalizado = id.replace(/-/g, '');
  
 
 
-let ptData, enData, folderData, weapon;
+let ptData, folderData, weapon;
 
 
 
   if (!idList.includes(id)) return notFound();
   const urls = [
-    `weapons?query=${idNormalizado}&resultLanguage=portuguese`,
     `weapons?query=${idNormalizado}`,
     `stats?folder=weapons&query=${idNormalizado}`
   ];
   
-  [ptData, enData, folderData] = await Promise.all(
+  [ptData, folderData] = await Promise.all(
     urls.map(endpoint =>
       fetch(`https://genshin-db-api.vercel.app/api/v5/${endpoint}`, { cache: 'default' }).then(res => res.json())
     )
   );
   if (id != 'the-catch') {
-   weapon = enData.name.replace(/'/g, "")
+   weapon = ptData.name.replace(/'/g, "")
   }
   else {
     weapon = 'The Catch'

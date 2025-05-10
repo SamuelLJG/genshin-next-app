@@ -2,15 +2,17 @@ import Image from "next/image"
 import {characters} from "@/data/characters"
 import Link from "next/link";
 import Filter from "@/components/full-filter";
-import ptBr from "@/data/pt-br.json"
-import AdComponent from "@/components/Adsense";
+import ptBr from "@/data/en-us.json"
+import AdComponent from "./components/Adsense";
+import { state } from "@/components/config";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Genshin Build | Melhores Builds de Personagens Genshin Impact",
-  description: "Encontre as builds ideais para seus personagens favoritos de Genshin Impact com guias de armas, artefatos, equipes e mais.",
+  title: "Genshin Build | Top Character Builds for Genshin Impact",
+  description: "Discover the perfect builds for your favorite Genshin Impact characters — including detailed guides on weapons, artifacts, team comps, and more.",
+  metadataBase: new URL('https://genshinbuild.com'),
   alternates: {
-    canonical: '/',
+    canonical: '/en',
     languages: {
       'en': `/en`,
       'pt-br': `/`,
@@ -19,13 +21,16 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: `/images/genshinbuild-image.png`,
-    url: '/',
+    url: '/en',
     type: 'website'
+  },
+  icons: {
+    icon: '/favicon-96x96.png', // caminho dentro de /public
   }
 }
 
-
-export default function Home() {
+export default function Home({params:{locale}}:any) {
+  state.locale = locale;
     function formatarNome(nome:string) {
         return nome
           .split('-')
@@ -46,7 +51,7 @@ export default function Home() {
             name === 'Traveler Geo' ||
             name === 'Traveler Electro' ||
             name === 'Traveler Pyro') {
-            return 'Viajante';
+            return 'Traveler';
           }
           if (name === 'Raiden Shogun') {
             return 'Raiden';
@@ -84,8 +89,8 @@ export default function Home() {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Genshin Build",
-        "url": "https://genshinbuild.com",
-        "description": "Descubra as melhores builds de personagens para Genshin Impact com armas, artefatos, equipes e dicas atualizadas.",
+        "url": "https://genshinbuild.com/en",
+        "description": "Find the best Genshin Impact character builds with up-to-date weapons, artifacts, team comps, and expert tips.",
         "publisher": {
           "@type": "Organization",
           "name": "Genshin Build",
@@ -96,7 +101,7 @@ export default function Home() {
         },
         "mainEntity": {
           "@type": "CollectionPage",
-          "name": "Builds de Genshin Impact",
+          "name": "Genshin Impact Builds",
           "about": {
             "@type": "Thing",
             "name": "Genshin Impact"
@@ -116,7 +121,7 @@ export default function Home() {
            <AdComponent/>
             <div id="main-characters-flex">
             {characters.map((char:any,i:any)=> (
-                <Link href={`/${char.name}`} key={i} className={`character-card ${char.elementType} ${char.name.replace(/-/g, '').replace(/traveler/gi, "viajante")} ${char.weapon} rarity-${char.rarity}`}>
+                <Link href={`/en/${char.name}`} key={i} className={`character-card ${char.elementType} ${char.name.replace(/-/g, '').replace(/traveler/gi, "viajante")} ${char.weapon} rarity-${char.rarity}`}>
             <Image width={100} height={100} src={`/images/Team-Icons/${formatarNome(char.name)}.png`} alt={formatarNomeComEspaco(formatarNome(char.name))} className={`rarity-${char.rarity}`} loading="eager" priority/>
             <p>{formatCharacterName(formatarNomeComEspaco(formatarNome(char.name)))}</p>
             {char.newCharacter != null ? <span>{char.newCharacter}</span> : ''  }

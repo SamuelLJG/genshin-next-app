@@ -3,13 +3,14 @@ import { characters } from "@/data/characters";
 import Link from "next/link";
 import React from "react";
 import { Metadata } from "next";
-import AdComponent from "@/components/Adsense";
+import AdComponent from "@/app/en/components/Adsense";
+import { state } from "@/components/config";
 
 export const metadata: Metadata = {
   title: "Tier List 5.5 | Genshin Impact ",
-  description: "Confira a tier list atualizada de Genshin Impact com os melhores personagens. Veja quem está no topo do meta em 2025!",
+  description: "Explore the latest Genshin Impact tier list and find out which characters dominate the 2025 meta!",
   alternates: {
-    canonical: '/tier-list',
+    canonical: '/en/tier-list',
     languages: {
       'en': `/en/tier-list`,
       'pt-br': `/tier-list`,
@@ -18,12 +19,13 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: `/images/genshinbuild-image.png`,
-    url: '/tier-list',
+    url: '/en/tier-list',
     type: 'website'
   }
 };
 
-export default function Teams() {
+export default function Teams({params:{locale}}:any) {
+    state.locale = locale;
   function formatarNome(nome: string) {
     return nome
       .split("-")

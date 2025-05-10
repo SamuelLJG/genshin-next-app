@@ -2,15 +2,16 @@ import Image from "next/image"
 import {characters} from "@/data/characters"
 import Link from "next/link";
 import TeamsFilter from "@/components/TeamSlider";
-import ptBr from "@/data/pt-br.json"
+import ptBr from "@/data/en-us.json"
 import { Metadata } from "next";
-import AdComponent from "@/components/Adsense";
+import AdComponent from "@/app/en/components/Adsense";
+import { state } from "@/components/config";
 
 export const metadata: Metadata = {
-  title: "Melhores Times | Genshin Impact",
-  description: "Descubra os melhores times com funções bem definidas para cada personagem em Genshin Impact!",
+  title: "Best Teams | Genshin Impact",
+  description: "Find the best Genshin Impact teams with well-defined roles for each character!",
   alternates: {
-    canonical: '/teams',
+    canonical: '/en/teams',
     languages: {
       'en': `/en/teams`,
       'pt-br': `/teams`,
@@ -19,12 +20,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: `/images/genshinbuild-image.png`,
-    url: '/teams',
+    url: '/en/teams',
     type: 'website'
   }
 };
 
-export default function Teams() {
+export default function Teams({params:{locale}}:any) {
+  
+  state.locale = locale;
     function formatarNome(nome:string) {
         return nome
           .split('-')
