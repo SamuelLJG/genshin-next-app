@@ -40,7 +40,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export default async function RootLayout({ children }: {children: React.ReactNode;}) {
 const lang = await new Promise<string>((resolve) => {
     setLangResolve(resolve);
-    setTimeout(() => resolve("pt-br"), 100); // fallback, just in case
+    setTimeout(() => resolve("pt-br")); // fallback, just in case
   });
   return (
     <html lang={lang}>
