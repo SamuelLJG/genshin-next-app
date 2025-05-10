@@ -44,10 +44,10 @@ export async function generateMetadata(
 }
 
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params }: Props, {pp: locale}:any) {
     let { id } = await params;
     
-    state.locale = id;
+    state.locale = locale;
 
 const validIds = await fetch('https://genshin-db-api.vercel.app/api/v5/weapons?query=names&matchCategories=true', { cache: 'default' })
   .then(res => res.json());

@@ -45,9 +45,9 @@ export async function generateMetadata(
   
 }
 
-export default async function Page({params}:any) {
+export default async function Page({params}:any, {pp: locale}:any) {
     let { id } = await params;
-    state.locale = id;
+    state.locale = locale;
     const idNormalizado = id.replace(/-/g, '');
 
     const validIds = await fetch('https://genshin-db-api.vercel.app/api/v5/artifacts?query=names&matchCategories=true', { cache: 'default' })
