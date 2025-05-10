@@ -39,7 +39,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export default async function RootLayout({ children }: {children: React.ReactNode;}) {
 
   return (
-    <html lang={state.locale}>
+    <html lang={state.locale = "pt-br"}>
       <GoogleAnalytics gaId="G-ZMW5Q2STCE" />
       <Script
             async
