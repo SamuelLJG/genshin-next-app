@@ -26,7 +26,7 @@ export async function generateMetadata(
   // optionally access and extend (rather than replace) parent meta
  
   return {
-    title: `${product.name} | Genshin Impact Armas`,
+    title: `${product.name} | Genshin Impact Weapons`,
     description: product.description,
     openGraph: {
       images: `https://gi.yatta.moe/assets/UI/${product.images.filename_icon}.png`,
