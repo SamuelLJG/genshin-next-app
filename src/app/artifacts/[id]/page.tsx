@@ -23,7 +23,7 @@ export async function generateMetadata(
   let { id } = await params
  
 
-  const product = await fetch(`https://genshin-db-api.vercel.app/api/v5/artifacts?query=${id.replace(/-/g, '')}&resultLanguage=portuguese`, { next: { revalidate: 60 } }).then((res) => res.json())
+  const product = await fetch(`https://genshin-db-api.vercel.app/api/v5/artifacts?query=${id.replace(/-/g, '')}&resultLanguage=portuguese`, { cache: 'force-cache' }).then((res) => res.json())
  
   // optionally access and extend (rather than replace) parent meta
  
@@ -51,7 +51,7 @@ export default async function Page({params}:any) {
     let { id } = await params;
     const idNormalizado = id.replace(/-/g, '');
 
-    const validIds = await fetch('https://genshin-db-api.vercel.app/api/v5/artifacts?query=names&matchCategories=true', { next: { revalidate: 60 } })
+    const validIds = await fetch('https://genshin-db-api.vercel.app/api/v5/artifacts?query=names&matchCategories=true', { cache: 'force-cache' })
       .then(res => res.json());
     
     const idList = validIds.map((name: string) =>
@@ -67,7 +67,7 @@ export default async function Page({params}:any) {
     
     const [ptData, enData] = await Promise.all(
       urls.map(endpoint =>
-        fetch(`https://genshin-db-api.vercel.app/api/v5/${endpoint}`, { next: { revalidate: 60 } }).then(res => res.json())
+        fetch(`https://genshin-db-api.vercel.app/api/v5/${endpoint}`, { cache: 'force-cache' }).then(res => res.json())
       )
     );
       
