@@ -109,7 +109,7 @@ export default async function Home( { params }:any ) {
 const baseURLWeapon = `${apiUrl}weapons?query=`;
 const baseURLArtifact = `${apiUrl}artifacts?query=`;
 
-const fetchJson = (url: string) => fetch(url, { cache: 'no-store' }).then(res => res.json());
+const fetchJson = (url: string) => fetch(url, { cache: 'default' }).then(res => res.json());
 const fetchWeaponData = (name: string) =>
   fetchJson(`${baseURLWeapon}${encodeURIComponent(name)}`);
 const fetchArtifactData = (name: string) =>
@@ -166,13 +166,10 @@ switch (id) {
   case 'traveler-pyro':
     id3 = 'Traveler (Pyro)';
     break;
-  case 'andarilho':
-    id3 = 'wanderer';
-    break;
   default:
     id3 = id.replace(/-/g, "");
     break;
-}
+} 
       id2.toLowerCase().trim().replace(/\s+/g, '-') 
       
       async function getData() {
@@ -183,7 +180,7 @@ switch (id) {
             `${apiUrl}talents?query=${id3}`,
             `${apiUrl}constellations?query=${id3}`
           ];
-          const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'no-store' })));
+          const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'default' })));
           const data = await Promise.all(responses.map(res => res.json()));
           return {
             characterData: data[0],
@@ -244,43 +241,43 @@ switch (id) {
       let travelerName = formattedName;
       switch (id3) {
             case 'Traveler (Geo)' :
-            travelerName = 'Viajante Geo'
+            travelerName = 'Traveler Geo'
             break;
             case 'Traveler (Anemo)' :
-            travelerName = 'Viajante Anemo'
+            travelerName = 'Traveler Anemo'
             break;
             case 'Traveler (Pyro)' :
-            travelerName = 'Viajante Pyro'
+            travelerName = 'Traveler Pyro'
             break;
             case 'Traveler (Dendro)' :
-            travelerName = 'Viajante Dendro'
+            travelerName = 'Traveler Dendro'
             break;
             case 'Traveler (Electro)' :
-            travelerName = 'Viajante Electro'
+            travelerName = 'Traveler Electro'
             break;
             case 'Traveler (Hydro)' :
-            travelerName = 'Viajante Hydro'
+            travelerName = 'Traveler Hydro'
             break;
             
       }
 let elementFormatted;
 switch (travelerName) {
-      case 'Viajante Anemo':
+      case 'Traveler Anemo':
         elementFormatted = 'Anemo';
       break;
-      case 'Viajante Hydro':
+      case 'Traveler Hydro':
         elementFormatted = 'Hydro';
       break;
-      case 'Viajante Dendro':
+      case 'Traveler Dendro':
         elementFormatted = 'Dendro';
       break;
-      case 'Viajante Geo':
+      case 'Traveler Geo':
         elementFormatted = 'Geo';
       break;
-      case 'Viajante Pyro':
+      case 'Traveler Pyro':
         elementFormatted = 'Pyro';
       break;
-      case 'Viajante Electro':
+      case 'Traveler Electro':
         elementFormatted = 'Electro';
       break;
     default:
@@ -296,7 +293,7 @@ switch (travelerName) {
       name === 'Traveler Geo' ||
       name === 'Traveler Electro' ||
       name === 'Traveler Pyro') {
-      return 'Viajante';
+      return 'Traveler';
     }
     if (name === 'Raiden Shogun') {
       return 'Raiden';
