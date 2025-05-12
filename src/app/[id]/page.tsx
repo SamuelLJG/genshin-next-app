@@ -109,7 +109,7 @@ export default async function Home( { params }:any ) {
 const baseURLWeapon = `${apiUrl}weapons?query=`;
 const baseURLArtifact = `${apiUrl}artifacts?query=`;
 
-const fetchJson = (url: string) => fetch(url, { cache: 'no-store' }).then(res => res.json());
+const fetchJson = (url: string) => fetch(url, { next: { revalidate: 60 } }).then(res => res.json());
 const fetchWeaponData = (name: string) =>
   fetchJson(`${baseURLWeapon}${encodeURIComponent(name)}&resultLanguage=portuguese`);
 const fetchArtifactData = (name: string) =>
@@ -183,7 +183,7 @@ switch (id) {
             `${apiUrl}talents?query=${id3}&resultLanguage=portuguese`,
             `${apiUrl}constellations?query=${id3}&resultLanguage=portuguese`
           ];
-          const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'no-store' })));
+          const responses = await Promise.all(urls.map(url => fetch(url, { next: { revalidate: 60 } })));
           const data = await Promise.all(responses.map(res => res.json()));
           return {
             characterData: data[0],

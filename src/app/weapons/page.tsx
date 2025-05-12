@@ -31,12 +31,12 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const response = await fetch('https://genshin-db-api.vercel.app/api/v5/weapons?query=names&matchCategories=true', { cache: 'no-store' });
+  const response = await fetch('https://genshin-db-api.vercel.app/api/v5/weapons?query=names&matchCategories=true', { next: { revalidate: 60 } });
   const data = await response.json();
   const responsesPTWeapons = await Promise.all(
     data.map((nome:any) => {
       const nomeLimpo = encodeURIComponent(nome.trim());
-      return fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${nomeLimpo}&resultLanguage=portuguese`, { cache: 'no-store' });
+      return fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${nomeLimpo}&resultLanguage=portuguese`, { next: { revalidate: 60 } });
     })
   );
   const armasPT = await Promise.all(responsesPTWeapons.map(res => res.json()));
