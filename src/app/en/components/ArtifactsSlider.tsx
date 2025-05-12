@@ -3,7 +3,7 @@
 import Image from "next/image"
 import SliderHighlight from "@/components/SliderHighlight";
 import Link from "next/link";
-import AdComponent from "@/app/en/components/Adsense";
+import AdComponent from "@/components/Adsense-en";
 
    // ou use um state p/ controlar o nível (de 1 a 5)
    function formatarNome(nome:string) {

@@ -4,7 +4,10 @@ import Link from "next/link";
 import TeamsFilter from "@/components/TeamSlider";
 import ptBr from "@/data/en-us.json"
 import { Metadata } from "next";
-import AdComponent from "@/app/en/components/Adsense";
+import AdComponent from "@/components/Adsense-en";
+import Nav from '@/components/nav-en';
+import Footer from '@/components/footer-en';
+
 
 export const metadata: Metadata = {
   title: "Best Teams | Genshin Impact",
@@ -45,7 +48,7 @@ export default function Teams() {
             name === 'Traveler Geo' ||
             name === 'Traveler Electro' ||
             name === 'Traveler Pyro') {
-            return 'Viajante';
+            return 'Traveler';
           }
           if (name === 'Raiden Shogun') {
             return 'Raiden';
@@ -80,6 +83,10 @@ export default function Teams() {
         return name;
       }
     return (
+<html lang="en">
+          <body>
+            <Nav/>
+            
         <main id="main-index" className="iii"> 
         
         <div id="h1-flex">
@@ -127,6 +134,10 @@ export default function Teams() {
   ))
 )}
             
-            </ul></main>
+            </ul>
+            </main>
+            <Footer/>
+          </body>
+          </html>
     )
 }

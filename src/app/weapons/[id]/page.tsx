@@ -3,6 +3,8 @@ import ptBr from "@/data/pt-br.json"
 import WeaponSlider from "@/components/WeaponsSlider";
 import ScriptsClient from "@/components/scripts-client";
 import { notFound } from "next/navigation";
+import Nav from '@/components/nav';
+import Footer from '@/components/footer';
 
 import type { Metadata, ResolvingMetadata } from 'next'
  
@@ -89,9 +91,15 @@ let ptData, enData, folderData, weapon;
         char.otherWeapons.some((w) => w === weapon)
       );
       
-  return <>
-             
+  return (
+             <html lang="pt-br">
+                
+              <body>
+              <Nav/>
              <WeaponSlider ptData={ptData} matchedCharacters={matchedCharacters} folderData={folderData} id={id} ptBr={ptBr}/>
           <ScriptsClient/>
-      </>
+      <Footer/>
+             </body>
+             </html>
+)
 }

@@ -59,7 +59,7 @@ export default function WeaponsFilter({ptBr}:any) {
         <label htmlFor='index-search'>{ptBr.search}</label>
         <input
           type="text"
-          placeholder="Digite um nome..."
+          placeholder={ptBr.searchAName}
           id="index-search"
           value={searchFilter}
           onChange={handleSearchChange}

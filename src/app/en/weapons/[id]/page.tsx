@@ -3,6 +3,8 @@ import ptBr from "@/data/en-us.json"
 import WeaponSlider from "@/app/en/components/WeaponsSlider";
 import ScriptsClient from "@/components/scripts-client";
 import { notFound } from "next/navigation";
+import Nav from '@/components/nav-en';
+import Footer from '@/components/footer-en';
 
 import type { Metadata, ResolvingMetadata } from 'next'
  
@@ -24,8 +26,13 @@ export async function generateMetadata(
   // optionally access and extend (rather than replace) parent meta
  
   return {
-    title: `${product.name} | Genshin Impact Weapons`,
+    title: `${product.name} | Genshin Impact Armas`,
     description: product.description,
+    openGraph: {
+      images: `https://gi.yatta.moe/assets/UI/${product.images.filename_icon}.png`,
+      url: `/en/weapons/${id}`,
+      type: 'website'
+    },
     alternates: {
       canonical: `/en/weapons/${id}`,
       languages: {
@@ -33,11 +40,6 @@ export async function generateMetadata(
         'pt-br': `/weapons/${id}`,
         'x-default': `/weapons/${id}`
       }
-    },
-    openGraph: {
-      images: `https://gi.yatta.moe/assets/UI/${product.images.filename_icon}.png`,
-      url: `/en/weapons/${id}`,
-      type: 'website'
     }
   }
 }
@@ -59,23 +61,24 @@ idNormalizado = id.replace(/-/g, '');
  
 
 
-let ptData, folderData, weapon;
+let ptData, enData, folderData, weapon;
 
 
 
   if (!idList.includes(id)) return notFound();
   const urls = [
     `weapons?query=${idNormalizado}`,
+    `weapons?query=${idNormalizado}`,
     `stats?folder=weapons&query=${idNormalizado}`
   ];
   
-  [ptData, folderData] = await Promise.all(
+  [ptData, enData, folderData] = await Promise.all(
     urls.map(endpoint =>
       fetch(`https://genshin-db-api.vercel.app/api/v5/${endpoint}`, { cache: 'default' }).then(res => res.json())
     )
   );
   if (id != 'the-catch') {
-   weapon = ptData.name.replace(/'/g, "")
+   weapon = enData.name.replace(/'/g, "")
   }
   else {
     weapon = 'The Catch'
@@ -88,9 +91,15 @@ let ptData, folderData, weapon;
         char.otherWeapons.some((w) => w === weapon)
       );
       
-  return <>
-             
+  return (
+             <html lang="en">
+                
+              <body>
+              <Nav/>
              <WeaponSlider ptData={ptData} matchedCharacters={matchedCharacters} folderData={folderData} id={id} ptBr={ptBr}/>
-          <ScriptsClient/>
-      </>
+          
+      <Footer/><ScriptsClient/>
+             </body>
+             </html>
+)
 }

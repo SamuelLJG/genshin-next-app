@@ -6,6 +6,9 @@ import ScriptsClient from "@/components/scripts-client";
 import { notFound } from "next/navigation";
 import ptBr from "@/data/en-us.json"
 import type { Metadata, ResolvingMetadata } from 'next'
+import Nav from '@/components/nav-en';
+import Footer from '@/components/footer-en';
+
 
 type Props = {
   params: Promise<{ id: string }>
@@ -29,11 +32,11 @@ export async function generateMetadata(
     description: `Check out the full details of the ${product.name} artifact set in Genshin Impact — including its effects and the best characters to get the most out of it.`,
     alternates: {
       canonical: `/en/artifacts/${id}`,
-      languages: {
-        'en': `/en/artifacts/${id}`,
-        'pt-br': `/artifacts/${id}`,
-        'x-default': `/artifacts/${id}`
-      }
+    languages: {
+      'en': `/en/artifacts/${id}`,
+      'pt-br': `/artifacts/${id}`,
+      'x-default': `/artifacts/${id}`
+    }
     },
     openGraph: {
       images: `https://enka.network/ui/${product.images.filename_flower}.png`,
@@ -59,23 +62,28 @@ export default async function Page({params}:any) {
     
     const urls = [
       `artifacts?query=${idNormalizado}`,
+      `artifacts?query=${idNormalizado}`
     ];
     
-    const [ptData] = await Promise.all(
+    const [ptData, enData] = await Promise.all(
       urls.map(endpoint =>
         fetch(`https://genshin-db-api.vercel.app/api/v5/${endpoint}`, { cache: 'default' }).then(res => res.json())
       )
     );
       
-    const weapon = ptData.name.replace(/'/g, "")
+    const weapon = enData.name.replace(/'/g, "")
       const matchedCharacters = characters.filter((char) => 
         char.bestArtifacts === weapon ||
       (char.otherArtifacts ?? []).some((w) => w === weapon)||
       (char.twoPieces ?? []).some((w) => w === weapon)
       );
       
-  return <>
-             <ArtifactsSlider ptData={ptData} matchedCharacters={matchedCharacters} ptBr={ptBr}/>
-          <ScriptsClient/>
-          </>
+  return <html lang="en">
+          <body>
+            <Nav/>
+            <ArtifactsSlider ptData={ptData} matchedCharacters={matchedCharacters} ptBr={ptBr}/>
+            <Footer/>
+            <ScriptsClient/>
+          </body>
+          </html>
 }

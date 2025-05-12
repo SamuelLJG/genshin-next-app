@@ -1,5 +1,8 @@
 
 import { Metadata } from "next";
+import Nav from '@/components/nav';
+import Footer from '@/components/footer';
+
 
 export const metadata: Metadata = {
   title: "Política de Privacidade | genshinbuild.com",
@@ -21,7 +24,10 @@ export const metadata: Metadata = {
 
 export default function PoliticaPrivacidade() {
   return (
-    <>
+    <html lang="pt-br">
+              <body>
+                <Nav/>
+                
       <main id="main-index">
         <h1>Política de Privacidade</h1>
         <br />
@@ -97,6 +103,8 @@ export default function PoliticaPrivacidade() {
           criado com o objetivo de ajudar a comunidade de jogadores de Genshin Impact.
         </p>
       </main>
-    </>
+      <Footer/>
+    </body>
+    </html>
   );
 }

@@ -2,12 +2,16 @@
 
 import { useEffect, useState, ChangeEvent } from 'react';
 
-const weaponOptions = [
-  { label: 'Espada', value: 'WEAPON_SWORD_ONE_HAND' },
-  { label: 'Espadão', value: 'WEAPON_CLAYMORE' },
-  { label: 'Lança', value: 'WEAPON_POLE' },
-  { label: 'Arco', value: 'WEAPON_BOW' },
-  { label: 'Catalisador', value: 'WEAPON_CATALYST' }
+
+
+export default function WeaponsFilter({ptBr}:any) {
+
+  const weaponOptions = [
+  { label: ptBr.sword, value: 'WEAPON_SWORD_ONE_HAND' },
+  { label: ptBr.claymore, value: 'WEAPON_CLAYMORE' },
+  { label: ptBr.polearm, value: 'WEAPON_POLE' },
+  { label: ptBr.bow, value: 'WEAPON_BOW' },
+  { label: ptBr.catalyst, value: 'WEAPON_CATALYST' }
 ];
 
 const elementOptions = [
@@ -20,7 +24,6 @@ const elementOptions = [
   { label: 'Pyro', value: 'pyro' }
 ];
 
-export default function WeaponsFilter({ptBr}:any) {
   const [searchFilter, setSearchFilter] = useState('');
   const [activeRarity, setActiveRarity] = useState<string | null>(null);
   const [activeWeapon, setActiveWeapon] = useState<string | null>(null);
@@ -75,7 +78,7 @@ export default function WeaponsFilter({ptBr}:any) {
       <label htmlFor='index-search'>{ptBr.search}</label>
         <input
           type="text"
-          placeholder="Digite um nome..."
+          placeholder={ptBr.searchAName}
           id="index-search"
           value={searchFilter}
           onChange={handleSearchChange}

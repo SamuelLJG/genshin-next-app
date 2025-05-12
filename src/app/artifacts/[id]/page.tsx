@@ -6,6 +6,9 @@ import ScriptsClient from "@/components/scripts-client";
 import { notFound } from "next/navigation";
 import ptBr from "@/data/pt-br.json"
 import type { Metadata, ResolvingMetadata } from 'next'
+import Nav from '@/components/nav';
+import Footer from '@/components/footer';
+
 
 type Props = {
   params: Promise<{ id: string }>
@@ -75,8 +78,12 @@ export default async function Page({params}:any) {
       (char.twoPieces ?? []).some((w) => w === weapon)
       );
       
-  return <>
-             <ArtifactsSlider ptData={ptData} matchedCharacters={matchedCharacters} ptBr={ptBr}/>
-          <ScriptsClient/>
-          </>
+  return <html lang="pt-br">
+          <body>
+            <Nav/>
+            <ArtifactsSlider ptData={ptData} matchedCharacters={matchedCharacters} ptBr={ptBr}/>
+            <Footer/>
+            <ScriptsClient/>
+          </body>
+          </html>
 }

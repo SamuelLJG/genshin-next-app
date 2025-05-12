@@ -6,6 +6,10 @@ import WeaponsFilter from "@/components/WeaponsFilter";
 import ptBr from "@/data/pt-br.json"
 import { Metadata } from "next";
 import AdComponent from "@/components/Adsense";
+import Nav from '@/components/nav';
+import Footer from '@/components/footer';
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 export const metadata: Metadata = {
   title: "Lista de Armas | Genshin Impact",
@@ -38,6 +42,9 @@ export default async function Page() {
   const armasPT = await Promise.all(responsesPTWeapons.map(res => res.json()));
   return (
         
+    <html lang="pt-br">
+      <body>
+        <Nav/>
           <main id="main-index">
           <div id="h1-flex">
             <Image src="/images/sword-fill-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} alt={ptBr.weaponList} loading="eager" /> <h1 id="index-h1">Genshin Impact {ptBr.weaponList}</h1>
@@ -59,5 +66,8 @@ export default async function Page() {
                   ))}
               </div>
           </main>
+          <Footer/>
+      </body>
+    </html>
   );
 }

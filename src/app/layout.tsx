@@ -5,8 +5,6 @@ import Nav from '@/components/nav';
 import Footer from '@/components/footer';
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script';
-import { state } from "@/components/config";
-import { setLangResolve } from "./contexts";
 
 
 export const metadata: Metadata = {
@@ -38,23 +36,16 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 })
 
 export default async function RootLayout({ children }: {children: React.ReactNode;}) {
-const lang = await new Promise<string>((resolve) => {
-    setLangResolve(resolve);
-    setTimeout(() => resolve("pt-br")); // fallback, just in case
-  });
+
   return (
-    <html lang={lang}>
-      <GoogleAnalytics gaId="G-ZMW5Q2STCE" />
+        <>
+        <GoogleAnalytics gaId="G-ZMW5Q2STCE" />
       <Script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1999593447203691"
             crossOrigin="anonymous"
           ></Script>
-      <body>
-        <Nav lang1={lang}/>
         {children}
-        <Footer/>
-      </body>
-    </html>
-  );
+        </>
+  )
 }

@@ -5,7 +5,10 @@ import Image from "next/image";
 import WeaponsFilter from "@/components/WeaponsFilter";
 import ptBr from "@/data/en-us.json"
 import { Metadata } from "next";
-import AdComponent from "@/app/en/components/Adsense";
+import AdComponent from "@/components/Adsense-en";
+import Nav from '@/components/nav-en';
+import Footer from '@/components/footer-en';
+
 
 export const metadata: Metadata = {
   title: "Weapons List | Genshin Impact",
@@ -13,11 +16,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://genshinbuild.com'),
   alternates: {
     canonical: '/en/weapons',
-      languages: {
-        'en': `/en/weapons`,
-        'pt-br': `/weapons`,
-        'x-default': `/weapons`
-      }
+    languages: {
+      'en': `/en/weapons`,
+      'pt-br': `/weapons`,
+      'x-default': `/weapons`
+    }
   },
   openGraph: {
     images: `/images/genshinbuild-image.png`,
@@ -32,12 +35,15 @@ export default async function Page() {
   const responsesPTWeapons = await Promise.all(
     data.map((nome:any) => {
       const nomeLimpo = encodeURIComponent(nome.trim());
-      return fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${nomeLimpo}`, { cache: 'default' });
+      return fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${nomeLimpo}&resultLanguage=portuguese`, { cache: 'default' });
     })
   );
   const armasPT = await Promise.all(responsesPTWeapons.map(res => res.json()));
   return (
         
+    <html lang="en">
+      <body>
+        <Nav/>
           <main id="main-index">
           <div id="h1-flex">
             <Image src="/images/sword-fill-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} alt={ptBr.weaponList} loading="eager" /> <h1 id="index-h1">Genshin Impact {ptBr.weaponList}</h1>
@@ -59,5 +65,8 @@ export default async function Page() {
                   ))}
               </div>
           </main>
+          <Footer/>
+      </body>
+    </html>
   );
 }

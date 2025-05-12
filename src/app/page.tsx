@@ -5,7 +5,9 @@ import Filter from "@/components/full-filter";
 import ptBr from "@/data/pt-br.json"
 import AdComponent from "@/components/Adsense";
 import { Metadata } from "next";
-import { state } from "@/components/config";
+import Nav from '@/components/nav';
+import Footer from '@/components/footer';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: "Genshin Build | Melhores Builds de Personagens Genshin Impact",
@@ -105,11 +107,17 @@ export default function Home() {
         }
       }
     return (
-        <main id="main-index" className="iii"> 
-        <script
+        <html lang="pt-br">
+          <head>
+          <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-      />
+      /></head>
+          <body>
+            <Nav/>
+            
+        <main id="main-index" className="iii"> 
+        
         <div id="h1-flex">
             <Image src="/images/list-paper-school-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} alt={ptBr.charactersList} loading="eager" /> <h1 id="index-h1">Genshin Impact {ptBr.charactersList}</h1>
           </div>
@@ -125,5 +133,8 @@ export default function Home() {
             </Link>
             
         ))}</div></main>
+        <Footer/>
+          </body>
+        </html>
     )
 }

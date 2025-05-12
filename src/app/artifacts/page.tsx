@@ -6,6 +6,9 @@ import ArtifactsFilter from "@/components/ArtifactsFilter";
 import ptBr from "@/data/pt-br.json"
 import { Metadata } from "next";
 import AdComponent from "@/components/Adsense";
+import Nav from '@/components/nav';
+import Footer from '@/components/footer';
+
 
 export const metadata: Metadata = {
   title: "Lista de Artefatos | Genshin Impact",
@@ -38,8 +41,10 @@ export default async function Page() {
   const circletOnly = ['Prayers for Destiny', 'Prayers for Illumination', 'Prayers for Wisdom', 'Prayers to Springtime'];
   
   return (
-        
-          <main id="main-index">
+        <html lang="pt-br">
+          <body>
+            <Nav/>
+            <main id="main-index">
             <div id="h1-flex">
             <Image src="/images/flower-with-heart-petals-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} loading="eager" alt={ptBr.artifactsList} /> <h1 id="index-h1">Genshin Impact {ptBr.artifactsList}</h1>
           </div>
@@ -57,5 +62,9 @@ export default async function Page() {
                   ))}
               </div>
           </main>
+            <Footer/>
+          </body>
+          </html>
+          
   );
 }

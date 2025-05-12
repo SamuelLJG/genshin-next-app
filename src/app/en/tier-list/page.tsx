@@ -3,7 +3,10 @@ import { characters } from "@/data/characters";
 import Link from "next/link";
 import React from "react";
 import { Metadata } from "next";
-import AdComponent from "@/app/en/components/Adsense";
+import AdComponent from "@/components/Adsense-en";
+import Nav from '@/components/nav-en';
+import Footer from '@/components/footer-en';
+
 
 export const metadata: Metadata = {
   title: "Tier List 5.5 | Genshin Impact ",
@@ -39,6 +42,9 @@ export default function Teams() {
   const ranks = ["S", "A", "B", "C", "D"];
 
   return (
+    <html lang="en">
+      <body>
+        <Nav/>
     <main id="main-index" className="iii">
       <div id="h1-flex">
         <Image
@@ -83,5 +89,8 @@ export default function Teams() {
         })}
       </ul>
     </main>
+        <Footer/>
+      </body>
+    </html>
   );
 }

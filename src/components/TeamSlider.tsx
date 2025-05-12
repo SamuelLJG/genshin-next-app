@@ -52,7 +52,7 @@ export default function TeamsFilter({ptBr}:any) {
         <label htmlFor='index-search'>{ptBr.search}</label>
         <input
           type="text"
-          placeholder="Digite o nome de um personagem..."
+          placeholder={ptBr.searchAName}
           id="index-search"
           value={searchFilter}
           onChange={handleSearchChange}

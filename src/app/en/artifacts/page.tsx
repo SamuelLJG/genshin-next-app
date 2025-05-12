@@ -5,7 +5,10 @@ import Image from "next/image";
 import ArtifactsFilter from "@/components/ArtifactsFilter";
 import ptBr from "@/data/en-us.json"
 import { Metadata } from "next";
-import AdComponent from "@/app/en/components/Adsense";
+import AdComponent from "@/components/Adsense-en";
+import Nav from '@/components/nav-en';
+import Footer from '@/components/footer-en';
+
 
 export const metadata: Metadata = {
   title: "Artifacts List | Genshin Impact",
@@ -13,9 +16,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/en/artifacts',
     languages: {
-        'en': `/en/artifacts`,
-        'pt-br': `/artifacts`,
-        'x-default': `/artifacts`
+      'en': `/en/artifacts`,
+      'pt-br': `/artifacts`,
+      'x-default': `/artifacts`
     }
   },
   openGraph: {
@@ -38,8 +41,10 @@ export default async function Page() {
   const circletOnly = ['Prayers for Destiny', 'Prayers for Illumination', 'Prayers for Wisdom', 'Prayers to Springtime'];
   
   return (
-        
-          <main id="main-index">
+        <html lang="en">
+          <body>
+            <Nav/>
+            <main id="main-index">
             <div id="h1-flex">
             <Image src="/images/flower-with-heart-petals-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} loading="eager" alt={ptBr.artifactsList} /> <h1 id="index-h1">Genshin Impact {ptBr.artifactsList}</h1>
           </div>
@@ -47,7 +52,7 @@ export default async function Page() {
           <AdComponent/>
               <div id="weapons-flex">
                   {armasPT.map((post: any, i: number) => (
-                    <Link href={`artifacts/${data[i].replace(/'/g, '').toLowerCase().replace(/ /g, '-')}`} key={i} className={`weapon-card ${post.name} rarity-${post.rarityList[post.rarityList.length - 1]}-weapon`}>
+                    <Link href={`/en/artifacts/${data[i].replace(/'/g, '').toLowerCase().replace(/ /g, '-')}`} key={i} className={`weapon-card ${post.name} rarity-${post.rarityList[post.rarityList.length - 1]}-weapon`}>
                         <Image width={150} height={150} src={!circletOnly.includes(data[i].replace(/'/g, '')) ? `https://enka.network/ui/${post.images.filename_flower}.png` : `https://enka.network/ui/${post.images.filename_circlet}.png`} alt={post.name} className={`star${post.rarityList[post.rarityList.length - 1]}`} loading="eager" priority/>
                         <div>
                             <p>{post.name}</p>
@@ -57,5 +62,9 @@ export default async function Page() {
                   ))}
               </div>
           </main>
+            <Footer/>
+          </body>
+          </html>
+          
   );
 }

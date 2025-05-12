@@ -5,6 +5,9 @@ import TeamsFilter from "@/components/TeamSlider";
 import ptBr from "@/data/pt-br.json"
 import { Metadata } from "next";
 import AdComponent from "@/components/Adsense";
+import Nav from '@/components/nav';
+import Footer from '@/components/footer';
+
 
 export const metadata: Metadata = {
   title: "Melhores Times | Genshin Impact",
@@ -80,6 +83,10 @@ export default function Teams() {
         return name;
       }
     return (
+<html lang="pt-br">
+          <body>
+            <Nav/>
+            
         <main id="main-index" className="iii"> 
         
         <div id="h1-flex">
@@ -127,6 +134,10 @@ export default function Teams() {
   ))
 )}
             
-            </ul></main>
+            </ul>
+            </main>
+            <Footer/>
+          </body>
+          </html>
     )
 }

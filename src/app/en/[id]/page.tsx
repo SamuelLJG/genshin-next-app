@@ -4,14 +4,17 @@ import RefinamentoSlider from '@/components/RefinamentSlider'
 import WeaponStatsSlider from "@/components/WeaponStatsSlider";
 import CharacterStatsSlider from "@/components/CharacterStatsSlider";
 import SliderHighlight from '@/components/SliderHighlight';
-import ptBr from '@/data/en-us.json'
+import ptBr from "@/data/en-us.json"
 import Link from "next/link";
 import ScriptsClient from "@/components/scripts-client";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import AscensionSlider from "@/components/AscensionSlider";
 import { notFound } from 'next/navigation'
 import TalentsSlider from "@/components/TalentsSlider";
-import AdComponent from "@/app/en/components/Adsense";
+import AdComponent from "@/components/Adsense-en";
+import Nav from '@/components/nav-en';
+import Footer from '@/components/footer-en';
+
 
 type Props = {
   params: Promise<{ id: string }>
@@ -36,7 +39,7 @@ export const generateMetadata = async ({
   }
   else {
   return {
-    title: `${formatarUrl(id)} Build | Guide Best Weapons, Artifacts & Teams`,
+    title: `${formatarUrl(id)} Build | Guide with Best Weapons, Artifacts, and Teams`,
     description: `Discover the best builds and teams for ${formatarUrl(id)} in Genshin Impact! Check out their weapons, artifacts, skills, and much more!`,
     alternates: {
       canonical: `/en/${id}`,
@@ -50,6 +53,16 @@ export const generateMetadata = async ({
       images: `/images/Banners/${formatarUrl(id)}_Card.png`,
       url: `/en/${id}`,
       type: 'website'
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        noimageindex: false,
+        'max-image-preview': 'large'
+      }
     }
   }
   }
@@ -60,7 +73,6 @@ export const generateMetadata = async ({
 export default async function Home( { params }:any ) {
   
   
-
     let { id } = await params;
     const characterBuild:any = characters.find(p => p.name === id);
     if (!characterBuild) return notFound()
@@ -69,7 +81,7 @@ export default async function Home( { params }:any ) {
       "@type": "BlogPosting",
       "headline": `${formatarUrl(id)} Build | Genshin Impact`,
       "description": `The perfect build for ${formatarUrl(id)} in Genshin Impact, featuring the best weapons, artifacts, teams, and more.`,
-      "url": `https://genshinbuild.com/${id}`,
+      "url": `https://genshinbuild.com/en/${id}`,
       "author": {
         "@type": "Organization",
         "name": "Genshin Build Team",
@@ -232,43 +244,43 @@ switch (id) {
       let travelerName = formattedName;
       switch (id3) {
             case 'Traveler (Geo)' :
-            travelerName = 'Traveler Geo'
+            travelerName = 'Viajante Geo'
             break;
             case 'Traveler (Anemo)' :
-            travelerName = 'Traveler Anemo'
+            travelerName = 'Viajante Anemo'
             break;
             case 'Traveler (Pyro)' :
-            travelerName = 'Traveler Pyro'
+            travelerName = 'Viajante Pyro'
             break;
             case 'Traveler (Dendro)' :
-            travelerName = 'Traveler Dendro'
+            travelerName = 'Viajante Dendro'
             break;
             case 'Traveler (Electro)' :
-            travelerName = 'Traveler Electro'
+            travelerName = 'Viajante Electro'
             break;
             case 'Traveler (Hydro)' :
-            travelerName = 'Traveler Hydro'
+            travelerName = 'Viajante Hydro'
             break;
             
       }
 let elementFormatted;
 switch (travelerName) {
-      case 'Traveler Anemo':
+      case 'Viajante Anemo':
         elementFormatted = 'Anemo';
       break;
-      case 'Traveler Hydro':
+      case 'Viajante Hydro':
         elementFormatted = 'Hydro';
       break;
-      case 'Traveler Dendro':
+      case 'Viajante Dendro':
         elementFormatted = 'Dendro';
       break;
-      case 'Traveler Geo':
+      case 'Viajante Geo':
         elementFormatted = 'Geo';
       break;
-      case 'Traveler Pyro':
+      case 'Viajante Pyro':
         elementFormatted = 'Pyro';
       break;
-      case 'Traveler Electro':
+      case 'Viajante Electro':
         elementFormatted = 'Electro';
       break;
     default:
@@ -284,7 +296,7 @@ switch (travelerName) {
       name === 'Traveler Geo' ||
       name === 'Traveler Electro' ||
       name === 'Traveler Pyro') {
-      return 'Traveler';
+      return 'Viajante';
     }
     if (name === 'Raiden Shogun') {
       return 'Raiden';
@@ -337,11 +349,17 @@ switch (travelerName) {
   };
     return (
       
-        <>
-        <script
+        <html lang="en">
+          
+          <head>
+            <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
+          </head>
+          <body>
+            <Nav/>
+        
             <div id="character-h1" className={elementFormatted}>
                 <div id="header-container" >
                     <div className="header-icon">
@@ -373,6 +391,7 @@ switch (travelerName) {
         height={315}
         loading="eager"
         priority={true}
+        fetchPriority="high"
       />
       <Image
         id="character-image"
@@ -383,6 +402,7 @@ switch (travelerName) {
         height={256}
         loading="eager"
         priority={true}
+        fetchPriority="high"
       />
       
                     <div id="character-main">
@@ -746,9 +766,10 @@ switch (travelerName) {
         </section>
 
             </main>
-            
+            <Footer/>
             <ScriptsClient/>
             <SliderHighlight />
-        </>
+          </body>
+        </html>
     )
     }

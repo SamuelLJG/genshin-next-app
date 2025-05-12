@@ -3,17 +3,16 @@ import {characters} from "@/data/characters"
 import Link from "next/link";
 import Filter from "@/components/full-filter";
 import ptBr from "@/data/en-us.json"
-import AdComponent from "./components/Adsense";
+import AdComponent from "@/components/Adsense-en";
 import { Metadata } from "next";
-import { getLangResolve } from "../contexts";
-
+import Nav from '@/components/nav-en';
+import Footer from '@/components/footer-en';
 
 export const metadata: Metadata = {
-  title: "Genshin Build | Top Character Builds for Genshin Impact",
-  description: "Discover the perfect builds for your favorite Genshin Impact characters — including detailed guides on weapons, artifacts, team comps, and more.",
-  metadataBase: new URL('https://genshinbuild.com'),
+  title: "Genshin Build | Best Genshin Impact Character Builds",
+  description: "Find the ideal builds for your favorite Genshin Impact characters with guides on weapons, artifacts, teams, and more.",
   alternates: {
-    canonical: '/en',
+    canonical: '/en/',
     languages: {
       'en': `/en`,
       'pt-br': `/`,
@@ -22,17 +21,13 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: `/images/genshinbuild-image.png`,
-    url: '/en',
+    url: '/en/',
     type: 'website'
-  },
-  icons: {
-    icon: '/favicon-96x96.png', // caminho dentro de /public
   }
 }
 
-export default async function Home() {
-   const  lang  = "en";
-  getLangResolve()(lang);
+
+export default function Home() {
     function formatarNome(nome:string) {
         return nome
           .split('-')
@@ -92,7 +87,7 @@ export default async function Home() {
         "@type": "WebSite",
         "name": "Genshin Build",
         "url": "https://genshinbuild.com/en",
-        "description": "Find the best Genshin Impact character builds with up-to-date weapons, artifacts, team comps, and expert tips.",
+        "description": "Find the best Genshin Impact character builds with up-to-date weapons, artifacts, team comps, and expert tips..",
         "publisher": {
           "@type": "Organization",
           "name": "Genshin Build",
@@ -103,7 +98,7 @@ export default async function Home() {
         },
         "mainEntity": {
           "@type": "CollectionPage",
-          "name": "Genshin Impact Builds",
+          "name": "Builds de Genshin Impact",
           "about": {
             "@type": "Thing",
             "name": "Genshin Impact"
@@ -111,11 +106,17 @@ export default async function Home() {
         }
       }
     return (
-        <main id="main-index" className="iii"> 
-        <script
+        <html lang="en">
+          <head>
+          <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-      />
+      /></head>
+          <body>
+            <Nav/>
+            
+        <main id="main-index" className="iii"> 
+        
         <div id="h1-flex">
             <Image src="/images/list-paper-school-svgrepo-com.svg" className="index-h1-icon" width={30} height={30} alt={ptBr.charactersList} loading="eager" /> <h1 id="index-h1">Genshin Impact {ptBr.charactersList}</h1>
           </div>
@@ -131,5 +132,8 @@ export default async function Home() {
             </Link>
             
         ))}</div></main>
+        <Footer/>
+          </body>
+        </html>
     )
 }

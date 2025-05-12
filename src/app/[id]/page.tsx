@@ -12,6 +12,9 @@ import AscensionSlider from "@/components/AscensionSlider";
 import { notFound } from 'next/navigation'
 import TalentsSlider from "@/components/TalentsSlider";
 import AdComponent from "@/components/Adsense";
+import Nav from '@/components/nav';
+import Footer from '@/components/footer';
+
 
 type Props = {
   params: Promise<{ id: string }>
@@ -36,7 +39,7 @@ export const generateMetadata = async ({
   }
   else {
   return {
-    title: `${formatarUrl(id)} Build | Guide to the Best Weapons, Artifacts, and Teams`,
+    title: `${formatarUrl(id)} Build | Guia com melhores Armas, Artefatos e Times`,
     description: `Descubra as melhores builds e times para ${formatarUrl(id)} em Genshin Impact! Confira também suas armas, artefatos, habilidades e muito mais!`,
     alternates: {
       canonical: id,
@@ -346,11 +349,17 @@ switch (travelerName) {
   };
     return (
       
-        <>
-        <script
+        <html lang="pt-br">
+          
+          <head>
+            <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
+          </head>
+          <body>
+            <Nav/>
+        
             <div id="character-h1" className={elementFormatted}>
                 <div id="header-container" >
                     <div className="header-icon">
@@ -757,9 +766,10 @@ switch (travelerName) {
         </section>
 
             </main>
-            
+            <Footer/>
             <ScriptsClient/>
             <SliderHighlight />
-        </>
+          </body>
+        </html>
     )
     }
