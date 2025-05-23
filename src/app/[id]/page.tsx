@@ -14,6 +14,7 @@ import TalentsSlider from "@/components/TalentsSlider";
 import AdComponent from "@/components/Adsense";
 import Nav from '@/components/nav';
 import Footer from '@/components/footer';
+import JoinAdsHead from "@/components/JoinAds";
 
 
 type Props = {
@@ -358,6 +359,7 @@ switch (travelerName) {
       />
           </head>
           <body>
+            <JoinAdsHead/>
             <Nav/>
         
             <div id="character-h1" className={elementFormatted}>
@@ -381,6 +383,7 @@ switch (travelerName) {
             </div>
 
             <main id="main-content" className={elementFormatted}>
+              <div joinadscode="Content1"></div>
                 <section id="character-banner">
         <Image
         id="character-image"

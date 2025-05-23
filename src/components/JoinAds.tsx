@@ -1,20 +1,33 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
+import { useEffect } from 'react'
 
 export default function JoinAdsHead() {
   const pathname = usePathname()
 
-  return (
-    <>
-      <div key={`joinads-preload-${pathname}`}
-        dangerouslySetInnerHTML={{
-          __html: `
-            <link rel="preload" href="https://script.joinads.me/myad21872.js" crossorigin="anonymous" as="script">
-<script type="module" src="https://script.joinads.me/myad21872.js" crossorigin="anonymous" async></script>
-          `,
-        }}
-      />
-    </>
-  )
+  useEffect(() => {
+    // Remove script anterior (se houver)
+    const existingScript = document.getElementById('joinads-script')
+    if (existingScript) {
+      existingScript.remove()
+    }
+
+    // Cria novo script
+    const script = document.createElement('script')
+    script.src = 'https://script.joinads.me/myad21872.js'
+    script.type = 'module'
+    script.crossOrigin = 'anonymous'
+    script.async = true
+    script.id = 'joinads-script'
+
+    document.body.appendChild(script)
+
+    // Cleanup opcional
+    return () => {
+      script.remove()
+    }
+  }, [pathname]) // Reexecuta sempre que mudar de rota
+
+  return null
 }
