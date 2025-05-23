@@ -7,7 +7,7 @@ import AdComponent from "@/components/Adsense";
 import { Metadata } from "next";
 import Nav from '@/components/nav';
 import Footer from '@/components/footer';
-import { GoogleAnalytics } from '@next/third-parties/google'
+import JoinAdsHead from "@/components/JoinAds";
 
 export const metadata: Metadata = {
   title: "Genshin Build | Melhores Builds de Personagens Genshin Impact",
@@ -114,6 +114,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       /></head>
           <body>
+<JoinAdsHead/>
             <Nav/>
             
         <main id="main-index" className="iii"> 

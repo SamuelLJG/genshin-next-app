@@ -1873,6 +1873,10 @@ footer{
     margin:auto;
     margin-bottom:calc(96px * var(--minimize))
 }
+.adbox {
+    width: 100%;
+    overflow: visible;
+}
 @media (min-width:1355px){
     #artifacts-main-stats-section{
         white-space:nowrap

@@ -8,7 +8,7 @@ import { Metadata } from "next";
 import AdComponent from "@/components/Adsense";
 import Nav from '@/components/nav';
 import Footer from '@/components/footer';
-import { GoogleAnalytics } from '@next/third-parties/google'
+import JoinAdsHead from "@/components/JoinAds";
 
 
 export const metadata: Metadata = {

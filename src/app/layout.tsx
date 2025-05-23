@@ -3,6 +3,7 @@ import "./globals.css";
 import { Metadata } from "next";
 import Nav from '@/components/nav';
 import Footer from '@/components/footer';
+import JoinAdsHead from '@/components/JoinAds';
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script';
 
@@ -40,11 +41,6 @@ export default async function RootLayout({ children }: {children: React.ReactNod
   return (
         <>
         <GoogleAnalytics gaId="G-ZMW5Q2STCE" />
-      <Script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1999593447203691"
-            crossOrigin="anonymous"
-          ></Script>
         {children}
         </>
   )
