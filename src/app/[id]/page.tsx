@@ -383,7 +383,9 @@ switch (travelerName) {
             </div>
 
             <main id="main-content" className={elementFormatted}>
-              <div joinadscode="Content1"></div>
+              <div
+        dangerouslySetInnerHTML={{ __html: '<div joinadscode="Content1"></div>' }}
+      />
                 <section id="character-banner">
         <Image
         id="character-image"
