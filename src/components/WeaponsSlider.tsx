@@ -100,7 +100,7 @@ export default function WeaponSlider ({ ptData, matchedCharacters,folderData, id
                     <div id="wee-level"> <span> {ptBr.lvl}. {level2}</span><input type="range" min="1" max={dd2} defaultValue={level2} onChange={handleChange2} id="ascension-costs-slider" /></div>
                    
                 </section>
-                <AdComponent/>
+                <div className='joinads'></div>
                 {ptData.effectTemplateRaw != null ? <section>
                     <h2 className="titles-h2">{ptBr.refinement}</h2>
                     <div className="ascension-costs-flex">

@@ -1,11 +1,8 @@
 import { Anuphan, Plus_Jakarta_Sans } from 'next/font/google'
 import "./globals.css";
 import { Metadata } from "next";
-import Nav from '@/components/nav';
-import Footer from '@/components/footer';
-import JoinAdsHead from '@/components/JoinAds';
 import { GoogleAnalytics } from '@next/third-parties/google'
-import Script from 'next/script';
+import ForceFullReloadLinks from '@/components/ForceFullReloadLinks';
 
 
 export const metadata: Metadata = {
@@ -40,6 +37,11 @@ export default async function RootLayout({ children }: {children: React.ReactNod
 
   return (
         <>
+        <head>
+          <link rel="preload" href="https://script.joinads.me/myad21872.js" crossOrigin="anonymous" as="script"/>
+          <script type="module" src="https://script.joinads.me/myad21872.js" crossOrigin="anonymous" async></script>
+        </head>
+        <ForceFullReloadLinks/>
         <GoogleAnalytics gaId="G-ZMW5Q2STCE" />
         {children}
         </>

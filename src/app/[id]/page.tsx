@@ -14,7 +14,6 @@ import TalentsSlider from "@/components/TalentsSlider";
 import AdComponent from "@/components/Adsense";
 import Nav from '@/components/nav';
 import Footer from '@/components/footer';
-import JoinAdsHead from "@/components/JoinAds";
 
 
 type Props = {
@@ -357,9 +356,9 @@ switch (travelerName) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
+      
           </head>
           <body>
-            <JoinAdsHead/>
             <Nav/>
         
             <div id="character-h1" className={elementFormatted}>
@@ -383,9 +382,6 @@ switch (travelerName) {
             </div>
 
             <main id="main-content" className={elementFormatted}>
-              <div
-        dangerouslySetInnerHTML={{ __html: '<div joinadscode="Content1"></div>' }}
-      />
                 <section id="character-banner">
         <Image
         id="character-image"
@@ -516,7 +512,7 @@ switch (travelerName) {
                         </div>
                 </section>
                 <AdComponent/>
-                <section>
+                <section className='joinads'>
                     <h2 className="titles-h2">{travelerName}{" "}{ptBr.bestArtifacts}</h2>
                     <div id="artifacts-container">
                         <div id="artifacts-section">

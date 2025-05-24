@@ -508,7 +508,7 @@ switch (travelerName) {
                         </div>
                 </section>
                 <AdComponent/>
-                <section>
+                <section className='joinads'>
                     <h2 className="titles-h2">{travelerName}{" "}{ptBr.bestArtifacts}</h2>
                     <div id="artifacts-container">
                         <div id="artifacts-section">

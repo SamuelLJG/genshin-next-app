@@ -47,7 +47,7 @@ export default function TeamsFilter({ptBr}:any) {
   };
 
   return (
-    <div id='filter-section2'>
+    <div id='filter-section2' className='joinads'>
       <div className='top-name'>
         <label htmlFor='index-search'>{ptBr.search}</label>
         <input

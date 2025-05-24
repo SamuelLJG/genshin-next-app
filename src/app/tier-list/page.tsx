@@ -60,7 +60,7 @@ export default function Teams() {
         </h1>
       </div>
       <AdComponent/>
-      <ul id="tier-list-flex">
+      <ul id="tier-list-flex" className='joinads'>
         {ranks.map((rank) => {
           const chars = characters.filter(
             (p) => p.rank?.toUpperCase() === rank

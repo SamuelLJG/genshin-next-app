@@ -53,7 +53,7 @@ export default function WeaponsFilter({ptBr}:any) {
   };
 
   return (
-    <div id='filter-section2'>
+    <div id='filter-section2' className='joinads'>
       {/* Barra de Pesquisa */}
       <div className='top-name'>
         <label htmlFor='index-search'>{ptBr.search}</label>
