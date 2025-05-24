@@ -8,7 +8,6 @@ import { Metadata } from "next";
 import AdComponent from "@/components/Adsense";
 import Nav from '@/components/nav';
 import Footer from '@/components/footer';
-import JoinAdsHead from "@/components/JoinAds";
 
 
 export const metadata: Metadata = {
