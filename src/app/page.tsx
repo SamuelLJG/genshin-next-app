@@ -125,7 +125,7 @@ export default function Home() {
             <div id="main-characters-flex">
             {characters.map((char:any,i:any)=> (
                 <Link href={`/${char.name}`} key={i} className={`character-card ${char.elementType} ${char.name.replace(/-/g, '').replace(/traveler/gi, "viajante")} ${char.weapon} rarity-${char.rarity}`}>
-            <Image width={100} height={100} src={`/images/Team-Icons/${formatarNome(char.name)}.png`} alt={formatarNomeComEspaco(formatarNome(char.name))} className={`rarity-${char.rarity}`} loading="eager" priority/>
+            <Image width={100} height={100} src={`/images/Chibi/${char.name}-chibi.webp`} alt={formatarNomeComEspaco(formatarNome(char.name))} className={`rarity-${char.rarity}`} loading="eager" priority/>
             <p>{formatCharacterName(formatarNomeComEspaco(formatarNome(char.name)))}</p>
             {char.newCharacter != null ? <span>{char.newCharacter}</span> : ''  }
             

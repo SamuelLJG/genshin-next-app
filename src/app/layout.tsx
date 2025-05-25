@@ -38,8 +38,11 @@ export default async function RootLayout({ children }: {children: React.ReactNod
   return (
         <>
         <head>
-          <link rel="preload" href="https://script.joinads.me/myad21872.js" crossOrigin="anonymous" as="script"/>
-          <script type="module" src="https://script.joinads.me/myad21872.js" crossOrigin="anonymous" async></script>
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1999593447203691"
+            crossOrigin="anonymous"
+          ></script>
         </head>
         <ForceFullReloadLinks/>
         <GoogleAnalytics gaId="G-ZMW5Q2STCE" />

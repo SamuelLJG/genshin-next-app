@@ -61,7 +61,7 @@ export default function WeaponSlider ({ ptData, matchedCharacters, ptBr }: any) 
                 </section>
                 </>
                 }
-                <div className='joinads'></div>
+                <AdComponent/>
                 {matchedCharacters != false ? 
                                  <section>
                                  <h2 className="titles-h2">{ptBr.recommendedCharacters}</h2>

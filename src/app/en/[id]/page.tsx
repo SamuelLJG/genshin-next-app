@@ -660,7 +660,7 @@ switch (travelerName) {
 </ol>
 
                 </section>
-                   
+                   <AdComponent/>
 <section id="ascension-costs-section">
   <h2 className="titles-h2">{travelerName}{" "}{ptBr.ascensionCosts}</h2>
   <AscensionSlider currentCosts={characterData.costs} ptBr={ptBr}/>
@@ -738,6 +738,7 @@ switch (travelerName) {
             
             
         </section>
+        <AdComponent/>
                 <section>
                 <h2 className="titles-h2">{travelerName}{" "}{ptBr.constellations}</h2>
             <div className="talents-ul">
