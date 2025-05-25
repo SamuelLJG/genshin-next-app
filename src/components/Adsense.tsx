@@ -12,13 +12,15 @@ const AdBanner = () => {
   }, []);
 
   return (
-    <ins className="adsbygoogle adbox ptdesc"
+    <div className='adbox ptdesc'>
+    <ins className="adsbygoogle"
                style={{display:'block'}}
                data-ad-client="ca-pub-1999593447203691"
                data-ad-slot="8181198147"
                data-ad-format="auto"
                data-full-width-responsive="true"
     />
+    </div>
   );
 };
 export default AdBanner;
