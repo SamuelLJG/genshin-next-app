@@ -13,6 +13,8 @@ const AdBanner = () => {
 
   return (
     <div className='adbox endesc'>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1999593447203691"
+     crossOrigin="anonymous"></script>
     <ins className="adsbygoogle"
                style={{display:'block'}}
                data-ad-client="ca-pub-1999593447203691"
