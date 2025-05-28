@@ -35,7 +35,7 @@ export default async function Page() {
   const responsesPTWeapons = await Promise.all(
     data.map((nome:any) => {
       const nomeLimpo = encodeURIComponent(nome.trim());
-      return fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${nomeLimpo}&resultLanguage=portuguese`, { cache: 'default' });
+      return fetch(`https://genshin-db-api.vercel.app/api/v5/weapons?query=${nomeLimpo}`, { cache: 'default' });
     })
   );
   const armasPT = await Promise.all(responsesPTWeapons.map(res => res.json()));
