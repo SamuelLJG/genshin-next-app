@@ -1034,7 +1034,6 @@ select{
     border-radius:4px;
     border:1px solid var(--bd);
     text-align: center;
-    overflow:hidden
 }
 .ptdesc::before, .endesc::before{
     position:absolute;
