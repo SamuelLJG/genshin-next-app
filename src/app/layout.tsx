@@ -44,6 +44,7 @@ export default async function RootLayout({ children }: {children: React.ReactNod
             crossOrigin="anonymous"
           ></script>
         </head>
+        <ForceFullReloadLinks/>
         <GoogleAnalytics gaId="G-ZMW5Q2STCE" />
         {children}
         </>
