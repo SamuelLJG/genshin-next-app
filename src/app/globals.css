@@ -1041,13 +1041,7 @@ select{
     left:50%;
     transform:translate(-50%,-50%)
 }
-.ptdesc::before {
-    content:'Este site suporta Anúncios';
-}
 
-.endesc::before {
-    content:'This website is supported by advertisements';
-}
 .titles-h2::before,.titles-h3::before{
     margin-right:calc(7px * var(--minimize));
     content:''
