@@ -1,60 +1,61 @@
 export const characters = [
     {
-        name: 'escoffier',
-        function: 'subDps',
-        bestWeapon: 'Symphonist of Scents',
-        otherWeapons: ['Staff of Homa','Engulfing Lightning','Prospectors Drill'],
-        bestArtifacts: 'Golden Troupe',
-        otherArtifacts: ['Blizzard Strayer', 'Noblesse Oblige'],
+        name: 'skirk',
+        function: 'mainDps',
+        bestWeapon: 'Azurelight',
+        otherWeapons: ['Haran Geppaku Futsu','Finale of the Deep','Calamity of Eshu'],
+        bestArtifacts: 'Finale of the Deep Galleries',
+        otherArtifacts: ['Marechaussee Hunter', 'Blizzard Strayer'],
         teams: [[
-            {'wriothesley': 'mainDps'},
-            {'furina': 'subDps'},
-            {'escoffier': 'subDps'},
-            {'shenhe': 'support'}
-        ],
-        [
-            {'neuvillette': 'mainDps'},
+            {'skirk': 'mainDps'},
             {'furina': 'subDps'},
             {'escoffier': 'subDps'},
             {'citlali': 'support'}
-        ]
-        ],
-        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
-        elementType: 'cryo',
-        mainStatsArtifacts: ['atkPercentOrEnergyRecharge','cryoBonus', 'critRateOrDamage'],
-        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
-        newCharacter : 'new',
-        weapon: 'WEAPON_POLE',
-        rarity: '5',
-    },
-    {
-        name: 'ifa',
-        function: 'support',
-        bestWeapon: 'Sunny Morning Sleep-In',
-        otherWeapons: ['A Thousand Floating Dreams','Mappa Mare','Wandering Evenstar'],
-        bestArtifacts: 'Viridescent Venerer',
-        otherArtifacts: ['Scroll of the Hero of Cinder City'],
-        twoPieces: ['Gilded Dreams', 'Wanderers Troupe'],
-        teams: [[
-            {'kamisato-ayato': 'mainDps'},
-            {'furina': 'support'},
-            {'ororon': 'subDps'},
-            {'ifa': 'support'}
         ],
         [
-            {'clorinde': 'mainDps'},
-            {'furina': 'support'},
-            {'yelan': 'subDps'},
-            {'ifa': 'support'}
+            {'skirk': 'mainDps'},
+            {'furina': 'subDps'},
+            {'escoffier': 'subDps'},
+            {'dahlia': 'support'}
         ]
         ],
-        talentPriority: ['elementalBurst','elementalSkill','normalAttack'],
-        elementType: 'anemo',
-        mainStatsArtifacts: ['elementalMastery','elementalMastery', 'elementalMastery'],
-        subStatsArtifacts: ['critRate', 'elementalMastery','energyRecharge'],
+        talentPriority: ['elementalSkill','elementalBurst'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['atkPercent','cryoBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent'],
         newCharacter : 'new',
-        weapon: 'WEAPON_CATALYST',
-        rarity: '4'
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5',
+        rank:'s'
+    },
+    {
+        name: 'dahlia',
+        function: 'support',
+        bestWeapon: 'Favonius Sword',
+        otherWeapons: ['Freedom-Sworn','Key of Khaj-Nisut','Fleuve Cendre Ferryman'],
+        bestArtifacts: 'Noblesse Oblige',
+        otherArtifacts: ['Scroll of the Hero of Cinder City', 'Marechaussee Hunter'],
+        teams: [[
+            {'skirk': 'mainDps'},
+            {'furina': 'subDps'},
+            {'escoffier': 'subDps'},
+            {'dahlia': 'support'}
+        ],
+        [
+            {'kamisato-ayato': 'mainDps'},
+            {'furina': 'subDps'},
+            {'xilonen': 'support'},
+            {'dahlia': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalBurst','elementalSkill'],
+        elementType: 'hydro',
+        mainStatsArtifacts: ['hpPercentOrEnergyRecharge','hpPercent', 'hpPercentOrCritRate'],
+        subStatsArtifacts: ['energyRecharge','hpPercent', 'hp', 'critRate'],
+        newCharacter : 'new',
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '4',
+        rank:'C'
     },
     {
         name: 'albedo',
@@ -723,6 +724,34 @@ export const characters = [
         rank: 'a'
     },
     {
+        name: 'escoffier',
+        function: 'subDps',
+        bestWeapon: 'Symphonist of Scents',
+        otherWeapons: ['Staff of Homa','Engulfing Lightning','Prospectors Drill'],
+        bestArtifacts: 'Golden Troupe',
+        otherArtifacts: ['Blizzard Strayer', 'Noblesse Oblige'],
+        teams: [[
+            {'wriothesley': 'mainDps'},
+            {'furina': 'subDps'},
+            {'escoffier': 'subDps'},
+            {'shenhe': 'support'}
+        ],
+        [
+            {'neuvillette': 'mainDps'},
+            {'furina': 'subDps'},
+            {'escoffier': 'subDps'},
+            {'citlali': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalSkill','elementalBurst','normalAttack'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['atkPercentOrEnergyRecharge','cryoBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent','energyRecharge'],
+        weapon: 'WEAPON_POLE',
+        rarity: '5',
+        rank: 's'
+    },
+    {
         name: 'eula',
         function: 'mainDps',
         bestWeapon: 'Song of Broken Pines',
@@ -1003,6 +1032,36 @@ export const characters = [
         weapon: 'WEAPON_POLE',
         rarity: '4',
         rank: 's'
+    },
+    
+    {
+        name: 'ifa',
+        function: 'support',
+        bestWeapon: 'Sunny Morning Sleep-In',
+        otherWeapons: ['A Thousand Floating Dreams','Mappa Mare','Wandering Evenstar'],
+        bestArtifacts: 'Viridescent Venerer',
+        otherArtifacts: ['Scroll of the Hero of Cinder City'],
+        twoPieces: ['Gilded Dreams', 'Wanderers Troupe'],
+        teams: [[
+            {'kamisato-ayato': 'mainDps'},
+            {'furina': 'support'},
+            {'ororon': 'subDps'},
+            {'ifa': 'support'}
+        ],
+        [
+            {'clorinde': 'mainDps'},
+            {'furina': 'support'},
+            {'yelan': 'subDps'},
+            {'ifa': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalBurst','elementalSkill','normalAttack'],
+        elementType: 'anemo',
+        mainStatsArtifacts: ['elementalMastery','elementalMastery', 'elementalMastery'],
+        subStatsArtifacts: ['critRate', 'elementalMastery','energyRecharge'],
+        weapon: 'WEAPON_CATALYST',
+        rarity: '4',
+        rank: 'd'
     },
     {
         name: 'jean',
