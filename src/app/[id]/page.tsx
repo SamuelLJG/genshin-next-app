@@ -12,6 +12,8 @@ import AscensionSlider from "@/components/AscensionSlider";
 import { notFound } from 'next/navigation'
 import TalentsSlider from "@/components/TalentsSlider";
 import AdComponent from "@/components/Adsense";
+import AdComponent2 from "@/components/Adsense2";
+import AdComponent3 from "@/components/Adsense3";
 import Nav from '@/components/nav';
 import Footer from '@/components/footer';
 
@@ -664,7 +666,7 @@ switch (travelerName) {
 </ol>
 
                 </section>
-                       <AdComponent/>
+                       <AdComponent2/>
 <section id="ascension-costs-section">
   <h2 className="titles-h2">{travelerName}{" "}{ptBr.ascensionCosts}</h2>
   <AscensionSlider currentCosts={characterData.costs} ptBr={ptBr}/>
@@ -720,6 +722,7 @@ switch (travelerName) {
             </div>
             
         </section>
+        <AdComponent3/>
                 <section>
                 <h2 className="titles-h2">{travelerName}{" "}{ptBr.passives}</h2>
             <div className="talents-ul">
@@ -742,7 +745,6 @@ switch (travelerName) {
             
             
         </section>
-        <AdComponent/>
                 <section>
                 <h2 className="titles-h2">{travelerName}{" "}{ptBr.constellations}</h2>
             <div className="talents-ul">
