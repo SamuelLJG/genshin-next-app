@@ -1,61 +1,33 @@
 export const characters = [
     {
-        name: 'skirk',
-        function: 'mainDps',
-        bestWeapon: 'Azurelight',
-        otherWeapons: ['Haran Geppaku Futsu','Finale of the Deep','Calamity of Eshu'],
-        bestArtifacts: 'Finale of the Deep Galleries',
-        otherArtifacts: ['Marechaussee Hunter', 'Blizzard Strayer'],
+        name: 'ineffa',
+        function: 'subDps',
+        bestWeapon: 'Fractured Halo',
+        otherWeapons: ['Staff of the Scarlet Sands','Deathmatch','Missive Windspear'],
+        bestArtifacts: 'Gilded Dreams',
+        otherArtifacts: ['Thundering Fury'],
+        twoPieces: ['Shimenawas Reminiscence','Gilded Dreams'],
         teams: [[
-            {'skirk': 'mainDps'},
+            {'neuvillette': 'mainDps'},
             {'furina': 'subDps'},
-            {'escoffier': 'subDps'},
-            {'citlali': 'support'}
+            {'ineffa': 'subDps'},
+            {'kaedehara-kazuha': 'support'}
         ],
         [
-            {'skirk': 'mainDps'},
-            {'furina': 'subDps'},
-            {'escoffier': 'subDps'},
-            {'dahlia': 'support'}
+            {'keqing': 'mainDps'},
+            {'yelan': 'subDps'},
+            {'ineffa': 'subDps'},
+            {'kaedehara-kazuha': 'support'}
         ]
         ],
         talentPriority: ['elementalSkill','elementalBurst'],
         elementType: 'cryo',
-        mainStatsArtifacts: ['atkPercent','cryoBonus', 'critRateOrDamage'],
-        subStatsArtifacts: ['critRate','critDamage', 'atkPercent'],
+        mainStatsArtifacts: ['atkPercentOrElementalMastery','atkPercentOrElementalMastery', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRateOrDamage', 'atkPercent', 'energyRecharge', 'elementalMastery'],
         newCharacter : 'new',
-        weapon: 'WEAPON_SWORD_ONE_HAND',
+        weapon: 'WEAPON_POLE',
         rarity: '5',
-        rank:'s'
-    },
-    {
-        name: 'dahlia',
-        function: 'support',
-        bestWeapon: 'Favonius Sword',
-        otherWeapons: ['Freedom-Sworn','Key of Khaj-Nisut','Fleuve Cendre Ferryman'],
-        bestArtifacts: 'Noblesse Oblige',
-        otherArtifacts: ['Scroll of the Hero of Cinder City', 'Marechaussee Hunter'],
-        teams: [[
-            {'skirk': 'mainDps'},
-            {'furina': 'subDps'},
-            {'escoffier': 'subDps'},
-            {'dahlia': 'support'}
-        ],
-        [
-            {'kamisato-ayato': 'mainDps'},
-            {'furina': 'subDps'},
-            {'xilonen': 'support'},
-            {'dahlia': 'support'}
-        ]
-        ],
-        talentPriority: ['elementalBurst','elementalSkill'],
-        elementType: 'hydro',
-        mainStatsArtifacts: ['hpPercentOrEnergyRecharge','hpPercent', 'hpPercentOrCritRate'],
-        subStatsArtifacts: ['energyRecharge','hpPercent', 'hp', 'critRate'],
-        newCharacter : 'new',
-        weapon: 'WEAPON_SWORD_ONE_HAND',
-        rarity: '4',
-        rank:'C'
+        rank:'a'
     },
     {
         name: 'albedo',
@@ -581,6 +553,34 @@ export const characters = [
         weapon: 'WEAPON_POLE',
         rarity: '5',
         rank: 'b'
+    },    
+    {
+        name: 'dahlia',
+        function: 'support',
+        bestWeapon: 'Favonius Sword',
+        otherWeapons: ['Freedom-Sworn','Key of Khaj-Nisut','Fleuve Cendre Ferryman'],
+        bestArtifacts: 'Noblesse Oblige',
+        otherArtifacts: ['Scroll of the Hero of Cinder City', 'Marechaussee Hunter'],
+        teams: [[
+            {'skirk': 'mainDps'},
+            {'furina': 'subDps'},
+            {'escoffier': 'subDps'},
+            {'dahlia': 'support'}
+        ],
+        [
+            {'kamisato-ayato': 'mainDps'},
+            {'furina': 'subDps'},
+            {'xilonen': 'support'},
+            {'dahlia': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalBurst','elementalSkill'],
+        elementType: 'hydro',
+        mainStatsArtifacts: ['hpPercentOrEnergyRecharge','hpPercent', 'hpPercentOrCritRate'],
+        subStatsArtifacts: ['energyRecharge','hpPercent', 'hp', 'critRate'],
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '4',
+        rank:'C'
     },
     {
         name: 'dehya',
@@ -2165,6 +2165,34 @@ export const characters = [
         weapon: 'WEAPON_BOW',
         rarity: '5',
         rank: 'b'
+    },
+    {
+        name: 'skirk',
+        function: 'mainDps',
+        bestWeapon: 'Azurelight',
+        otherWeapons: ['Haran Geppaku Futsu','Finale of the Deep','Calamity of Eshu'],
+        bestArtifacts: 'Finale of the Deep Galleries',
+        otherArtifacts: ['Marechaussee Hunter', 'Blizzard Strayer'],
+        teams: [[
+            {'skirk': 'mainDps'},
+            {'furina': 'subDps'},
+            {'escoffier': 'subDps'},
+            {'citlali': 'support'}
+        ],
+        [
+            {'skirk': 'mainDps'},
+            {'furina': 'subDps'},
+            {'escoffier': 'subDps'},
+            {'dahlia': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalSkill','elementalBurst'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['atkPercent','cryoBonus', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRate','critDamage', 'atkPercent'],
+        weapon: 'WEAPON_SWORD_ONE_HAND',
+        rarity: '5',
+        rank:'s'
     },
     {
         name: 'tartaglia',
