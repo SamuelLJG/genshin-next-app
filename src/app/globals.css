@@ -1033,7 +1033,6 @@ select{
 .adbox{
     border:1px solid var(--bd);
     text-align: center;
-    background:linear-gradient(135deg,#9e9d9d,#606060 53%);
 }
 
 .popo {

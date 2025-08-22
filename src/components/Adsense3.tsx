@@ -1,19 +1,28 @@
 'use client';
 
-import Link from "next/link";
+import { useEffect } from 'react';
 
 const AdBanner = () => {
+  useEffect(() => {
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (err) {
+      console.log(err);
+    }
+  }, []);
 
   return (
-    <Link href={'https://amzn.to/4mFrLLV'} className="amazonbox">
-      <picture>
-  <source srcSet="/images/havit.png" media="(min-width: 451px)"
-  className="dsdsds"/>
-  
-  <img src="/images/image3.png" alt="Imagem responsiva" 
-  className="dsdsds"/>
-</picture>
-    </Link>
+    <div className='adbox ptdesc'>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1999593447203691"
+     crossOrigin="anonymous"></script>
+    <ins className="adsbygoogle"
+               style={{display:'block'}}
+               data-ad-client="ca-pub-1999593447203691"
+               data-ad-slot="8181198147"
+               data-ad-format="auto"
+               data-full-width-responsive="true"
+    />
+    </div>
   );
 };
 export default AdBanner;
