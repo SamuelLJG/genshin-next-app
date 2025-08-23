@@ -738,7 +738,6 @@ switch (travelerName) {
             
             
         </section>
-        <AdComponent/>
                 <section>
                 <h2 className="titles-h2">{travelerName}{" "}{ptBr.constellations}</h2>
             <div className="talents-ul">

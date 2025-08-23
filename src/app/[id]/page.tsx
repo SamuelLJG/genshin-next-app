@@ -722,7 +722,6 @@ switch (travelerName) {
             </div>
             
         </section>
-        <AdComponent3/>
                 <section>
                 <h2 className="titles-h2">{travelerName}{" "}{ptBr.passives}</h2>
             <div className="talents-ul">
