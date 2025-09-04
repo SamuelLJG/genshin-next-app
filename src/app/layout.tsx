@@ -46,8 +46,6 @@ export default async function RootLayout({ children }: {children: React.ReactNod
         </head>
         <GoogleAnalytics gaId="G-ZMW5Q2STCE" />
         <ForceFullReloadLinks/>
-        <script type='text/javascript' src='//pl26727677.revenuecpmgate.com/a9/70/9c/a9709c503cf57db4f0ab15ee609a19e3.js'></script>
-        <script type='text/javascript' src='//pl26727656.revenuecpmgate.com/74/5a/15/745a153412b6a9f61df569eb2130477e.js'></script>
         {children}
         </>
   )
