@@ -108,11 +108,17 @@ export default function Home() {
     return (
         <html lang="pt-br">
           <head>
-          <script
+            <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1999593447203691"
+            crossOrigin="anonymous"
+          ></script>
+          </head>
+          <body>
+            <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-      /></head>
-          <body>
+      />
             <Nav/>
             
         <main id="main-index" className="iii"> 

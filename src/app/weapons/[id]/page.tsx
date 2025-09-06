@@ -93,7 +93,13 @@ let ptData, enData, folderData, weapon;
       
   return (
              <html lang="pt-br">
-                
+                <head>
+                  <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1999593447203691"
+            crossOrigin="anonymous"
+          ></script>
+                </head>
               <body>
               <Nav/>
              <WeaponSlider ptData={ptData} matchedCharacters={matchedCharacters} folderData={folderData} id={id} ptBr={ptBr}/>
