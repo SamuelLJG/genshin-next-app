@@ -106,16 +106,15 @@ export default async function Home( { params }:any ) {
       "image": `https://genshinbuild.com/images/Banners/${formatarUrl(id)}_Card.png`
     }
   
+// Função para importar JSON local
+const fetchLocalJson = async (path: string) => (await import(`@/data/${path}`)).default;
 
-   const apiUrl = 'https://genshin-db-api.vercel.app/api/v5/';
-const baseURLWeapon = `${apiUrl}weapons?query=`;
-const baseURLArtifact = `${apiUrl}artifacts?query=`;
-
-const fetchJson = (url: string) => fetch(url, { cache: 'default' }).then(res => res.json());
+// Funções para pegar armas e artefatos
 const fetchWeaponData = (name: string) =>
-  fetchJson(`${baseURLWeapon}${encodeURIComponent(name)}&resultLanguage=portuguese`);
+  fetchLocalJson(`weaponsDataPT/${name.replace(/\s+/g, '-').toLowerCase()}.json`);
+
 const fetchArtifactData = (name: string) =>
-  fetchJson(`${baseURLArtifact}${encodeURIComponent(name.trim())}&resultLanguage=portuguese`);
+  fetchLocalJson(`artifactsDataPT/${name.replace(/\s+/g, '-').toLowerCase()}.json`);
 
 const nomesDosArtefatos = [
   characterBuild.bestArtifacts,
@@ -124,9 +123,9 @@ const nomesDosArtefatos = [
 
 async function getArmasEArtefatos() {
   const armasPT = [
-  await fetchWeaponData(characterBuild.bestWeapon),
-  ...await Promise.all(characterBuild.otherWeapons.map(fetchWeaponData))
-];
+    await fetchWeaponData(characterBuild.bestWeapon),
+    ...await Promise.all(characterBuild.otherWeapons.map(fetchWeaponData))
+  ];
 
   const artefatosPT = await Promise.all(nomesDosArtefatos.map(fetchArtifactData));
 
@@ -138,66 +137,36 @@ async function getArmasEArtefatos() {
 }
 
 const { armasPT, artefatosPT, twoPiecesArtifacts } = await getArmasEArtefatos();
-    const id2 = (
-        id === 'traveler-hydro' ||
-        id === 'traveler-dendro' ||
-        id === 'traveler-anemo' ||
-        id === 'traveler-geo' ||
-        id === 'traveler-electro' ||
-        id === 'traveler-pyro'
-      ) ? 'aether' : id.replace(/-/g, "")
-      ;
-      let id3:any;
 
+// Ajuste de IDs
+const id2 = (
+  id.startsWith('traveler-')
+) ? 'aether' : id
+
+let id3: any;
 switch (id) {
-  case 'traveler-hydro':
-    id3 = 'Traveler (Hydro)';
-    break;
-  case 'traveler-dendro':
-    id3 = 'Traveler (Dendro)';
-    break;
-  case 'traveler-anemo':
-    id3 = 'Traveler (Anemo)';
-    break;
-  case 'traveler-geo':
-    id3 = 'Traveler (Geo)';
-    break;
-  case 'traveler-electro':
-    id3 = 'Traveler (Electro)';
-    break;
-  case 'traveler-pyro':
-    id3 = 'Traveler (Pyro)';
-    break;
-  case 'andarilho':
-    id3 = 'wanderer';
-    break;
-  default:
-    id3 = id.replace(/-/g, "");
-    break;
+  case 'traveler-hydro': id3 = 'Traveler (Hydro)'; break;
+  case 'traveler-dendro': id3 = 'Traveler (Dendro)'; break;
+  case 'traveler-anemo': id3 = 'Traveler (Anemo)'; break;
+  case 'traveler-geo': id3 = 'Traveler (Geo)'; break;
+  case 'traveler-electro': id3 = 'Traveler (Electro)'; break;
+  case 'traveler-pyro': id3 = 'Traveler (Pyro)'; break;
+  case 'andarilho': id3 = 'wanderer'; break;
+  default: id3 = id; break;
 }
-      id2.toLowerCase().trim().replace(/\s+/g, '-') 
-      
-      async function getData() {
-          const urls = [
-            `${apiUrl}characters?query=${id2}&resultLanguage=portuguese`,
-            `${apiUrl}stats?folder=characters&query=${id2}`,
-            `${apiUrl}stats?folder=weapons&query=${characterBuild.bestWeapon}`,
-            `${apiUrl}talents?query=${id3}&resultLanguage=portuguese`,
-            `${apiUrl}constellations?query=${id3}&resultLanguage=portuguese`
-          ];
-          const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'default' })));
-          const data = await Promise.all(responses.map(res => res.json()));
-          return {
-            characterData: data[0],
-            characterFolder: data[1],
-            characterWeapons: data[2],
-            characterTalents: data[3],
-            characterConstellations: data[4]
-          };
-        
-      }
-      
-      let { characterWeapons, characterData, characterFolder, characterTalents, characterConstellations } = await getData();
+
+// Função para pegar todos os dados do personagem
+async function getData() {
+  const characterData = await fetchLocalJson(`charactersDataPT/${id2.toLowerCase()}.json`);
+  const characterFolder = await fetchLocalJson(`charactersFolder/${id2.toLowerCase()}.json`);
+  const characterWeapons = await fetchLocalJson(`weaponsFolder/${characterBuild.bestWeapon.replace(/\s+/g, '-').toLowerCase()}.json`);
+  const characterTalents = await fetchLocalJson(`charactersTalentsPT/${id3.replace(/\s+/g, '-').toLowerCase().replace(/[()]/g, '')}.json`);
+  const characterConstellations = await fetchLocalJson(`charactersConstellationsPT/${id3.replace(/\s+/g, '-').toLowerCase().replace(/[()]/g, '')}.json`);
+
+  return { characterData, characterFolder, characterWeapons, characterTalents, characterConstellations };
+}
+
+let { characterWeapons, characterData, characterFolder, characterTalents, characterConstellations } = await getData();
 
     function extrairAtePrimeiroPonto(texto: string) {
         return texto.split('.')[0];

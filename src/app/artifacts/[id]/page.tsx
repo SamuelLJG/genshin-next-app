@@ -23,7 +23,13 @@ export async function generateMetadata(
   let { id } = await params
  
 
-  const product = await fetch(`https://genshin-db-api.vercel.app/api/v5/artifacts?query=${id.replace(/-/g, '')}&resultLanguage=portuguese`, { cache: 'default' }).then((res) => res.json())
+  
+ const fetchLocalJson = async (path: string) => (await import(`@/data/${path}`)).default;
+
+
+const fetchWeaponDataPT = (name: string) =>
+  fetchLocalJson(`artifactsDataPT/${id.replace(/\s+/g, '-').toLowerCase()}.json`);
+ const product = await fetchWeaponDataPT(id)
  
   // optionally access and extend (rather than replace) parent meta
  
@@ -49,10 +55,9 @@ export async function generateMetadata(
 
 export default async function Page({params}:any) {
     let { id } = await params;
-    const idNormalizado = id.replace(/-/g, '');
+    const idNormalizado = id
 
-    const validIds = await fetch('https://genshin-db-api.vercel.app/api/v5/artifacts?query=names&matchCategories=true', { cache: 'default' })
-      .then(res => res.json());
+    const validIds = ["Adventurer","Archaic Petra","Berserker","Blizzard Strayer","Bloodstained Chivalry","Brave Heart","Crimson Witch of Flames","Deepwood Memories","Defender's Will","Desert Pavilion Chronicle","Echoes of an Offering","Emblem of Severed Fate","Finale of the Deep Galleries","Flower of Paradise Lost","Fragment of Harmonic Whimsy","Gambler","Gilded Dreams","Gladiator's Finale","Golden Troupe","Heart of Depth","Husk of Opulent Dreams","Instructor","Lavawalker","Long Night's Oath","Lucky Dog","Maiden Beloved","Marechaussee Hunter","Martial Artist","Nighttime Whispers in the Echoing Woods","Noblesse Oblige","Nymph's Dream","Obsidian Codex","Ocean-Hued Clam","Pale Flame","Prayers for Destiny","Prayers for Illumination","Prayers for Wisdom","Prayers to Springtime","Resolution of Sojourner","Retracing Bolide","Scholar","Scroll of the Hero of Cinder City","Shimenawa's Reminiscence","Song of Days Past","Tenacity of the Millelith","The Exile","Thundering Fury","Thundersoother","Tiny Miracle","Traveling Doctor","Unfinished Reverie","Vermillion Hereafter","Viridescent Venerer","Vourukasha's Glow","Wanderer's Troupe"]
     
     const idList = validIds.map((name: string) =>
       name.replace(/'/g, '').toLowerCase().replace(/ /g, '-')
@@ -60,16 +65,23 @@ export default async function Page({params}:any) {
     
     if (!idList.includes(id)) return notFound();
     
+    const fetchLocalJson = async (path: string) => (await import(`@/data/${path}`)).default;
+
+
+const fetchArtifactDataPT = (name: string) =>
+  fetchLocalJson(`artifactsDataPT/${name.replace(/\s+/g, '-').toLowerCase()}.json`);
+const fetchArtifactDataEN = (name: string) =>
+  fetchLocalJson(`artifactsDataEN/${name.replace(/\s+/g, '-').toLowerCase()}.json`);
+
     const urls = [
-      `artifacts?query=${idNormalizado}&resultLanguage=portuguese`,
-      `artifacts?query=${idNormalizado}`
+      await fetchArtifactDataPT(idNormalizado),
+      await fetchArtifactDataEN(idNormalizado)
     ];
     
     const [ptData, enData] = await Promise.all(
-      urls.map(endpoint =>
-        fetch(`https://genshin-db-api.vercel.app/api/v5/${endpoint}`, { cache: 'default' }).then(res => res.json())
+      urls.map(endpoint => endpoint)
       )
-    );
+    
       
     const weapon = enData.name.replace(/'/g, "")
       const matchedCharacters = characters.filter((char) => 
