@@ -28,16 +28,23 @@ export const metadata: Metadata = {
   }
 };
 
+
+const fetchLocalJson = async (path: string) => (await import(`@/data/${path}`)).default;
+
+// Funções para pegar armas e artefatos
+const fetchWeaponData = (name: string) =>
+  fetchLocalJson(`artifactsDataEN/${name}.json`);
+
+
 export default async function Page() {
-  const response = await fetch('https://genshin-db-api.vercel.app/api/v5/artifacts?query=names&matchCategories=true');
-  const data = await response.json();
+  const data = ["Adventurer","Archaic Petra","Berserker","Blizzard Strayer","Bloodstained Chivalry","Brave Heart","Crimson Witch of Flames","Deepwood Memories","Defender's Will","Desert Pavilion Chronicle","Echoes of an Offering","Emblem of Severed Fate","Finale of the Deep Galleries","Flower of Paradise Lost","Fragment of Harmonic Whimsy","Gambler","Gilded Dreams","Gladiator's Finale","Golden Troupe","Heart of Depth","Husk of Opulent Dreams","Instructor","Lavawalker","Long Night's Oath","Lucky Dog","Maiden Beloved","Marechaussee Hunter","Martial Artist","Nighttime Whispers in the Echoing Woods","Noblesse Oblige","Nymph's Dream","Obsidian Codex","Ocean-Hued Clam","Pale Flame","Prayers for Destiny","Prayers for Illumination","Prayers for Wisdom","Prayers to Springtime","Resolution of Sojourner","Retracing Bolide","Scholar","Scroll of the Hero of Cinder City","Shimenawa's Reminiscence","Song of Days Past","Tenacity of the Millelith","The Exile","Thundering Fury","Thundersoother","Tiny Miracle","Traveling Doctor","Unfinished Reverie","Vermillion Hereafter","Viridescent Venerer","Vourukasha's Glow","Wanderer's Troupe"];
   const responsesPTWeapons = await Promise.all(
     data.map((nome:any) => {
-      const nomeLimpo = encodeURIComponent(nome.trim());
-      return fetch(`https://genshin-db-api.vercel.app/api/v5/artifacts?query=${nomeLimpo}`, { cache: 'default' });
+      const nomeLimpo = encodeURIComponent(nome.trim().replace(/\s+/g, '-').toLowerCase().replace(/'/g, ''));
+      return fetchWeaponData(nomeLimpo.replace(/\s+/g, '-').toLowerCase())
     })
   );
-  const armasPT = await Promise.all(responsesPTWeapons.map(res => res.json()));
+  const armasPT = responsesPTWeapons
   const circletOnly = ['Prayers for Destiny', 'Prayers for Illumination', 'Prayers for Wisdom', 'Prayers to Springtime'];
   
   return (
