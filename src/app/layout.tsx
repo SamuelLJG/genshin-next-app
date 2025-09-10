@@ -38,13 +38,12 @@ export default async function RootLayout({ children }: {children: React.ReactNod
 
   return (
         <>
-        <head>
             <Script
   async
   strategy="afterInteractive"
-  src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1999593447203691`}
+  src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID}`}
   crossOrigin="anonymous"
-/></head>
+/>
         <GoogleAnalytics gaId="G-ZMW5Q2STCE" />
         {children}
         </>
