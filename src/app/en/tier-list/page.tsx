@@ -9,7 +9,7 @@ import Footer from '@/components/footer-en';
 
 
 export const metadata: Metadata = {
-  title: "Tier List 5.5 | Genshin Impact ",
+  title: "Tier List 6.0 | Genshin Impact ",
   description: "Explore the latest Genshin Impact tier list and find out which characters dominate the 2025 meta!",
   alternates: {
     canonical: '/en/tier-list',
@@ -56,7 +56,7 @@ export default function Teams() {
           loading="eager"
         />
         <h1 id="index-h1" style={{ display: "block" }}>
-          Genshin Impact <span className="nowrap"> Tier-List 5.5</span>
+          Genshin Impact <span className="nowrap"> Tier-List 6.0</span>
         </h1>
       </div>
       <AdComponent/>
