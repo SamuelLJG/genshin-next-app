@@ -320,15 +320,6 @@ switch (travelerName) {
     return (
       
         <html lang="en">
-          
-          <head>
-
-            <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1999593447203691"
-            crossOrigin="anonymous"
-          ></script>
-          </head>
           <body>
             <script
         type="application/ld+json"
@@ -493,7 +484,7 @@ switch (travelerName) {
                         <div id="artifacts-section">
                             <section id="artifacts-main">
                               <Link id="artifact-img-box" href={`/en/artifacts/${characterBuild.bestArtifacts.toLowerCase().trim().replace(/\s+/g, '-')}`}> 
-                            <Image width={160} height={160} className="star5" src={`https://enka.network/ui/${artefatosPT[0].images.filename_flower}.png`} alt={artefatosPT[0].name}/>
+                            <Image width={160} height={160} className="star5" src={`https://gi.yatta.moe/assets/UI/reliquary/${artefatosPT[0].images.filename_flower}.png`} alt={artefatosPT[0].name}/>
                             </Link>
                                 <div id="artifacts-header">
                                     <div>
@@ -546,7 +537,7 @@ switch (travelerName) {
                     <Link key={i} href={`/en/artifacts/${characterBuild.otherArtifacts[i].toLowerCase().trim().replace(/\s+/g, '-')}`}> 
                             <span className="other-artifacts-set">{i+2}{ptBr.degree}</span>
                                         <div className="other-artifacts-box">
-                                          <Image width={160} height={160} src={`https://enka.network/ui/${art.images.filename_flower}.png`} alt={art.name}/>
+                                          <Image width={160} height={160} src={`https://gi.yatta.moe/assets/UI/reliquary/${art.images.filename_flower}.png`} alt={art.name}/>
                                           <div className="other-artifacts-set-description">
                                             <span className="four-pieces-name">4x&nbsp;{art.name}</span>
                                           
@@ -571,8 +562,8 @@ switch (travelerName) {
   pairIndex 
 ): (pairIndex+1)}{ptBr.degree}</span>
                               <div className="other-artifacts-box">
-                                <Image width={160} height={160} src={`https://enka.network/ui/${first.images.filename_flower}.png`} className="spp" alt={first.name} />
-                                <Image width={160} height={160} src={`https://enka.network/ui/${second.images.filename_flower}.png`} alt={second.name} />
+                                <Image width={160} height={160} src={`https://gi.yatta.moe/assets/UI/reliquary/${first.images.filename_flower}.png`} className="spp" alt={first.name} />
+                                <Image width={160} height={160} src={`https://gi.yatta.moe/assets/UI/reliquary/${second.images.filename_flower}.png`} alt={second.name} />
                                 
                                 <div className="other-artifacts-set-description">
                                   <div>

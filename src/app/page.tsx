@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: "Encontre as builds ideais para seus personagens favoritos de Genshin Impact com guias de armas, artefatos, equipes e mais.",
   alternates: {
     canonical: '/',
-    languages: {
+    languages: {  
       'en': `/en`,
       'pt-br': `/`,
       'x-default': `/`
@@ -107,13 +107,6 @@ export default function Home() {
       }
     return (
         <html lang="pt-br">
-          <head>
-            <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1999593447203691"
-            crossOrigin="anonymous"
-          ></script>
-          </head>
           <body>
             <script
         type="application/ld+json"

@@ -1,32 +1,60 @@
 export const characters = [
     {
-        name: 'ineffa',
-        function: 'subDps',
-        bestWeapon: 'Fractured Halo',
-        otherWeapons: ['Staff of the Scarlet Sands','Deathmatch','Missive Windspear'],
-        bestArtifacts: 'Gilded Dreams',
-        otherArtifacts: ['Thundering Fury'],
-        twoPieces: ['Shimenawas Reminiscence','Gilded Dreams'],
+        name: 'lauma',
+        function: 'support',
+        bestWeapon: 'Nightweavers Looking Glass',
+        otherWeapons: ['A Thousand Floating Dreams','Sunny Morning Sleep-In','Starcallers Watch'],
+        bestArtifacts: 'Deepwood Memories',
+        otherArtifacts: ['Silken Moons Serenade', 'Instructor'],
         teams: [[
-            {'neuvillette': 'mainDps'},
-            {'furina': 'subDps'},
-            {'ineffa': 'subDps'},
-            {'kaedehara-kazuha': 'support'}
+            {'alhaitham': 'mainDps'},
+            {'xingqiu': 'subDps'},
+            {'yelan': 'subDps'},
+            {'lauma': 'support'}
         ],
         [
-            {'keqing': 'mainDps'},
-            {'yelan': 'subDps'},
-            {'ineffa': 'subDps'},
-            {'kaedehara-kazuha': 'support'}
+            {'neuvillette': 'mainDps'},
+            {'furina': 'subDps'},
+            {'ineffa': 'support'},
+            {'lauma': 'support'}
         ]
         ],
-        talentPriority: ['elementalSkill','elementalBurst'],
-        elementType: 'cryo',
-        mainStatsArtifacts: ['atkPercentOrElementalMastery','atkPercentOrElementalMastery', 'critRateOrDamage'],
+        talentPriority: ['elementalBurst','elementalSkill'],
+        elementType: 'dendro',
+        mainStatsArtifacts: ['elementalMastery','elementalMastery', 'critRateOrElementalMastery'],
         subStatsArtifacts: ['critRateOrDamage', 'atkPercent', 'energyRecharge', 'elementalMastery'],
         newCharacter : 'new',
-        weapon: 'WEAPON_POLE',
+        weapon: 'WEAPON_CATALYST',
         rarity: '5',
+        rank:'s'
+    },
+    {
+        name: 'aino',
+        function: 'support',
+        bestWeapon: 'Flame-Forged Insight',
+        otherWeapons: ['Favonius Greatsword','Sacrificial Greatsword','Makhaira Aquamarine'],
+        bestArtifacts: 'Silken Moons Serenade',
+        otherArtifacts: ['Noblesse Oblige', 'Flower of Paradise Lost'],
+        teams: [[
+            {'alhaitham': 'mainDps'},
+            {'lauma': 'support'},
+            {'nilou': 'support'},
+            {'aino': 'support'}
+        ],
+        [
+            {'arlecchino': 'mainDps'},
+            {'bennett': 'support'},
+            {'ineffa': 'support'},
+            {'aino': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalBurst','elementalSkill','normalAttack'],
+        elementType: 'hydro',
+        mainStatsArtifacts: ['elementalMastery','elementalMastery', 'critRateOrElementalMastery'],
+        subStatsArtifacts: ['critRateOrDamage', 'atkPercent', 'energyRecharge', 'elementalMastery'],
+        newCharacter : 'new',
+        weapon: 'WEAPON_CLAYMORE',
+        rarity: '4',
         rank:'a'
     },
     {
@@ -1033,7 +1061,6 @@ export const characters = [
         rarity: '4',
         rank: 's'
     },
-    
     {
         name: 'ifa',
         function: 'support',
@@ -1062,6 +1089,36 @@ export const characters = [
         weapon: 'WEAPON_CATALYST',
         rarity: '4',
         rank: 'd'
+    },
+    {
+        name: 'ineffa',
+        function: 'subDps',
+        bestWeapon: 'Fractured Halo',
+        otherWeapons: ['Staff of the Scarlet Sands','Deathmatch','Missive Windspear'],
+        bestArtifacts: 'Gilded Dreams',
+        otherArtifacts: ['Thundering Fury'],
+        twoPieces: ['Shimenawas Reminiscence','Gilded Dreams'],
+        teams: [[
+            {'neuvillette': 'mainDps'},
+            {'furina': 'subDps'},
+            {'ineffa': 'subDps'},
+            {'kaedehara-kazuha': 'support'}
+        ],
+        [
+            {'keqing': 'mainDps'},
+            {'yelan': 'subDps'},
+            {'ineffa': 'subDps'},
+            {'kaedehara-kazuha': 'support'}
+        ]
+        ],
+        talentPriority: ['elementalSkill','elementalBurst'],
+        elementType: 'cryo',
+        mainStatsArtifacts: ['atkPercentOrElementalMastery','atkPercentOrElementalMastery', 'critRateOrDamage'],
+        subStatsArtifacts: ['critRateOrDamage', 'atkPercent', 'energyRecharge', 'elementalMastery'],
+        newCharacter : 'new',
+        weapon: 'WEAPON_POLE',
+        rarity: '5',
+        rank:'a'
     },
     {
         name: 'jean',

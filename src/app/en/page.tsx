@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Genshin Build | Best Genshin Impact Character Builds",
   description: "Find the ideal builds for your favorite Genshin Impact characters with guides on weapons, artifacts, teams, and more.",
   alternates: {
-    canonical: '/en/',
+    canonical: '/en',
     languages: {
       'en': `/en`,
       'pt-br': `/`,
@@ -107,14 +107,6 @@ export default function Home() {
       }
     return (
         <html lang="en">
-          <head>
-          <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1999593447203691"
-            crossOrigin="anonymous"
-          ></script>
-
-      </head>
           <body>
             <script
         type="application/ld+json"

@@ -91,11 +91,6 @@ const fetchArtifactDataEN = (name: string) =>
       );
       
   return <html lang="pt-br">
-    <head><script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1999593447203691"
-            crossOrigin="anonymous"
-          ></script></head>
           <body>
             <Nav/>
             <ArtifactsSlider ptData={ptData} matchedCharacters={matchedCharacters} ptBr={ptBr}/>

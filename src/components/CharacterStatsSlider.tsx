@@ -22,14 +22,17 @@ export default function CharacterStatsSlider({ stats, stats2, stats3 }: any) {
     const descricao4 = stats?.[`${characterlvl}`]?.specialized
 
     let calc = descricao4
-    if (stats2.substatText !== "Proficiência Elemental") {
-        calc = (Math.round(descricao4 * 1000) / 10) + '%'
-    }
+    if (stats2.substatText != "Proficiência Elemental" && stats2.substatText != "Elemental Mastery") {
+    calc = (Math.round(descricao4 * 1000) / 10) + '%';
+}
 
     function formatarSubstat(texto: string): string {
         let resultado = texto
         if (resultado === 'Proficiência Elemental') {
             resultado = 'Prof Elem.'
+        }
+        if (resultado === 'Elemental Mastery') {
+            resultado = 'EM'
         }
         if (resultado.includes('de Dano')) {
             resultado = resultado.replace(' de Dano', '').replace('Dano ', '')
