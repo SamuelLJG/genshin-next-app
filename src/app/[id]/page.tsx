@@ -17,8 +17,7 @@ import AdComponent3 from "@/components/Adsense3";
 import Nav from '@/components/nav';
 import Footer from '@/components/footer';
 
-import Script from "next/script";
-import { GoogleAnalytics } from "@next/third-parties/google";
+
 type Props = {
   params: Promise<{ id: string }>
 }
@@ -322,13 +321,6 @@ switch (travelerName) {
     return (
       
         <html lang="pt-br">
-          <head>
-            <script
-  async
-  src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1999593447203691`}
-  crossOrigin="anonymous"
-/>
-          </head>
           <body>
             <script
         type="application/ld+json"
