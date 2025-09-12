@@ -57,7 +57,6 @@ export default async function RootLayout({ children }: {children: React.ReactNod
             gtag('config', 'AW-11069534793');
           `}
         </Script>
-<ForceFullReloadLinks/>
         <GoogleAnalytics gaId="G-ZMW5Q2STCE" />
         {children}
         </>
