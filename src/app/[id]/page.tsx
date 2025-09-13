@@ -70,7 +70,10 @@ export const generateMetadata = async ({
   }
 }
 
-
+export async function generateStaticParams() {
+  // gera todas as rotas possíveis com base no seu JSON
+  return characters.map((c) => ({ id: c.name }));
+}
 
 export default async function Home( { params }:any ) {
   
