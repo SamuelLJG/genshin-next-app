@@ -17,7 +17,7 @@ import Footer from '@/components/footer-en';
 
 
 type Props = {
-  params: Promise<{ id: string }>
+  params: { id: string }
 }
 
 function formatarUrl(nome: string) {
@@ -27,53 +27,39 @@ function formatarUrl(nome: string) {
     .join(' ');
 }
 
-export const generateMetadata = async ({
-  params,
-}: Props): Promise<Metadata> => {
-  const id = (await params).id;
-  const characterBuild:any = characters.find(p => p.name === id);
+export async function generateStaticParams() {
+  // gera todas as rotas possíveis com base no seu JSON
+  return characters.map((c) => ({ id: c.name }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const id = await params.id;
+  const characterBuild: any = characters.find((p) => p.name === id);
+
   if (!characterBuild) {
-     return {
-    title: `404 - Not Found`,
+    return { title: "404 - Not Found" };
   }
-  }
-  else {
+
   return {
     title: `${formatarUrl(id)} Build | Guide with Best Weapons, Artifacts, and Teams`,
-    description: `Discover the best builds and teams for ${formatarUrl(id)} in Genshin Impact! Check out their weapons, artifacts, skills, and much more!`,
+    description: `Discover the best builds and teams for ${formatarUrl(id)} in Genshin Impact!`,
     alternates: {
       canonical: `/en/${id}`,
       languages: {
-        'en': `/en/${id}`,
-        'pt-br': id,
-        'x-default': id
-      }
+        en: `/en/${id}`,
+        "pt-br": id,
+        "x-default": id,
+      },
     },
     openGraph: {
       images: `/images/Banners/${formatarUrl(id)}_Card.png`,
       url: `/en/${id}`,
-      type: 'website'
+      type: "website",
     },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        noimageindex: false,
-        'max-image-preview': 'large'
-      }
-    }
-  }
-  }
+  };
 }
-
-
-
-export default async function Home( { params }:any ) {
-  
-  
-    let { id } = await params;
+export default async function Home({ params }: { params: { id: string } }) {
+  const { id } = params;
     const characterBuild:any = characters.find(p => p.name === id);
     if (!characterBuild) return notFound()
     const schemaData = {
