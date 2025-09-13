@@ -17,7 +17,7 @@ import Footer from '@/components/footer-en';
 
 
 type Props = {
-  params: { id: string }
+  params: Promise<{ id: string }>
 }
 
 function formatarUrl(nome: string) {
@@ -25,11 +25,6 @@ function formatarUrl(nome: string) {
     .split('-')
     .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
     .join(' ');
-}
-
-export async function generateStaticParams() {
-  // gera todas as rotas possíveis com base no seu JSON
-  return characters.map((c) => ({ id: c.name }));
 }
 
 export const generateMetadata = async ({
@@ -72,6 +67,12 @@ export const generateMetadata = async ({
   }
   }
 }
+
+export async function generateStaticParams() {
+  // gera todas as rotas possíveis com base no seu JSON
+  return characters.map((c) => ({ id: c.name }));
+}
+
 export default async function Home( { params }:any ) {
   
   
